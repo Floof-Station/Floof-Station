@@ -1,3 +1,32 @@
+# Mechs
+
+- type: listing
+  id: UplinkDarkGygax
+  name: uplink-mech-teleporter-assault-name
+  description: uplink-mech-teleporter-assault-desc
+  icon: { sprite: /Textures/Objects/Specific/Mech/mecha.rsi, state: darkgygax }
+  productEntity: CrateCybersunDarkGygaxBundle
+  cost:
+    Telecrystal: 400
+  categories:
+  - UplinkAllies
+
+- type: listing
+  id: UplinkMauler
+  name: uplink-mech-teleporter-heavy-name
+  description: uplink-mech-teleporter-heavy-desc
+  icon: { sprite: /Textures/Objects/Specific/Mech/mecha.rsi, state: mauler }
+  productEntity: CrateCybersunMaulerBundle
+  cost:
+    Telecrystal: 650
+  categories:
+  - UplinkAllies
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+        
 # Martial Arts
 - type: listing
   id: UplinkCQCManual
@@ -7,12 +36,12 @@
   cost:
     Telecrystal: 20 # Floof - M3739 - EE-CQB | Was originally 60
   categories:
-  - UplinkDeception
+    - UplinkDeception
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkMysteriousScroll
@@ -22,12 +51,12 @@
   cost:
     Telecrystal: 35 # Floof - M3739 - EE-CQB | Was originally 70
   categories:
-  - UplinkWeaponry
+    - UplinkWeaponry
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerSpeciesCondition
-    blacklist:
-      - Oni
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerSpeciesCondition
+      blacklist:
+        - Oni
