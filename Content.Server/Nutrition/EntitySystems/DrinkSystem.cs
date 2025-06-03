@@ -322,7 +322,7 @@ public sealed class DrinkSystem : SharedDrinkSystem
 
         _audio.PlayPvs(entity.Comp.UseSound, args.Target.Value, AudioParams.Default.WithVolume(-2f));
 
-        _reaction.DoEntityReaction(args.Target.Value, solution, ReactionMethod.Ingestion);
+        _reaction.DoEntityReaction(args.Target.Value, drained, ReactionMethod.Ingestion);
         //TODO: Grab the stomach UIDs somehow without using Owner
         _stomach.TryTransferSolution(firstStomach.Value.Comp.Owner, drained, firstStomach.Value.Comp);
 

@@ -268,7 +268,7 @@ public sealed class FoodSystem : EntitySystem
             return;
         }
 
-        _reaction.DoEntityReaction(args.Target.Value, solution, ReactionMethod.Ingestion);
+        _reaction.DoEntityReaction(args.Target.Value, split, ReactionMethod.Ingestion);
         _stomach.TryTransferSolution(stomachToUse.Owner, split, stomachToUse);
 
         var flavors = args.FlavorMessage;
