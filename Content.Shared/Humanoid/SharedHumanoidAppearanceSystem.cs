@@ -465,6 +465,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             grammar.Gender = profile.Gender;
 
         humanoid.Age = profile.Age;
+        humanoid.Height = profile.Height; // CD - Character Records
 
         humanoid.CustomSpecieName = profile.Customspeciename;
 

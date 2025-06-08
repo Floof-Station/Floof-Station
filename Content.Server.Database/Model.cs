@@ -67,6 +67,20 @@ namespace Content.Server.Database
                 .HasIndex(c => new { c.ConsentSettingsId, c.ToggleProtoId })
                 .IsUnique();
 
+            // Begin CD - CD Character Data
+            modelBuilder.Entity<CDModel.CDProfile>()
+                .HasOne(p => p.Profile)
+                .WithOne(p => p.CDProfile)
+                .HasForeignKey<CDModel.CDProfile>(p => p.ProfileId)
+                .IsRequired();
+
+            modelBuilder.Entity<CDModel.CharacterRecordEntry>()
+                .HasOne(e => e.CDProfile)
+                .WithMany(e => e.CharacterRecordEntries)
+                .HasForeignKey(e => e.CDProfileId)
+                .IsRequired();
+            // End CD - CD Character Data
+
             modelBuilder.Entity<Antag>()
                 .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.AntagName })
                 .IsUnique();
@@ -426,6 +440,8 @@ namespace Content.Server.Database
 
         // Floof
         public string? FavoriteDrink { get; set; }
+
+        public CDModel.CDProfile? CDProfile { get; set; } // CD - Character Records
     }
     public class ConsentSettings
     {
@@ -929,7 +945,7 @@ namespace Content.Server.Database
         Panic = 3,
         /*
          * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
-         * 
+         *
          * If baby jail is removed, please reserve this value for as long as can reasonably be done to prevent causing ambiguity in connection denial reasons.
          * Reservation by commenting out the value is likely sufficient for this purpose, but may impact projects which depend on SS14 like SS14.Admin.
          */

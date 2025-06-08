@@ -37,6 +37,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Serilog;
 using Direction = Robust.Shared.Maths.Direction;
+// Begin CD - Character Records
+using System.Globalization;
+using Content.Client._CD.Records.UI;
+using Content.Shared._CD.Records;
+// End CD - Character Records
 
 namespace Content.Client.Lobby.UI
 {
@@ -458,6 +463,16 @@ namespace Content.Client.Lobby.UI
 
             #endregion Markings
 
+            // Begin CD - Character Records
+            #region CosmaticRecords
+
+            RecordsTab.Orphan();
+            Records.SetRecordUpdateFunction(UpdateProfileRecords);
+            CTabContainer.AddTab(RecordsTab, Loc.GetString("humanoid-profile-editor-cd-records-tab"));
+
+            #endregion CosmaticRecords
+            // End CD - Character Records
+
             RefreshFlavorText();
 
             #region Floof
@@ -680,6 +695,10 @@ namespace Content.Client.Lobby.UI
 
             // Floof
             UpdateFavoriteDrink();
+
+            // Begin CD - Character Records
+            Records.Update(profile);
+            // End CD - Character Records
 
             RefreshAntags();
             RefreshJobs();
@@ -1020,6 +1039,16 @@ namespace Content.Client.Lobby.UI
                 Profile = Profile?.WithJobPriority(proto.ID, JobPriority.Never);
             }
         }
+
+        // Start CD - Character Records
+        private void UpdateProfileRecords(PlayerProvidedCharacterRecords records)
+        {
+            if (Profile is null)
+                return;
+            Profile = Profile.WithCDCharacterRecords(records);
+            IsDirty = true;
+        }
+        // End CD - Character Records
 
         private void OnFlavorTextChange(string content)
         {
@@ -1639,6 +1668,8 @@ namespace Content.Client.Lobby.UI
             var name = HumanoidCharacterProfile.GetName(Profile.Species, Profile.Gender);
             SetName(name);
             UpdateNameEdit();
+
+            Records.Update(Profile); // CD - Character Records
         }
 
         private async void ImportProfile()
@@ -1976,7 +2007,7 @@ namespace Content.Client.Lobby.UI
                 var temp = TraitPointsBar.Value + points;
                 return preference ? !(temp < 0) : temp < 0;
             }
-            
+
             bool CheckSlots(int slots, bool preference)
             {
                 var temp = _traitCount + slots;
