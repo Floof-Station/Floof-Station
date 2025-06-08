@@ -3,6 +3,7 @@ using System;
 using Content.Server.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Content.Server.Database.Migrations.Sqlite
 {
     [DbContext(typeof(SqliteServerDbContext))]
-    partial class SqliteServerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250303043130_CosmaticDriftCharacterRecords")]
+    partial class CosmaticDriftCharacterRecords
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
@@ -27,6 +30,14 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<int?>("AdminRankId")
                         .HasColumnType("INTEGER")
                         .HasColumnName("admin_rank_id");
+
+                    b.Property<bool>("Deadminned")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("deadminned");
+
+                    b.Property<bool>("Suspended")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("suspended");
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT")
@@ -661,59 +672,33 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("connection_log", (string)null);
                 });
 
-            modelBuilder.Entity("Content.Server.Database.ConsentSettings", b =>
+            modelBuilder.Entity("Content.Server.Database.IPIntelCache", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
-                        .HasColumnName("consent_settings_id");
+                        .HasColumnName("ipintel_cache_id");
 
-                    b.Property<string>("ConsentFreetext")
+                    b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasColumnName("consent_freetext");
+                        .HasColumnName("address");
 
-                    b.Property<Guid>("UserId")
+                    b.Property<float>("Score")
+                        .HasColumnType("REAL")
+                        .HasColumnName("score");
+
+                    b.Property<DateTime>("Time")
                         .HasColumnType("TEXT")
-                        .HasColumnName("user_id");
+                        .HasColumnName("time");
 
                     b.HasKey("Id")
-                        .HasName("PK_consent_settings");
+                        .HasName("PK_ipintel_cache");
 
-                    b.HasIndex("UserId")
+                    b.HasIndex("Address")
                         .IsUnique();
 
-                    b.ToTable("consent_settings", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ConsentToggle", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("consent_toggle_id");
-
-                    b.Property<int>("ConsentSettingsId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("consent_settings_id");
-
-                    b.Property<string>("ToggleProtoId")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("toggle_proto_id");
-
-                    b.Property<string>("ToggleProtoState")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("toggle_proto_state");
-
-                    b.HasKey("Id")
-                        .HasName("PK_consent_toggle");
-
-                    b.HasIndex("ConsentSettingsId", "ToggleProtoId")
-                        .IsUnique();
-
-                    b.ToTable("consent_toggle", (string)null);
+                    b.ToTable("ipintel_cache", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Job", b =>
@@ -749,47 +734,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasFilter("priority = 3");
 
                     b.ToTable("job", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.Loadout", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("loadout_id");
-
-                    b.Property<string>("CustomColorTint")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("custom_color_tint");
-
-                    b.Property<string>("CustomDescription")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("custom_description");
-
-                    b.Property<bool?>("CustomHeirloom")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("custom_heirloom");
-
-                    b.Property<string>("CustomName")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("custom_name");
-
-                    b.Property<string>("LoadoutName")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("loadout_name");
-
-                    b.Property<int>("ProfileId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_id");
-
-                    b.HasKey("Id")
-                        .HasName("PK_loadout");
-
-                    b.HasIndex("ProfileId", "LoadoutName")
-                        .IsUnique();
-
-                    b.ToTable("loadout", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.PlayTime", b =>
@@ -908,25 +852,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
-                    b.Property<string>("Backpack")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("backpack");
-
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("char_name");
-
-                    b.Property<string>("Clothing")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("clothing");
-
-                    b.Property<string>("CustomSpecieName")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("custom_specie_name");
 
                     b.Property<string>("EyeColor")
                         .IsRequired()
@@ -942,10 +871,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("facial_hair_name");
-
-                    b.Property<string>("FavoriteDrink")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("favorite_drink");
 
                     b.Property<string>("FlavorText")
                         .IsRequired()
@@ -966,10 +891,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("hair_name");
-
-                    b.Property<float>("Height")
-                        .HasColumnType("REAL")
-                        .HasColumnName("height");
 
                     b.Property<byte[]>("Markings")
                         .HasColumnType("jsonb")
@@ -1006,10 +927,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
 
-                    b.Property<float>("Width")
-                        .HasColumnType("REAL")
-                        .HasColumnName("width");
-
                     b.HasKey("Id")
                         .HasName("PK_profile");
 
@@ -1020,6 +937,78 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsUnique();
 
                     b.ToTable("profile", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_loadout_id");
+
+                    b.Property<string>("LoadoutName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("loadout_name");
+
+                    b.Property<int>("ProfileLoadoutGroupId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_loadout_group_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_profile_loadout");
+
+                    b.HasIndex("ProfileLoadoutGroupId");
+
+                    b.ToTable("profile_loadout", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileLoadoutGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_loadout_group_id");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("group_name");
+
+                    b.Property<int>("ProfileRoleLoadoutId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_role_loadout_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_profile_loadout_group");
+
+                    b.HasIndex("ProfileRoleLoadoutId");
+
+                    b.ToTable("profile_loadout_group", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileRoleLoadout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_role_loadout_id");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_id");
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("role_name");
+
+                    b.HasKey("Id")
+                        .HasName("PK_profile_role_loadout");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("profile_role_loadout", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.RoleWhitelist", b =>
@@ -1723,18 +1712,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Server");
                 });
 
-            modelBuilder.Entity("Content.Server.Database.ConsentToggle", b =>
-                {
-                    b.HasOne("Content.Server.Database.ConsentSettings", "ConsentSettings")
-                        .WithMany("ConsentToggles")
-                        .HasForeignKey("ConsentSettingsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_consent_toggle_consent_settings_consent_settings_id");
-
-                    b.Navigation("ConsentSettings");
-                });
-
             modelBuilder.Entity("Content.Server.Database.Job", b =>
                 {
                     b.HasOne("Content.Server.Database.Profile", "Profile")
@@ -1743,18 +1720,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_job_profile_profile_id");
-
-                    b.Navigation("Profile");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.Loadout", b =>
-                {
-                    b.HasOne("Content.Server.Database.Profile", "Profile")
-                        .WithMany("Loadouts")
-                        .HasForeignKey("ProfileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_loadout_profile_profile_id");
 
                     b.Navigation("Profile");
                 });
@@ -1800,6 +1765,42 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasConstraintName("FK_profile_preference_preference_id");
 
                     b.Navigation("Preference");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
+                {
+                    b.HasOne("Content.Server.Database.ProfileLoadoutGroup", "ProfileLoadoutGroup")
+                        .WithMany("Loadouts")
+                        .HasForeignKey("ProfileLoadoutGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_profile_loadout_profile_loadout_group_profile_loadout_group_id");
+
+                    b.Navigation("ProfileLoadoutGroup");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileLoadoutGroup", b =>
+                {
+                    b.HasOne("Content.Server.Database.ProfileRoleLoadout", "ProfileRoleLoadout")
+                        .WithMany("Groups")
+                        .HasForeignKey("ProfileRoleLoadoutId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_profile_loadout_group_profile_role_loadout_profile_role_loadout_id");
+
+                    b.Navigation("ProfileRoleLoadout");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileRoleLoadout", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithMany("Loadouts")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_profile_role_loadout_profile_profile_id");
+
+                    b.Navigation("Profile");
                 });
 
             modelBuilder.Entity("Content.Server.Database.RoleWhitelist", b =>
@@ -2040,11 +2041,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("BanHits");
                 });
 
-            modelBuilder.Entity("Content.Server.Database.ConsentSettings", b =>
-                {
-                    b.Navigation("ConsentToggles");
-                });
-
             modelBuilder.Entity("Content.Server.Database.Player", b =>
                 {
                     b.Navigation("AdminLogs");
@@ -2100,6 +2096,16 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Loadouts");
 
                     b.Navigation("Traits");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileLoadoutGroup", b =>
+                {
+                    b.Navigation("Loadouts");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileRoleLoadout", b =>
+                {
+                    b.Navigation("Groups");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Round", b =>

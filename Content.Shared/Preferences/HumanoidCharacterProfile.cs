@@ -16,6 +16,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared._CD.Records; // CD - Character Records
 
 namespace Content.Shared.Preferences;
 
@@ -116,6 +117,11 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     [DataField]
     public string? FavoriteDrink { get; private set; }
 
+    // Start CD - Character records
+    [DataField("cosmaticDriftCharacterRecords")]
+    public PlayerProvidedCharacterRecords? CDCharacterRecords;
+    // End CD - Character records
+
     public HumanoidCharacterProfile(
         string name,
         string flavortext,
@@ -137,6 +143,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         HashSet<LoadoutPreference> loadoutPreferences,
 
         // Floof
+        PlayerProvidedCharacterRecords? cdCharacterRecords,
         string? favoriteDrink)
     {
         Name = name;
@@ -157,6 +164,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         _antagPreferences = antagPreferences;
         _traitPreferences = traitPreferences;
         _loadoutPreferences = loadoutPreferences;
+        CDCharacterRecords = cdCharacterRecords;
 
         // Floof
         FavoriteDrink = favoriteDrink;
@@ -183,7 +191,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             new HashSet<string>(other.AntagPreferences),
             new HashSet<string>(other.TraitPreferences),
             new HashSet<LoadoutPreference>(other.LoadoutPreferences),
-            other.FavoriteDrink)
+            other.CDCharacterRecords, other.FavoriteDrink)
     {
     }
 
@@ -312,6 +320,13 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         return new(this) { _antagPreferences = list };
     }
 
+    // Begin CD - Character Records
+    public HumanoidCharacterProfile WithCDCharacterRecords(PlayerProvidedCharacterRecords records)
+    {
+        return new HumanoidCharacterProfile(this) { CDCharacterRecords = records };
+    }
+    // End CD - Character Records
+
     public HumanoidCharacterProfile WithTraitPreference(string traitId, bool pref)
     {
         var list = new HashSet<string>(_traitPreferences);
@@ -370,7 +385,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             && Appearance.MemberwiseEquals(other.Appearance)
             && FlavorText == other.FlavorText
             // Floof
-            && FavoriteDrink == other.FavoriteDrink;
+            && FavoriteDrink == other.FavoriteDrink
+            && CDCharacterRecords != null && other.CDCharacterRecords != null &&
+                CDCharacterRecords.MemberwiseEquals(other.CDCharacterRecords);
     }
 
     public void EnsureValid(ICommonSession session, IDependencyCollection collection)
@@ -475,6 +492,17 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             SpawnPriorityPreference.Cryosleep => SpawnPriorityPreference.Cryosleep,
             _ => SpawnPriorityPreference.None // Invalid enum values.
         };
+
+        // Begin CD - Character Records
+        if (CDCharacterRecords == null)
+        {
+            CDCharacterRecords = PlayerProvidedCharacterRecords.DefaultRecords();
+        }
+        else
+        {
+            CDCharacterRecords!.EnsureValid();
+        }
+        // End CD - Character Records
 
         var priorities = new Dictionary<string, JobPriority>(JobPriorities
             .Where(p => prototypeManager.TryIndex<JobPrototype>(p.Key, out var job) && job.SetPreference && p.Value switch
