@@ -735,6 +735,10 @@ public sealed class ChatUIController : UIController
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(box.SelectedChannel, null);
         else
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(prefixChannel, radioChannel);
+
+        // Floof: stop showing typing indicator immediately if we switch to an anonymous channel
+        if ((box.SelectedChannel & ChatSelectChannel.Anonymous) != ChatSelectChannel.None)
+            _typingIndicator?.ClientSubmittedChatText();
     }
 
     public (ChatSelectChannel chatChannel, string text, RadioChannelPrototype? radioChannel) SplitInputContents(string text)
@@ -964,9 +968,11 @@ public sealed class ChatUIController : UIController
         return MapLocalIfGhost(PreferredChannel);
     }
 
-    public void NotifyChatTextChange()
+    public void NotifyChatTextChange(ChatSelectChannel channel)
     {
-        _typingIndicator?.ClientChangedChatText();
+        // Floof: only show typing indicator if we're not typing in an anonymous channel
+        if ((channel & ChatSelectChannel.Anonymous) == ChatSelectChannel.None)
+            _typingIndicator?.ClientChangedChatText();
     }
 
     public void Repopulate()

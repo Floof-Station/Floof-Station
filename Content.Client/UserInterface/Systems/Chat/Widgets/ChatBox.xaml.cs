@@ -258,7 +258,7 @@ public partial class ChatBox : UIWidget
         _controller.UpdateSelectedChannel(this);
 
         // Warn typing indicator about change
-        _controller.NotifyChatTextChange();
+        _controller.NotifyChatTextChange(SelectedChannel);
     }
 
     protected override void Dispose(bool disposing)

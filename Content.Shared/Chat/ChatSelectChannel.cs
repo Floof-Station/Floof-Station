@@ -66,6 +66,11 @@
         /// </summary>
         Telepathic = ChatChannel.Telepathic,
 
-        Console = ChatChannel.Unspecified
+        Console = ChatChannel.Unspecified,
+
+        /// <summary>
+        ///     Floof - Channels which should avoid associating character identity with participation.
+        /// </summary>
+        Anonymous = OOC | Admin | Telepathic | Console,
     }
 }
