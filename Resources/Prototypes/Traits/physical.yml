@@ -761,12 +761,16 @@
         - GlassJaw
         - Tenacity
         - BrittleBoneDisease
-
   functions:
     - !type:TraitReplaceComponent
       components:
         - type: DeadModifier
           deadThresholdModifier: -100
+    - !type:TraitPushDescription
+      descriptionExtensions:
+        - description: examine-redshirt-message
+          fontSize: 12
+          requireDetailRange: true
 
 - type: trait
   id: BrittleBoneDisease
@@ -793,6 +797,11 @@
       components:
         - type: CritModifier
           critThresholdModifier: -50
+    - !type:TraitPushDescription
+      descriptionExtensions:
+        - description: examine-brittle-bone-disease-message
+          fontSize: 12
+          requireDetailRange: true
 
 - type: trait
   id: BionicLeg #was removed upstream due to goobstation powergaming but we get less powergaming here so it's probably fine
