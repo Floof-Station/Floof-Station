@@ -577,6 +577,15 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (language.SpeechOverride.RequireSpeech && !_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
 
+        // Floof
+        if (language.SpeechOverride.RequireHands
+            // Sign language requires at least two complexly-interacting hands
+            && !(_actionBlocker.CanComplexInteract(source) && _hands.EnumerateHands(source).Count(hand => hand.IsEmpty) >= 2))
+        {
+            _popups.PopupEntity(Loc.GetString("chat-manager-language-requires-hands"), source, source, PopupType.Medium);
+            return;
+        }
+
         var message = TransformSpeech(source, originalMessage, language); // Floofstation - DO NOT remove markup, there's an EscapeText call upstream.
         if (message.Length == 0)
             return;
@@ -618,7 +627,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             // Result is the intermediate message derived from the perceived one via obfuscation
             // Wrapped message is the result wrapped in an "x says y" string
             string result, wrappedMessage;
-            if (data.Range <= WhisperClearRange)
+            // Floof: handle languages that require LOS
+            if (!language.SpeechOverride.RequireLOS && data.Range <= WhisperClearRange
+                || _interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, Shared.Physics.CollisionGroup.Opaque))
             {
                 // Scenario 1: the listener can clearly understand the message
                 result = perceivedMessage;
@@ -632,6 +643,10 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
             else
             {
+                // Floof: If there is no LOS, the listener doesn't see at all
+                if (language.SpeechOverride.RequireLOS)
+                    return;
+
                 // Scenario 3: If listener is too far and has no line of sight, they can't identify the whisperer's identity
                 result = ObfuscateMessageReadability(perceivedMessage);
                 wrappedMessage = WrapWhisperMessage(source, "chat-manager-entity-whisper-unknown-wrap-message", string.Empty, result, language);
