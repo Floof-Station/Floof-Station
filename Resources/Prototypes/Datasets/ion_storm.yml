@@ -151,6 +151,37 @@
   - WEIRD
   - WOBBLY
   - WOODEN
+  # Floofstation
+  - LUSTFUL
+  - STEAMY
+  - SEDUCTIVE
+  - SULTRY
+  - PROVOCATIVE
+  - AROUSED
+  - PASSIONATE
+  - SENSUAL
+  - EROTIC
+  - FLUSHED
+  - THROBBING
+  - NAUGHTY
+  - DESPERATE
+  - TEASING
+  - WANTON
+  - CRAVING
+  - TEMPTING
+  - MOIST
+  - FEVERISH
+  - ACHING
+  - RAVISHING
+  - LEWD
+  - CARNAL
+  - HORNY
+  - INDECENT
+  - JUICY
+  - RILED-UP
+  - UNINHIBITED
+  - TURNED-ON
+  - SALACIOUS
 
 # Allergies should be broad and appear somewhere on the station for maximum fun.
 - type: dataset
@@ -249,6 +280,8 @@
   - THE UNIVERSE
   - URANUS
   - VENUS
+  # Floofstation
+  - THE DORMS
 
 # Abstract concepts for the law holder to decide on it's own definition of.
 - type: dataset
@@ -309,6 +342,9 @@
   - TIME
   - WEALTHINESS
   - WONDER
+  # Floofstation
+  - HORNY
+  - LUST
 
 # Crew is any specific job. Using jobs instead of specific crewmembers since "THE CLOWN" is easier than
 # seeing "JOHN SMITH" and having to figure out who john smith is.
@@ -359,6 +395,9 @@
   - STATION ENGINEERS
   # - VIROLOGISTS
   - WARDENS
+  # Floofstation
+  - HORNY INDIVIDUALS
+  - NAKED INDIVIDUALS
 
 # only including complex dangerous or funny drinks no water allowed
 - type: dataset
@@ -380,6 +419,12 @@
   - SPACE LUBE
   - SULFURIC ACID
   - WELDING FUEL
+  # Floofstation
+  - CUM
+  - BREAST MILK
+  - LIBIDOZENTHIZINE
+  - SEMEN
+  - SQUIRT
 
 - type: dataset
   id: IonStormFeelings
@@ -406,6 +451,9 @@
   - WANTS
   - WORSHIPS
   - WOULD KILL FOR
+  # Floofstation
+  - IS HORNY FOR
+  - ACHES FOR
 
 # loc is not advanced enough to change has to have, etc.
 - type: dataset
@@ -460,6 +508,14 @@
   - STEEL
   - SUPPERMATTER
   - URANIUM
+  # Floofstation
+  - CUM
+  - COCK
+  - PUSSY
+  - PENIS
+  - VAGINA
+  - SEMEN
+  - ASS
 
 # Musts are funny things the law holder or crew has to do.
 - type: dataset
@@ -538,6 +594,11 @@
   - TURN OFF THE LIGHTS
   - WHISPER
   - WEEP UNCONTROLLABLY
+  # Floofstation
+  - HAVE SEX
+  - BE HORNY
+  - BE NAKED
+  - CONDUCT AN ORGY
 
 - type: dataset
   id: IonStormNumberBase
@@ -733,6 +794,12 @@
   - WIRECUTTERS
   - WIZARD ROBES
   - WRENCHES
+  # Floofstation
+  - DILDOS
+  - FLESHLIGHTS
+  - COCKS
+  - PUSSIES
+  - VAGINAS
 
 # Requires are basically all dumb internet memes.
 - type: dataset
@@ -840,6 +907,13 @@
   - TO UNDERSTAND UNDERSTAND, UNDERSTAND UNDERSTAND, UNDERSTAND UNDERSTAND THE CONCEPT OF LOVE
   - TRAITORS
   - VEGETABLES
+  # Floofstation
+  - SEX
+  - TO BE FUCKED
+  - TO BE FUCKED STUPID
+  - TO BE PUMPED FULL OF CUM
+  - MORE SEX
+  - TO BE PERMANENTLY IMMOBILIZED BY SEX
 
 # Specific actions that either harm humans or must be done to not
 # harm humans. Make sure they're plural and "not" can be tacked
@@ -902,6 +976,12 @@
   - USING THE BATHROOM
   - WASTING WATER
   - WRITING
+  # Floofstation
+  - ORGYING
+  - SEXING
+  - FUCKING
+  - BEING FUCKED
+  - BEING FUCKED STUPID
 
 # Threats are generally bad things, silly or otherwise. Plural.
 - type: dataset
@@ -1009,3 +1089,6 @@
   - SPYING ON
   - STALKING
   - WATCHING
+ # Floofstation
+  - FUCKING
+  - PEGGING
