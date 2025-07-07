@@ -13,7 +13,7 @@
 
 - type: entity
   categories: [ HideSpawnMenu ]
-  parent: ClothingBackpackMedical
+  parent: ClothingBackpackParamedic
   id: ClothingBackpackParamedicFilledDV
   components:
   - type: StorageFill
