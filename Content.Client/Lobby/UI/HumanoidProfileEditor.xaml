@@ -115,6 +115,12 @@
                             <BoxContainer HorizontalExpand="True">
                                 <Label Name="WeightLabel" />
                             </BoxContainer>
+                            <!-- Floof: Favorite Drink -->
+                            <BoxContainer HorizontalExpand="True">
+                                <Label Text="{Loc 'humanoid-profile-editor-favorite-drink'}" />
+                                <Control HorizontalExpand="True" />
+                                <OptionButton Name="FavoriteDrinkButton" HorizontalAlignment="Right"/>
+                            </BoxContainer>
                         </BoxContainer>
                         <!-- Skin -->
                         <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">

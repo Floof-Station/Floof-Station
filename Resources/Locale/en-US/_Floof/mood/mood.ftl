@@ -6,6 +6,8 @@ mood-effect-IceCreamBenefit = Ice cream, Yum!
 
 mood-effect-IceCreamBrainFreeze = Arrggghh, my head. Brain freeze.
 
+mood-effect-FavoriteDrink = My favorite drink!
+
 # Addictions
 mood-effect-name-AmphetamineBenefit = amphetamine addiction
 mood-effect-AmphetamineBenefit = Intent flows into action without barrier. I feel like I can do anything.

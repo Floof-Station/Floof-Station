@@ -873,6 +873,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("facial_hair_name");
 
+                    b.Property<string>("FavoriteDrink")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("favorite_drink");
+
                     b.Property<string>("FlavorText")
                         .IsRequired()
                         .HasColumnType("TEXT")

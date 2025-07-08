@@ -423,6 +423,9 @@ namespace Content.Server.Database
 
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
+
+        // Floof
+        public string? FavoriteDrink { get; set; }
     }
     public class ConsentSettings
     {

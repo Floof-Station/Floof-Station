@@ -46,3 +46,8 @@
 - type: moodEffect
   id: ShadekinLightExtreme
   moodChange: -15
+
+- type: moodEffect
+  id: FavoriteDrink
+  moodChange: 3
+  timeout: 180 # same as ice cream
