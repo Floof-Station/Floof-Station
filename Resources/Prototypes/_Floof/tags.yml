@@ -40,3 +40,6 @@
 
 - type: Tag
   id: ShirtlessClothing
+
+- type:
+  id: BloodTomato
