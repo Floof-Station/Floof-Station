@@ -68,6 +68,9 @@
   id: Bloodpack
 
 - type: Tag
+  id: BloodTomato
+
+- type: Tag
   id: BodyBag
 
 - type: Tag

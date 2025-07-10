@@ -946,6 +946,7 @@
     tags:
     - Fruit # Fuck you they're a fruit
     - Vegetable
+    - BloodTomato # For Vampirism users to Succ on
   - type: FoodSequenceElement
     entries:
       Skewer: TomatoSkewer
