@@ -41,6 +41,9 @@ trait-description-FrenchAccent = You seem to come from space France.
 trait-name-DrunkardAccent = Drunkard accent
 trait-description-DrunkardAccent = You always sound like you're drunk.
 
+trait-name-DogAccent = Dog accent
+trait-description-DogAccent = Bork.
+
 trait-name-AudioPlayer = Audio Player
 trait-description-AudioPlayer = You have an audio player installed, which allows you to play music.
 
