@@ -30,4 +30,18 @@
     - !type:TraitAddComponent
       components:
         - type: FrenchAccent
-
+        
+- type: trait
+  id: DogAccent
+  category: TraitsSpeechAccents
+  slots: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsAccents
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: BarkAccent
+        - type: Speech
+          speechSounds: Dog
+          speechVerb: SmallMob
