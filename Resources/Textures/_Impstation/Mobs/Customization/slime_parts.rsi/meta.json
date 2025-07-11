@@ -20,10 +20,6 @@
       "directions": 4
     },
     {
-      "name": "eyeglow",
-      "directions": 4
-    },
-    {
       "name": "lungs",
       "directions": 4
     },
@@ -69,6 +65,81 @@
     },
     {
       "name": "bonelegright",
+      "directions": 4
+    },
+    {
+      "name": "full"
+    },
+    {
+      "name": "eyes",
+      "directions": 4
+    },
+    {
+      "name": "head_f",
+      "directions": 4
+    },
+    {
+      "name": "head_m",
+      "directions": 4
+    },
+    {
+      "name": "l_arm",
+      "directions": 4
+    },
+    {
+      "name": "l_foot",
+      "directions": 4
+    },
+    {
+      "name": "l_hand",
+      "directions": 4
+    },
+    {
+      "name": "l_leg",
+      "directions": 4
+    },
+    {
+      "name": "r_arm",
+      "directions": 4
+    },
+    {
+      "name": "r_foot",
+      "directions": 4
+    },
+    {
+      "name": "r_hand",
+      "directions": 4
+    },
+    {
+      "name": "r_leg",
+      "directions": 4
+    },
+    {
+      "name": "torso_f",
+      "directions": 4
+    },
+    {
+      "name": "torso_m",
+      "directions": 4
+    },
+    {
+      "name": "glow",
+      "directions": 4
+    },
+    {
+      "name": "droopy",
+      "directions": 4
+    },
+    {
+      "name": "droopyglow",
+      "directions": 4
+    },
+    {
+      "name": "cyclops",
+      "directions": 4
+    },
+    {
+      "name": "cyclopsglow",
       "directions": 4
     }
   ]
