@@ -436,12 +436,12 @@ trait-description-PlateletFactories =
 
 trait-name-DermalArmor = Dermal Armor
 trait-description-DermalArmor =
-    Your skin has reacts to physical trauma by hardening to a steel like consistancy, reducing physical damage taken.
+    Your skin contains an array of nanoweave layers embedded beneath the surface, engineered as a cost-effective solution for integrated protection that maintains full flexibility.
     This augmentation provides 1.5 points of flat reduction from all physical damage.
 
-trait-name-HeavyDermalArmor = Heavy Dermal Armor
+trait-name-HeavyDermalArmor = Heavy Subdermal Armor
 trait-description-HeavyDermalArmor =
-    Your skin has reacts to physical trauma by hardening to a plasteel like consistancy, heavily reducing physical damage taken.
+    Your skin contains an advanced composite lattice embedded beneath the surface, engineered to reduce physical trauma to the body without compromising flexibility.
     This augmentation provides 3 points of flat reduction from all physical damage.
 
 trait-name-CyberEyes = Cyber-Eyes Basic System
