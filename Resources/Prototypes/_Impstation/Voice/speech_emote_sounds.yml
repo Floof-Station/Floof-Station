@@ -1,0 +1,45 @@
+- type: emoteSounds
+  id: UnisexSlime
+  sounds:
+    Squish:
+      collection: Squishes
+    Bubble:
+      collection: Bubbles
+    Pop:
+      collection: Pops
+    Scream:
+      collection: UnisexSlimeScreams
+    Laugh:
+      collection: UnisexSlimeLaugh
+    Sneeze:
+      collection: UnisexSlimeSneezes
+    Cough:
+      collection: UnisexSlimeCoughs
+    CatMeow:
+      collection: CatMeows
+    CatHisses:
+      collection: CatHisses
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+    RobotBeep:
+      collection: RobotBeeps
+    Yawn:
+      collection: UnisexSlimeYawn
+    Snore:
+      collection: Snores
+    Honk:
+      collection: BikeHorn
+    Sigh:
+      collection: UnisexSlimeSigh
+    Crying:
+      collection: UnisexSlimeCry
+    Whistle:
+      collection: SlimeWhistles
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: UnisexSlimeGasp
+    DefaultDeathgasp:
+      collection: UnisexSlimeDeathGasp
+  params:
+    variation: 0.125

@@ -162,6 +162,10 @@
   sounds:
     Squish:
       collection: Squishes
+    Bubble:
+      collection: Bubbles # imp
+    Pop:
+      collection: Pops # imp
     Scream:
       collection: SlimeMaleScreams
     Laugh:
@@ -200,6 +204,10 @@
   sounds:
     Squish:
       collection: Squishes
+    Bubble:
+      collection: Bubbles # imp
+    Pop:
+      collection: Pops # imp
     Scream:
       collection: SlimeFemaleScreams
     Laugh:

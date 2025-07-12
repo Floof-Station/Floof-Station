@@ -56,7 +56,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: glow
-  shader: unshaded
 
 - type: marking
   id: SlimeEyesDroopy
@@ -85,7 +84,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: droopyglow
-  shader: unshaded
 
 - type: marking
   id: SlimeEyesCyclops
@@ -114,7 +112,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: cyclopsglow
-  shader: unshaded
 
 - type: marking
   id: SlimeLungs
