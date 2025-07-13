@@ -6791,3 +6791,62 @@ Entries:
   id: 714
   time: '2025-07-09T01:15:39.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1176
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: Hiding under tables now obscures you from HUD overlays
+  id: 715
+  time: '2025-07-11T14:09:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1198
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: Thieving trait now only shows the silhouette of pocketed items
+  id: 716
+  time: '2025-07-11T14:22:42.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1197
+- author: ashkitten
+  changes:
+    - type: Fix
+      message: Fixed basic examine health info using the wrong entity
+  id: 717
+  time: '2025-07-11T14:23:19.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1196
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: Roboticist is back.
+  id: 718
+  time: '2025-07-11T14:34:05.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1200
+- author: M3739
+  changes:
+    - type: Fix
+      message: >-
+        The speed snail, and vulpkanin atmos suits should now display the proper
+        sprites.
+    - type: Tweak
+      message: The investigation cyborg module now has it's own unique PDA.
+    - type: Tweak
+      message: >-
+        Felinids no longer have innate Trap Avoider, and Thieving traits as part
+        of their base kit.
+    - type: Fix
+      message: Slime people can now have their core reattached into their chest.
+  id: 719
+  time: '2025-07-11T15:08:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1194
+- author: Dunrab
+  changes:
+    - type: Tweak
+      message: Increased the amount of cadet slots on Tortuga from one to four.
+  id: 720
+  time: '2025-07-11T15:44:56.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1190
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Dog Accent
+  id: 721
+  time: '2025-07-11T16:02:38.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1205

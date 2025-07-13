@@ -103,11 +103,11 @@
           stealth: Subtle
           stripTimeReduction: 0
           stripTimeMultiplier: 0.667
-  requirements:
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Felinid
+#  requirements: | Floof - M3739 - #1194
+#    - !type:CharacterSpeciesRequirement
+#      inverted: true
+#      species:
+#        - Felinid
 
 - type: trait
   id: Voracious
@@ -301,7 +301,7 @@
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
-        - Felinid
+#        - Felinid | Floof - M3739 - #1194
         - Harpy
         - Rodentia # Floof - Rodentia
 

@@ -36,7 +36,8 @@ loadout-category-JobsEpistemicsAAUncategorized = All Epistemiologists
 loadout-category-JobsEpistemicsAcolyte = Acolyte
 loadout-category-JobsEpistemicsCataloger = Cataloger
 loadout-category-JobsEpistemicsChaplain = Chaplain
-loadout-category-JobsEpistemicsGolemancer = Golemancer
+# Floof - renamed back
+loadout-category-JobsEpistemicsGolemancer = Roboticist
 loadout-category-JobsEpistemicsMystagogue = Mystagogue
 loadout-category-JobsEpistemicsMystic = Mystic
 loadout-category-JobsEpistemicsNoviciate = Noviciate

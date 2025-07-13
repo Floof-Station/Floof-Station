@@ -234,19 +234,20 @@ character-item-group-LoadoutChaplainShoes = Chaplain Shoes
 character-item-group-LoadoutChaplainUniforms = Chaplain Uniforms
 
 # Epistemics - Golemancer
-character-item-group-LoadoutGolemancerBackpacks = Golemancer Backpacks
-character-item-group-LoadoutGolemancerBelt = Golemancer Belt
-character-item-group-LoadoutGolemancerEars = Golemancer Ears
-character-item-group-LoadoutGolemancerEquipment = Golemancer Equipment
-character-item-group-LoadoutGolemancerEyes = Golemancer Eyewear
-character-item-group-LoadoutGolemancerGloves = Golemancer Gloves
-character-item-group-LoadoutGolemancerHead = Golemancer Headgear
-character-item-group-LoadoutGolemancerId = Golemancer Id
-character-item-group-LoadoutGolemancerNeck = Golemancer Neckwear
-character-item-group-LoadoutGolemancerMask = Golemancer Masks
-character-item-group-LoadoutGolemancerOuter = Golemancer Outerwear
-character-item-group-LoadoutGolemancerShoes = Golemancer Shoes
-character-item-group-LoadoutGolemancerUniforms = Golemancer Uniforms
+# Floof - all renamed back
+character-item-group-LoadoutGolemancerBackpacks = Roboticist Backpacks
+character-item-group-LoadoutGolemancerBelt = Roboticist Belt
+character-item-group-LoadoutGolemancerEars = Roboticist Ears
+character-item-group-LoadoutGolemancerEquipment = Roboticist Equipment
+character-item-group-LoadoutGolemancerEyes = Roboticist Eyewear
+character-item-group-LoadoutGolemancerGloves = Roboticist Gloves
+character-item-group-LoadoutGolemancerHead = Roboticist Headgear
+character-item-group-LoadoutGolemancerId = Roboticist Id
+character-item-group-LoadoutGolemancerNeck = Roboticist Neckwear
+character-item-group-LoadoutGolemancerMask = Roboticist Masks
+character-item-group-LoadoutGolemancerOuter = Roboticist Outerwear
+character-item-group-LoadoutGolemancerShoes = Roboticist Shoes
+character-item-group-LoadoutGolemancerUniforms = Roboticist Uniforms
 
 # Epistemics - Mystagogue
 character-item-group-LoadoutMystagogueBackpacks = Mystagogue Backpacks

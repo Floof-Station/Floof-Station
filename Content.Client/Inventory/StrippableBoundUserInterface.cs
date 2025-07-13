@@ -12,11 +12,13 @@ using Content.Shared.Ensnaring.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Input;
+using Content.Shared.Interaction.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Strip.Components;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
+using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
@@ -24,6 +26,7 @@ using Robust.Client.Player;
 using Robust.Shared.Input;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.Manager;
 using static Content.Client.Inventory.ClientInventorySystem;
 using static Robust.Client.UserInterface.Control;
 
@@ -34,6 +37,8 @@ namespace Content.Client.Inventory
     {
         [Dependency] private readonly IPlayerManager _player = default!;
         [Dependency] private readonly IUserInterfaceManager _ui = default!;
+        [Dependency] private readonly IPrototypeManager _prototype = default!;
+        [Dependency] private readonly ISerializationManager _serialization = default!;
 
         private readonly ExamineSystem _examine;
         private readonly InventorySystem _inv;
@@ -49,8 +54,12 @@ namespace Content.Client.Inventory
         [ViewVariables]
         private StrippingMenu? _strippingMenu;
 
+        // Floof: use a list to accommodate silhouettes
         [ViewVariables]
-        private readonly EntityUid _virtualHiddenEntity;
+        private readonly List<EntityUid> _virtualHiddenEntities = new();
+
+        // Floof
+        private readonly ShaderInstance _silhouetteShader;
 
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
@@ -59,7 +68,8 @@ namespace Content.Client.Inventory
             _cuffable = EntMan.System<SharedCuffableSystem>();
             _strippable = EntMan.System<StrippableSystem>();
 
-            _virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
+            // Floof
+            _silhouetteShader = _prototype.Index<ShaderPrototype>("Silhouette").InstanceUnique();
         }
 
         protected override void Open()
@@ -81,7 +91,11 @@ namespace Content.Client.Inventory
             if (_strippingMenu != null)
                 _strippingMenu.OnDirty -= UpdateMenu;
 
-            EntMan.DeleteEntity(_virtualHiddenEntity);
+            // Floof: list for silhouettes
+            foreach (var entity in _virtualHiddenEntities)
+            {
+                EntMan.DeleteEntity(entity);
+            }
             base.Dispose(disposing);
         }
 
@@ -207,11 +221,30 @@ namespace Content.Client.Inventory
 
             // If this is a full pocket, obscure the real entity
             // this does not work for modified clients because they are still sent the real entity
-            if (entity != null
-                && _strippable.IsStripHidden(slotDef, _player.LocalEntity)
-                && !(EntMan.TryGetComponent<ThievingComponent>(PlayerManager.LocalEntity, out var thiefComponent)
-                && thiefComponent.IgnoreStripHidden))
-                entity = _virtualHiddenEntity;
+            // Floof: show as silhouette
+            if (entity != null &&
+                _strippable.IsStripHidden(slotDef, null) &&
+                !EntMan.HasComponent<BypassInteractionChecksComponent>(PlayerManager.LocalEntity))
+            {
+                var virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
+                _virtualHiddenEntities.Add(virtualHiddenEntity);
+
+                if (EntMan.TryGetComponent<ThievingComponent>(PlayerManager.LocalEntity, out var thiefComponent)
+                        && thiefComponent.IgnoreStripHidden)
+                {
+                    if (EntMan.TryGetComponent<SpriteComponent>(entity, out var sprite))
+                    {
+                        _silhouetteShader.SetParameter("color", thiefComponent.HiddenEntityColor);
+
+                        var hiddenSprite = _serialization.CreateCopy(sprite, notNullableOverride: true);
+                        for (var i = 0; i < sprite.AllLayers.Count(); i++)
+                            hiddenSprite.LayerSetShader(i, _silhouetteShader);
+                        EntMan.AddComponent(virtualHiddenEntity, hiddenSprite, true);
+                    }
+                }
+
+                entity = virtualHiddenEntity;
+            }
 
             var button = new SlotButton(new SlotData(slotDef, container));
             button.Pressed += SlotPressed;
