@@ -47,8 +47,3 @@
         - type: Speech
           speechSounds: Dog
           speechVerb: SmallMob
-        - type: Vocal
-          sounds:
-            Male: Dog
-            Unsexed: Dog
-            Female: Dog
