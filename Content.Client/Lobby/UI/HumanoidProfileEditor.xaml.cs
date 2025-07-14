@@ -9,6 +9,7 @@ using Content.Client.Players.PlayTimeTracking;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
@@ -235,7 +236,7 @@ namespace Content.Client.Lobby.UI
                 if (Profile is null)
                     return;
                 Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithHairStyleName(newStyle.id));
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -246,7 +247,7 @@ namespace Content.Client.Lobby.UI
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithHairColor(newColor.marking.MarkingColors[0]));
                 UpdateCMarkingsHair();
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -256,7 +257,7 @@ namespace Content.Client.Lobby.UI
                     return;
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithFacialHairStyleName(newStyle.id));
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -267,7 +268,7 @@ namespace Content.Client.Lobby.UI
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithFacialHairColor(newColor.marking.MarkingColors[0]));
                 UpdateCMarkingsFacialHair();
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -280,7 +281,7 @@ namespace Content.Client.Lobby.UI
                 );
                 UpdateHairPickers();
                 UpdateCMarkingsHair();
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -293,7 +294,7 @@ namespace Content.Client.Lobby.UI
                 );
                 UpdateHairPickers();
                 UpdateCMarkingsFacialHair();
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -314,7 +315,7 @@ namespace Content.Client.Lobby.UI
 
                 UpdateHairPickers();
                 UpdateCMarkingsHair();
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -335,7 +336,7 @@ namespace Content.Client.Lobby.UI
 
                 UpdateHairPickers();
                 UpdateCMarkingsFacialHair();
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -363,7 +364,7 @@ namespace Content.Client.Lobby.UI
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithEyeColor(newColor));
                 Markings.CurrentEyeColor = Profile.Appearance.EyeColor;
-                IsDirty = true;
+                SetDirty();
                 ReloadProfilePreview();
             };
 
@@ -391,7 +392,7 @@ namespace Content.Client.Lobby.UI
                 PreferenceUnavailableButton.SelectId(args.Id);
 
                 Profile = Profile?.WithPreferenceUnavailable((PreferenceUnavailableMode) args.Id);
-                IsDirty = true;
+                SetDirty();
             };
 
             _jobCategories = new Dictionary<string, BoxContainer>();
@@ -458,6 +459,27 @@ namespace Content.Client.Lobby.UI
             #endregion Markings
 
             RefreshFlavorText();
+
+            #region Floof
+
+            FavoriteDrinkButton.AddItem(Loc.GetString("humanoid-profile-editor-favorite-drink-none"));
+            foreach (var reagent in _prototypeManager.EnumeratePrototypes<ReagentPrototype>())
+            {
+                if (reagent.Group != "Drinks")
+                    continue;
+
+                FavoriteDrinkButton.AddItem(reagent.LocalizedName);
+                FavoriteDrinkButton.SetItemMetadata(FavoriteDrinkButton.ItemCount - 1, reagent.ID);
+            }
+
+            FavoriteDrinkButton.OnItemSelected += args =>
+            {
+                FavoriteDrinkButton.SelectId(args.Id);
+                var reagentId = (string) FavoriteDrinkButton.GetItemMetadata(args.Id)!;
+                SetFavoriteDrink(reagentId);
+            };
+
+            #endregion Floof
 
             #region Dummy
 
@@ -655,6 +677,9 @@ namespace Content.Client.Lobby.UI
             UpdateHeightWidthSliders();
             UpdateWeight();
             UpdateCharacterRequired();
+
+            // Floof
+            UpdateFavoriteDrink();
 
             RefreshAntags();
             RefreshJobs();
@@ -1002,7 +1027,7 @@ namespace Content.Client.Lobby.UI
                 return;
 
             Profile = Profile.WithFlavorText(content);
-            IsDirty = true;
+            SetDirty();
         }
 
         private void OnMarkingChange(MarkingSet markings)
@@ -1107,7 +1132,7 @@ namespace Content.Client.Lobby.UI
         {
             Profile = Profile?.WithAge(newAge);
             ReloadPreview();
-            IsDirty = true;
+            SetDirty();
         }
 
         private void SetSex(Sex newSex)
@@ -1136,7 +1161,7 @@ namespace Content.Client.Lobby.UI
         {
             Profile = Profile?.WithGender(newGender);
             ReloadPreview();
-            IsDirty = true;
+            SetDirty();
         }
 
         private void SetSpecies(string newSpecies)
@@ -1150,40 +1175,47 @@ namespace Content.Client.Lobby.UI
             UpdateHeightWidthSliders();
             UpdateWeight();
             UpdateSpeciesGuidebookIcon();
-            IsDirty = true;
+            SetDirty();
             ReloadProfilePreview();
         }
 
         private void SetName(string newName)
         {
             Profile = Profile?.WithName(newName);
-            IsDirty = true;
+            SetDirty();
         }
 
         private void SetCustomSpecieName(string customname)
         {
             Profile = Profile?.WithCustomSpeciesName(customname);
-            IsDirty = true;
+            SetDirty();
         }
 
         private void SetSpawnPriority(SpawnPriorityPreference newSpawnPriority)
         {
             Profile = Profile?.WithSpawnPriorityPreference(newSpawnPriority);
-            IsDirty = true;
+            SetDirty();
         }
 
         private void SetProfileHeight(float height)
         {
             Profile = Profile?.WithHeight(height);
-            IsDirty = true;
+            SetDirty();
             ReloadProfilePreview();
         }
 
         private void SetProfileWidth(float width)
         {
             Profile = Profile?.WithWidth(width);
-            IsDirty = true;
+            SetDirty();
             ReloadProfilePreview();
+        }
+
+        // Floof
+        private void SetFavoriteDrink(string? favoriteDrink)
+        {
+            Profile = Profile?.WithFavoriteDrink(favoriteDrink);
+            SetDirty();
         }
 
         private bool IsDirty
@@ -1451,6 +1483,27 @@ namespace Content.Client.Lobby.UI
             SpriteView.InvalidateMeasure();
         }
 
+        // Floof
+        private void UpdateFavoriteDrink()
+        {
+            if (Profile == null)
+                return;
+
+            if (Profile.FavoriteDrink is null)
+                FavoriteDrinkButton.Select(0);
+
+            for (var i = 1; i < FavoriteDrinkButton.ItemCount; i++)
+            {
+                var reagentId = (string) FavoriteDrinkButton.GetItemMetadata(i)!;
+
+                if (Profile.FavoriteDrink != reagentId)
+                    continue;
+
+                FavoriteDrinkButton.Select(i);
+                break;
+            }
+        }
+
         private void UpdateHairPickers()
         {
             if (Profile == null)
@@ -1675,7 +1728,7 @@ namespace Content.Client.Lobby.UI
                     .Count(t => !t.Value)));
             AdminUIHelpers.RemoveConfirm(TraitsRemoveUnusableButton, _confirmationData);
 
-            IsDirty = true;
+            SetDirty();
             ReloadProfilePreview();
         }
 
@@ -1886,7 +1939,7 @@ namespace Content.Client.Lobby.UI
 
                     // Update Preferences
                     Profile = Profile?.WithTraitPreference(selector.Trait.ID, preference);
-                    IsDirty = true;
+                    SetDirty();
                     UpdateTraitPreferences();
                     SetProfile(Profile, CharacterSlot);
                 };
@@ -2010,7 +2063,7 @@ namespace Content.Client.Lobby.UI
                         || !_loadoutPreferences.First(lps => lps.Loadout == l.Key).Wearable)));
             AdminUIHelpers.RemoveConfirm(LoadoutsRemoveUnusableButton, _confirmationData);
 
-            IsDirty = true;
+            SetDirty();
             ReloadProfilePreview();
         }
 
@@ -2261,7 +2314,7 @@ namespace Content.Client.Lobby.UI
                         preference.CustomDescription,
                         preference.CustomColorTint,
                         preference.CustomHeirloom);
-                    IsDirty = true;
+                    SetDirty();
                     UpdateLoadoutPreferences();
                     SetProfile(Profile, CharacterSlot);
                 };

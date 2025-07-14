@@ -928,6 +928,10 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("facial_hair_name");
 
+                    b.Property<string>("FavoriteDrink")
+                        .HasColumnType("text")
+                        .HasColumnName("favorite_drink");
+
                     b.Property<string>("FlavorText")
                         .IsRequired()
                         .HasColumnType("text")

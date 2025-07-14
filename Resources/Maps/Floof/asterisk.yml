@@ -7330,14 +7330,14 @@ entities:
     - type: Transform
       pos: 4.5,-25.5
       parent: 2
-- proto: BenchParkLeft
+- proto: BenchParkRight
   entities:
   - uid: 1477
     components:
     - type: Transform
       pos: -44.5,-8.5
       parent: 2
-- proto: BenchParkRight
+- proto: BenchParkLeft
   entities:
   - uid: 3380
     components:
@@ -7468,7 +7468,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -35.5,-12.5
       parent: 2
-- proto: BenchSofaCorpLeft
+- proto: BenchSofaCorpRight
   entities:
   - uid: 3733
     components:
@@ -7490,7 +7490,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,-25.5
       parent: 2
-- proto: BenchSofaCorpRight
+- proto: BenchSofaCorpLeft
   entities:
   - uid: 3734
     components:

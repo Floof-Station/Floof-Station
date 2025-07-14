@@ -50,5 +50,5 @@
   id: HeirloomSecure
   category: Heirloom
   moodChange: 5
-  timeout: 60 # A bit of time before they realize it's gone
+  timeout: 300 # A bit of time before they realize it's gone # Floof - increased to 5 minutes
   moodletOnEnd: HeirloomLost

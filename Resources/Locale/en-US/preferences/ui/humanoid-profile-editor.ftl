@@ -106,3 +106,7 @@ humanoid-profile-editor-loadouts-heirloom-tooltip = Whichever loadouts you choos
 
 humanoid-profile-editor-markings-tab = Markings
 humanoid-profile-editor-flavortext-tab = Description
+
+# Floof
+humanoid-profile-editor-favorite-drink = Favorite drink: 
+humanoid-profile-editor-favorite-drink-none = None

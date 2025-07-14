@@ -20809,7 +20809,7 @@ entities:
     - type: Transform
       pos: -83.5,-29.5
       parent: 2
-- proto: BenchParkLeft
+- proto: BenchParkRight
   entities:
   - uid: 1131
     components:
@@ -20823,7 +20823,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,10.5
       parent: 2
-- proto: BenchParkRight
+- proto: BenchParkLeft
   entities:
   - uid: 1133
     components:
@@ -20845,7 +20845,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -11.5,-7.5
       parent: 2
-- proto: BenchSofaCorpLeft
+- proto: BenchSofaCorpRight
   entities:
   - uid: 1136
     components:
@@ -20865,7 +20865,7 @@ entities:
     - type: Transform
       pos: -10.5,-7.5
       parent: 2
-- proto: BenchSofaCorpRight
+- proto: BenchSofaCorpLeft
   entities:
   - uid: 1139
     components:
@@ -20879,7 +20879,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -11.5,-8.5
       parent: 2
-- proto: BenchSteelLeft
+- proto: BenchSteelRight
   entities:
   - uid: 1141
     components:
@@ -20943,7 +20943,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -10.5,-5.5
       parent: 2
-- proto: BenchSteelRight
+- proto: BenchSteelLeft
   entities:
   - uid: 1151
     components:

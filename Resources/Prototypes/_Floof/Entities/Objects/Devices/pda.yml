@@ -52,3 +52,28 @@
     - NewsReaderCartridge
     - StockTradingCartridge # DeltaV - StockTrading
     - NanoChatCartridge # DeltaV
+
+# Cyborg PDAs
+- type: entity
+  parent: DetectivePDA
+  id: DetectivePDACyborg
+  name: integrated detective PDA
+  description: Smells like digital rain... pouring down the virtual rooftops...
+  components:
+    - type: Pda
+      id: null
+      penSlot:
+        startingItem: null
+        priority: -1
+        whitelist:
+          tags:
+            - Write
+      bookSlot: # Frontier
+        startingItem: null
+        priority: -2
+        whitelist:
+          tags:
+            - BookSpaceLaw
+            - BookJusticeSop 
+            - BookSecuritySop 
+      state: pda-detective

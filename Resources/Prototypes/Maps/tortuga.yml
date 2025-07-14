@@ -49,7 +49,7 @@
             Prisoner: [ 2, 3 ]
             PrisonGuard: [ 1, 1 ]
             SecurityOfficer: [ 6, 9 ]
-            SecurityCadet: [ 1, 1 ]
+            SecurityCadet: [ 2, 4 ]
             Warden: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
           #service

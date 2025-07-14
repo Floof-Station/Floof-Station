@@ -20051,7 +20051,7 @@ entities:
     - type: Transform
       pos: 67.5,-54.5
       parent: 2
-- proto: BenchPewLeft
+- proto: BenchPewRight
   entities:
   - uid: 540
     components:
@@ -20119,7 +20119,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -21.5,-21.5
       parent: 2
-- proto: BenchPewRight
+- proto: BenchPewLeft
   entities:
   - uid: 46
     components:

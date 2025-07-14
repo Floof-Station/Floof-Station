@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared.CCVar;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
 using Content.Shared.GameTicking;
@@ -111,6 +112,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
         PreferenceUnavailableMode.SpawnAsOverflow;
 
+    // Floof
+    [DataField]
+    public string? FavoriteDrink { get; private set; }
+
     public HumanoidCharacterProfile(
         string name,
         string flavortext,
@@ -129,7 +134,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         PreferenceUnavailableMode preferenceUnavailable,
         HashSet<string> antagPreferences,
         HashSet<string> traitPreferences,
-        HashSet<LoadoutPreference> loadoutPreferences)
+        HashSet<LoadoutPreference> loadoutPreferences,
+
+        // Floof
+        string? favoriteDrink)
     {
         Name = name;
         FlavorText = flavortext;
@@ -149,6 +157,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         _antagPreferences = antagPreferences;
         _traitPreferences = traitPreferences;
         _loadoutPreferences = loadoutPreferences;
+
+        // Floof
+        FavoriteDrink = favoriteDrink;
     }
 
     /// <summary>Copy constructor</summary>
@@ -171,7 +182,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             other.PreferenceUnavailable,
             new HashSet<string>(other.AntagPreferences),
             new HashSet<string>(other.TraitPreferences),
-            new HashSet<LoadoutPreference>(other.LoadoutPreferences))
+            new HashSet<LoadoutPreference>(other.LoadoutPreferences),
+            other.FavoriteDrink)
     {
     }
 
@@ -329,6 +341,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         return new HumanoidCharacterProfile(this) { _loadoutPreferences = list };
     }
 
+    // Floof
+    public HumanoidCharacterProfile WithFavoriteDrink(string? favoriteDrink) =>
+        new(this) { FavoriteDrink = favoriteDrink };
+
     public string Summary =>
         Loc.GetString(
             "humanoid-character-profile-summary",
@@ -352,7 +368,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             && _traitPreferences.SequenceEqual(other._traitPreferences)
             && LoadoutPreferences.SequenceEqual(other.LoadoutPreferences)
             && Appearance.MemberwiseEquals(other.Appearance)
-            && FlavorText == other.FlavorText;
+            && FlavorText == other.FlavorText
+            // Floof
+            && FavoriteDrink == other.FavoriteDrink;
     }
 
     public void EnsureValid(ICommonSession session, IDependencyCollection collection)
@@ -509,6 +527,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
         _loadoutPreferences.Clear();
         _loadoutPreferences.UnionWith(loadouts);
+
+        // Floof
+        if (FavoriteDrink is not null && !prototypeManager.HasIndex<ReagentPrototype>(FavoriteDrink))
+            FavoriteDrink = null;
     }
 
     public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection)
@@ -548,6 +570,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         hashCode.Add((int) SpawnPriority);
         hashCode.Add((int) PreferenceUnavailable);
         hashCode.Add(Customspeciename);
+
+        // Floof
+        hashCode.Add(FavoriteDrink);
+
         return hashCode.ToHashCode();
     }
 

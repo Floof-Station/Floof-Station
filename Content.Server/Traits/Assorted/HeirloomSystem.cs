@@ -39,7 +39,7 @@ public sealed class HeirloomSystem : EntitySystem
 
         query.Dispose();
 
-        _nextUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(10);
+        _nextUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(60); // Floof - less updates because this is quite expensive
     }
 
     private IEnumerable<EntityUid> RecursiveGetAllChildren(EntityUid uid)

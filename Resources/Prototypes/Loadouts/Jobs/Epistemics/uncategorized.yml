@@ -153,6 +153,7 @@
   id: LoadoutHeadHoodTechPriest
   category: Head
   cost: 0
+  canBeHeirloom: true
   exclusive: true
   items:
     - ClothingHeadTechPriest

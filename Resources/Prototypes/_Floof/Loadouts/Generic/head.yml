@@ -1,5 +1,6 @@
 - type: loadout
   id: LoadoutTacticalMaidHeadband
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 1
   exclusive: true
@@ -16,6 +17,7 @@
 
 - type: loadout
   id: LoadoutHeadHatAnimalCat
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -27,6 +29,7 @@
 
 - type: loadout
   id: LoadoutHeadHatAnimalCatBrown
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -38,6 +41,7 @@
 
 - type: loadout
   id: LoadoutHeadAnimalCatBlack
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -49,6 +53,7 @@
 
 - type: loadout
   id: LoadoutHeadAnimalHeadslime
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -60,6 +65,7 @@
 
 - type: loadout
   id: LoadoutHeadHatAnimalMonkey
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -71,6 +77,7 @@
 
 - type: loadout
   id: LoadoutHeadHatWitch1
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -82,6 +89,7 @@
 
 - type: loadout
   id: LoadoutHeadHatPlaguedoctor
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -93,6 +101,7 @@
 
 - type: loadout
   id: LoadoutHeadHatUshanka
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -104,6 +113,7 @@
 
 - type: loadout
   id: LoadoutHeadHatWitch
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -115,6 +125,7 @@
 
 - type: loadout
   id: LoadoutHeadHatTrucker
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -126,6 +137,7 @@
 
 - type: loadout
   id: LoadoutHeadPaperSack
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -137,6 +149,7 @@
 
 - type: loadout
   id: LoadoutHeadHatFlowerWreath
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -148,6 +161,7 @@
 
 - type: loadout
   id: LoadoutHeadHatSquid
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -159,6 +173,7 @@
 
 - type: loadout
   id: LoadoutHeadHatRedRacoon
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -170,6 +185,7 @@
 
 - type: loadout
   id: LoadoutHeadHatDogEarsCosmetic
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 1
   exclusive: true
@@ -181,6 +197,7 @@
 
 - type: loadout
   id: LoadoutHeadHatCatEarsCosmetic
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 1
   exclusive: true
@@ -192,6 +209,7 @@
 
 - type: loadout
   id: LoadoutHeadLily
+  canBeHeirloom: true #FLOOF
   category: Head
   cost: 0
   exclusive: true
@@ -200,7 +218,7 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutHead
-      
+
 - type: loadout
   id: LoadoutHeadHatHolyWatermelon
   category: Head

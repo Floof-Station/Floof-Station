@@ -6672,3 +6672,206 @@ Entries:
   id: 700
   time: '2025-07-04T15:05:22.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1110
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The speed at which your characters body regulates its heat now depends
+        on its mass. This means that 4 kg rodentia will no longer regulate its
+        temperature 17 times faster than a 70 kg human.
+  id: 701
+  time: '2025-07-04T15:13:31.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1107
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        You can now add visual descriptions to your character in-game by
+        clicking on your character or by using the right click menu and
+        selecting "custom examine". This works on all entities that can
+        consciously perform actions.
+  id: 702
+  time: '2025-07-04T15:01:29.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1168
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Surgery Speed to Roboticist, Senior Researcher
+  id: 703
+  time: '2025-07-04T15:28:20.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1094
+- author: Dunrab
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaked Train based on community feedback and requests. This includes
+        adding the full Justice department.
+  id: 704
+  time: '2025-07-04T15:17:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1074
+- author: ashkitten
+  changes: []
+  id: 705
+  time: '2025-07-04T15:02:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1135
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: Added Mimeguin
+    - type: Tweak
+      message: Balanced Crazed Clown Rat
+  id: 706
+  time: '2025-07-04T15:03:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1128
+- author: Fansana
+  changes:
+    - type: Fix
+      message: Fixed all the benches on the maps.
+  id: 707
+  time: '2025-07-05T14:05:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1178
+- author: TheDen
+  changes:
+    - type: Fix
+      message: The research console now handles tier 3 multiplier as expected.
+    - type: Fix
+      message: Fixed a critical bug involving the research console.
+  id: 708
+  time: '2025-07-07T05:32:28.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1183
+- author: WhiteLightningTwister
+  changes:
+    - type: Add
+      message: Syndicate Station
+    - type: Add
+      message: Gorlex Station
+    - type: Add
+      message: Syndicate shuttles
+    - type: Add
+      message: Gorlex Raider shuttle
+  id: 709
+  time: '2025-07-08T03:00:48.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1138
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: Fixed another round-crashing bug related to loadouts.
+  id: 710
+  time: '2025-07-08T03:01:15.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1193
+- author: VividPups
+  changes:
+    - type: Tweak
+      message: all hats can be Heirlooms now
+  id: 711
+  time: '2025-07-08T03:02:05.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1192
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Repeated mood effects (such as that from hunger or nicotine addiction)
+        should no longer cause your mood to flicker.
+  id: 712
+  time: '2025-07-08T17:39:05.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1181
+- author: M3739
+  changes:
+    - type: Fix
+      message: >-
+        Mindshield implants no longer state that they "ensure loyalty" in it's
+        description.
+  id: 713
+  time: '2025-07-08T17:39:41.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1180
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: Custom examine texts should now correctly be removed when they expire.
+  id: 714
+  time: '2025-07-09T01:15:39.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1176
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: Hiding under tables now obscures you from HUD overlays
+  id: 715
+  time: '2025-07-11T14:09:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1198
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: Thieving trait now only shows the silhouette of pocketed items
+  id: 716
+  time: '2025-07-11T14:22:42.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1197
+- author: ashkitten
+  changes:
+    - type: Fix
+      message: Fixed basic examine health info using the wrong entity
+  id: 717
+  time: '2025-07-11T14:23:19.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1196
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: Roboticist is back.
+  id: 718
+  time: '2025-07-11T14:34:05.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1200
+- author: M3739
+  changes:
+    - type: Fix
+      message: >-
+        The speed snail, and vulpkanin atmos suits should now display the proper
+        sprites.
+    - type: Tweak
+      message: The investigation cyborg module now has it's own unique PDA.
+    - type: Tweak
+      message: >-
+        Felinids no longer have innate Trap Avoider, and Thieving traits as part
+        of their base kit.
+    - type: Fix
+      message: Slime people can now have their core reattached into their chest.
+  id: 719
+  time: '2025-07-11T15:08:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1194
+- author: Dunrab
+  changes:
+    - type: Tweak
+      message: Increased the amount of cadet slots on Tortuga from one to four.
+  id: 720
+  time: '2025-07-11T15:44:56.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1190
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Dog Accent
+  id: 721
+  time: '2025-07-11T16:02:38.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1205
+- author: Raikyr0
+  changes:
+    - type: Fix
+      message: Fixed BORK!
+  id: 722
+  time: '2025-07-13T18:23:57.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1210
+- author: archangelmarcy
+  changes:
+    - type: Tweak
+      message: >-
+        Characters using the 'Vampirism' trait can now eat blood tomatoes in
+        order to satiate their bloodthirst.
+  id: 723
+  time: '2025-07-13T18:26:50.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1202
+- author: ashkitten
+  changes:
+    - type: Add
+      message: >-
+        Added favorite drink preference to character profile, which improves
+        mood when consumed.
+  id: 724
+  time: '2025-07-13T18:32:41.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1195

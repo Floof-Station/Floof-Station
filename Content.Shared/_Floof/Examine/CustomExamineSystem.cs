@@ -75,7 +75,7 @@ public abstract class SharedCustomExamineSystem : EntitySystem
 
     private void CheckExpirations(Entity<CustomExamineComponent> ent)
     {
-        bool Check(CustomExamineData data)
+        bool Check(ref CustomExamineData data)
         {
             if (data.Content is null
                 || data.ExpireTime.Ticks <= 0
@@ -87,7 +87,7 @@ public abstract class SharedCustomExamineSystem : EntitySystem
         }
 
         // Note: using | (bitwise or) instead of || (logical or) because the former is not short-circuiting
-        if (Check(ent.Comp.PublicData) | Check(ent.Comp.SubtleData))
+        if (Check(ref ent.Comp.PublicData) | Check(ref ent.Comp.SubtleData))
             Dirty(ent);
     }
 

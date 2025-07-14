@@ -1309,7 +1309,7 @@ entities:
     - type: Transform
       pos: -18.5,-9.5
       parent: 2
-- proto: BenchParkLeft
+- proto: BenchParkRight
   entities:
   - uid: 66
     components:
@@ -1325,7 +1325,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -31.5,2.5
       parent: 2
-- proto: BenchParkRight
+- proto: BenchParkLeft
   entities:
   - uid: 68
     components:

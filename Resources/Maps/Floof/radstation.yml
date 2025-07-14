@@ -18109,7 +18109,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -35.5,15.5
       parent: 2
-- proto: BenchPewLeft
+- proto: BenchPewRight
   entities:
   - uid: 954
     components:
@@ -18201,7 +18201,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 22.5,32.5
       parent: 2
-- proto: BenchPewRight
+- proto: BenchPewLeft
   entities:
   - uid: 969
     components:
@@ -18307,7 +18307,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 10.5,24.5
       parent: 2
-- proto: BenchSofaCorpLeft
+- proto: BenchSofaCorpRight
   entities:
   - uid: 986
     components:
@@ -18321,7 +18321,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -12.5,4.5
       parent: 2
-- proto: BenchSofaCorpRight
+- proto: BenchSofaCorpLeft
   entities:
   - uid: 987
     components:
@@ -18335,7 +18335,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -11.5,4.5
       parent: 2
-- proto: BenchSofaLeft
+- proto: BenchSofaRight
   entities:
   - uid: 988
     components:
@@ -18444,7 +18444,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 10.5,26.5
       parent: 2
-- proto: BenchSofaRight
+- proto: BenchSofaLeft
   entities:
   - uid: 1006
     components:
@@ -18528,7 +18528,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5,53.5
       parent: 2
-- proto: BenchSteelLeft
+- proto: BenchSteelRight
   entities:
   - uid: 1020
     components:
@@ -18621,7 +18621,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,39.5
       parent: 2
-- proto: BenchSteelRight
+- proto: BenchSteelLeft
   entities:
   - uid: 1038
     components:
@@ -18657,7 +18657,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -6.5,5.5
       parent: 2
-- proto: BenchSteelWhiteLeft
+- proto: BenchSteelWhiteRight
   entities:
   - uid: 1045
     components:
@@ -18681,7 +18681,7 @@ entities:
     - type: Transform
       pos: 5.5,-23.5
       parent: 2
-- proto: BenchSteelWhiteRight
+- proto: BenchSteelWhiteLeft
   entities:
   - uid: 1049
     components:
@@ -112735,11 +112735,11 @@ entities:
       content: >-
         [color=#002159]█▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▄
 
-        █   ▀██   █▄      █               █  
+        █   ▀██   █▄      █               █
 
         █         ▀   █▀█▄█   ▄         █  [head=1]Nanotrasen[/head]
 
-        █               █      ▀█   ██▄   █ 
+        █               █      ▀█   ██▄   █
 
         ▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄█  [head=1]Technologies[/head][/color]
 
@@ -112990,7 +112990,7 @@ entities:
 
         █         ▀   █▀█▄█   ▄         █  [head=1]Nanotrasen[/head]
 
-        █               █      ▀█   ██▄   █ 
+        █               █      ▀█   ██▄   █
 
         ▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄█  [head=1]Technologies[/head][/color]
 

@@ -1,5 +1,7 @@
-﻿using Content.Shared.Alert;
+﻿using System.Threading;
+using Content.Shared.Alert;
 using Content.Shared.FixedPoint;
+using Content.Shared.Mood;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Generic;
 
@@ -22,6 +24,10 @@ public sealed partial class MoodComponent : Component
 
     [ViewVariables(VVAccess.ReadOnly)]
     public readonly Dictionary<string, float> UncategorisedEffects = new();
+
+    // Floofstation - this system is so terrible.
+    [NonSerialized]
+    public readonly Dictionary<ProtoId<MoodEffectPrototype>, CancellationTokenSource> CancellationTokens = new();
 
     /// <summary>
     ///     The formula for the movement speed modifier is SpeedBonusGrowth ^ (MoodLevel - MoodThreshold.Neutral).

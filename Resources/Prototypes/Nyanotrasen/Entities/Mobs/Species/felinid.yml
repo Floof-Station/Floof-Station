@@ -72,11 +72,11 @@
     - TauCetiBasic
     - Nekomimetic
     naturalLanguage: Nekomimetic # Floof: explicitly stated natural languages
-  - type: Thieving
-    ignoreStripHidden: true
-    stealth: Subtle
-    stripTimeReduction: 0
-    stripTimeMultiplier: 0.667
+#  - type: Thieving | Floof - M3739 - #1194 - Removed due to balancing and SoP concerns
+#    ignoreStripHidden: true
+#    stealth: Subtle
+#    stripTimeReduction: 0
+#    stripTimeMultiplier: 0.667
   - type: NightVision # Floofstation - Upstream has Felinids replaced with Tajarans and Tajarans have Cat Night Vision
     color: "#808080"
     activateSound: null
@@ -85,13 +85,13 @@
     eyeDamageChance: 0.3
     eyeDamage: 1
     durationMultiplier: 1.5
-  - type: StepTriggerImmune
-    whitelist:
-      types:
-        - Shard
-        - Landmine
-        - Mousetrap
-        - SlipEntity
+#  - type: StepTriggerImmune | Floof - M3739 - #1194 - Removed due to balancing
+#    whitelist:
+#      types:
+#        - Shard
+#        - Landmine
+#        - Mousetrap
+#        - SlipEntity
   - type: Tag
     tags:
     - CanPilot

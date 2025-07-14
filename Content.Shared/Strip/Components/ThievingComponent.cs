@@ -31,4 +31,11 @@ public sealed partial class ThievingComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool IgnoreStripHidden;
+
+    /// <summary>
+    /// Floof: The color of the hidden entity silhouette
+    /// The default is based on the window background color, value-adjusted for contrast with all themes.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Color HiddenEntityColor = Color.FromHex("#AAAAAF");
 }
