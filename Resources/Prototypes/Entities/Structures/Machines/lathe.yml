@@ -236,6 +236,8 @@
     - MagazineMagnum # Goobstation
     - MagazineMagnumLeverRifleEmpty # Goobstation
     - MagazineMagnumLeverRifle # Goobstation
+    - WeaponRifleNovaliteC1
+    - WeaponRifleGestio
 
 - type: entity
   id: AutolatheHyperConvection
@@ -434,6 +436,13 @@
     - WeaponEnergyGunMini   # DeltaV - Miniature Energy Gun
     - WeaponEnergyGunPistol # DeltaV - PDW-9 Energy Pistol
     - WeaponGunLaserCarbineAutomatic # DeltaV - IK-60 Laser Carbine
+    - WeaponHalberd
+    - WeaponEnergyHalberd
+    - HandheldCrewMonitor # Floof -   
+    - ClothingOuterArmorReflective
+    - OmnimedTool
+    - ClothingEyesNightVisionMedicalGoggles
+    - HypoMini # Floof
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -722,6 +731,14 @@
     - JetpackBlue
     - JetpackMini
   # End Nyano additions
+  - type: EmagLatheRecipes
+    emagStaticRecipes:
+    - BorgModuleStun # Floof 
+    - BorgModuleKill # Floof 
+    - BorgModuleInvestigation # Floof
+    emagDynamicRecipes:
+    - SecurityCyberneticEyes
+    - MedicalCyberneticEyes
   - type: MaterialStorage
     whitelist:
       tags:
