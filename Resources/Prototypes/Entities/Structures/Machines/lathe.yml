@@ -236,8 +236,6 @@
     - MagazineMagnum # Goobstation
     - MagazineMagnumLeverRifleEmpty # Goobstation
     - MagazineMagnumLeverRifle # Goobstation
-    - WeaponRifleNovaliteC1 # Floofstation
-    - WeaponRifleGestio # Floofstation
 
 - type: entity
   id: AutolatheHyperConvection
