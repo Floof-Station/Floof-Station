@@ -11,7 +11,7 @@
   startingGear: SeniorOfficerGear
   icon: "JobIconSeniorOfficer"
   supervisors: job-supervisors-hos
-  canBeAntag: false
+  antagAdvantage: 10 # Starts mindshielded with access to guns and relatively trusted
   access:
   - Security
   #- Brig # Delta V: Removed
