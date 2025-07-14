@@ -47,6 +47,7 @@ namespace Content.Shared.Localizations
 
             _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
             _loc.AddFunction(cultureEn, "MANY", FormatMany);
+            _loc.AddFunction(cultureEn, "NUMBER-WORDS", FormatNumberWords); // Floof
         }
 
         private ILocValue FormatMany(LocArgs args)
@@ -228,6 +229,61 @@ namespace Content.Shared.Localizations
             );
 
             return new LocValueString(res);
+        }
+
+        // Floof
+        private static readonly string[] OneToNineteen =
+        [
+            "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+        ];
+
+        private static readonly string[] TwentyToNinety =
+        [
+            "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
+        ];
+
+        // adapted from https://stackoverflow.com/a/18493408
+        static string NumberToEnglishText(long n, bool isFirst = false)
+        {
+            string result;
+            if(isFirst && n == 0)
+                result = "zero";
+            else if(n < 0)
+                result = "negative " + NumberToEnglishText(-n);
+            else if(n == 0)
+                result = "";
+            else if(n <= 9)
+                result = OneToNineteen[n - 1] + " ";
+            else if(n <= 19)
+                result = OneToNineteen[n - 1] + (isFirst ? null : " ");
+            else if(n <= 99)
+                result = TwentyToNinety[n / 10 - 2] + (n % 10 > 0 ? "-" + NumberToEnglishText(n % 10) : null);
+            else if(n <= 999)
+                result = NumberToEnglishText(n / 100) + "hundred " + (n % 100 > 0 ? "and " + NumberToEnglishText(n % 100) : null);
+            else if(n <= 999999)
+                result = NumberToEnglishText(n / 1000) + "thousand " + NumberToEnglishText(n % 1000);
+            else if(n <= 999999999)
+                result = NumberToEnglishText(n / 1000000) + "million " + NumberToEnglishText(n % 1000000);
+            else
+                result = NumberToEnglishText(n / 1000000000) + "billion " + NumberToEnglishText(n % 1000000000);
+            if(isFirst) {
+                result = result.Trim();
+            }
+            return result;
+        }
+
+        private static ILocValue FormatNumberWords(LocArgs args)
+        {
+            var count = ((LocValueNumber) args.Args[0]).Value;
+
+            var integral = (long) Math.Truncate(count);
+            var fractional = count - integral;
+
+            var result = NumberToEnglishText(integral, true);
+
+            // TODO: handle fractional part
+            return new LocValueString(result);
         }
     }
 }
