@@ -8,14 +8,14 @@ This script will cherry-pick a pull request from a GitHub repo into a new branch
 
 Default pull remote is 'upstream', default GitHub repo is 'simple-station/einstein-engines', default GitHub repo to create a PR in is 'fansana/floofstation1'"
 
-PRNUM=$1 # First arg to a shell script
+PRNUM=$4 # First arg to a shell script
 if [[ -z $PRNUM || $PRNUM == "--help" || $PRNUM == "-h" ]]; then
     echo "$HELPSTR"
     exit 1
 fi
-PUSH_REMOTE=${2:-upstream}
-PULL_REPO=${3:-simple-station/einstein-engines}
-PUSH_REPO=${4:-fansana/floofstation1}
+PUSH_REMOTE=${1:-upstream}
+PULL_REPO=${2:-simple-station/einstein-engines}
+PUSH_REPO=${3:-fansana/floofstation1}
 
 echo "Pulling from $PULL_REPO and pushing to $PUSH_REMOTE, then creating a PR in $PUSH_REPO"
 
@@ -46,9 +46,9 @@ if [ "$current_branch" != "$target_branch" ]; then
     if ! $cherry_pick_cmd $merge_commit; then
         echo "Resolve the merge conflicts manually and hit enter."
         read -r
-        git cherry-pick --continue --no-edit
+        git cherry-pick --continue --no-edit --allow-empty
     fi
-    git push -u "$PUSH_REMOTE"
+    git push --set-upstream $PUSH_REMOTE
 fi
 
 if [ -f .git/CHERRY_PICK_HEAD ]; then
