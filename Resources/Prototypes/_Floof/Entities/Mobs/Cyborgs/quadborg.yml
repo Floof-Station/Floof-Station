@@ -38,7 +38,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -133,7 +133,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -183,7 +183,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -194,6 +194,7 @@
     access: [["Cargo"], ["Service"], ["Command"], ["Research"]]
   - type: SiliconLawProvider
     laws: StationEfficiency
+  - type: SolutionScanner
 
 - type: entity
   id: BorgChassisQuadmed
@@ -233,7 +234,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -251,6 +252,12 @@
   - type: SurgeryTarget # Shitmed
   - type: Sanitized # Shitmed
   - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
 
 - type: entity
   id: BorgChassisApex
@@ -296,7 +303,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
