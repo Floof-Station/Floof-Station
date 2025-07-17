@@ -686,8 +686,7 @@
     - BorgModulePka
     - BorgModuleArtifact
     - BorgModuleAnomaly
-    - BorgModuleGardening
-    - BorgModuleHarvesting
+    - BorgModuleBotany
     - BorgModuleMusique
     - BorgModuleClowning
     - BorgModuleDiagnosis
