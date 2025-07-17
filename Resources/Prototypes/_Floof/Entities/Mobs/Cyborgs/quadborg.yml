@@ -255,6 +255,7 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - BiologicalMetaphysical
   - type: ShowHealthIcons
     damageContainers:
     - Biological
