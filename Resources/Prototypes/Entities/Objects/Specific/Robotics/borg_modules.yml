@@ -480,9 +480,9 @@
     - SaxophoneInstrument
 
 - type: entity
-  id: BorgModuleGardening
+  id: BorgModuleBotany
   parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
-  name: gardening cyborg module
+  name: botany cyborg module
   components:
   - type: Sprite
     layers:
@@ -494,18 +494,6 @@
     - HydroponicsToolSpade
     - HydroponicsToolClippers
     - Bucket
-
-- type: entity
-  id: BorgModuleHarvesting
-  parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
-  name: harvesting cyborg module
-  components:
-  - type: Sprite
-    layers:
-    - state: service
-    - state: icon-harvesting
-  - type: ItemBorgModule
-    items:
     - HydroponicsToolScythe
     - HydroponicsToolHatchet
     - PlantBag
