@@ -258,6 +258,7 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+    - BiologicalMetaphysical
 
 - type: entity
   id: BorgChassisApex
