@@ -110,8 +110,7 @@
     - BorgModuleDefibrillator
     - BorgModuleAdvancedCleaning
     - BorgModuleClowning
-    - BorgModuleGardening
-    - BorgModuleHarvesting
+    - BorgModuleBotany
     rareChance: 0.1
     prototypes:
     - BorgModuleCable
