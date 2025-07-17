@@ -10,8 +10,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - BorgModuleGardening
-  - BorgModuleHarvesting
+  - BorgModuleBotany
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
