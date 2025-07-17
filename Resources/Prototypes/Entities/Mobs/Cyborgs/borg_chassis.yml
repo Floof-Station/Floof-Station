@@ -271,7 +271,6 @@
     interactFailureString: petting-failure-medical-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
-  - type: SolutionScanner
   - type: ShowHealthBars
     damageContainers:
     - Biological
@@ -326,6 +325,7 @@
     access: [["Service"], ["Command"], ["Research"]]
   - type: Inventory
     templateId: borgTall
+  - type: SolutionScanner
 
 - type: entity
   id: BorgChassisSyndicateAssault
