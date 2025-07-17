@@ -139,7 +139,6 @@
     damageContainers:
     - Inorganic
     - Silicon
-    - SiliconUnshielded
 
 - type: entity
   id: BorgChassisJanitor
