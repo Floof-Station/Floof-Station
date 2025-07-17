@@ -167,6 +167,7 @@
     - CloningConsoleComputerCircuitboard
     - MedicalScannerMachineCircuitboard
     - MetempsychoticMachineCircuitboard
+    - CloningPodMachineCircuitboard
 
 - type: technology
   id: NightVisionTech
