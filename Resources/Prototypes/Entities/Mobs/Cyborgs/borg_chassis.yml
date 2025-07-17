@@ -55,7 +55,7 @@
       movement:
         state: miner
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -103,7 +103,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -135,6 +135,11 @@
     templateId: borgShort
   - type: SiliconLawProvider # Delta-V - Adds custom lawset for Engineering Cyborg
     laws: Engineer
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+    - SiliconUnshielded
 
 - type: entity
   id: BorgChassisJanitor
@@ -161,7 +166,7 @@
       movement:
         state: janitor
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -219,7 +224,7 @@
       movement:
         state: medical
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -266,6 +271,13 @@
     interactFailureString: petting-failure-medical-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
 
 - type: entity
   id: BorgChassisService
@@ -284,7 +296,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 5
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
