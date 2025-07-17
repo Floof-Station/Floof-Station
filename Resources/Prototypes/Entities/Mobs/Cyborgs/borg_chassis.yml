@@ -276,7 +276,8 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
-
+    - BiologicalMetaphysical
+    
 - type: entity
   id: BorgChassisService
   parent: BaseBorgChassisNT
