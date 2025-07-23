@@ -24,3 +24,14 @@
             - material: Steel
               amount: 7
               doAfter: 3
+    - node: DecorativeComputer
+      entity: DecorativeComputer
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 7
+          steps:
+            - tool: Screwing
+              doAfter: 1
