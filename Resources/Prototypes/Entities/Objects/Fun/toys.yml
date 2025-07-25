@@ -1973,6 +1973,26 @@
     - type: Sprite
       sprite: Objects/Fun/toys.rsi
       state: shadowkin
+    - type: EmitSoundOnUse # 
+      sound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Shadowkin/wurble.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+      path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: MeleeWeapon
+      wideAnimationRotation: 180
+      soundHit:
+        path: /Audio/Voice/Shadowkin/mar.ogg
 
 - type: entity
   parent: BasePlushie
