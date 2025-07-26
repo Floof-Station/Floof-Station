@@ -434,7 +434,7 @@ trait-description-PlateletFactories =
     to keep the user alive, even in the face of advanced trauma, all the way up until - but not including - death.
     Your natural healing is no longer capped, and will now slowly heal any damage type. This includes more exotic injuries like radiation exposure, or cancer.
 
-trait-name-DermalArmor = Dermal Armor
+trait-name-DermalArmor = Subdermal Armor
 trait-description-DermalArmor =
     Your skin contains an array of nanoweave layers embedded beneath the surface, engineered as a cost-effective solution for integrated protection that maintains full flexibility.
     This augmentation provides 1.5 points of flat reduction from all physical damage.
