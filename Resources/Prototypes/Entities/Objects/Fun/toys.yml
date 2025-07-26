@@ -1973,12 +1973,12 @@
     - type: Sprite
       sprite: Objects/Fun/toys.rsi
       state: shadowkin
-    - type: EmitSoundOnUse
+    - type: EmitSoundOnUse # floof, all sound components
       sound:
         path: /Audio/Voice/Shadowkin/mar.ogg
     - type: EmitSoundOnLand
       sound:
-        path: /Audio/Voice/Shadowkin/mar.ogg
+        path: /Audio/Nyanotrasen/Voice/Felinid/cat_mew1.ogg
     - type: EmitSoundOnActivate
       sound:
         path: /Audio/Voice/Shadowkin/mar.ogg
