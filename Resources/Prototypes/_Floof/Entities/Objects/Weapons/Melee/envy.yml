@@ -1,0 +1,7 @@
+- type: entity
+  name: envy's knife
+  parent: CombatKnife
+  id: EnvyKnife
+  description: Their success will be yours.
+  components:
+  - type: EnvyCloneSpawner
