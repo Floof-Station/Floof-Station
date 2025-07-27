@@ -1,5 +1,6 @@
 using System.Collections.Frozen;
 using System.Text.RegularExpressions;
+using Content.Shared.Localizations;
 using Content.Shared.Popups;
 using Content.Shared.Radio;
 using Content.Shared.Speech;
@@ -193,6 +194,16 @@ public abstract class SharedChatSystem : EntitySystem
         }
 
         return message;
+    }
+
+    private static readonly Regex NumberRegex = new(@"-?\d+(\.\d+)?");
+    // Floof
+    public string SanitizeMessageNumbersAsWords(string message)
+    {
+        if (string.IsNullOrEmpty(message))
+            return message;
+
+        return NumberRegex.Replace(message, match => ContentLocalizationManager.FormatNumberWords(match.Value));
     }
 
     public static string SanitizeAnnouncement(string message, int maxLength = 0, int maxNewlines = 2)
