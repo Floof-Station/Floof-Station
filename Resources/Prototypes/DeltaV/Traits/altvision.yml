@@ -1,6 +1,7 @@
 - type: trait
   id: UltraVision
   category: Visual
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       inverted: true
@@ -20,6 +21,7 @@
 - type: trait
   id: DogVision
   category: Visual
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       inverted: true
