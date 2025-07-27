@@ -55,6 +55,8 @@
   - type: Construction
     graph: CrateFreezer
     node: CrateFreezer
+  - type: StaticPrice
+    price: 100
 
 - type: entity
   parent: CratePlastic
