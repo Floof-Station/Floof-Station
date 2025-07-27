@@ -363,7 +363,8 @@
 - type: trait
   id: Talons
   category: Physical
-  points: -1
+  points: 0
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       inverted: true
@@ -390,7 +391,8 @@
 - type: trait
   id: Claws
   category: Physical
-  points: -1
+  points: 0
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       inverted: true
@@ -423,6 +425,7 @@
   id: NaturalWeaponRemoval
   category: Physical
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       inverted: true
@@ -599,6 +602,7 @@
   id: CyberEyes
   category: Physical
   points: -4
+  slots: 0
   requirements:
     - !type:CharacterJobRequirement
       inverted: true
