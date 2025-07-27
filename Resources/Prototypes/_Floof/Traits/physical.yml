@@ -171,6 +171,7 @@
   id: Tiny
   category: Physical
   points: 0 # At this point, this RP-focused trait is intended to be self-balancing
+  slots: 0
   requirements:
   - !type:CharacterJobRequirement
     inverted: true
