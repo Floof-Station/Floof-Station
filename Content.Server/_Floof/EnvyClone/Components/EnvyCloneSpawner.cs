@@ -9,5 +9,15 @@ namespace Content.Server.DeltaV.EnvyClone.Components;
 [RegisterComponent, Access(typeof(EnvyCloneSystem))]
 public sealed partial class EnvyCloneSpawnerComponent : Component
 {
-
+    [DataField]
+    public HashSet<string> CopiedComponents = new()
+    {
+        "Damage",
+        "DetailExaminable",
+        "Dna",
+        "Fingerprint",
+        "LanguageSpeaker",
+        "Psionic",
+        "Scent"
+    };
 }
