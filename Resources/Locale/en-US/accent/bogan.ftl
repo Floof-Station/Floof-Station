@@ -13,7 +13,6 @@ accent-bogan-suffix-1 = , cunt.
 accent-bogan-suffix-2 = , fuckin' oath.
 accent-bogan-suffix-3 = , fuckin' oath cunt.
 accent-bogan-suffix-4 = , ya fuckin druggo.
-accent-bogan-suffix-5 = , you fucking drug addict.
 
 accent-bogan-words-1 = woman
 accent-bogan-words-replace-1 = sheila
@@ -44,9 +43,6 @@ accent-bogan-words-replace-9 = heroween
 
 accent-bogan-words-10 = popcorn
 accent-bogan-words-replace-10 = popcoin
-
-accent-bogan-words-11 = asshole
-accent-bogan-words-replace-11 = dog cunt 
 
 accent-bogan-words-12 = roach
 accent-bogan-words-replace-12 = stingin' roger
@@ -242,9 +238,6 @@ accent-bogan-words-replace-75 = cash
 
 accent-bogan-words-76 = its ok 
 accent-bogan-words-replace-76 = she'll be right
-
-accent-bogan-words-77 = shut up 
-accent-bogan-words-replace-77 = fuck up
 
 accent-bogan-words-78 = go away
 accent-bogan-words-replace-78 = piss off
