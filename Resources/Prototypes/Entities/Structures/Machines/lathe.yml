@@ -687,6 +687,8 @@
     - BorgModuleArtifact
     - BorgModuleAnomaly
     - BorgModuleBotany
+    - BorgModuleGardening
+    - BorgModuleHarvesting
     - BorgModuleMusique
     - BorgModuleClowning
     - BorgModuleDiagnosis
