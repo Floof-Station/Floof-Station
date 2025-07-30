@@ -94,6 +94,63 @@
     noMovementLayers:
       movement:
         state: quadspriteCC
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Justice # Delta V- adds Justice department
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Prison #DeltaV
+    - CentCom
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Justice # Delta V- adds Justice department
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Prison #DeltaV
+    - CentCom
+  - type: AccessReader
+    access: [["Central Command"]]
+  - type: BorgChassis
+    maxModules: 8
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleSecurity
+      - BorgModuleService
+      - BorgModuleMedical
+      - BorgModuleCargo
+      - BorgModuleEngineering
+      - BorgModuleJanitor
+  - type: SurgeryTarget # Shitmed
+  - type: Sanitized # Shitmed
+  - type: SolutionScanner
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - BiologicalMetaphysical
+    - Inorganic
+    - Silicon
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+    - BiologicalMetaphysical
+    - Inorganic
+    - Silicon
 
 - type: entity
   id: BorgChassisQuadsalv
