@@ -40,6 +40,7 @@ public sealed partial class EncryptionKeySystem : EntitySystem
         SubscribeLocalEvent<EncryptionKeyHolderComponent, ExaminedEvent>(OnHolderExamined);
 
         SubscribeLocalEvent<EncryptionKeyHolderComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<EncryptionKeyHolderComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<EncryptionKeyHolderComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<EncryptionKeyHolderComponent, EntInsertedIntoContainerMessage>(OnContainerModified);
         SubscribeLocalEvent<EncryptionKeyHolderComponent, EntRemovedFromContainerMessage>(OnContainerModified);
@@ -181,6 +182,10 @@ public sealed partial class EncryptionKeySystem : EntitySystem
     private void OnStartup(EntityUid uid, EncryptionKeyHolderComponent component, ComponentStartup args)
     {
         component.KeyContainer = _container.EnsureContainer<Container>(uid, EncryptionKeyHolderComponent.KeyContainerName);
+    }
+
+    private void OnMapInit(EntityUid uid, EncryptionKeyHolderComponent component, MapInitEvent args)
+    {
         UpdateChannels(uid, component);
     }
 

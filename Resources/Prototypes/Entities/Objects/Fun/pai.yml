@@ -46,6 +46,9 @@
   - type: EncryptionKeyHolder
     keySlots: 4
     keysExtractionMethod: Screwing
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
   - type: ContainerFill
     containers:
       key_slots:
@@ -53,7 +56,13 @@
       - EncryptionKeyCommon
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
   - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
   - type: DoAfter
   - type: Actions
   - type: TypingIndicator
@@ -124,7 +133,15 @@
       - EncryptionKeyCommon
       - EncryptionKeySyndie
   - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Syndicate
   - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Syndicate
   - type: Appearance
   - type: GenericVisualizer
     visuals:
