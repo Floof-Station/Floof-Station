@@ -727,7 +727,7 @@ accent-medieval-words-replace-227 = blacksguard
 accent-medieval-words-228 = assistants
 accent-medieval-words-replace-228 = blacksguards
 
-accent-medieval-words-229 = bot
+accent-medieval-words-229 = botany
 accent-medieval-words-replace-229 = the farmers
 
 accent-medieval-words-230 = bartenders
