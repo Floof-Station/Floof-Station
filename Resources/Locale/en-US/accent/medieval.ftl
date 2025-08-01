@@ -325,10 +325,10 @@ accent-medieval-words-replace-92 = merchant
 accent-medieval-words-93 = cargo
 accent-medieval-words-replace-93 = merchants' guild
 
-accent-medieval-words-94 = QM
+accent-medieval-words-94 = LO
 accent-medieval-words-replace-94 = Guild Master
 
-accent-medieval-words-95 = Quartermaster
+accent-medieval-words-95 = Logistics Officer
 accent-medieval-words-replace-95 = Guild Master
 
 accent-medieval-words-96 = moths
