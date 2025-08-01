@@ -121,7 +121,7 @@
     - Prison #DeltaV
     - CentCom
   - type: AccessReader
-    access: [["Central Command"]]
+    access: [["CentralCommand"]]
   - type: BorgChassis
     maxModules: 8
     moduleWhitelist:
