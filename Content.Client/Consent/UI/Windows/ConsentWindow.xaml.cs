@@ -63,7 +63,7 @@ public sealed partial class ConsentWindow : FancyWindow
     private void UnsavedChanges()
     {
         // Validate freetext length
-        var maxLength = _configManager.GetCVar(CCVars.ConsentFreetextMaxLength);
+        var maxLength = _configManager.GetCVar(FloofStationCVars.ConsentFreetextMaxLength);
         var length = Rope.Collapse(ConsentFreetext.TextRope).Length;
 
         if (length > maxLength)
