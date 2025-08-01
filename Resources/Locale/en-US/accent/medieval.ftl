@@ -391,13 +391,13 @@ accent-medieval-words-replace-114 = deus ex machina
 accent-medieval-words-115 = adminbus
 accent-medieval-words-replace-115 = deus ex machina
 
-accent-medieval-words-116 = sci
+accent-medieval-words-116 = epi
 accent-medieval-words-replace-116 = alchemists
 
-accent-medieval-words-117 = RD
+accent-medieval-words-117 = MG
 accent-medieval-words-replace-117 = Head Alchemist
 
-accent-medieval-words-118 = Research Directer
+accent-medieval-words-118 = Mystagogue
 accent-medieval-words-replace-118 = Head Alchemist
 
 accent-medieval-words-119 = department
