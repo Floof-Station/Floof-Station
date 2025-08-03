@@ -116,15 +116,15 @@ public sealed class TraitSystem : EntitySystem
             return;
 
         // For maximum comedic effect, this is plenty of time for the cheater to get on station and start interacting with people.
-        var timeToDestroy = _random.NextFloat(120, 360);
+        /*var timeToDestroy = _random.NextFloat(120, 360);
 
-        Timer.Spawn(TimeSpan.FromSeconds(timeToDestroy), () => VaporizeCheater(targetPlayer));
+        Timer.Spawn(TimeSpan.FromSeconds(timeToDestroy), () => VaporizeCheater(targetPlayer));*/
     }
 
     /// <summary>
     ///     https://www.youtube.com/watch?v=X2QMN0a_TrA
     /// </summary>
-    private void VaporizeCheater (Robust.Shared.Player.ICommonSession targetPlayer)
+    /*private void VaporizeCheater (Robust.Shared.Player.ICommonSession targetPlayer)
     {
         _adminSystem.Erase(targetPlayer);
 
@@ -136,5 +136,6 @@ public sealed class TraitSystem : EntitySystem
             EntityUid.Invalid,
             false,
             targetPlayer.Channel);
-    }
+    }*/
+    // Floof - M3739 - TaskAcumen-II | I don't feel like modernizing this bit to use TargetUID due to changes to Erase.
 }

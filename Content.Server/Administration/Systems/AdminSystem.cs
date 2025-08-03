@@ -77,7 +77,8 @@ namespace Content.Server.Administration.Systems
             Subs.CVar(_config, CCVars.PanicBunkerEnabled, OnPanicBunkerChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerDisableWithAdmins, OnPanicBunkerDisableWithAdminsChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerEnableWithoutAdmins, OnPanicBunkerEnableWithoutAdminsChanged, true);
-            Subs.CVar(_config, CCVars.PanicBunkerCountDeadminnedAdmins, OnPanicBunkerCountDeadminnedAdminsChanged, true);
+            Subs.CVar(
+                _config, CCVars.PanicBunkerCountDeadminnedAdmins, OnPanicBunkerCountDeadminnedAdminsChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerShowReason, OnShowReasonChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerMinAccountAge, OnPanicBunkerMinAccountAgeChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerMinOverallHours, OnPanicBunkerMinOverallHoursChanged, true);
@@ -249,17 +250,20 @@ namespace Content.Server.Administration.Systems
                 overallPlaytime = playTime;
             }
 
-            return new PlayerInfo(name, entityName, identityName, startingRole, antag, GetNetEntity(session?.AttachedEntity), data.UserId,
+            return new PlayerInfo(
+                name, entityName, identityName, startingRole, antag, GetNetEntity(session?.AttachedEntity), data.UserId,
                 connected, _roundActivePlayers.Contains(data.UserId), overallPlaytime);
         }
 
         private void OnPanicBunkerChanged(bool enabled)
         {
             PanicBunker.Enabled = enabled;
-            _chat.SendAdminAlert(Loc.GetString(enabled
-                ? "admin-ui-panic-bunker-enabled-admin-alert"
-                : "admin-ui-panic-bunker-disabled-admin-alert"
-            ));
+            _chat.SendAdminAlert(
+                Loc.GetString(
+                    enabled
+                        ? "admin-ui-panic-bunker-enabled-admin-alert"
+                        : "admin-ui-panic-bunker-disabled-admin-alert"
+                ));
 
             SendPanicBunkerStatusAll();
         }
@@ -267,10 +271,12 @@ namespace Content.Server.Administration.Systems
         private void OnBabyJailChanged(bool enabled)
         {
             BabyJail.Enabled = enabled;
-            _chat.SendAdminAlert(Loc.GetString(enabled
-                ? "admin-ui-baby-jail-enabled-admin-alert"
-                : "admin-ui-baby-jail-disabled-admin-alert"
-            ));
+            _chat.SendAdminAlert(
+                Loc.GetString(
+                    enabled
+                        ? "admin-ui-baby-jail-enabled-admin-alert"
+                        : "admin-ui-baby-jail-disabled-admin-alert"
+                ));
 
             SendBabyJailStatusAll();
         }
@@ -389,7 +395,8 @@ namespace Content.Server.Administration.Systems
         {
             _chat.DeleteMessagesBy(uid);
 
-            if (!_minds.TryGetMind(uid, out var mindId, out var mind) || mind.OwnedEntity == null || TerminatingOrDeleted(mind.OwnedEntity.Value))
+            if (!_minds.TryGetMind(uid, out var mindId, out var mind) || mind.OwnedEntity == null ||
+                TerminatingOrDeleted(mind.OwnedEntity.Value))
                 return;
 
             var entity = mind.OwnedEntity.Value;
@@ -398,7 +405,8 @@ namespace Content.Server.Administration.Systems
             {
                 var coordinates = _transform.GetMoverCoordinates(entity, transform);
                 var name = Identity.Entity(entity, EntityManager);
-                _popup.PopupCoordinates(Loc.GetString("admin-erase-popup", ("user", name)), coordinates, PopupType.LargeCaution);
+                _popup.PopupCoordinates(
+                    Loc.GetString("admin-erase-popup", ("user", name)), coordinates, PopupType.LargeCaution);
                 var filter = Filter.Pvs(coordinates, 1, EntityManager, _playerManager);
                 var audioParams = new AudioParams().WithVolume(3);
                 _audio.PlayStatic("/Audio/Effects/pop_high.ogg", filter, coordinates, true, audioParams);
@@ -417,16 +425,16 @@ namespace Content.Server.Administration.Systems
                         continue;
                     }
 
-                        if (TryComp(entity, out FingerprintComponent? fingerPrint) &&
-                            fingerPrint.Fingerprint != record.Fingerprint)
-                        {
-                            continue;
-                        }
-
-                        _stationRecords.RemoveRecord(key);
-                        Del(item);
+                    if (TryComp(entity, out FingerprintComponent? fingerPrint) &&
+                        fingerPrint.Fingerprint != record.Fingerprint)
+                    {
+                        continue;
                     }
+
+                    _stationRecords.RemoveRecord(key);
+                    Del(item);
                 }
+            }
 
             if (_inventory.TryGetContainerSlotEnumerator(entity, out var enumerator))
             {
@@ -452,8 +460,9 @@ namespace Content.Server.Administration.Systems
                 _gameTicker.SpawnObserver(session);
         }
 
-    private void OnSessionPlayTimeUpdated(ICommonSession session)
-    {
-        UpdatePlayerList(session);
+        private void OnSessionPlayTimeUpdated(ICommonSession session)
+        {
+            UpdatePlayerList(session);
+        }
     }
 }
