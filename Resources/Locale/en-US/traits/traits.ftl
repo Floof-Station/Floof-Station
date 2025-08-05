@@ -327,7 +327,7 @@ trait-description-Clumsy =
 trait-name-Small = Small
 trait-description-Small =
     You are much smaller than a typical person, and can climb into spaces others would not normally be able to fit into, such as duffel bags.
-    This trait does not in any way modify your character's size, it merely requires that your character be at most the size of a standard Felinid.
+    This trait does not in any way modify your character's size, it merely requires that your character be at most the size of a standard Tajaran.
 
 trait-name-TemperatureTolerance = Temperature Tolerance
 trait-description-TemperatureTolerance =
@@ -443,32 +443,33 @@ trait-description-DermalArmor =
 
 trait-name-CyberEyes = Cyber-Eyes Basic System
 trait-description-CyberEyes =
-    One or more of your eyes have been replaced with a highly modular mechanical ocular implant.
-    Their most basic functionality is to provide amelioration for weaknesses of the wearer's natural eyes.
-    The functionality of these implants can be extended by a variety of commercially available modules.
+    One or more of your eyes have been replaced with modular cybernetic optical implants.
+    Their most basic functionality is to ameliorate weaknesses in the wearer's natural eyes.
+    The functionality of these implants can be extended with a variety of commercially available upgrades.
 
 trait-name-FlareShielding = Cyber-Eyes: Eye Damage Resistance
 trait-description-FlareShielding =
-    Your cybereyes have been fitted with a photochromic lense that automatically darkens in response to intense stimuli.
-    This provides immunity from most bright flashes of light, such as those from welding arcs.
+    Your Cyber-Eyes have been upgraded with a set of photochromic lenses that automatically darken in response to intense light.
+    This helps prevent optical damage caused by events such as exposure to welding arcs.
 
-trait-name-CyberEyesSecurity = Cyber-Eyes: SecHud Module
+trait-name-CyberEyesSecurity = Cyber-Eyes: Integrated Security HUD
 trait-description-CyberEyesSecurity =
-    Your Cyber-Eyes have been upgraded to include a built-in Security Hud. Note that this augmentation is considered Contraband
-    for anyone not under the employ of station Security personel, and may be disabled by your employer before dispatch to the station.
+    Your Cyber-Eyes have been upgraded to include an integrated Security HUD.
+    Note that this type of optical augmentation is considered Contraband for anyone not under the employ of station Security personnel,
+    and may be disabled by your employer before dispatch to the station.
 
-trait-name-CyberEyesMedical = Cyber-Eyes: MedHud Module
+trait-name-CyberEyesMedical = Cyber-Eyes: Integrated Medical HUD
 trait-description-CyberEyesMedical =
-    Your Cyber-Eyes have been upgraded to include a built-in Medical Hud, allowing you to track the relative health condition of biological organisms.
+    Your Cyber-Eyes have been upgraded to include an integrated Medical HUD, allowing you to monitor the relative health condition of biological organisms.
 
-trait-name-CyberEyesDiagnostic = Cyber-Eyes: Diagnostics Module
+trait-name-CyberEyesDiagnostic = Cyber-Eyes: Integrated Diagnostics HUD
 trait-description-CyberEyesDiagnostic =
-    Your Cyber-Eyes have been upgraded to include a built-in Diagnostic Hud, allowing you to track the condition of synthetic entities.
+    Your Cyber-Eyes have been upgraded to include an integrated Diagnostic HUD, allowing you to monitor the overall structural integrity of synthetic entities.
 
 trait-name-CyberEyesOmni = Cyber-Eyes: Premium Suite Module
 trait-description-CyberEyesOmni =
-    This expensive implant provides the combined benefits of a SecHud, MedHud, and a Diagnostics Module.
-    Note that this augmentation is considered Contraband for anyone not under the employ of station Security personel,
+    Your Cyber-Eyes have been extensively upgraded to provide the combined benefits of an integrated Security HUD, Medical HUD, and a Diagnostics HUD.
+    Note that this type of optical augmentation is considered Contraband for anyone not under the employ of station Security personnel,
     and may be disabled by your employer before dispatch to the station.
 
 trait-name-DispelPower = Normality Projection
@@ -511,13 +512,14 @@ trait-description-BrittleBoneDisease =
     Also known as "brittle bone disease", people with this genetic disorder have bones that are easily broken,
     often simply by moving. This trait reduces your threshold for critical injury by 50 points.
 
-trait-name-LightAmplification = CyberEyes Module: Light Amplification
+trait-name-LightAmplification = Cyber-Eyes Module: Light Amplification
 trait-description-LightAmplification =
-    Your CyberEyes have been enhanced with a light amplifier module, enabling the user to toggle between standard sight and "Night Vision" mode.
+    Your Cyber-Eyes have been upgraded with a toggleable image intensifier, which enhances ambient visible light and converts near-infrared light into visible light.
+    This results in better night vision but comes at the cost of being vulnerable to bright flashes of light due to the lack of automatic gain control.
 
-trait-name-ThermographicVision = CyberEyes Module: Thermographic Scanner
+trait-name-ThermographicVision = Cyber-Eyes Module: Thermographic Scanner
 trait-description-ThermographicVision =
-    Your CyberEyes have been enhanced with a Thermographic Scanner. When enabled, it captures a snapshot of the user's surroundings, while highlighting all
+    Your Cyber-Eyes have been enhanced with a Thermographic Scanner. When enabled, it captures a snapshot of the user's surroundings, while highlighting all
     biological life forms. It can even detect individuals through the walls of a station.
 
 trait-name-BionicLeg = Bionic Legs

@@ -39,6 +39,7 @@
     tags:
     - FootstepSound
     - DoorBumpOpener
+    - SlimeEmotes #floof
   - type: Butcherable
     butcheringType: Knife
     spawned:
@@ -111,6 +112,12 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
+    allowedEmotes: ['Squish', 'Bubble', 'Pop']
+  - type: Vocal #floof
+    sounds:
+      Male: AnimalSlime
+      Female: AnimalSlime
+      Unsexed: AnimalSlime
   - type: TypingIndicator
     proto: slime
   - type: SurgeryTarget
@@ -140,7 +147,6 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish']
   - type: TypingIndicator
     proto: slime
   - type: NpcFactionMember

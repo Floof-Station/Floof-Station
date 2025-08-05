@@ -48,4 +48,22 @@
     id: LoadoutClothingHandsCoderValidWarmers
   - type: loadout
     id: LoadoutClothingHandsBeeWarmers
+  - type: loadout
+    id: LoadoutClothingUnderHandsRainbow
+  - type: loadout
+    id: LoadoutClothingUnderHandsAce
+  - type: loadout
+    id: LoadoutClothingUnderHandsAro
+  - type: loadout
+    id: LoadoutClothingUnderHandsBi
+  - type: loadout
+    id: LoadoutClothingUnderHandsGay
+  - type: loadout
+    id: LoadoutClothingUnderHandsInter
+  - type: loadout
+    id: LoadoutClothingUnderHandsNon
+  - type: loadout
+    id: LoadoutClothingUnderHandsPan
+  - type: loadout
+    id: LoadoutClothingUnderHandsTrans
   # end Floof

@@ -46,7 +46,7 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish']
+    allowedEmotes: ['Squish', 'Bubble', 'Pop']
   - type: TypingIndicator
     proto: slime
   - type: Vocal
@@ -129,6 +129,9 @@
   - type: DamageForceSay # Floofstation - added unqiue pain messages
     forceSayStringPrefix: damage-force-say-slime-
     forceSayStringCount: 7 # Default is 7, but defining it anyway in case it changes or someone wants to add/remove messages
+  - type: Tag #floof
+    tags:
+    - SlimeEmotes
 
 - type: entity
   parent: MobHumanDummy

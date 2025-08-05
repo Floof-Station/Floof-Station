@@ -24,6 +24,7 @@
     - Chitinid
     - Feroxi
     - Kitsune
+    - Tajaran  # Floof - Tajaran Update b7660b9
 
 - type: guideEntry
   id: Arachnid
@@ -79,7 +80,12 @@
   id: Oni
   name: species-name-oni
   text: "/ServerInfo/Guidebook/Mobs/DeltaV/Oni.xml"
-  
+
+- type: guideEntry # Floof - Tajaran Update b7660b9
+  id: Tajaran
+  name: species-name-tajaran
+  text: "/ServerInfo/Guidebook/Mobs/Tajaran.xml"
+
 - type: guideEntry
   id: Rodentia
   name: species-name-rodentia

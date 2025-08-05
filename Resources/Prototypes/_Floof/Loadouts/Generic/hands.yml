@@ -129,3 +129,102 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutRing
+
+- type: loadout
+  id: LoadoutClothingUnderHandsRainbow
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideRainbow
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsAce
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideAce
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsAro
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideAro
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsBi
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideBi
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsGay
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideGay
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsInter
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideInter
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsNon
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideNon
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsPan
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPridePan
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutClothingUnderHandsTrans
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideTrans
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves

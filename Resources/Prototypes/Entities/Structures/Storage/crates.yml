@@ -103,6 +103,11 @@
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
   - type: AntiRottingContainer
+  - type: Construction
+    graph: CrateFreezer2
+    node: CrateFreezer2
+  - type: StaticPrice
+    price: 100
 
 # Wooden
 - type: entity

@@ -5,7 +5,7 @@
   id: SnoutCanidAlt2
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_canid_alt2
@@ -25,7 +25,7 @@
   id: SnoutFLCanid
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_flcanid_primary
@@ -36,7 +36,7 @@
   id: SnoutLCanid
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_lcanid_primary
@@ -47,7 +47,7 @@
   id: SnoutFLCanidAlt
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_flcanidalt_primary
@@ -56,7 +56,7 @@
   id: SnoutFLCanidStripe
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_flcanidstripe_primary
@@ -67,7 +67,7 @@
   id: SnoutLCanidStripe
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_lcanidstripe_primary
@@ -78,7 +78,7 @@
   id: SnoutFLCanidStripeAlt
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_flcanidstripealt_primary
@@ -89,7 +89,7 @@
   id: SnoutLCanidStripeAlt
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_lcanidstripealt_primary
@@ -111,7 +111,7 @@
   id: SnoutHusky
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_husky_primary
@@ -133,7 +133,7 @@
   id: SnoutWolf
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_wolf_primary
@@ -153,7 +153,7 @@
   id: SnoutWolfAlt
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_wolfalt_primary
@@ -162,7 +162,7 @@
   id: SnoutFSCanid
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_fscanid_primary
@@ -173,7 +173,7 @@
   id: SnoutSCanid
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_scanid_primary
@@ -215,7 +215,7 @@
   id: SnoutSCanidAlt3
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_scanidalt3_primary
@@ -228,7 +228,7 @@
   id: SnoutRound
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_round
@@ -237,7 +237,7 @@
   id: SnoutSharp
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_sharp
@@ -246,7 +246,7 @@
   id: SnoutRoundLight
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_roundlight
@@ -255,7 +255,7 @@
   id: SnoutSharpLight
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_sharplight
@@ -279,7 +279,7 @@
   id: SnoutBird
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_bird_primary
@@ -301,7 +301,7 @@
   id: SnoutBigBeak
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_bigbeak_primary
@@ -330,7 +330,7 @@
   id: SnoutToucan
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_toucan_primary
@@ -341,7 +341,7 @@
   id: SnoutBirdSmall
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_birdsmall_primary
@@ -354,7 +354,7 @@
   id: SnoutBigBeakShort
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_bigbeakshort_primary
@@ -363,7 +363,7 @@
   id: SnoutSlimBeak
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_slimbeak_primary
@@ -372,7 +372,7 @@
   id: SnoutSlimBeakAlt
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_slimbeakalt_primary
@@ -381,7 +381,7 @@
   id: SnoutSlimBeakShort
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_slimbeakshort_primary
@@ -390,7 +390,7 @@
   id: SnoutHookBeak
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_hookbeak_primary
@@ -399,7 +399,7 @@
   id: SnoutHookBeakBig
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_hookbeakbig_primary
@@ -423,7 +423,7 @@
   id: SnoutWah
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_wah_primary
@@ -447,7 +447,7 @@
   id: SnoutWahAlt
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_wahalt_primary
@@ -469,7 +469,7 @@
   id: SnoutOtie
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_otie_primary
@@ -491,7 +491,7 @@
   id: SnoutOtieSmile
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_otiesmile_primary
@@ -513,7 +513,7 @@
   id: SnoutPede
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_pede_primary
@@ -533,7 +533,7 @@
   id: SnoutRodent
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_rodent_primary
@@ -564,7 +564,7 @@
   id: SnoutRhino
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_rhino_primary
@@ -590,7 +590,7 @@
   id: SnoutBovine
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_bovine_primary
@@ -614,7 +614,7 @@
   id: SnoutElephant
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_elephant_primary
@@ -661,7 +661,7 @@
   id: SnoutShark
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_shark_primary
@@ -670,7 +670,7 @@
   id: SnoutHShark
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hshark_primary
@@ -681,7 +681,7 @@
   id: SnoutHSharkEyes
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hshark_eyes_primary
@@ -707,7 +707,7 @@
   id: SnoutBug
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_bug_primary
@@ -718,7 +718,7 @@
   id: SnoutBugNoEyes
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_bug_no_eyes
@@ -727,7 +727,7 @@
   id: SnoutSergal
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_sergal_primary
@@ -738,7 +738,7 @@
   id: SnoutHHorse
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hhorse_primary
@@ -749,7 +749,7 @@
   id: SnoutHZebra
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hzebra_primary
@@ -760,7 +760,7 @@
   id: SnoutHAnubus
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hanubus_primary
@@ -771,7 +771,7 @@
   id: SnoutHPanda
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hpanda_primary
@@ -782,7 +782,7 @@
   id: SnoutHJackal
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state:  snout_hjackal_primary
@@ -793,7 +793,7 @@
   id: SnoutHSpots
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_hspots_primary
@@ -817,7 +817,7 @@
   id: SnoutSkulldog
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_skulldog_primary
@@ -830,7 +830,7 @@
   id: SnoutSharkBlubber
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_sharkblubber_primary
@@ -841,7 +841,7 @@
   id: SnoutRat
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_rat_primary
@@ -852,7 +852,7 @@
   id: SnoutNTajaran
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_ntajaran
@@ -861,7 +861,7 @@
   id: SnoutStubby
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_stubby_primary
@@ -872,7 +872,7 @@
   id: SnoutLeporid
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/skyratsnouts.rsi
     state: snout_leporid_primary

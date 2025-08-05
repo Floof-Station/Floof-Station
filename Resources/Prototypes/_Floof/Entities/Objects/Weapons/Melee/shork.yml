@@ -1,0 +1,29 @@
+- type: entity # Floofstation - Concealed Shork
+  parent: PlushieSharkPink
+  id: PlushieSharkPinkBonk
+  name: pink shark hard toy
+  description: Hehe shonk >:)
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/sharkplush.rsi
+    state: pink
+  - type: Item
+    heldPrefix: pink
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.5
+    soundHit:
+      collection: ToySqueak
+    attackRate: 1 # Floofstation - this is hertz, not seconds
+    damage:
+      types:
+        Blunt: 16
+    heavyDamageBaseModifier: 1.2
+    heavyStaminaCost: 5
+    angle: 100
+  - type: DamageOtherOnHit
+    meleeDamageMultiplier: 2
+    staminaCost: 10
+  - type: Tag
+    tags:
+      - PlushieSharkPink

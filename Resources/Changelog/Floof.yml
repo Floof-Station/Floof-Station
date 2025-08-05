@@ -6978,3 +6978,201 @@ Entries:
   id: 736
   time: '2025-07-28T20:58:34.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1083
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Freezer Recipes, Fireplace Recipe
+  id: 737
+  time: '2025-07-31T13:39:58.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1109
+- author: M3739
+  changes:
+    - type: Fix
+      message: The Slow Battery Drain, and Fast Battery Drain now behave as expected.
+    - type: Tweak
+      message: >-
+        'Marked For Death' cannot be taken by command members. No
+        double-dipping. In addition, anomalies can no longer take either Marked
+        trait.
+    - type: Fix
+      message: the "Dog Accent" was still borked, and has been unborked.
+    - type: Fix
+      message: Female shadekin should no longer laugh like a male shadekin.
+    - type: Fix
+      message: Cyber traits should now be properly restricted from prisoners.
+    - type: Tweak
+      message: Cyber-Eyes have had a bit of a rewrite for both clarity and flavor.
+    - type: Fix
+      message: Scugs can now be stripped again.
+  id: 738
+  time: '2025-07-31T13:50:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1230
+- author: Sprkl
+  changes:
+    - type: Tweak
+      message: Marked traits no longer give trait points.
+  id: 739
+  time: '2025-08-01T01:59:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1262
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Several syndicate items now cost less TC.
+  id: 740
+  time: '2025-08-01T02:06:19.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1253
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Tiny Fan to Logistics order-ables
+  id: 741
+  time: '2025-08-01T02:33:42.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1260
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Normal vulpkanin tails (vulpkanin, vulpkanin alt, vulpkanin tip,
+        vulpkanin alt tip, and their wagging variants) will no longer draw over
+        skirts and dresses!
+    - type: Fix
+      message: >-
+        Vulpkanin (fade) tails will no longer turn into Vulpkanin (tip) when
+        wagging.
+  id: 742
+  time: '2025-08-01T03:01:46.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1224
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Shork
+  id: 743
+  time: '2025-08-01T03:31:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1247
+- author: KyuPolaris
+  changes:
+    - type: Add
+      message: Added the Progression cloak from Funky
+    - type: Add
+      message: Added Pride scarves
+    - type: Add
+      message: Added Pride Socks and Arm-Warmers
+  id: 744
+  time: '2025-08-01T04:42:12.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1254
+- author: Memeji
+  changes:
+    - type: Add
+      message: Lobby art contest winners added
+  id: 745
+  time: '2025-08-01T12:37:21.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1264
+- author: Sprkl
+  changes:
+    - type: Add
+      message: The Tajara have arrived!
+  id: 746
+  time: '2025-08-01T13:42:10.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1233
+- author: WhiteLightningTwister
+  changes:
+    - type: Add
+      message: Security Barracks
+    - type: Add
+      message: AI Sat
+    - type: Add
+      message: Robotics Console
+    - type: Add
+      message: Holopads
+    - type: Add
+      message: Service Breakroom
+    - type: Add
+      message: Finally added EVAC pods, three new ones.
+    - type: Tweak
+      message: Moved & reworked Cargo
+    - type: Tweak
+      message: Reworked command
+    - type: Tweak
+      message: Moved & reworked HOP
+    - type: Tweak
+      message: Reworked Security
+    - type: Tweak
+      message: Reworked detective & armory
+    - type: Tweak
+      message: Moved Telecoms
+    - type: Tweak
+      message: Reworked Engineering PA & Containment area
+    - type: Tweak
+      message: Made the pipes to the TEG to outside more visible & accessible.
+    - type: Tweak
+      message: Converted former rooms into maints areas
+    - type: Fix
+      message: Fixed atmos in botany
+    - type: Tweak
+      message: >-
+        Saltern has received a rework, featuring a brand new AI sattelite,
+        holopads, breakrooms, as well as changes to other departments.
+  id: 747
+  time: '2025-08-01T13:46:31.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1222
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Rodentia now have nightvision
+  id: 748
+  time: '2025-08-01T21:25:22.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1257
+- author: RosySaturniidae
+  changes:
+    - type: Tweak
+      message: slimes have gotten a slight visual refresh!
+    - type: Add
+      message: some new eye markings, exclusive to slimes!
+    - type: Add
+      message: two new slime sounds. squish, bubble, pop!
+    - type: Fix
+      message: feral and geras slimes can now make slime noises.
+    - type: Remove
+      message: slime noses and mouths!! they can be replaced as head markings.
+  id: 749
+  time: '2025-08-01T21:28:05.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1204
+- author: KyuPolaris
+  changes:
+    - type: Add
+      message: Added the paramedic satchel, backpack and duffel
+  id: 750
+  time: '2025-08-01T21:28:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1240
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: >-
+        Words in languages you don't understand should now be obfuscated the
+        same way across all rounds.
+  id: 751
+  time: '2025-08-01T22:58:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1217
+- author: ashkitten
+  changes:
+    - type: Fix
+      message: >-
+        Fixed an issue where the game would incorrectly state that someone
+        "Waves theirs item" at you.
+  id: 752
+  time: '2025-08-01T23:00:04.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1263
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: Animals such as foxes should once again be able to wear internals.
+  id: 753
+  time: '2025-08-01T23:03:54.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1228
+- author: Memeji
+  changes:
+    - type: Tweak
+      message: Tweaked the NSFW Disclaimer.
+  id: 754
+  time: '2025-08-02T01:15:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1270

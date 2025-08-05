@@ -66,4 +66,24 @@
     id: LoadoutClothingUnderSocksCoderValid
   - type: loadout
     id: LoadoutClothingUnderSocksBee
+  - type: loadout
+    id: LoadoutClothingUnderSocksRainbow
+  - type: loadout
+    id: LoadoutClothingUnderSocksAro
+  - type: loadout
+    id: LoadoutClothingUnderSocksAce
+  - type: loadout
+    id: LoadoutClothingUnderSocksBi
+  - type: loadout
+    id: LoadoutClothingUnderSocksGay
+  - type: loadout
+    id: LoadoutClothingUnderSocksInter
+  - type: loadout
+    id: LoadoutClothingUnderSocksLesbian
+  - type: loadout
+    id: LoadoutClothingUnderSocksNon
+  - type: loadout
+    id: LoadoutClothingUnderSocksPan
+  - type: loadout
+    id: LoadoutClothingUnderSocksTrans
   # end Floof

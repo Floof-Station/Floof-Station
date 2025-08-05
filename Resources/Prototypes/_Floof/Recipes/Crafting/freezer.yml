@@ -1,0 +1,79 @@
+- type: construction
+  name: freezer
+  id: CrateFreezer
+  graph: CrateFreezer
+  startNode: start
+  targetNode: CrateFreezer
+  category: construction-category-storage
+  description: A freezer for keeping things cool.
+  icon: { sprite: Structures/Storage/Crates/freezer.rsi, state: icon }
+  objectType: Structure
+
+- type: construction
+  name: freezer
+  id: CrateFreezer2
+  graph: CrateFreezer2
+  startNode: start
+  targetNode: CrateFreezer2
+  category: construction-category-storage
+  description: A freezer for keeping things cool.
+  icon: { sprite: Structures/Storage/Crates/freezer.rsi, state: icon }
+  objectType: Structure
+
+- type: constructionGraph
+  id: CrateFreezer
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: CrateFreezer
+          steps:
+            - material: Plastic
+              amount: 10
+              doAfter: 5
+
+    - node: CrateFreezer
+      entity: CrateFreezer
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+          conditions:
+            - !type:StorageWelded
+              welded: false
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlastic1
+              amount: 10
+            - !type:EmptyAllContainers
+            - !type:DeleteEntity
+
+- type: constructionGraph
+  id: CrateFreezer2
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: CrateFreezer2
+          steps:
+            - material: Plastic
+              amount: 10
+              doAfter: 5
+
+    - node: CrateFreezer2
+      entity: CrateFreezer2
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+          conditions:
+            - !type:StorageWelded
+              welded: false
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlastic1
+              amount: 10
+            - !type:EmptyAllContainers
+            - !type:DeleteEntity

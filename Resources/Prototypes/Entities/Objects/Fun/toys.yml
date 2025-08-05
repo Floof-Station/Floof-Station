@@ -438,6 +438,14 @@
   - type: Item
     heldPrefix: blue
     storedRotation: -90
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    soundHit:
+      collection: ToySqueak
+    attackRate: 1.25 # Floofstation - this is hertz, not seconds
+    damage:
+      types:
+        Blunt: 0
   - type: Tag
     tags:
       - PlushieSharkBlue

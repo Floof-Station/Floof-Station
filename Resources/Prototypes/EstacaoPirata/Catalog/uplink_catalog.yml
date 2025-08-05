@@ -4,6 +4,6 @@
   description: uplink-syndicate-deck-desc
   productEntity: CardBoxSyndicate
   cost:
-    Telecrystal: 4 # Frontier: 1<4 (less spam please)
+    Telecrystal: 1 # Frontier: 1<4 (less spam please)
   categories:
   - UplinkPointless

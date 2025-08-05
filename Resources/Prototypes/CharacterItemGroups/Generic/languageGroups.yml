@@ -19,6 +19,16 @@
     # Floof section start
     - type: trait
       id: Ratvarian
+    # - type: trait # Floof - Tajaran Update b7660b9, disabled
+    #   id: SiikMaas
+    - type: trait # Floof - Tajaran Update b7660b9
+      id: NalRasan
+    - type: trait # Floof - Tajaran Update b7660b9
+      id: SiikTajr
+    # - type: trait # Floof - Tajaran Update b7660b9, disabled
+    #   id: YaSsa
+    # - type: trait # Floof - Tajaran Update b7660b9, disabled
+    #   id: Delvahii
     - type: trait
       id: FoxLanguage
     - type: trait
