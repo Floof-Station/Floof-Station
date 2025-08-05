@@ -434,7 +434,7 @@
   coefficients:
     Poison: 0
     Radiation: 0
-    Genetic: 0
+    Cellular: 0
     Cold: 0
     Heat: 1.5
     Shock: 2.5
@@ -447,7 +447,7 @@
   coefficients:
     Poison: 0
     Radiation: 0
-    Genetic: 0
+    Cellular: 0
     Cold: 0
     Heat: 1.5
     Shock: 2
@@ -464,7 +464,7 @@
   coefficients:
     Poison: 0
     Radiation: 0
-    Genetic: 0
+    Cellular: 0
     Cold: 0
     Heat: 1.5
     Shock: 2
