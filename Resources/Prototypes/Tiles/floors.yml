@@ -977,7 +977,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemConcrete
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -997,7 +997,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteMono
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1017,7 +1017,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteSmooth
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1037,7 +1037,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcrete
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1057,7 +1057,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcreteMono
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1077,7 +1077,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcreteSmooth
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1097,7 +1097,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcrete
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1117,7 +1117,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcreteMono
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 - type: tile
@@ -1137,7 +1137,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcreteSmooth
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulp
   tileRipResistance: 300
 
 # Carpets (non smoothing)
