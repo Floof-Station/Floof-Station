@@ -451,9 +451,9 @@
     Cold: 0
     Heat: 1.5
     Shock: 2
-    Blunt: 0.75
-    Slash: 0.75
-    Piercing: 0.75
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.8
   flatReductions:
     Blunt: 1.5
     Slash: 1.5
