@@ -85,6 +85,9 @@
     access: [["Cargo"], ["Salvage"], ["Command"], ["Research"]]
   - type: Inventory
     templateId: borgTall
+  - type: Damageable # Floofstation - Borg Armor
+    damageContainer: Silicon
+    damageModifierSet: BorgSalvage
 
 - type: entity
   id: BorgChassisEngineer
@@ -358,6 +361,9 @@
       noMindState: synd_sec
     - type: Construction
       node: syndicateassault
+    - type: Damageable # Floofstation - Borg Armor
+      damageContainer: Silicon
+      damageModifierSet: BorgSyndicate
 
 - type: entity
   id: BorgChassisSyndicateMedical
@@ -387,6 +393,9 @@
       noMindState: synd_medical
     - type: Construction
       node: syndicatemedical
+    - type: Damageable # Floofstation - Borg Armor
+      damageContainer: Silicon
+      damageModifierSet: BorgSyndicate
 
 - type: entity
   id: BorgChassisSyndicateSaboteur
@@ -416,3 +425,53 @@
       noMindState: synd_engi
     - type: Construction
       node: syndicatesaboteur
+    - type: Damageable # Floofstation - Borg Armor
+      damageContainer: Silicon
+      damageModifierSet: BorgSyndicate
+
+- type: damageModifierSet
+  id: BorgSalvage
+  coefficients:
+    Poison: 0
+    Radiation: 0
+    Genetic: 0
+    Cold: 0
+    Heat: 1.5
+    Shock: 2.5
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.8
+
+- type: damageModifierSet
+  id: BorgSecurity
+  coefficients:
+    Poison: 0
+    Radiation: 0
+    Genetic: 0
+    Cold: 0
+    Heat: 1.5
+    Shock: 2
+    Blunt: 0.75
+    Slash: 0.75
+    Piercing: 0.75
+  flatReductions:
+    Blunt: 1.5
+    Slash: 1.5
+    Piercing: 1.5
+
+- type: damageModifierSet
+  id: BorgSyndicate
+  coefficients:
+    Poison: 0
+    Radiation: 0
+    Genetic: 0
+    Cold: 0
+    Heat: 1.5
+    Shock: 2
+    Blunt: 0.6
+    Slash: 0.6
+    Piercing: 0.6
+  flatReductions:
+    Blunt: 3
+    Slash: 3
+    Piercing: 3
