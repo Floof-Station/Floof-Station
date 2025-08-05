@@ -67,6 +67,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepQuadBorg
+  - type: Damageable # Floofstation - Borg Armor
+    damageContainer: Silicon
+    damageModifierSet: BorgSecurity
 
 
 - type: entity
@@ -151,6 +154,9 @@
     - BiologicalMetaphysical
     - Inorganic
     - Silicon
+  - type: Damageable # Floofstation - Borg Armor
+    damageContainer: Silicon
+    damageModifierSet: BorgSyndicate
 
 - type: entity
   id: BorgChassisQuadsalv
@@ -201,6 +207,9 @@
     access: [["Cargo"], ["Salvage"], ["Command"], ["Research"]]
   - type: SiliconLawProvider
     laws: Corporate
+  - type: Damageable # Floofstation - Borg Armor
+    damageContainer: Silicon
+    damageModifierSet: BorgSalvage
 
 - type: entity
   id: BorgChassisQuadserv
@@ -377,3 +386,6 @@
     access: [["Medical"], ["Salvage"], ["Service"], ["Security"], ["Command"], ["Research"]]
   - type: SiliconLawProvider
     laws: Qborg
+  - type: Damageable # Floofstation - Borg Armor
+    damageContainer: Silicon
+    damageModifierSet: BorgSyndicate
