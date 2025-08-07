@@ -18,6 +18,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Consent;
+using Content.Server.GameTicking;
 
 
 namespace Content.Server.DeltaV.ParadoxAnomaly.Systems;
@@ -58,6 +59,13 @@ public sealed class ParadoxAnomalySystem : EntitySystem
         var role = Comp<GhostRoleComponent>(ent);
         _ghostRole.GhostRoleInternalCreateMindAndTransfer(args.Player, ent, twin.Value, role);
         _ghostRole.UnregisterGhostRole((ent.Owner, role));
+
+        // Floof - raise event to handle trait application
+        if (_station.GetOwningStation(twin.Value) is not { } station)
+            return;
+        var humanoid = Comp<HumanoidAppearanceComponent>(twin.Value);
+        var psce = new PlayerSpawnCompleteEvent(twin.Value, args.Player, null, true, 0, station, humanoid.LastProfileLoaded!);
+        RaiseLocalEvent(twin.Value, psce, true);
 
         args.TookRole = true;
         QueueDel(ent);
