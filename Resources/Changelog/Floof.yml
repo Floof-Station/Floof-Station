@@ -7176,3 +7176,25 @@ Entries:
   id: 754
   time: '2025-08-02T01:15:01.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1270
+- author: sprkl
+  changes:
+    - type: Fix
+      message: Ghosts can now play their haunting music.
+  id: 755
+  time: '2025-08-07T10:24:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1273
+- author: Vulpstation
+  changes:
+    - type: Tweak
+      message: >-
+        Mappers no longer have to make sure to add spawnpoints for every job on
+        every map. Now only a cryosleep/latejoin spawnpoint is necessary.
+    - type: Fix
+      message: The ore processor can now correctly craft reinforced glass.
+    - type: Fix
+      message: >-
+        The /invokeverb command should now correctly function when invoked with
+        a verb type rather than name.
+  id: 756
+  time: '2025-08-07T10:30:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1281
