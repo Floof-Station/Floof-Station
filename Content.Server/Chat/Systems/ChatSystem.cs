@@ -487,8 +487,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        // Floof: allow languages that don't require speech
-        if (language.SpeechOverride.RequireSpeech && !_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
+        if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
 
         // The original message
@@ -573,8 +572,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        // Floof: allow languages that don't require speech
-        if (language.SpeechOverride.RequireSpeech && !_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
+        if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
 
         // Floof
