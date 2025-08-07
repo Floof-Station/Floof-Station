@@ -314,8 +314,8 @@ namespace Content.Server.Kitchen.EntitySystems
                 return;
             if (!(TryComp<ApcPowerReceiverComponent>(ent, out var apc) && apc.Powered))
             {
-                _popupSystem.PopupEntity(Loc.GetString("microwave-component-interact-using-no-power"), ent, args.User);
-                return;
+              //  _popupSystem.PopupEntity(Loc.GetString("microwave-component-interact-using-no-power"), ent, args.User);
+              //  return;
             }
 
             if (ent.Comp.Broken)

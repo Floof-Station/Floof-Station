@@ -1605,7 +1605,6 @@
   id: MobMouse
   description: Squeak!
   components:
-  - type: Vore
   - type: Body
     prototype: Mouse
   - type: GhostRole

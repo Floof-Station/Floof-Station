@@ -18,6 +18,16 @@
   reagents:
     TranexamicAcid: 20
     Cryptobiolin: 20
+    
+- type: microwaveMealRecipe
+  id: RecipeLollipop
+  name: Lollipop recipe
+  result: FoodLollipop
+  time: 5
+  reagents:
+    Sugar: 5
+    Tricordrazine: 2
+    JuiceBerry: 4
 
 - type: microwaveMealRecipe
   id: RecipeRegenerativeMesh

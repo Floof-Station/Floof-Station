@@ -239,7 +239,7 @@
     - RobotTalk
   - type: PsionicInsulation
   - type: Vore # Floofstation - Vore
-    canVore: true
+    canVore: false
     canBeVored: false
   - type: TwistedConstructionTarget
     replacementProto: ConstructShell

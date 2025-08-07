@@ -5,7 +5,7 @@
   abstract: true
   components:
     - type: Vore # Floofstation - Vore
-      canVore: true
+      canVore: false
     - type: ContentEye
     - type: CameraRecoil
     - type: Reactive
@@ -223,6 +223,8 @@
           type: ListViewSelectorBUI
         enum.SurgeryUIKey.Key:
           type: SurgeryBui
+        enum.MicrowaveUiKey.Key:
+          type: MicrowaveBoundUserInterface
     - type: Emoting
     - type: Grammar
       attributes:
@@ -312,6 +314,20 @@
     - type: LightningTarget
       priority: 1
       lightningExplode: false
+    - type: Microwave
+      capacity: 10
+    - type: ActivatableUI
+      key: enum.MicrowaveUiKey.Key
+    - type: DeviceLinkSink
+      ports:
+      - On
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: BasicDevice
+    - type: WirelessNetworkConnection
+      range: 200
+
+      
 
 
 - type: damageModifierSet

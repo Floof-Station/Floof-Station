@@ -82,7 +82,7 @@
       interactFailureSound:
         path: /Audio/Effects/bite.ogg
     - type: Vore # Floofstation - Vore
-      canVore: true
+      canVore: false
     - type: Body # Shitmed - Adds carp organs.
       prototype: Carp
     - type: SurgeryTarget

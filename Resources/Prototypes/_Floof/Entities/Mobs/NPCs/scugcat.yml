@@ -175,7 +175,7 @@
     kind: Intrinsic
     offset: 0, 0.2
   - type: Vore
-    canVore: true
+    canVore: false
 
 - type: palette
   id: ScugCatColors

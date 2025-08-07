@@ -144,7 +144,7 @@
     understands:
     - Xeno
   - type: Vore # Floofstation - Vore
-    canVore: true
+    canVore: false
     canBeVored: false
   - type: NightVision # Floof - M3739 - Originally came with ThermalVision. While acceptable at EE and Goob, Floof has stricter privacy standards. Same as Rat King.
     isActive: true

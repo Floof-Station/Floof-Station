@@ -64,7 +64,7 @@
   - type: LeashAnchor
     offset: 0, 0.2
   - type: Vore
-    canVore: true
+    canVore: false
   - type: Inventory
     templateId: scugcat
   - type: InventorySlots
