@@ -82,7 +82,7 @@ public sealed class DiscordAuthManager
                     return;
                 }
 
-                session.Channel.Disconnect(Loc.GetString(_configuration.GetCVar(FloofStationCVars.WhitelistReason)));
+                session.Channel.Disconnect(Loc.GetString(_configuration.GetCVar(CCVars.WhitelistReason)));
                 return;
             }
             PlayerVerified?.Invoke(this, session);

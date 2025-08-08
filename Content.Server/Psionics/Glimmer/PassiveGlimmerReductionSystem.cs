@@ -32,7 +32,7 @@ namespace Content.Server.Psionics.Glimmer
         {
             base.Initialize();
             SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
-            _cfg.OnValueChanged(FloofStationCVars.GlimmerLostPerSecond, UpdatePassiveGlimmer, true);
+            _cfg.OnValueChanged(CCVars.GlimmerLostPerSecond, UpdatePassiveGlimmer, true);
         }
 
         private void OnRoundRestartCleanup(RoundRestartCleanupEvent args)

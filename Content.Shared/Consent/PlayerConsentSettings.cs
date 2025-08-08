@@ -28,7 +28,7 @@ public sealed class PlayerConsentSettings
 
     public void EnsureValid(IConfigurationManager configManager, IPrototypeManager prototypeManager)
     {
-        var maxLength = configManager.GetCVar(FloofStationCVars.ConsentFreetextMaxLength);
+        var maxLength = configManager.GetCVar(CCVars.ConsentFreetextMaxLength);
         Freetext = Freetext.Trim();
         if (Freetext.Length > maxLength)
             Freetext = Freetext.Substring(0, maxLength);

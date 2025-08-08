@@ -326,7 +326,7 @@ namespace Content.Server.Connection
                 if (await _discordAuthManager.IsWhitelisted(userId) || await _db.GetWhitelistStatusAsync(userId))
                     return null;
 
-                return (ConnectionDenyReason.Whitelist, Loc.GetString(_cfg.GetCVar(FloofStationCVars.WhitelistReason)), null);
+                return (ConnectionDenyReason.Whitelist, Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason)), null);
             }
 
             // DeltaV - Soft whitelist improvements
