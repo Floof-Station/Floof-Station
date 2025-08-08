@@ -77,8 +77,7 @@ namespace Content.Server.Administration.Systems
             Subs.CVar(_config, CCVars.PanicBunkerEnabled, OnPanicBunkerChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerDisableWithAdmins, OnPanicBunkerDisableWithAdminsChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerEnableWithoutAdmins, OnPanicBunkerEnableWithoutAdminsChanged, true);
-            Subs.CVar(
-                _config, CCVars.PanicBunkerCountDeadminnedAdmins, OnPanicBunkerCountDeadminnedAdminsChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerCountDeadminnedAdmins, OnPanicBunkerCountDeadminnedAdminsChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerShowReason, OnShowReasonChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerMinAccountAge, OnPanicBunkerMinAccountAgeChanged, true);
             Subs.CVar(_config, CCVars.PanicBunkerMinOverallHours, OnPanicBunkerMinOverallHoursChanged, true);
