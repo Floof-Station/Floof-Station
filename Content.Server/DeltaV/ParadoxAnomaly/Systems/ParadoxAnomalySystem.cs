@@ -45,9 +45,9 @@ public sealed class ParadoxAnomalySystem : EntitySystem
     [Dependency] private readonly SharedRoleSystem _role = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
-    [Dependency] private readonly LoadoutSystem _loadout = default!;
-    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
-    [Dependency] private readonly IPlayerManager _players = default!;
+    [Dependency] private readonly LoadoutSystem _loadout = default!; // Floof
+    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!; // Floof
+    [Dependency] private readonly IPlayerManager _players = default!; // Floof
 
 
     public override void Initialize()
