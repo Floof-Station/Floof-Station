@@ -7350,18 +7350,8 @@ Entries:
   url: https://github.com/Floof-Station/Floof-Station/pull/1285
 - author: M3739
   changes:
-    - type: Fix
-      message: >-
-        Respawn verb is now available on players even after they have
-        disconnected.
-    - type: Fix
-      message: >-
-        Erase command is now available on players even after they have
-        disconnected.
-    - type: Add
-      message: You can now erase people with the erase command
     - type: Tweak
-      message: Respawn command now also accepts user ids
+      message: Observer ghosts no longer have global hearing.
   id: 773
   time: '2025-08-09T23:11:10.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1300
