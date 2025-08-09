@@ -136,6 +136,5 @@ public sealed class TraitSystem : EntitySystem
             EntityUid.Invalid,
             false,
             targetPlayer.Channel);
-    }*/
-    // Floof - M3739 - TaskAcumen-II | I don't feel like modernizing this bit to use TargetUID due to changes to Erase.
+    }
 }
