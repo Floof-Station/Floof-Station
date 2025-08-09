@@ -399,6 +399,12 @@
       - id: PlushieSapphicHarpyPlushie
         prob: 0.50
         orGroup: Prize
+      - id: PlushieRatLogisticsOfficer 
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieBunnyChiefMedicalOfficer
+        prob: 0.50
+        orGroup: Prize
       # - id: PlushieFeistyBartender
       #   prob: 0.50
       #   orGroup: Prize
@@ -414,6 +420,19 @@
       - id: PlushieAvaliHOP 
         prob: 0.50
         orGroup: Prize
+      - id: PlushieSlimeBartender 
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieGrumpyQuartermaster 
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieHardcoreDj 
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieHos
+        prob: 0.50
+        orGroup: Prize
+
       # Floof - End
       # Rare
       - id: PlushieAbductorAgent

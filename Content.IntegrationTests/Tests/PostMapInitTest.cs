@@ -272,7 +272,8 @@ namespace Content.IntegrationTests.Tests
                             jobs.Remove(jobId);
                     }
 
-                    Assert.That(jobs, Is.Empty, $"There is no spawnpoints for {string.Join(", ", jobs)} on {mapProto}.");
+                    // Vulpstation - this was never necessary
+                    // Assert.That(jobs, Is.Empty, $"There is no spawnpoints for {string.Join(", ", jobs)} on {mapProto}.");
                 }
 
                 try

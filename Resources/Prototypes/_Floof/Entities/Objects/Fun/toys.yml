@@ -379,6 +379,194 @@
       params:
         variation: 0.05
         volume: 4
+        
+- type: entity
+  parent: PlushieHuman
+  id: PlushieSlimeBartender
+  name: Slimetender plushie
+  description: A bartender plushie, this one is all slimey. It smells like oranges and cheap cologne.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: slimebartender
+  - type: UseDelay
+    delay: 1.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Impstation/Voice/Slime/s_pop.ogg
+      params:
+        volume: 2
+        variation: 0.05
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Slime/slime_laugh_f1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Impstation/Voice/Slime/s_pop.ogg
+      params:
+        volume: 1
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Slime/slime_laugh_f1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieGrumpyQuartermaster
+  name: Grumpy Quartermaster plushie
+  description: A plushie of a human cargonian, looks unimpressed. Smells like oak.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: grumpyqm
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Lighters/zippo_open.ogg
+      params:
+        volume: 1
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/kaching.ogg
+      params:
+        volume: 1
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Lighters/zippo_open.ogg
+      params:
+        volume: 1
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/kaching.ogg
+      params:
+        volume: 1
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieHardcoreDj
+  name: Hardcore DJ plushie
+  description: You're not sure how, you're not sure why, but you're overwhelmed with the urge to deepfry this thing.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: hardcoredj
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_purr1.ogg
+      params:
+        volume: 1
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow3.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_purr1.ogg
+      params:
+        volume: 1
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow3.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieHos
+  name: Head of security plushie
+  description: The person under the suit no longer matters, this plushie represents the ideal head of security form.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: moss
+  - type: UseDelay
+    delay: 2.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/drink.ogg
+      params:
+        volume: 1
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/egloves.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/drink.ogg
+      params:
+        volume: 1
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/egloves.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieRatLogisticsOfficer
+  name: rat logistics officer
+  description: This plushie smells like milk, the tag reads "Product of Donk Co."
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: ratgirl
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Rodentia/Rat_Scream_01.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Rodentia/Rat_Scream_01.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieBunnyChiefMedicalOfficer
+  name: bunny chief medical officer
+  description: This plushie smells like carrots and has an aura of non-violence
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: CMObun
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Rodentia/Rat_Scream_01.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Rodentia/Rat_Scream_01.ogg
+      params:
+        variation: 0.05
+        volume: 4
 
 # Banned individual
 # - type: entity

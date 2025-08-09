@@ -61,6 +61,8 @@
   - type: loadout
     id: LoadoutClothingUnderHandsInter
   - type: loadout
+    id: LoadoutClothingUnderHandsLesbian
+  - type: loadout
     id: LoadoutClothingUnderHandsNon
   - type: loadout
     id: LoadoutClothingUnderHandsPan

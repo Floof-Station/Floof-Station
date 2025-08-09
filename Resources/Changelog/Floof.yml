@@ -7176,3 +7176,98 @@ Entries:
   id: 754
   time: '2025-08-02T01:15:01.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1270
+- author: sprkl
+  changes:
+    - type: Fix
+      message: Ghosts can now play their haunting music.
+  id: 755
+  time: '2025-08-07T10:24:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1273
+- author: Vulpstation
+  changes:
+    - type: Tweak
+      message: >-
+        Mappers no longer have to make sure to add spawnpoints for every job on
+        every map. Now only a cryosleep/latejoin spawnpoint is necessary.
+    - type: Fix
+      message: The ore processor can now correctly craft reinforced glass.
+    - type: Fix
+      message: >-
+        The /invokeverb command should now correctly function when invoked with
+        a verb type rather than name.
+  id: 756
+  time: '2025-08-07T10:30:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1281
+- author: JFerrix
+  changes:
+    - type: Fix
+      message: Fixed mass sleep, healing word, and revivify assay feedback.
+    - type: Fix
+      message: >-
+        Fixed all three language abilities (telepathy, xenoglossy and
+        psychognomy)
+    - type: Add
+      message: Wrote psychognomy and telepathy descriptions as they didnt exist.
+    - type: Tweak
+      message: >-
+        Changed pyrokinetic flare description from placeholder text to a real
+        description
+  id: 757
+  time: '2025-08-07T22:22:12.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1268
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        Faxes and holopads now have their respective circuit boards available in
+        the circuit imprinter and can be constructed.
+  id: 758
+  time: '2025-08-08T16:38:24.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1286
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: Slime Bartender Plushie
+    - type: Add
+      message: Grumpy Quartermaster Plushie
+    - type: Add
+      message: Hardcore Dj Plushie
+    - type: Add
+      message: HOS Plushie
+  id: 759
+  time: '2025-08-08T16:45:58.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1296
+- author: sprkl
+  changes:
+    - type: Fix
+      message: Surgery now works on Mimeguins.
+  id: 760
+  time: '2025-08-08T16:51:06.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1274
+- author: Dunrab
+  changes:
+    - type: Add
+      message: Added multiple craftable wooden windows for houses and structures.
+  id: 761
+  time: '2025-08-08T17:18:29.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1287
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: HOPEFULLY fixed the annoying bug that caused broken standing state.
+    - type: Fix
+      message: >-
+        Entities leaving your PVS should no longer have their sprite rotation
+        reset to "facing west".
+  id: 762
+  time: '2025-08-08T17:20:42.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1293
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        You can finally filter out subtle messages like all other kinds of
+        messages.
+  id: 763
+  time: '2025-08-08T17:34:26.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1291

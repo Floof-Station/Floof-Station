@@ -487,8 +487,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        // Floof: allow languages that don't require speech
-        if (language.SpeechOverride.RequireSpeech && !_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
+        if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
 
         // The original message
@@ -573,8 +572,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        // Floof: allow languages that don't require speech
-        if (language.SpeechOverride.RequireSpeech && !_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
+        if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
 
         // Floof
@@ -629,13 +627,13 @@ public sealed partial class ChatSystem : SharedChatSystem
             string result, wrappedMessage;
             // Floof: handle languages that require LOS
             if (!language.SpeechOverride.RequireLOS && data.Range <= WhisperClearRange
-                || _interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, Shared.Physics.CollisionGroup.Opaque))
+                || _examine.InRangeUnOccluded(source, listener, WhisperClearRange))
             {
                 // Scenario 1: the listener can clearly understand the message
                 result = perceivedMessage;
                 wrappedMessage = WrapWhisperMessage(source, "chat-manager-entity-whisper-wrap-message", name, result, language);
             }
-            else if (_interactionSystem.InRangeUnobstructed(source, listener, WhisperMuffledRange, Shared.Physics.CollisionGroup.Opaque))
+            else if (_examine.InRangeUnOccluded(source, listener, WhisperMuffledRange))
             {
                 // Scenario 2: if the listener is too far, they only hear fragments of the message
                 result = ObfuscateMessageReadability(perceivedMessage);
@@ -645,7 +643,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             {
                 // Floof: If there is no LOS, the listener doesn't see at all
                 if (language.SpeechOverride.RequireLOS)
-                    return;
+                    continue;
 
                 // Scenario 3: If listener is too far and has no line of sight, they can't identify the whisperer's identity
                 result = ObfuscateMessageReadability(perceivedMessage);
@@ -761,7 +759,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             if (SubtleOOCRespectsLOS && !data.InLOS)
                 continue; // Floofstation: some things dont go through walls (but they go through windows!)
 
-            _chatManager.ChatMessageToOne(ChatChannel.Emotes, action, wrappedMessage, source, false, session.Channel);
+            _chatManager.ChatMessageToOne(ChatChannel.Subtle, action, wrappedMessage, source, false, session.Channel);
         }
 
         if (!hideLog)

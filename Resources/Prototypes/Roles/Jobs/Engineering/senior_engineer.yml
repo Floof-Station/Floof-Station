@@ -8,7 +8,6 @@
     - !type:CharacterDepartmentTimeRequirement
       department: Engineering
       min: 144000 # Floofstation 40 hrs
-  antagAdvantage: 3 # Floof - Reduced TC: External Access + Engineering
   startingGear: SeniorEngineerGear
   icon: "JobIconSeniorEngineer"
   supervisors: job-supervisors-ce

@@ -312,13 +312,13 @@
     - !type:PsionicFeedbackSelfChat
       feedbackMessage: psychognomy-power-initialization-feedback
     - !type:AddPsionicAssayFeedback
-      assayFeedback: psionic-language-power-feedback
+      assayFeedback: psionic-psychognomy-power-feedback
   removalFunctions:
     - !type:RemovePsionicPowerComponents
       components:
         - type: Psychognomist
     - !type:RemoveAssayFeedback
-      assayFeedback: psionic-language-power-feedback
+      assayFeedback: psionic-psychognomy-power-feedback
   powerSlotCost: 0
 
 - type: psionicPower
@@ -334,7 +334,7 @@
     - !type:PsionicFeedbackSelfChat
       feedbackMessage: telepathy-power-initialization-feedback
     - !type:AddPsionicAssayFeedback
-      assayFeedback: psionic-language-power-feedback
+      assayFeedback: psionic-telepathy-power-feedback
     - !type:PsionicAddAvailablePowers
       powerPrototype: XenoglossyPower
       weight: 0.75
@@ -346,7 +346,7 @@
       components:
         - type: Telepathy
     - !type:RemoveAssayFeedback
-      assayFeedback: psionic-language-power-feedback
+      assayFeedback: psionic-telepathy-power-feedback
     - !type:PsionicRemoveAvailablePowers
       powerPrototype: XenoglossyPower
     - !type:PsionicRemoveAvailablePowers
