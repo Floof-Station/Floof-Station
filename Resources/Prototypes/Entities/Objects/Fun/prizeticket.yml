@@ -432,6 +432,9 @@
       - id: PlushieHos
         prob: 0.50
         orGroup: Prize
+      - id: PlushieSillyResomi
+        prob: 0.50
+        orGroup: Prize
 
       # Floof - End
       # Rare
