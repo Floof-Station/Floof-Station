@@ -317,7 +317,7 @@
   name: chat-emote-name-weh
   category: Vocal
   icon: Interface/Emotes/weh.png
-  chatMessages: [ wehs ]
+  chatMessages: [ floof-chat-emote-msg-weh ]
   whitelist:
     components:
       - Vocal
