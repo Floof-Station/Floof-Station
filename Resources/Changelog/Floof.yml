@@ -7262,7 +7262,7 @@ Entries:
   id: 762
   time: '2025-08-08T17:20:42.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1293
-#- author: Mnemotechnician
+#- author: Mnemotechnician | M3739 - Commented out as it was appended with ADMIN: We don't have an admin CL as of writing.
 #  changes:
 #    - type: Fix
 #      message: >-
