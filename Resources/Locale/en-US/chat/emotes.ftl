@@ -13,6 +13,7 @@ chat-emote-name-squeak = Squeak
 chat-emote-name-thump = Thump Tail
 chat-emote-name-click = Click
 chat-emote-name-clap = Clap
+chat-emote-name-clap-single = Single Clap
 chat-emote-name-snap = Snap
 chat-emote-name-salute = Salute
 chat-emote-name-deathgasp = Deathgasp
