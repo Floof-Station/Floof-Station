@@ -337,9 +337,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
         if (!CombatMode.IsInCombatMode(user))
             return false;
-
-        var fireRateSwingModifier = 1f;
-
+        
         EntityUid? target = null;
         switch (attack)
         {
@@ -356,10 +354,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                 // Can't self-attack if you're the weapon
                 if (weaponUid == target)
                     return false;
-
-                break;
-            case HeavyAttackEvent:
-                fireRateSwingModifier = weapon.HeavyRateModifier;
+                
                 break;
             case DisarmAttackEvent disarm:
                 if (disarm.Target != null && !TryGetEntity(disarm.Target, out target))
@@ -378,7 +373,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         }
 
         // Windup time checked elsewhere.
-        var fireRate = TimeSpan.FromSeconds(GetAttackRate(weaponUid, user, weapon) * fireRateSwingModifier);
+        var fireRate = TimeSpan.FromSeconds(1f / GetAttackRate(weaponUid, user, weapon));
         var swings = 0;
 
         // TODO: If we get autoattacks then probably need a shotcounter like guns so we can do timing properly.
