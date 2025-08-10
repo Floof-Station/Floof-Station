@@ -7262,15 +7262,15 @@ Entries:
   id: 762
   time: '2025-08-08T17:20:42.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1293
-- author: Mnemotechnician
-  changes:
-    - type: Fix
-      message: >-
-        You can finally filter out subtle messages like all other kinds of
-        messages.
-  id: 763
-  time: '2025-08-08T17:34:26.0000000+00:00'
-  url: https://github.com/Floof-Station/Floof-Station/pull/1291
+#- author: Mnemotechnician
+#  changes:
+#    - type: Fix
+#      message: >-
+#        You can finally filter out subtle messages like all other kinds of
+#        messages.
+#  id: 763
+#  time: '2025-08-08T17:34:26.0000000+00:00'
+#  url: https://github.com/Floof-Station/Floof-Station/pull/1291
 - author: ashkitten
   changes:
     - type: Fix
