@@ -1,6 +1,6 @@
 - type: characterItemGroup
   id: TraitsLanguagesBasic
-  maxItems: 2
+  maxItems: 1
   items:
     - type: trait
       id: SignLanguage
@@ -39,6 +39,12 @@
       id: MonkeyLanguage
     - type: trait
       id: KoboldLanguage
+    - type: trait
+      id: Bilingual
+    - type: trait
+      id: Trilingual
+    - type: trait
+      id: Quadrilingual
     # Floof section end
 
 - type: characterItemGroup
