@@ -202,6 +202,7 @@
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
+    - claps once # floof
     - claps their hands together
     - claps her hands together
     - claps his hands together
