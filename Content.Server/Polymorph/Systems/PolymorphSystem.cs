@@ -5,6 +5,8 @@ using Content.Server.Inventory;
 using Content.Server.Mind.Commands;
 using Content.Server.Nutrition;
 using Content.Server.Polymorph.Components;
+using Content.Server.Temperature.Components;
+using Content.Server.Temperature.Systems;
 using Content.Shared._DV.Polymorph; // DeltaV
 using Content.Shared.Actions;
 using Content.Shared.Buckle;
@@ -52,6 +54,7 @@ public sealed partial class PolymorphSystem : EntitySystem
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly CarryingSystem _carrying = default!;
+    [Dependency] private readonly TemperatureSystem _temperature = default!; // Floof
 
     private const string RevertPolymorphId = "ActionRevertPolymorph";
 
@@ -255,6 +258,10 @@ public sealed partial class PolymorphSystem : EntitySystem
             _stamina.TakeStaminaDamage(child, staminaDamage);
         }
 
+        // Floof
+        if (configuration.TransferTemperature && TryComp<TemperatureComponent>(uid, out var temperature))
+            _temperature.ForceChangeTemperature(child, temperature.CurrentTemperature);
+
         // DeltaV - Drop MindContainer entities on polymorph
         var beforePolymorphedEv = new BeforePolymorphedEvent();
         RaiseLocalEvent(uid, ref beforePolymorphedEv);
@@ -331,6 +338,31 @@ public sealed partial class PolymorphSystem : EntitySystem
         _transform.SetParent(parent, parentXform, uidXform.ParentUid);
         _transform.SetCoordinates(parent, parentXform, uidXform.Coordinates, uidXform.LocalRotation);
 
+        // Floof: copy specified components back to parent, or remove if they've been removed from the child
+        if (component.Configuration.SyncComponents)
+        {
+            foreach (var compName in component.Configuration.CopiedComponents)
+            {
+                if (!_compFact.TryGetRegistration(compName, out var reg))
+                    continue;
+
+                // Only sync back components that came from the parent, so we don't end up inheriting completely
+                // new components from a polymorph
+                if (!HasComp(parent, reg.Type))
+                    continue;
+
+                if (!EntityManager.TryGetComponent(uid, reg.Idx, out var comp))
+                {
+                    RemComp(parent, reg.Type);
+                    continue;
+                }
+
+                var copy = _serialization.CreateCopy(comp, notNullableOverride: true);
+                copy.Owner = parent;
+                AddComp(parent, copy, true);
+            }
+        }
+
         if (component.Configuration.TransferDamage &&
             TryComp<DamageableComponent>(parent, out var damageParent) &&
             _mobThreshold.GetScaledDamage(uid, parent, out var damage) &&
@@ -342,6 +374,10 @@ public sealed partial class PolymorphSystem : EntitySystem
             var staminaDamage = _stamina.GetStaminaDamage(uid);
             _stamina.TakeStaminaDamage(parent, staminaDamage);
         }
+
+        // Floof
+        if (component.Configuration.TransferTemperature && TryComp<TemperatureComponent>(uid, out var temperature))
+            _temperature.ForceChangeTemperature(parent, temperature.CurrentTemperature);
 
         if (component.Configuration.Inventory == PolymorphInventoryChange.Transfer)
         {

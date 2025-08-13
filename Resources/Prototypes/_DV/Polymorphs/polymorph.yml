@@ -5,5 +5,19 @@
     inventory: None
     transferName: true
     transferDamage: true
+    transferTemperature: true # Floof
     revertOnCrit: true
     revertOnDeath: true
+    syncComponents: true # Floof
+    copiedComponents: # Floof
+    - Blindable
+    - BlurryVision
+    - Grammar
+    - Hemophilia
+    - Hunger
+    - LanguageKnowledge
+    - LanguageSpeaker
+    - Mood
+    - Muted
+    - Narcolepsy
+    - Thirst

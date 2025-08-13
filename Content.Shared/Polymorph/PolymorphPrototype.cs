@@ -67,6 +67,12 @@ public sealed partial record PolymorphConfiguration
     public bool TransferDamage = true;
 
     /// <summary>
+    /// Floof: Whether to transfer temperature between forms.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool TransferTemperature = true;
+
+    /// <summary>
     /// Whether or not the entity transfers its name between forms.
     /// </summary>
     [DataField(serverOnly: true)]
@@ -115,6 +121,12 @@ public sealed partial record PolymorphConfiguration
     [DataField(serverOnly: true)]
     [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan Cooldown = TimeSpan.Zero;
+
+    /// <summary>
+    /// Floof: Whether to copy component modifications and deletions back from the polymorph to the original entity.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool SyncComponents;
 
     /// <summary>
     /// The exact names of components to copy over when this polymorph is applied.
