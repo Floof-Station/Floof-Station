@@ -67,10 +67,22 @@ public sealed partial record PolymorphConfiguration
     public bool TransferDamage = true;
 
     /// <summary>
-    /// Floof: Whether to transfer temperature between forms.
+    /// Floof: Whether to share temperature between forms.
     /// </summary>
     [DataField(serverOnly: true)]
     public bool TransferTemperature = true;
+
+    /// <summary>
+    /// Floof: whether to share organs with the polymorphed body.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool TransferOrgans;
+
+    /// <summary>
+    /// Floof: whether to share chemicals with the polymorphed body.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool TransferChemicals;
 
     /// <summary>
     /// Whether or not the entity transfers its name between forms.

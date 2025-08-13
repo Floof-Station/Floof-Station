@@ -6,6 +6,8 @@
     transferName: true
     transferDamage: true
     transferTemperature: true # Floof
+    transferOrgans: true # Floof
+    transferChemicals: true # Floof
     revertOnCrit: true
     revertOnDeath: true
     syncComponents: true # Floof

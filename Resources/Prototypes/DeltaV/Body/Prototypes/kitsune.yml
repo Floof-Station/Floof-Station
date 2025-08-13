@@ -48,3 +48,34 @@
       part: RightFootHuman
     left foot:
       part: LeftFootHuman
+
+# Floof
+- type: body
+  id: KitsuneFox
+  name: "kitsune fox"
+  root: torso
+  slots:
+    head: # Without a brain, replacing the heart will give DelayedDeathComponent without removing it (why?)
+      part: HeadHuman
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoAnimal
+      connections:
+      - head
+      - legs
+      organs: # Same set of organs as Kitsune
+        heart: OrganAnimalHeart
+        lungs: OrganHumanLungs
+        stomach: OrganAnimalStomach
+        liver:  OrganAnimalLiver
+        kidneys: OrganHumanKidneys
+    legs: # TODO: make arms/hands turn into legs/feet? limb damage and surgery?
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal

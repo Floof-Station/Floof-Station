@@ -1,5 +1,6 @@
 using Content.Server.Body.Systems;
 using Content.Server.Chemistry.EntitySystems;
+using Content.Server.Polymorph.Systems;
 using Content.Server.Traits;
 using Content.Server.Traits.Assorted;
 using Content.Shared.Alert;
@@ -14,7 +15,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.Body.Components
 {
-    [RegisterComponent, Access(typeof(BloodstreamSystem), typeof(ReactionMixerSystem), typeof(BloodDeficiencySystem), typeof(HemophiliaSystem))]
+    [RegisterComponent, Access(typeof(BloodstreamSystem), typeof(ReactionMixerSystem), typeof(BloodDeficiencySystem), typeof(HemophiliaSystem), typeof(PolymorphSystem))]
     public sealed partial class BloodstreamComponent : Component
     {
         public static string DefaultChemicalsSolutionName = "chemicals";

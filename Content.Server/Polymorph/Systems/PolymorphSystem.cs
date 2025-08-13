@@ -1,4 +1,6 @@
 using Content.Server.Actions;
+using Content.Server.Body.Components;
+using Content.Server.Body.Systems;
 using Content.Server.Carrying;
 using Content.Server.Humanoid;
 using Content.Server.Inventory;
@@ -9,7 +11,9 @@ using Content.Server.Temperature.Components;
 using Content.Server.Temperature.Systems;
 using Content.Shared._DV.Polymorph; // DeltaV
 using Content.Shared.Actions;
+using Content.Shared.Body.Components;
 using Content.Shared.Buckle;
+using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems; // DeltaV
 using Content.Shared.Destructible;
@@ -55,6 +59,9 @@ public sealed partial class PolymorphSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly CarryingSystem _carrying = default!;
     [Dependency] private readonly TemperatureSystem _temperature = default!; // Floof
+    [Dependency] private readonly BodySystem _body = default!; // Floof
+    [Dependency] private readonly SharedSolutionContainerSystem _solution = default!; // Floof
+    [Dependency] private readonly BloodstreamSystem _bloodstream = default!; // Floof
 
     private const string RevertPolymorphId = "ActionRevertPolymorph";
 
@@ -245,6 +252,9 @@ public sealed partial class PolymorphSystem : EntitySystem
         if (TryComp<BeingCarriedComponent>(uid, out var carried))
             _carrying.DropCarried(carried.Carrier, uid);
 
+        var bloodstream = CompOrNull<BloodstreamComponent>(uid);
+        var childBloodstream = CompOrNull<BloodstreamComponent>(child);
+
         //Transfers all damage from the original to the new one
         if (configuration.TransferDamage &&
             TryComp<DamageableComponent>(child, out var damageParent) &&
@@ -256,11 +266,46 @@ public sealed partial class PolymorphSystem : EntitySystem
             // DeltaV - Transfer Stamina Damage
             var staminaDamage = _stamina.GetStaminaDamage(uid);
             _stamina.TakeStaminaDamage(child, staminaDamage);
+
+            // Floof
+            // childBloodstream.BloodSolution is always null when the entity is first spawned
+            // but we know it'll be filled to maximum volume
+            if (bloodstream?.BloodSolution is not null && childBloodstream is not null)
+            {
+                childBloodstream.BleedReductionAmount = bloodstream.BleedReductionAmount;
+                _bloodstream.TryModifyBleedAmount(child, bloodstream.BleedAmount, childBloodstream);
+                var scaledBloodLevel = childBloodstream.BloodMaxVolume * bloodstream.BloodSolution.Value.Comp.Solution.FillFraction;
+                _bloodstream.TryModifyBloodLevel(
+                    child,
+                    scaledBloodLevel - childBloodstream.BloodMaxVolume,
+                    childBloodstream,
+                    false);
+            }
         }
 
         // Floof
         if (configuration.TransferTemperature && TryComp<TemperatureComponent>(uid, out var temperature))
             _temperature.ForceChangeTemperature(child, temperature.CurrentTemperature);
+
+        // Floof
+        if (configuration.TransferChemicals && bloodstream?.ChemicalSolution is not null && childBloodstream is not null)
+            childBloodstream.ChemicalSolution?.Comp.Solution.SetContents(bloodstream.ChemicalSolution.Value.Comp.Solution.Contents);
+
+        // Floof
+        if (configuration.TransferOrgans && TryComp<BodyComponent>(uid, out var body) && TryComp<BodyComponent>(child, out var childBody))
+        {
+            var childOrgans = _body.GetBodyOrgans(child, childBody);
+            foreach (var organ in _body.GetBodyOrgans(uid, body))
+            {
+                if (!childOrgans.TryFirstOrNull(childOrgan => childOrgan.Component.SlotId == organ.Component.SlotId, out var childOrgan))
+                    continue;
+                if (!_container.TryGetContainingContainer((childOrgan.Value.Id, null, null), out var container))
+                    continue;
+                _container.Remove(childOrgan.Value.Id, container);
+                QueueDel(childOrgan.Value.Id);
+                _container.Insert(organ.Id, container);
+            }
+        }
 
         // DeltaV - Drop MindContainer entities on polymorph
         var beforePolymorphedEv = new BeforePolymorphedEvent();
@@ -363,6 +408,10 @@ public sealed partial class PolymorphSystem : EntitySystem
             }
         }
 
+        // Floof
+        var bloodstream = CompOrNull<BloodstreamComponent>(uid);
+        var parentBloodstream = CompOrNull<BloodstreamComponent>(parent);
+
         if (component.Configuration.TransferDamage &&
             TryComp<DamageableComponent>(parent, out var damageParent) &&
             _mobThreshold.GetScaledDamage(uid, parent, out var damage) &&
@@ -373,11 +422,48 @@ public sealed partial class PolymorphSystem : EntitySystem
             // DeltaV - Transfer Stamina Damage
             var staminaDamage = _stamina.GetStaminaDamage(uid);
             _stamina.TakeStaminaDamage(parent, staminaDamage);
+
+            // Floof
+            if (bloodstream?.BloodSolution is not null && parentBloodstream?.BloodSolution is not null)
+            {
+                parentBloodstream.BleedReductionAmount = bloodstream.BleedReductionAmount;
+                _bloodstream.TryModifyBleedAmount(
+                    parent,
+                    bloodstream.BleedAmount - parentBloodstream.BleedAmount,
+                    parentBloodstream);
+                var scaledBloodLevel = parentBloodstream.BloodMaxVolume * bloodstream.BloodSolution.Value.Comp.Solution.FillFraction;
+                _bloodstream.TryModifyBloodLevel(
+                    parent,
+                    scaledBloodLevel - parentBloodstream.BloodSolution.Value.Comp.Solution.Volume,
+                    parentBloodstream,
+                    false);
+            }
         }
 
         // Floof
         if (component.Configuration.TransferTemperature && TryComp<TemperatureComponent>(uid, out var temperature))
             _temperature.ForceChangeTemperature(parent, temperature.CurrentTemperature);
+
+        // Floof
+        if (component.Configuration.TransferChemicals && bloodstream?.ChemicalSolution is not null && parentBloodstream is not null)
+        {
+            parentBloodstream.ChemicalSolution?.Comp.Solution.SetContents(bloodstream.ChemicalSolution.Value.Comp.Solution.Contents);
+        }
+
+        // Floof
+        if (component.Configuration.TransferOrgans && TryComp<BodyComponent>(uid, out var body) &&
+            TryComp<BodyComponent>(parent, out var parentBody))
+        {
+            if (_body.GetRootPartOrNull(parent, parentBody) is { } parentRoot)
+            {
+                foreach (var organ in _body.GetBodyOrgans(uid, body))
+                {
+                    foreach (var part in _body.GetBodyPartChildren(parentRoot.Entity, parentRoot.BodyPart))
+                        if (_body.InsertOrgan(part.Id, organ.Id, organ.Component.SlotId, part.Component, organ.Component))
+                            break;
+                }
+            }
+        }
 
         if (component.Configuration.Inventory == PolymorphInventoryChange.Transfer)
         {
