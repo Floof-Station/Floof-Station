@@ -85,9 +85,9 @@
     access: [["Cargo"], ["Salvage"], ["Command"], ["Research"]]
   - type: Inventory
     templateId: borgTall
-  - type: Damageable # Floofstation - Borg Armor
-    damageContainer: Silicon
-    damageModifierSet: BorgSalvage
+  #- type: Damageable # Floofstation - Borg Armor
+  #  damageContainer: Silicon
+  #  damageModifierSet: BorgSalvage
 
 - type: entity
   id: BorgChassisEngineer
