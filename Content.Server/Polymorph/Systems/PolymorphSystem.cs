@@ -17,6 +17,8 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems; // DeltaV
 using Content.Shared.Destructible;
+using Content.Shared.Floofstation.Leash;
+using Content.Shared.Floofstation.Leash.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mind;
@@ -63,6 +65,7 @@ public sealed partial class PolymorphSystem : EntitySystem
     [Dependency] private readonly BodySystem _body = default!; // Floof
     [Dependency] private readonly SharedSolutionContainerSystem _solution = default!; // Floof
     [Dependency] private readonly BloodstreamSystem _bloodstream = default!; // Floof
+    [Dependency] private readonly LeashSystem _leash = default!; // Floof
 
     private const string RevertPolymorphId = "ActionRevertPolymorph";
 
@@ -254,6 +257,17 @@ public sealed partial class PolymorphSystem : EntitySystem
         var polymorphedComp = _compFact.GetComponent<PolymorphedEntityComponent>();
         polymorphedComp.Parent = uid;
         polymorphedComp.Configuration = configuration;
+
+        if (TryComp<LeashedComponent>(uid, out var leashed)
+            && TryComp<LeashComponent>(leashed.Puller, out var leash)
+            && TryComp<LeashAnchorComponent>(leashed.Anchor, out var anchor))
+        {
+            _leash.RemoveLeash(uid, leashed.Puller.Value);
+            polymorphedComp.LeashAnchor = new(leashed.Anchor.Value, anchor); // save for later
+            if (TryComp<LeashAnchorComponent>(child, out var childAnchor))
+                _leash.DoLeash(new(child, childAnchor), new(leashed.Puller.Value, leash), child);
+        }
+
         AddComp(child, polymorphedComp);
 
         var childXform = Transform(child);
@@ -402,6 +416,13 @@ public sealed partial class PolymorphSystem : EntitySystem
 
         _transform.SetParent(parent, parentXform, uidXform.ParentUid);
         _transform.SetCoordinates(parent, parentXform, uidXform.Coordinates, uidXform.LocalRotation);
+
+        if (TryComp<LeashedComponent>(uid, out var leashed) && leashed.Puller is not null)
+        {
+            _leash.RemoveLeash(uid, leashed.Puller.Value);
+            if (ent.Comp?.LeashAnchor is not null)
+                _leash.DoLeash(ent.Comp.LeashAnchor.Value, new(leashed.Puller.Value, Comp<LeashComponent>(leashed.Puller.Value)), parent);
+        }
 
         // Floof: copy specified components back to parent, or remove if they've been removed from the child
         if (component.Configuration.SyncComponents)

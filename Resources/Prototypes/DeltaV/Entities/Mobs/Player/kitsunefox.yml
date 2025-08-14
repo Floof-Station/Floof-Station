@@ -59,3 +59,4 @@
       task: IdleCompound
   - type: MindContainer
     showExamineInfo: true
+  - type: LeashAnchor # Floofstation
