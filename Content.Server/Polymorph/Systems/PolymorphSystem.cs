@@ -24,6 +24,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Polymorph;
 using Content.Shared.Popups;
+using Content.Shared.Standing;
 using Robust.Server.Audio;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
@@ -76,6 +77,9 @@ public sealed partial class PolymorphSystem : EntitySystem
         SubscribeLocalEvent<PolymorphedEntityComponent, BeforeFullyEatenEvent>(OnBeforeFullyEaten);
         SubscribeLocalEvent<PolymorphedEntityComponent, BeforeFullySlicedEvent>(OnBeforeFullySliced);
         SubscribeLocalEvent<PolymorphedEntityComponent, DestructionEventArgs>(OnDestruction);
+
+        // Floof
+        SubscribeLocalEvent<PolymorphingComponent, DownAttemptEvent>(OnDownAttempt);
 
         InitializeCollide();
         InitializeMap();
@@ -183,6 +187,15 @@ public sealed partial class PolymorphSystem : EntitySystem
     }
 
     /// <summary>
+    /// Floof: When the brain is removed from an entity, it receives the Debrained component and is forced to lay down.
+    /// When we're switching the organs up, we add the Polymorphing component so we can cancel that event.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
+    private void OnDownAttempt(EntityUid uid, PolymorphingComponent component, DownAttemptEvent args) => args.Cancel();
+
+    /// <summary>
     /// Polymorphs the target entity into the specific polymorph prototype
     /// </summary>
     /// <param name="uid">The entity that will be transformed</param>
@@ -218,6 +231,10 @@ public sealed partial class PolymorphSystem : EntitySystem
         var targetTransformComp = Transform(uid);
 
         var child = Spawn(configuration.Entity, _transform.GetMapCoordinates(uid, targetTransformComp), rotation: _transform.GetWorldRotation(uid));
+
+        // Floof: add Polymorphing component to mark that we're actively making changes to these entities.
+        EnsureComp<PolymorphingComponent>(uid);
+        EnsureComp<PolymorphingComponent>(child);
 
         // Copy specified components over
         foreach (var compName in configuration.CopiedComponents)
@@ -355,6 +372,9 @@ public sealed partial class PolymorphSystem : EntitySystem
         // Raise an event to inform anything that wants to know about the entity swap
         var ev = new PolymorphedEvent(uid, child, false);
         RaiseLocalEvent(uid, ref ev);
+
+        // Floof: this entity is now completely polymorphed!
+        RemComp<PolymorphingComponent>(child);
 
         return child;
     }
@@ -512,6 +532,9 @@ public sealed partial class PolymorphSystem : EntitySystem
                 ("child", Identity.Entity(parent, EntityManager))),
             parent);
         QueueDel(uid);
+
+        // Floof: no longer mid-polymorph
+        RemComp<PolymorphingComponent>(parent);
 
         return parent;
     }
