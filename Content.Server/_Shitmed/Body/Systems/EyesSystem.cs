@@ -71,7 +71,7 @@ namespace Content.Server.Body.Systems
                 return;
 
             RemComp<TemporaryBlindnessComponent>(body);
-            HandleSight(uid, body);
+            HandleSight(body, uid);
         }
 
         private void OnOrganDisabled(EntityUid uid, EyesComponent component, OrganDisabledEvent args)
@@ -81,7 +81,7 @@ namespace Content.Server.Body.Systems
                 return;
 
             EnsureComp<TemporaryBlindnessComponent>(body);
-            HandleSight(body, uid);
+            HandleSight(uid, body);
         }
     }
 }

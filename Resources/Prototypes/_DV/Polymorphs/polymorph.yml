@@ -12,8 +12,6 @@
     revertOnDeath: true
     syncComponents: true # Floof
     copiedComponents: # Floof
-    - Blindable
-    - BlurryVision
     - Grammar
     - Hemophilia
     - Hunger
