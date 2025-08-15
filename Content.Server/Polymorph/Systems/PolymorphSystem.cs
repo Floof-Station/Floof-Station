@@ -265,7 +265,8 @@ public sealed partial class PolymorphSystem : EntitySystem
             _leash.RemoveLeash(uid, leashed.Puller.Value);
             polymorphedComp.LeashAnchor = new(leashed.Anchor.Value, anchor); // save for later
             if (TryComp<LeashAnchorComponent>(child, out var childAnchor))
-                _leash.DoLeash(new(child, childAnchor), new(leashed.Puller.Value, leash), child);
+                // Use a timer to delay the leashing, otherwise we'll crash the client's prediction
+                Timer.Spawn(0, () => _leash.DoLeash(new(child, childAnchor), new(leashed.Puller.Value, leash), child));
         }
 
         AddComp(child, polymorphedComp);
@@ -421,7 +422,9 @@ public sealed partial class PolymorphSystem : EntitySystem
         {
             _leash.RemoveLeash(uid, leashed.Puller.Value);
             if (ent.Comp?.LeashAnchor is not null)
-                _leash.DoLeash(ent.Comp.LeashAnchor.Value, new(leashed.Puller.Value, Comp<LeashComponent>(leashed.Puller.Value)), parent);
+                // Use a timer to delay the leashing, otherwise we'll crash the client's prediction
+                Timer.Spawn(0, () =>
+                    _leash.DoLeash(ent.Comp.LeashAnchor.Value, new(leashed.Puller.Value, Comp<LeashComponent>(leashed.Puller.Value)), parent));
         }
 
         // Floof: copy specified components back to parent, or remove if they've been removed from the child
