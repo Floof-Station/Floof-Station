@@ -5,7 +5,7 @@
   description: uplink-cqc-desc
   productEntity: CQCManual
   cost:
-    Telecrystal: 60
+    Telecrystal: 20 # Floof - M3739 - EE-CQB | Was originally 60
   categories:
   - UplinkDeception
   conditions:
@@ -20,7 +20,7 @@
   description: uplink-sleeping-carp-desc
   productEntity: SleepingCarpScroll
   cost:
-    Telecrystal: 70
+    Telecrystal: 35 # Floof - M3739 - EE-CQB | Was originally 70
   categories:
   - UplinkWeaponry
   conditions:
