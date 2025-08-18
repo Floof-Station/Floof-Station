@@ -24,12 +24,12 @@
   description: A rapid dose of Horny. Contains 20 units of Libidozenithizine, use for recreation.
   components:
   - type: SolutionContainerManager
-      solutions:
-        pen:
-          maxVol: 20
-          reagents:
-            - ReagentId: Libidozenithizine
-              Quantity: 20
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: Libidozenithizine
+          Quantity: 20
 
 - type: entity
   name: Nocturine Injector
@@ -38,9 +38,9 @@
   description: A rapid dose of Eepy. Contains 15 units of Nocturine, for god's eepiest soldiers.
   components:
   - type: SolutionContainerManager
-      solutions:
-        pen:
-          maxVol: 15
-          reagents:
-            - ReagentId: Nocturine
-              Quantity: 15
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 15
