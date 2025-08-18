@@ -135,3 +135,40 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 2
+
+- type: listing
+  id: UplinkLibidozenithizineInjectorFree
+  name: uplink-libidozenithizineinjector-free-name
+  description: uplink-libidozenithizineinjector-free-desc
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: hypovolemic }
+  productEntity: LibidozenithizineInjector
+  categories:
+  - UplinkPointless
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: UplinkLibidozenithizineInjector
+  name: uplink-libidozenithizineinjector-name
+  description: uplink-libidozenithizineinjector-desc
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: hypovolemic }
+  productEntity: LibidozenithizineInjector
+  categories:
+  - UplinkPointless
+  cost:
+    Telecrystal: 1
+
+- type: listing
+  id: UplinkNocturineInjector
+  name: uplink-nocturineinjector-name
+  description: uplink-nocturineinjector-desc
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: dermpen }
+  productEntity: NocturineInjector
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkChemicals
