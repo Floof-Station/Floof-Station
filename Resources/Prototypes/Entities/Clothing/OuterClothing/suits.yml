@@ -54,7 +54,7 @@
     - FullBodyOuter
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, ClothingOuterStorageBase]
   id: ClothingOuterSuitFire
   name: fire suit
   description: A suit that helps protect against hazardous temperatures.
