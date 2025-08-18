@@ -593,7 +593,9 @@ public sealed partial class AdminVerbSystem
                 Message = Loc.GetString("admin-smite-maid-description")
             };
             args.Verbs.Add(maiden);
-
+            
+            # FloofStation Start
+            
             Verb chameleon = new()
             {
                 Text = "Chameleon",
@@ -608,7 +610,9 @@ public sealed partial class AdminVerbSystem
             };
             args.Verbs.Add(chameleon);
         }
-
+            
+            # FloofStation End
+                 
         Verb angerPointingArrows = new()
         {
             Text = "Anger Pointing Arrows",
