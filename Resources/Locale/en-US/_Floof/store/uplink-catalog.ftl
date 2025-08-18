@@ -7,6 +7,15 @@ uplink-coder-socks-valid-desc = These socks add onto your robustness by making y
 uplink-Cryptobiolininjector-name = Cryptobiolin injector
 uplink-Cryptobiolininjector-desc = Made by SESWC. This item is prefilled with 20u of Cryptobiolin to help you get rid of those pesky psionic weirdo's.
 
+uplink-libidozenithizineinjector-free-name = Free Libidozenithizine Injector
+uplink-libidozenithizineinjector-free-desc = 3 Libidozenithizine Injectors on the house. Go have fun!
+
+uplink-libidozenithizineinjector-name = Libidozenithizine Injector
+uplink-libidozenithizineinjector-desc = Injector with Libidozenithizine, used to sleep with or honeypot your objective.
+
+uplink-nocturineinjector-name = Nocturine Injector
+uplink-nocturineinjector-desc = Disposable rapid injector filled with 15 units of Nocturine, filled into an injector for ease of use so even the clumsiest of agents can sleep their target.
+
 # Weapons
 uplink-EnergySabre-name = Energy Sabre MK. 9
 uplink-EnergySabre-desc = Crafted by Fae, the CyberSun Weapons Designer, a brilliant display of plasma weaponry crafted into a beautiful sabre.
