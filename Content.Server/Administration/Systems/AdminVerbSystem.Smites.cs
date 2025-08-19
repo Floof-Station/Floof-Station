@@ -559,6 +559,22 @@ public sealed partial class AdminVerbSystem
             args.Verbs.Add(hornySign);
             // Floof Station End
 
+            // Floof Station Start - Twink admin smite
+            Verb twinkSign = new()
+            {
+                Text = "Twink sign",
+                Category = VerbCategory.Smite,
+                Icon = new SpriteSpecifier.Rsi(new ("/Textures/_Floof/Objects/Misc/twinksign.rsi"), "icon"),
+                Act = () =>
+                {
+                    EnsureComp<TwinkSignComponent>(args.Target);
+                },
+                Impact = LogImpact.Extreme,
+                Message = Loc.GetString("admin-smite-twink-sign-description")
+            };
+            args.Verbs.Add(twinkSign);
+            // Floof Station End
+
             Verb cluwne = new()
             {
                 Text = "Cluwne",
