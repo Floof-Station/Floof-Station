@@ -5,7 +5,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Client._Floof.Administration.Systems;
 
-// This is just a copy-pasted version of the kill sign system with some find and replace
+// This is just a copy-pasted version of the horny sign system with some find and replace
 public sealed class TwinkSignSystem : EntitySystem
 {
     public override void Initialize()
