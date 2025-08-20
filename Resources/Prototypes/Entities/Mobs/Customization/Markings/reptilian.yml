@@ -76,7 +76,7 @@
   id: LizardHornsAngler
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson, Arachne, Kobold, Lamia, Oni]
+  speciesRestriction: [Reptilian, Human, SlimePerson, Arachne, Kobold, Lamia, Oni, Rodentia]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: horns_angler
@@ -85,7 +85,7 @@
   id: LizardHornsCurled
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson, Arachne, Kobold, Lamia, Oni]
+  speciesRestriction: [Reptilian, Human, SlimePerson, Arachne, Kobold, Lamia, Oni, Rodentia]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: horns_curled
@@ -94,7 +94,7 @@
   id: LizardHornsRam
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni]
+  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni, Rodentia]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: horns_ram
@@ -103,7 +103,7 @@
   id: LizardHornsShort
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni]
+  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni, Rodentia]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: horns_short
@@ -112,7 +112,7 @@
   id: LizardHornsSimple
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni]
+  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni, Rodentia]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: horns_simple
@@ -121,7 +121,7 @@
   id: LizardHornsDouble
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni]
+  speciesRestriction: [Reptilian, Human, SlimePerson, Kobold, Lamia, Oni, Rodentia]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: horns_double

@@ -600,6 +600,37 @@
         volume: 4
                 
 
+- type: entity
+  parent: PlushieHuman
+  id: PlushieAvianMysta 
+  name: Avian mysta plushie
+  description: A fluffy bird plushie that feels like it's slightly radiating glimmer.. Maybe you're just imagining it. 
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: crow
+  - type: UseDelay
+    delay: 1.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Vox/shriek1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Vox/shriek1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
 # Banned individual
 # - type: entity
 #   parent: PlushieHuman
