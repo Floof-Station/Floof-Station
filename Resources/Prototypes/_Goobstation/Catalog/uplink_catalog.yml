@@ -28,3 +28,6 @@
     blacklist:
       tags:
       - NukeOpsUplink
+  - !type:BuyerSpeciesCondition
+    blacklist:
+      - Oni
