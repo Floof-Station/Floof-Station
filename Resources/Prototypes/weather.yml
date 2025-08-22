@@ -135,4 +135,4 @@
     path: /Audio/Effects/Weather/rain_heavy.ogg
     params:
       loop: true
-      volume: -6
+      volume: -15 # Vulpstation - quiet

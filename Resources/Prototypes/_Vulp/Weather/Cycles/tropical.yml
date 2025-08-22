@@ -1,0 +1,186 @@
+- type: weatherCycle
+  id: Tropical
+  weathers:
+    # Default
+    default:
+      proto: null
+      weight: 25
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 293.15
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
+
+    # Warm
+    warm:
+      proto: null
+      weight: 10
+      transitions:
+        default: 1
+        rain: 0.4 # warm rain?
+        ashfall: 0.2
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 323.15
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
+
+    # Cold
+    cold:
+      proto: null
+      weight: 10
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 273.15
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
+
+    # Rain
+    rain:
+      proto: Rain
+      weight: 15
+      durationMinutes:
+        min: 10
+        max: 20
+      transitions:
+        default: 1
+        storm: 0.4
+      onUpdate:
+      - !type:WeatherCleanPuddles
+        cleanChance: 0.01
+        maxCleaned: 25
+        cleanAmount: 2.5
+      - !type:WeatherRefillSolutions
+        refillChance: 0.01
+        maxRefilled: 25
+        amount: 10
+        reagent: Water
+
+    storm:
+      proto: Storm
+      weight: 1 # Unlikely to happen on its own; most of the time will be an extension of a rain
+      durationMinutes:
+        min: 5
+        max: 10
+      transitions:
+        default: 0.4
+        rain: 1
+      onUpdate:
+      - !type:WeatherCleanPuddles
+        cleanChance: 0.03
+        maxCleaned: 50
+        cleanAmount: 2.5
+      - !type:WeatherRefillSolutions
+        refillChance: 0.01
+        maxRefilled: 50
+        amount: 10
+        reagent: Water
+
+    # Snow
+    snow:
+      proto: SnowfallLight
+      weight: 8
+      durationMinutes:
+        min: 5
+        max: 15
+      transitions:
+        cold: 1
+        default: 1
+        rain: 0.6 # Might as well
+        snowMedium: 0.4
+        snowHeavy: 0.1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 273.15
+          moles:
+          - 25.824879 # O2
+          - 90.10312  # N2
+
+    snowMedium:
+      proto: SnowfallMedium
+      weight: 3
+      durationMinutes:
+        min: 5
+        max: 10
+      transitions:
+        cold: 0.4
+        snow: 1
+        snowHeavy: 0.4
+      onTransition:
+       - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 253.15
+          moles:
+          - 25.824879 # O2
+          - 90.10312  # N2
+
+    snowHeavy:
+      proto: SnowfallHeavy
+      weight: 1
+      durationMinutes:
+        min: 4
+        max: 10
+      transitions:
+        cold: 0.2
+        snow: 0.4
+        snowMedium: 1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 223.15 # Shiver me timbers
+          moles:
+          - 29.824879 # O2
+          - 99.10312  # N2
+      onUpdate:
+      - !type:WeatherRefillSolutions
+        refillChance: 0.01
+        maxRefilled: 25
+        amount: 2
+        reagent: Ice
+
+    # Ashfall. Adds some CO2 to the air.
+    ashfall:
+      proto: AshfallLight
+      weight: 3
+      durationMinutes: # I'm afraid people might suffocate
+        min: 5
+        max: 10
+      transitions:
+        default: 1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          immutable: True
+          temperature: 293.15
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
+          - 3.1415926 # CO2
+      onUpdate:
+      - !type:WeatherRefillSolutions
+        refillChance: 0.01
+        maxRefilled: 25
+        amount: 2
+        reagent: Ash
+
+
