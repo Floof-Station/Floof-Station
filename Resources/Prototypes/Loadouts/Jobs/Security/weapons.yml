@@ -75,7 +75,7 @@
   - EnergyCutlassSecurity
 
 - type: loadout # Floofstation - A little special something for the weebs
-  id: LoadoutSecurityHoSKatanaSheath
+  id: LoadoutSecurityKatanaSheath
   category: JobsSecurityWeapons
   cost: 0
   canBeHeirloom: true
@@ -94,7 +94,7 @@
     species:
     - Oni
   items:
-    - ClothingBeltKatanaSheathFilledHoS
+    - ClothingBeltKatanaSheathFilled
 
 #Whatever the Flash falls under
 
