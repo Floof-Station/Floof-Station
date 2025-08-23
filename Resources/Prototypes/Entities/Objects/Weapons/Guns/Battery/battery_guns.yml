@@ -865,10 +865,10 @@
     price: 750
 
 - type: entity
-  name: energy shotgun
+  name: EG5 energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponEnergyShotgun
-  description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
+  description: A rare energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
@@ -917,10 +917,10 @@
     autoRechargePauseTime: 10
 
 - type: entity # Floofstation - Non Recharging Variant
-  name: energy shotgun
+  name: EG5-B energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponSecurityEnergyShotgun
-  description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon. This variant lacks the iconic self charging battery.
+  description: A rare energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon. This variant lacks the iconic self charging battery.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
