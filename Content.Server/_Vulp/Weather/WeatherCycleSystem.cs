@@ -85,7 +85,7 @@ public sealed class WeatherCycleSystem : EntitySystem
 
         // If the current weather has fully started, begin executing its update functions
         if (current.Proto != null
-            && (!ent.Comp2.Weather.TryGetValue(current.Proto.Value, out var data) || data.State != WeatherState.Running))
+            && (!ent.Comp2.Weather.TryGetValue(current.Proto.Value, out var data)))
             return;
 
         var updateTimeSeconds = (float) elapsedTime.TotalSeconds;
