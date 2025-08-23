@@ -130,7 +130,7 @@
     - type: loadout
       id: LoadoutSecurityEquipmentEnergySword
     - type: loadout # Floofstation - A little special something for the weebs
-      id: LoadoutSecurityHoSKatanaSheath
+      id: LoadoutSecurityKatanaSheath
     - type: loadout
       id: LoadoutSecurityDisablerSMG
     - type: loadout # Floofstation - Wardens need a little love
