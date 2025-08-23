@@ -12,9 +12,55 @@
     Drink:
       effects:
       - !type:SatiateThirst
+        conditions:
+        - !type:OrganType
+          type: Succubus
+          shouldHave: false
         factor: 0.2
       - !type:SatiateHunger
+        conditions:
+        - !type:OrganType
+          type: Succubus
+          shouldHave: false
         factor: 1
+      - !type:SatiateThirst
+        factor: 3
+        conditions:
+        - !type:OrganType
+          type: Succubus
+      - !type:SatiateHunger
+        factor: 6
+        conditions:
+        - !type:OrganType
+          type: Succubus
+      - !type:ModifyBleedAmount
+        conditions:
+        - !type:OrganType
+          type: Succubus
+        amount: -1
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:OrganType
+          type: Succubus
+        amount: 2
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Succubus
+        damage:
+          groups:
+            Burn: -0.3
+            Toxin: -0.2
+            Airloss: -0.2
+            Brute: -0.3
+      - !type:ChemAddMoodlet
+        moodPrototype: SuccubiumBenefit
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Cum
+          min: 10
+        - !type:OrganType
+          type: Succubus
   footstepSound:
     collection: FootstepSticky
     params:

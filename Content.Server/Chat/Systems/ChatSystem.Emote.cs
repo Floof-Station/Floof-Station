@@ -139,7 +139,7 @@ public partial class ChatSystem
     ///     Tries to find and play relevant emote sound in emote sounds collection.
     /// </summary>
     /// <returns>True if emote sound was played.</returns>
-    public bool TryPlayEmoteSound(EntityUid uid, EmoteSoundsPrototype? proto, string emoteId)
+    public bool TryPlayEmoteSound(EntityUid uid, EmoteSoundsPrototype? proto, string emoteId, float volumeDb = 0f) // Vulpstation - added volume control
     {
         if (proto == null)
             return false;
@@ -155,7 +155,7 @@ public partial class ChatSystem
 
         // if general params for all sounds set - use them
         var param = proto.GeneralParams ?? sound.Params;
-        _audio.PlayPvs(sound, uid, param);
+        _audio.PlayPvs(sound, uid, param.AddVolume(volumeDb)); // Vulpstation - added volume control
         return true;
     }
     /// <summary>

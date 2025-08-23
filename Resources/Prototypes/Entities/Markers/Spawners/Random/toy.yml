@@ -94,6 +94,11 @@
         - PlushieMort
         - PlushieAvaliHOP 
         - PlushieKoboldCefJustice
+        - PlushieSlimeBartender
+        - PlushieGrumpyQuartermaster
+        - PlushieHardcoreDj
+        - PlushieHos
+        - PlushieAvianMysta
       chance: 0.5
       offset: 0.2
 

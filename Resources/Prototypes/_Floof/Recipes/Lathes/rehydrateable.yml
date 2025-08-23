@@ -1,0 +1,13 @@
+- type: latheRecipe # Floofstation
+  id: PigCube
+  result: PigCube
+  completetime: 30
+  materials:
+    Biomass: 80
+
+- type: latheRecipe # Floofstation
+  id: ChickenCube
+  result: ChickenCube
+  completetime: 15
+  materials:
+    Biomass: 12

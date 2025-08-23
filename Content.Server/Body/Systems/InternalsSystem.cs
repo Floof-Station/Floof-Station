@@ -266,7 +266,9 @@ public sealed class InternalsSystem : EntitySystem
         // 3. in-hand tanks
         // 4. pocket/belt tanks
 
-        if (!Resolve(user, ref user.Comp1, ref user.Comp2, ref user.Comp3))
+        // Floofstation - do not require the entity to have hands
+        user.Comp1 ??= CompOrNull<HandsComponent>(user);
+        if (!Resolve(user, ref user.Comp2, ref user.Comp3))
             return null;
 
         if (_inventory.TryGetSlotEntity(user, "back", out var backEntity, user.Comp2, user.Comp3) &&
@@ -282,6 +284,10 @@ public sealed class InternalsSystem : EntitySystem
         {
             return (entity.Value, gasTank);
         }
+
+        // Floofstation - see above
+        if (user.Comp1 is null)
+            return null;
 
         foreach (var item in _inventory.GetHandOrInventoryEntities((user.Owner, user.Comp1, user.Comp2)))
         {

@@ -104,3 +104,8 @@
   moodChange: -7
   timeout: 1980 #33 minutes
   category: PainkillerAddiction
+
+- type: moodEffect # Floofstation
+  id: SuccubiumBenefit
+  moodChange: 10
+  timeout: 600 #10 minutes

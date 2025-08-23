@@ -932,10 +932,12 @@ public sealed class ChatUIController : UIController
                 AddSpeechBubble(msg, SpeechBubble.SpeechType.Say);
                 break;
 
+            case ChatChannel.Subtle: // Floofstation
             case ChatChannel.Emotes:
                 AddSpeechBubble(msg, SpeechBubble.SpeechType.Emote);
                 break;
 
+            case ChatChannel.SubtleOOC: // Floofstation
             case ChatChannel.LOOC:
                 if (_config.GetCVar(CCVars.LoocAboveHeadShow))
                     AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);

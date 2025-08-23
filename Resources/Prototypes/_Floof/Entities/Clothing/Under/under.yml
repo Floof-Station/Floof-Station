@@ -75,3 +75,114 @@
   - type: Clothing
     sprite: _Floof/Clothing/Under/Socks/sexcompblueboots.rsi
 
+# Pride
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideRainbow
+  name: rainbow thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/rainbow.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/rainbow.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideAce
+  name: asexual thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/ace.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/ace.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideAro
+  name: aromantic thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/aro.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/aro.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideBi
+  name: bisexual thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/bi.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/bi.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideGay
+  name: gay thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/gay.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/gay.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideInter
+  name: intersex thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/inter.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/inter.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideLesbian
+  name: lesbian thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/lesbian.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/lesbian.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideNon
+  name: non-binary thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/non.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/non.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPridePan
+  name: pansexual thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/pan.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/pan.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksPrideTrans
+  name: transgender thigh-high socks
+  description: Just a pride pair of thigh-high socks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Socks/Pride/trans.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Socks/Pride/trans.rsi

@@ -45,8 +45,6 @@
     - !type:TraitAddComponent
       components:
         - type: BarkAccent
-    - !type:TraitReplaceComponent
-      components:
-        - type: Speech
-          speechSounds: Dog
-          speechVerb: SmallMob
+    - !type:TraitModifySpeech
+      newSounds: Dog
+      newVerb: SmallMob

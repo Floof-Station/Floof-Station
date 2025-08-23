@@ -90,3 +90,27 @@
           productionLength: 3
           entityProduced: FoodEgg
           hungerCost: 4
+
+- type: trait
+  id: Succubus
+  category: Physical
+  points: -3
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - IPC
+  functions:
+    - !type:TraitModifyMetabolism
+      add: true
+      types: [ Succubus ]
+      groups: [
+        Poison,
+        Food,
+        Drink,
+      ]

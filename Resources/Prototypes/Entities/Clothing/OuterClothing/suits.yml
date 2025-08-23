@@ -54,7 +54,7 @@
     - FullBodyOuter
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, ClothingOuterStorageBase]
   id: ClothingOuterSuitFire
   name: fire suit
   description: A suit that helps protect against hazardous temperatures.
@@ -88,7 +88,7 @@
     # HidesHarpyWings floof
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, ClothingOuterStorageBase]
   id: ClothingOuterSuitAtmosFire
   name: atmos fire suit
   description: An expensive firesuit that protects against even the most deadly of station fires. Designed to protect even if the wearer is set aflame.

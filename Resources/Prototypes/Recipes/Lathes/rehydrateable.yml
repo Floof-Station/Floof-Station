@@ -47,7 +47,7 @@
   result: CockroachCube
   completetime: 15
   materials:
-    Biomass: 16
+    Biomass: 10
 
 - type: latheRecipe
   id: SpaceCarpCube

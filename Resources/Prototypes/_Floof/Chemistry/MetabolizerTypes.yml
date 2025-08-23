@@ -9,3 +9,6 @@
   id: AllicinIntolerant
   name: metabolizer-type-allicin-intolerant
 
+- type: metabolizerType
+  id: Succubus
+  name: metabolizer-type-succubus

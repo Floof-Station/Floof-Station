@@ -18,6 +18,9 @@
   description: uplink-EnergySabre-desc
   icon: { sprite: /Textures/_Floof/Objects/Weapons/Melee/e_sabre.rsi, state: icon }
   productEntity: ClothingBeltEnergySheathFilled
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
   cost:
     Telecrystal: 8
   categories:
@@ -30,11 +33,28 @@
   description: uplink-energy-halberd-desc
   icon: { sprite: _Floof/Objects/Weapons/Melee/e_halberd.rsi, state: icon }
   productEntity: WeaponEnergyHalberd
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
   cost:
-    Telecrystal: 10
+    Telecrystal: 8
   categories:
   - UplinkWeaponry
 #  saleLimit: 1 # Floofstation - used to exist, but now it doesn't. Oh, well.
+
+- type: listing
+  id: UplinkPlushieSharkPinkBonk
+  name: uplink-PlushieSharkPinkBonk-name
+  description: uplink-PlushieSharkPinkBonk-desc
+  icon: { sprite: Objects/Fun/sharkplush.rsi, state: pink }
+  productEntity: PlushieSharkPinkBonk
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWeaponry
 
 #Medical
 
@@ -57,7 +77,7 @@
   productEntity: BriefcaseSyndieTypewriterBundleFilled
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 8
+    Telecrystal: 6
   cost:
     Telecrystal: 12
   categories:

@@ -1,0 +1,40 @@
+- type: constructionGraph
+  id: Fireplace
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: Fireplace
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 10
+              doAfter: 1
+            - material: Steel
+              amount: 10
+              doAfter: 1
+    - node: Fireplace
+      entity: Fireplace
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 10
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+- type: construction
+  name: Fireplace
+  id: Fireplace
+  graph: Fireplace
+  startNode: start
+  targetNode: Fireplace
+  category: construction-category-furniture
+  description: A place that has fire. Cozy!
+  icon: { sprite: Structures/Decoration/fireplace.rsi, state: fireplace }
+  objectType: Structure

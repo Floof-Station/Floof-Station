@@ -2,7 +2,7 @@
   id: WingsDragon
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
     - sprite: SimpleStation14/Mobs/Customization/wings96x34.rsi
       state: dragon
@@ -11,7 +11,7 @@
   id: WingsFly
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
     - sprite: SimpleStation14/Mobs/Customization/wings96x34.rsi
       state: fly
@@ -20,7 +20,7 @@
   id: WingsRobotic
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
     - sprite: SimpleStation14/Mobs/Customization/wings96x34.rsi
       state: robotic
@@ -29,7 +29,7 @@
   id: WingsSkeleton
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
     - sprite: SimpleStation14/Mobs/Customization/wings96x34.rsi
       state: skeleton
@@ -38,7 +38,7 @@
   id: WingsHarpy
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
     - sprite: SimpleStation14/Mobs/Customization/wings64x32.rsi
       state: harpy
@@ -47,7 +47,7 @@
   id: WingsHarpyBionic
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
     - sprite: _Floof/Mobs/Customization/wings64-32.rsi
       state: bionic_wings_tone_1

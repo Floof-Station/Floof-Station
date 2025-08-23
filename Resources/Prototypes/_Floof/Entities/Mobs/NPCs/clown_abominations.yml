@@ -454,6 +454,10 @@
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
   - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
   - type: LanguageKnowledge
     speaks: [Sign]
     understands: [Sign]

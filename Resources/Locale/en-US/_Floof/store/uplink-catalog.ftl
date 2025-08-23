@@ -17,6 +17,9 @@ uplink-energy-halberd-desc = A polarm handle with an energy-based axe head attac
 uplink-typewriter-bundle-name = Typewriter Bundle
 uplink-typewriter-bundle-desc = An inconspicuous briefcase that contains a Typewriter SMG, three magazines and an outfit fit for any aspiring mafiosos.
 
+uplink-PlushieSharkPinkBonk-name = Inconspicuous Shark Mace
+uplink-PlushieSharkPinkBonk-desc = An inconspicuous shark shaped mace, they will never realise what hit them.
+
 # Toys
 
 uplink-toysabre-name = Toy Sabre MK. 9

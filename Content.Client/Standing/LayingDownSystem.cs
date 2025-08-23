@@ -36,6 +36,9 @@ public sealed class LayingDownSystem : SharedLayingDownSystem
             sprite.DrawDepth = standing.CurrentState is StandingState.Lying && layingDown.IsCrawlingUnder
                 ? layingDown.CrawlingUnderDrawDepth
                 : layingDown.NormalDrawDepth;
+
+            // Floofstation - the rotation of an entity can change without it moving
+            OnMovementInput(uid, layingDown, new MoveEvent());
         }
 
         query.Dispose();

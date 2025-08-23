@@ -8,7 +8,6 @@
     - !type:CharacterDepartmentTimeRequirement
       department: Logistics
       min: 57600 #16 hours
-  antagAdvantage: 2 # DeltaV - Reduced TC: External Access
   startingGear: InvSpecGear
   icon: "JobIconInventorySpecialist"
   supervisors: job-supervisors-qm

@@ -138,6 +138,10 @@
   - type: DamageForceSay # Floofstation - added unqiue pain messages
     forceSayStringPrefix: damage-force-say-rodentia-
     forceSayStringCount: 7 # Default is 7, but defining it anyway in case it changes or someone wants to add/remove messages
+  - type: NightVision # Floofstation - Upstream has Felinids replaced with Tajarans and Tajarans have Cat Night Vision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
 
 - type: entity
   save: false
