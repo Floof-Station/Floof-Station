@@ -17,7 +17,7 @@
       - id: MaterialBiomass
         amount: 3
 
-- type: entity # Floostation - To be Mapped to CC Medical
+- type: entity # Floofstation - To be Mapped to CC Medical
   id: CrateCentCommCryo
   parent: CrateChemistrySecure
   name: CentComm Cryogenics Chemicals crate
