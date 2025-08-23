@@ -858,7 +858,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeat
-      amount: 5
+      amount: 8
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -2474,6 +2474,8 @@
     - type: NpcFactionMember
       factions:
         - SimpleHostile #floof, makes tarantulas friendly to people with animal friend but not hostile to xenos which was their original faction
+    - type: NPCRetaliation # Vulpstation
+      attackMemoryLength: 20
     - type: InputMover
     - type: MobMover
     - type: HTN
@@ -3564,7 +3566,7 @@
         Base: dead
   - type: Butcherable
     spawned:
-    - id: FoodMeat
+    - id: FoodMeatBacon
       amount: 6
   - type: Grammar
     attributes:

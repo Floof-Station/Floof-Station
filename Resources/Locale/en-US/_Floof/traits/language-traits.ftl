@@ -104,3 +104,12 @@ trait-description-NaturalKagebun =
         To the uninitiated, it is a chorus of sounds ranging from eerie whispers to ritualistic chanting.
         To those who speak it, it is a living tongue that links them to the spirit world and their ancient pacts.
         Through some adaptation, augmentation or clever workaround, you speak this instead of your species's usual natural language.
+
+trait-name-Bilingual = Bilingual
+trait-description-Bilingual = By upbringing or by immersion, you've picked up more languages than most. You're able to speak two languages in addition to your native tongue.
+
+trait-name-Trilingual = Trilingual
+trait-description-Trilingual = You're well-traveled or had a very diverse upbringing. You're able to speak three languages in addition to your native tongue.
+
+trait-name-Quadrilingual = Quadrilingual
+trait-description-Quadrilingual = You've been to more places than you can count, and picked up more than a few languages along the way. You're able to speak four languages in addition to your native tongue.

@@ -312,3 +312,19 @@
     shoes: ClothingShoesClownBanana
     jumpsuit: ClothingUniformJumpsuitClownBanana
     mask: ClothingMaskClownBanana
+
+- type: startingGear # Floofstation 
+  id: Infiltrator
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChameleon
+    outerClothing: ClothingOuterChameleon
+    back: ClothingBackpackChameleon
+    shoes: ClothingShoesChameleon
+    gloves: ClothingHandsChameleonThief
+    eyes: ClothingEyesChameleon
+    head: ClothingHeadHatChameleon
+    id: PassengerPDA # Reminder to Change to Chameleon ID when we port that
+    ears: ClothingHeadsetChameleon
+    mask: ClothingMaskGasVoiceChameleon
+    pocket1: BarberScissors
+    pocket2: AgentIDCard

@@ -7457,3 +7457,64 @@ Entries:
   id: 785
   time: '2025-08-20T18:15:52.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1332
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: >-
+        NPCs will now retaliate when attacked even if the attacker belongs to a
+        faction they are friendly to. This means that animal friend trait users
+        can ***no longer*** safely kill vent critters (though they can still
+        move them to a spot where they won't hurt anyone).
+  id: 786
+  time: '2025-08-23T00:38:53.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1336
+- author: ashkitten
+  changes:
+    - type: Add
+      message: >-
+        Add Bilingual, Trilingual, and Quadrilingual traits, allowing you to
+        take more languages than ever before at the cost of your precious
+        points.
+    - type: Tweak
+      message: >-
+        Revert basic language allotment to one, effectively increasing the cost
+        of taking two basic languages by one point.
+  id: 787
+  time: '2025-08-23T00:42:29.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1318
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added larger storage canisters.
+  id: 788
+  time: '2025-08-23T00:45:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1302
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        Added a set of commands to help add bodies (and hands!) to non-mob
+        entities. See `list addbody` or Floof-Station#1278 for more info.
+  id: 789
+  time: '2025-08-23T01:52:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1278
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Cheesed to Eat you, Rodentia can now eat chocolate.
+  id: 790
+  time: '2025-08-23T04:27:50.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1258
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Tweaked wires to build almost instantly
+    - type: Tweak
+      message: Re-enabled Water Vapor Canisters from Logistics
+    - type: Fix
+      message: Pigs give bacon now. Weird they didn't before.
+    - type: Add
+      message: Added Pig and Chicken Cubes.
+  id: 791
+  time: '2025-08-23T04:28:27.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1261
