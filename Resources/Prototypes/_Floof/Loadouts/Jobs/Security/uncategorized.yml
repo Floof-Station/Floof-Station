@@ -65,6 +65,19 @@
 
 # Belt
 
+- type: loadout
+  id: LoadoutSecurityBeltJudo
+  category: JobsSecurityAUncategorized
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityBelt
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+  - ClothingBeltCorporateJudo
+
 # Ears
 
 # Equipment

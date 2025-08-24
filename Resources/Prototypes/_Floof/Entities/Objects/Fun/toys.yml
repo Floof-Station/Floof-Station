@@ -567,6 +567,38 @@
       params:
         variation: 0.05
         volume: 4
+        
+- type: entity
+  parent: PlushieHuman
+  id: PlushieSillyResomi
+  name: Silly Resomi plushie
+  description: A squishy resomi plush that carries the faint scent of strawberries and vanilla.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: sillyresomi
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Avali/avali_1.ogg
+      params:
+        volume: 1
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Avali/avali_scream.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Avali/avali_1.ogg
+      params:
+        volume: 1
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Avali/avali_scream.ogg
+      params:
+        variation: 0.05
+        volume: 4
+                
 
 - type: entity
   parent: PlushieHuman

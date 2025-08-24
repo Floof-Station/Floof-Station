@@ -432,6 +432,7 @@
       - id: PlushieHos
         prob: 0.50
         orGroup: Prize
+      - id: PlushieSillyResomi
       - id: PlushieAvianMysta
         prob: 0.50
         orGroup: Prize

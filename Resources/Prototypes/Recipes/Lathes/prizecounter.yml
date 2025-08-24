@@ -783,6 +783,14 @@
   completetime: 0.1
   materials:
     PrizeTicket: 50
+    
+- type: latheRecipe
+  id: PlushieSillyResomi
+  result: PlushieSillyResomi
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
 
 - type: latheRecipe
   id: PlushieAvianMysta

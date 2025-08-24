@@ -20,6 +20,8 @@
       id: LoadoutClothingBeltSecurity
     - type: loadout
       id: LoadoutClothingBeltHolster
+    - type: loadout # Floof - M3739 - #1328
+      id: LoadoutSecurityBeltJudo
 
 #- type: characterItemGroup
 #  id: LoadoutSecurityEars

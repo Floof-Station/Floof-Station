@@ -108,3 +108,157 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutOuter
+
+# Section - those were in the outerwearGroup, but never had loadouts added for them
+- type: loadout
+  id: LoadoutOuterBomberAerostatic
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatBomberAerostatic
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterJamrockBlazer
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatJacketJamrock
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterBomberPunkRed
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatBomberPunkRed
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadingOuterCoatJacketLeather
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatJacketLeather
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterJacketBiker
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatJacketBiker
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterJacketJamrock
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatJacketJamrock
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+# Already exists under a different id
+#- type: loadout
+#  id: LoadoutOuterJacketLettermanBlue
+#  category: Outer
+#  cost: 1
+#  items:
+#  - ClothingOuterCoatJacketLettermanBlue
+#  requirements:
+#  - !type:CharacterItemGroupRequirement
+#    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterJacketLettermanBrown
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatJacketLettermanBrown
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterJacketLettermanMagenta
+  category: Outer
+  cost: 1
+  items:
+  - ClothingOuterCoatJacketLettermanMagenta
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+# Already exists under a different id
+#- type: loadout
+#  id: LoadoutOuterJacketLettermanRed
+#  category: Outer
+#  cost: 1
+#  items:
+#  - ClothingOuterCoatJacketLettermanRed
+#  requirements:
+#  - !type:CharacterItemGroupRequirement
+#    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterCoatAcidRaincoat
+  category: Outer
+  cost: 2
+  items:
+  - ClothingOuterCoatAcidRaincoat
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterCoatAcidRaincoatBlue
+  category: Outer
+  cost: 2
+  items:
+  - ClothingOuterCoatAcidRaincoatBlue
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterCoatAcidRaincoatGreen
+  category: Outer
+  cost: 2
+  items:
+  - ClothingOuterCoatAcidRaincoatGreen
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterCoatAcidRaincoatMagenta
+  category: Outer
+  cost: 2
+  items:
+  - ClothingOuterCoatAcidRaincoatMagenta
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+
+- type: loadout
+  id: LoadoutOuterCoatAcidRaincoatYellow
+  category: Outer
+  cost: 2
+  items:
+  - ClothingOuterCoatAcidRaincoatYellow
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutOuter
+# Section end

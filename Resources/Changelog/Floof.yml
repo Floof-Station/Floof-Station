@@ -7518,3 +7518,48 @@ Entries:
   id: 791
   time: '2025-08-23T04:28:27.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1261
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: The Golden Cup can now be used to chug alcohol better.
+  id: 792
+  time: '2025-08-23T23:17:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1343
+- author: Einstein Engines
+  changes:
+    - type: Add
+      message: >-
+        You can now grab people by attempting to pull them while harm intent is
+        active.
+    - type: Add
+      message: Martial arts styles has been added. Try to remember the basics of CQC.
+  id: 793
+  time: '2025-08-23T23:19:31.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1328
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: >-
+        A few more existing coats (acid raincoats and letterman jackets) are now
+        available in the loadouts.
+  id: 794
+  time: '2025-08-23T23:37:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1344
+- author: friendofbugs
+  changes:
+    - type: Add
+      message: Added a Silly Resomi Plush
+    - type: Fix
+      message: >-
+        The Rat Logistics Officer and Bunny CMO plushies will now appear in
+        prize counter as intended
+  id: 795
+  time: '2025-08-24T00:08:49.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1309
+- author: Forzii
+  changes:
+    - type: Tweak
+      message: Added coos to Resomi.
+  id: 796
+  time: '2025-08-24T04:07:56.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1334
