@@ -140,6 +140,9 @@
   - type: Icon
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
     state: ruinswindow
+  - type: Construction # Vulpstation
+    graph: HouseWindowWood
+    node: housewindowwood
 
 - type: entity
   parent: N14WindowBaseAirtight
@@ -151,6 +154,9 @@
   - type: Icon
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
     state: ruinswindowvertical
+  - type: Construction # Vulpstation
+    graph: HouseWindowWoodVertical
+    node: housewindowwoodvertical
 
 - type: entity
   parent: N14WindowBase
@@ -196,6 +202,9 @@
   - type: Icon
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
     state: housewindow
+  - type: Construction # Vulpstation
+    graph: HouseWindowTan
+    node: housewindowtan
 
 - type: entity
   parent: N14WindowBaseAirtight
@@ -207,6 +216,9 @@
   - type: Icon
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
     state: housewindowvertical
+  - type: Construction # Vulpstation
+    graph: HousewindowverticalTan
+    node: housewindowverticaltan
 
 - type: entity
   parent: N14WindowBaseAirtight
@@ -218,6 +230,9 @@
   - type: Icon
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
     state: woodwindow
+  - type: Construction # Vulpstation
+    graph: WoodWindow
+    node: woodwindow
 
 - type: entity
   parent: N14WindowBase

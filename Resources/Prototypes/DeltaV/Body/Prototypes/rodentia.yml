@@ -13,7 +13,7 @@
     torso:
       part: TorsoRodentia
       organs:
-        heart: OrganAnimalHeart
+        heart: OrganHumanHeart
         lungs: OrganHumanLungs
         stomach: OrganAnimalStomach
         liver: OrganAnimalLiver

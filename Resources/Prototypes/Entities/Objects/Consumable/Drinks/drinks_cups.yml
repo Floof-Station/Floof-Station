@@ -53,6 +53,10 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/golden_cup.rsi
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
 
 - type: entity
   parent: DrinkBaseCup

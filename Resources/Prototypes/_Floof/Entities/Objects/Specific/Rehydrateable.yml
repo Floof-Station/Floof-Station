@@ -257,3 +257,21 @@
   - type: Rehydratable
     possibleSpawns:
     - MobXenoCCNeutralRavager
+
+- type: entity # Floofstation
+  parent: MonkeyCube
+  id: PigCube
+  name: pig cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobPig
+
+- type: entity # Floofstation
+  parent: MonkeyCube
+  id: ChickenCube
+  name: chicken cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobChicken

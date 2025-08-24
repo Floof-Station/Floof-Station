@@ -7176,3 +7176,390 @@ Entries:
   id: 754
   time: '2025-08-02T01:15:01.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1270
+- author: sprkl
+  changes:
+    - type: Fix
+      message: Ghosts can now play their haunting music.
+  id: 755
+  time: '2025-08-07T10:24:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1273
+- author: Vulpstation
+  changes:
+    - type: Tweak
+      message: >-
+        Mappers no longer have to make sure to add spawnpoints for every job on
+        every map. Now only a cryosleep/latejoin spawnpoint is necessary.
+    - type: Fix
+      message: The ore processor can now correctly craft reinforced glass.
+    - type: Fix
+      message: >-
+        The /invokeverb command should now correctly function when invoked with
+        a verb type rather than name.
+  id: 756
+  time: '2025-08-07T10:30:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1281
+- author: JFerrix
+  changes:
+    - type: Fix
+      message: Fixed mass sleep, healing word, and revivify assay feedback.
+    - type: Fix
+      message: >-
+        Fixed all three language abilities (telepathy, xenoglossy and
+        psychognomy)
+    - type: Add
+      message: Wrote psychognomy and telepathy descriptions as they didnt exist.
+    - type: Tweak
+      message: >-
+        Changed pyrokinetic flare description from placeholder text to a real
+        description
+  id: 757
+  time: '2025-08-07T22:22:12.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1268
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        Faxes and holopads now have their respective circuit boards available in
+        the circuit imprinter and can be constructed.
+  id: 758
+  time: '2025-08-08T16:38:24.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1286
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: Slime Bartender Plushie
+    - type: Add
+      message: Grumpy Quartermaster Plushie
+    - type: Add
+      message: Hardcore Dj Plushie
+    - type: Add
+      message: HOS Plushie
+  id: 759
+  time: '2025-08-08T16:45:58.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1296
+- author: sprkl
+  changes:
+    - type: Fix
+      message: Surgery now works on Mimeguins.
+  id: 760
+  time: '2025-08-08T16:51:06.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1274
+- author: Dunrab
+  changes:
+    - type: Add
+      message: Added multiple craftable wooden windows for houses and structures.
+  id: 761
+  time: '2025-08-08T17:18:29.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1287
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: HOPEFULLY fixed the annoying bug that caused broken standing state.
+    - type: Fix
+      message: >-
+        Entities leaving your PVS should no longer have their sprite rotation
+        reset to "facing west".
+  id: 762
+  time: '2025-08-08T17:20:42.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1293
+- author: ashkitten
+  changes:
+    - type: Fix
+      message: Fixed sign language whispers.
+    - type: Fix
+      message: Fixed sign language being usable while asleep.
+  id: 764
+  time: '2025-08-08T21:36:57.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1298
+- author: KyuPolaris
+  changes:
+    - type: Add
+      message: >-
+        Added some rodent plushies, the Rat LO plushie and the Bunny CMO
+        plushie!
+  id: 765
+  time: '2025-08-08T21:38:50.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1289
+- author: KyuPolaris
+  changes:
+    - type: Fix
+      message: Fixed some minor issues with the new pride drip
+  id: 766
+  time: '2025-08-08T22:40:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1284
+- author: sprkl
+  changes:
+    - type: Fix
+      message: Tajaran can have their species name customized.
+  id: 767
+  time: '2025-08-08T22:42:30.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1280
+- author: Raikyr0
+  changes:
+    - type: Fix
+      message: The fridge on the Pathfinder is now operable for non-chefs.
+  id: 768
+  time: '2025-08-08T22:44:29.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1255
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: >-
+        pAIs now use encryption keys, allowing them to talk on more than just
+        the binary channel
+  id: 769
+  time: '2025-08-09T03:20:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1208
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: >-
+        人人生而平等, 正是我们的习惯让我们与众不同。(editor's note: this means all jobs will now
+        receive the same amount of TC when chosen to be traitors)
+  id: 770
+  time: '2025-08-09T03:56:03.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1301
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: You can now choose up to two additional languages in character creation.
+  id: 771
+  time: '2025-08-09T17:06:26.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1279
+- author: Ko4erga
+  changes:
+    - type: Add
+      message: >-
+        Added a cutter machine for crafting patterned steel tiles, concrete and
+        wooden tiles.
+    - type: Tweak
+      message: >-
+        After ripping off patterned tiles, you get tiles with the respective
+        pattern, not just steel tiles.
+  id: 772
+  time: '2025-08-09T22:52:03.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1285
+- author: M3739
+  changes:
+    - type: Tweak
+      message: Observer ghosts no longer have global hearing.
+  id: 773
+  time: '2025-08-09T23:11:10.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1300
+- author: ashkitten
+  changes:
+    - type: Add
+      message: People you're carrying will now show up in your examine popup.
+  id: 774
+  time: '2025-08-10T00:37:45.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1221
+- author: Stealthii
+  changes:
+    - type: Tweak
+      message: Loadout items have been added to Paradox clones of characters
+    - type: Fix
+      message: Paradox clones now match traits with their original characters
+  id: 775
+  time: '2025-08-10T02:08:08.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1303
+- author: Einstein Engines
+  changes:
+    - type: Add
+      message: >-
+        Handheld radios, including their security variant can now be tuned to
+        specific frequencies, and have their mic and speaker toggled separately.
+    - type: Tweak
+      message: >-
+        The Martial Artist trait has received a rework, and is now given for
+        free to gladiators and boxers.
+    - type: Tweak
+      message: >-
+        Eating a brain takes longer, along with a red popup to communicate
+        potential round removal.
+    - type: Tweak
+      message: The Chemmaster's UI has been revised, and now features a pill buffer.
+    - type: Add
+      message: >-
+        The fillbot has been added. Use a multi-tool or network analyzer to link
+        it to a lathe, silo, or dispos and watch it pick everything up off the
+        floor and into the linked object!
+    - type: Add
+      message: >-
+        The Dignitary department, along with the Magistrate has been added. The
+        BSO and NTR has been moved to this department.
+  id: 776
+  time: '2025-08-10T03:29:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1294
+- author: M3739
+  changes:
+    - type: Fix
+      message: >-
+        Slime people are once again, certified to pilot, and registered by door
+        sensors.
+  id: 777
+  time: '2025-08-10T04:44:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1307
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Subtles and subtle OOC messages should now correctly display over the
+        speaker's head.
+  id: 778
+  time: '2025-08-11T04:05:17.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1314
+- author: M3739
+  changes:
+    - type: Fix
+      message: Intercomms are functional for every channel again.
+  id: 779
+  time: '2025-08-11T04:10:18.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1315
+- author: M3739
+  changes:
+    - type: Fix
+      message: Melee weapon speeds have been corrected.
+  id: 780
+  time: '2025-08-11T04:11:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1313
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: Added Avian Mysta Plushie
+  id: 781
+  time: '2025-08-18T04:12:16.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1326
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Atmos Firesuit and the regular Firesuit has Pockets now
+  id: 782
+  time: '2025-08-18T22:08:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1325
+- author: KyuPolaris
+  changes:
+    - type: Add
+      message: Added horny rodentia (Rodentia now can have horn markings)
+  id: 783
+  time: '2025-08-18T23:44:35.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1331
+- author: EinsteinEngines
+  changes: []
+  id: 784
+  time: '2025-08-19T00:25:34.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1324
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Clothing received via loadouts will now correctly have the owner's
+        fingerprints.
+  id: 785
+  time: '2025-08-20T18:15:52.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1332
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: >-
+        NPCs will now retaliate when attacked even if the attacker belongs to a
+        faction they are friendly to. This means that animal friend trait users
+        can ***no longer*** safely kill vent critters (though they can still
+        move them to a spot where they won't hurt anyone).
+  id: 786
+  time: '2025-08-23T00:38:53.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1336
+- author: ashkitten
+  changes:
+    - type: Add
+      message: >-
+        Add Bilingual, Trilingual, and Quadrilingual traits, allowing you to
+        take more languages than ever before at the cost of your precious
+        points.
+    - type: Tweak
+      message: >-
+        Revert basic language allotment to one, effectively increasing the cost
+        of taking two basic languages by one point.
+  id: 787
+  time: '2025-08-23T00:42:29.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1318
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added larger storage canisters.
+  id: 788
+  time: '2025-08-23T00:45:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1302
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        Added a set of commands to help add bodies (and hands!) to non-mob
+        entities. See `list addbody` or Floof-Station#1278 for more info.
+  id: 789
+  time: '2025-08-23T01:52:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1278
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Cheesed to Eat you, Rodentia can now eat chocolate.
+  id: 790
+  time: '2025-08-23T04:27:50.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1258
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Tweaked wires to build almost instantly
+    - type: Tweak
+      message: Re-enabled Water Vapor Canisters from Logistics
+    - type: Fix
+      message: Pigs give bacon now. Weird they didn't before.
+    - type: Add
+      message: Added Pig and Chicken Cubes.
+  id: 791
+  time: '2025-08-23T04:28:27.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1261
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: The Golden Cup can now be used to chug alcohol better.
+  id: 792
+  time: '2025-08-23T23:17:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1343
+- author: Einstein Engines
+  changes:
+    - type: Add
+      message: >-
+        You can now grab people by attempting to pull them while harm intent is
+        active.
+    - type: Add
+      message: Martial arts styles has been added. Try to remember the basics of CQC.
+  id: 793
+  time: '2025-08-23T23:19:31.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1328
+- author: Mnemotechnician
+  changes:
+    - type: Tweak
+      message: >-
+        A few more existing coats (acid raincoats and letterman jackets) are now
+        available in the loadouts.
+  id: 794
+  time: '2025-08-23T23:37:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1344
+- author: friendofbugs
+  changes:
+    - type: Add
+      message: Added a Silly Resomi Plush
+    - type: Fix
+      message: >-
+        The Rat Logistics Officer and Bunny CMO plushies will now appear in
+        prize counter as intended
+  id: 795
+  time: '2025-08-24T00:08:49.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1309
+- author: Forzii
+  changes:
+    - type: Tweak
+      message: Added coos to Resomi.
+  id: 796
+  time: '2025-08-24T04:07:56.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1334

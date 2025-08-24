@@ -47,6 +47,7 @@ namespace Content.Shared.Localizations
 
             _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
             _loc.AddFunction(cultureEn, "MANY", FormatMany);
+            _loc.AddFunction(cultureEn, "NUMBER-WORDS", FormatNumberWords); // Floof
         }
 
         private ILocValue FormatMany(LocArgs args)
@@ -229,5 +230,96 @@ namespace Content.Shared.Localizations
 
             return new LocValueString(res);
         }
+        // Floof
+        private static readonly string[] ZeroToNineteen =
+        [
+            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+        ];
+
+        private static readonly string[] TwentyToNinety =
+        [
+            "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
+        ];
+
+        // each is 10^x starting with x=3 and incrementing by 3
+        private static readonly string[] LargeNumberNames =
+        [
+            "thousand",
+            "million",
+            "billion",
+            "trillion",
+            "quadrillion",
+            "quintillion",
+            "sextillion",
+            "septillion",
+            "octillion",
+            "nonillion",
+            "decillion",
+            "undecillion",
+            "duodecillion",
+            "tredecillion",
+            "quattuordecillion",
+            "quindecillion",
+            "sexdecillion",
+            "septendecillion",
+            "octodecillion",
+            "novemdecillion",
+            "vigintillion"
+        ];
+
+        // HEAVILY adapted from https://stackoverflow.com/a/18493408
+        // rewritten entirely with string handling functions because BigInteger isn't allowed in sandbox...
+        private static string IntToEnglishText(string n, bool isFirst = false)
+        {
+            n = n.TrimStart('0');
+            string result;
+            if(isFirst && n == "")
+                result = "zero";
+            else if(n.StartsWith("-"))
+                result = "negative " + IntToEnglishText(n[1..]);
+            else if(n == "")
+                result = "";
+            else if(n.Length == 1)
+                result = ZeroToNineteen[int.Parse(n)] + " ";
+            else if(n.Length == 2 && n.StartsWith('1'))
+                result = ZeroToNineteen[int.Parse(n)] + (isFirst ? null : " ");
+            else if(n.Length == 2)
+                result = TwentyToNinety[int.Parse(n) / 10 - 2] + (n[1] != '0' ? "-" + IntToEnglishText(n[1].ToString()) : null);
+            else if(n.Length == 3)
+                result = IntToEnglishText(n[0].ToString()) + "hundred " + (n[1..3] != "00" ? "and " + IntToEnglishText(n[1..3]) : null);
+            else if (n.Length <= 6 + 3 * LargeNumberNames.Length)
+            {
+                var divRem = Math.DivRem(n.Length, 3);
+                if (divRem.Remainder == 0)
+                {
+                    divRem.Remainder = 3;
+                    divRem.Quotient -= 1;
+                }
+                result = IntToEnglishText(n[..divRem.Remainder]) + LargeNumberNames[divRem.Quotient - 1] + ", " +
+                    IntToEnglishText(n[divRem.Remainder..]);
+            }
+            else
+                result = n; // if it's bigger than 999 vigintillion, just fucking bail
+            if(isFirst)
+                result = result.Trim();
+            return result;
+        }
+
+        public static string FormatNumberWords(string number)
+        {
+            var parts = number.Split(".");
+            var result = IntToEnglishText(parts[0], true);
+            if (parts.TryGetValue(1, out var fractional))
+            {
+                result += " point";
+                foreach (var digit in fractional)
+                    result += " " + ZeroToNineteen[int.Parse(digit.ToString())];
+            }
+            return result;
+        }
+
+        private static ILocValue FormatNumberWords(LocArgs args) =>
+            new LocValueString(FormatNumberWords(args.Args[0].Value!.ToString()!));
     }
 }

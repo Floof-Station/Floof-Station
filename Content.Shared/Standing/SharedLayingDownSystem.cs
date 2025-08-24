@@ -114,8 +114,10 @@ public abstract class SharedLayingDownSystem : EntitySystem
             || _mobState.IsIncapacitated(uid)
             || !_standing.Stand(uid))
             component.CurrentState = StandingState.Lying;
+        else // Floofstation - put the below into else
+            component.CurrentState = StandingState.Standing;
 
-        component.CurrentState = StandingState.Standing;
+        Dirty(uid, component); // Floofstation
     }
 
     private void OnRefreshMovementSpeed(EntityUid uid, LayingDownComponent component, RefreshMovementSpeedModifiersEvent args)

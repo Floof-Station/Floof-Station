@@ -1,0 +1,28 @@
+- type: trait
+  id: Bilingual
+  category: TraitsSpeechLanguages
+  points: -1
+  slots: 0
+  itemGroupSlots: -1
+
+- type: trait
+  id: Trilingual
+  category: TraitsSpeechLanguages
+  points: -3
+  slots: 0
+  itemGroupSlots: -1
+  requirements:
+  - !type:CharacterTraitRequirement
+    traits:
+    - Bilingual
+
+- type: trait
+  id: Quadrilingual
+  category: TraitsSpeechLanguages
+  points: -5
+  slots: 0
+  itemGroupSlots: -1
+  requirements:
+  - !type:CharacterTraitRequirement
+    traits:
+    - Trilingual
