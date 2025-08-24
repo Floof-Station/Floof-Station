@@ -89,6 +89,8 @@
         type: StoreBoundUserInterface
       enum.VoiceMaskUIKey.Key:
         type: VoiceMaskBoundUserInterface # Floofstation
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface # Floofstation
   - type: Visibility
     layer: 2 #ghost vis layer
   - type: NightVision # Floofstation

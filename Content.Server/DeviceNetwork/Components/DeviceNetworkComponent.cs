@@ -1,6 +1,7 @@
 using Content.Server.DeviceNetwork.Systems;
 using Content.Shared.DeviceNetwork;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.Serialization;
 
 namespace Content.Server.DeviceNetwork.Components
 {
@@ -112,7 +113,7 @@ namespace Content.Server.DeviceNetwork.Components
         /// <summary>
         ///     A list of configurators that this device is on.
         /// </summary>
-        [DataField]
+        [NonSerialized]
         [Access(typeof(NetworkConfiguratorSystem))]
         public HashSet<EntityUid> Configurators = new();
     }

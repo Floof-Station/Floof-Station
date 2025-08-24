@@ -16,8 +16,36 @@
       id: ValyrianStandard
     - type: trait
       id: Azaziba
-    - type: trait # Floof
+    # Floof section start
+    - type: trait
       id: Ratvarian
+    # - type: trait # Floof - Tajaran Update b7660b9, disabled
+    #   id: SiikMaas
+    - type: trait # Floof - Tajaran Update b7660b9
+      id: NalRasan
+    - type: trait # Floof - Tajaran Update b7660b9
+      id: SiikTajr
+    # - type: trait # Floof - Tajaran Update b7660b9, disabled
+    #   id: YaSsa
+    # - type: trait # Floof - Tajaran Update b7660b9, disabled
+    #   id: Delvahii
+    - type: trait
+      id: FoxLanguage
+    - type: trait
+      id: DogLanguage
+    - type: trait
+      id: CatLanguage
+    - type: trait
+      id: MonkeyLanguage
+    - type: trait
+      id: KoboldLanguage
+    - type: trait
+      id: Bilingual
+    - type: trait
+      id: Trilingual
+    - type: trait
+      id: Quadrilingual
+    # Floof section end
 
 - type: characterItemGroup
   id: TraitsAccents

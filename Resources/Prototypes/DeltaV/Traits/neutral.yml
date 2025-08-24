@@ -2,6 +2,7 @@
   id: ScottishAccent
   category: TraitsSpeechAccents
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents

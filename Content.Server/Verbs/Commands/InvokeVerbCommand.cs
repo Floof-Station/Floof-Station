@@ -69,7 +69,7 @@ namespace Content.Server.Verbs.Commands
             var verbs = verbSystem.GetLocalVerbs(target.Value, playerEntity.Value, Verb.VerbTypes, true);
 
             // if the "verb name" is actually a verb-type, try run any verb of that type.
-            var verbType = Verb.VerbTypes.FirstOrDefault(x => x.Name == verbName);
+            var verbType = Verb.VerbTypes.FirstOrDefault(x => x.Name.ToLowerInvariant() == verbName); // Vulpstation - fixed this not lowercasing
             if (verbType != null)
             {
                 var verb = verbs.FirstOrDefault(v => v.GetType() == verbType);

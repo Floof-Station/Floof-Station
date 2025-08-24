@@ -6,6 +6,8 @@ chat-emote-name-sigh = Sigh
 chat-emote-name-whistle = Whistle
 chat-emote-name-crying = Crying
 chat-emote-name-squish = Squish
+chat-emote-name-pop = Pop
+chat-emote-name-bubble = Bubble
 chat-emote-name-chitter = Chitter
 chat-emote-name-squeak = Squeak
 chat-emote-name-thump = Thump Tail
@@ -45,7 +47,7 @@ chat-emote-name-vulpbark = Bark
 chat-emote-name-vulpsnarl = Snarl
 chat-emote-name-vulpwhine = Whine
 chat-emote-name-vulphowl = Howl
-# Felinid
+# Felinid / Tajaran
 chat-emote-name-meow = Meow
 chat-emote-name-mew = Mew
 chat-emote-name-purr = Purr
@@ -82,6 +84,8 @@ chat-emote-msg-cathisses = hisses!
 chat-emote-msg-monkeyscreeches = screeches!
 chat-emote-msg-yawn = yawns.
 chat-emote-msg-snore = snores.
+chat-emote-msg-bubble = bubbles.
+chat-emote-msg-pop = pops!
 
 # Floof - Feroxi Port
 chat-emote-msg-gnash = gnashes {POSS-ADJ($entity)} teeth.

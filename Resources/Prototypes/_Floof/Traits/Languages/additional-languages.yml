@@ -1,0 +1,112 @@
+- type: trait
+  id: Ratvarian
+  category: TraitsSpeechLanguages
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: TraitsLanguagesBasic
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Ratvarian
+    languagesUnderstood:
+    - Ratvarian
+
+# The below languages have little to no utility, so they are set to cost 0 slots
+# Fox and dog languages, specific to the vulpkanin
+- type: trait
+  id: FoxLanguage
+  category: TraitsSpeechLanguages
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: TraitsLanguagesBasic
+  - !type:CharacterSpeciesRequirement
+    species:
+    - Vulpkanin
+    - Kitsune
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Fox
+    languagesUnderstood:
+    - Fox
+
+- type: trait
+  id: DogLanguage
+  category: TraitsSpeechLanguages
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: TraitsLanguagesBasic
+  - !type:CharacterSpeciesRequirement
+    species: [Vulpkanin]
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Dog
+    languagesUnderstood:
+    - Dog
+
+# Cat language, specific to felinids and tajarans
+- type: trait
+  id: CatLanguage
+  category: TraitsSpeechLanguages
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: TraitsLanguagesBasic
+  - !type:CharacterSpeciesRequirement
+    species:
+    - Felinid
+  #    - Tajaran # one day...
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Cat
+    languagesUnderstood:
+    - Cat
+
+# Monkey language, specific to primate descendants
+- type: trait
+  id: MonkeyLanguage
+  category: TraitsSpeechLanguages
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: TraitsLanguagesBasic
+  - !type:CharacterSpeciesRequirement
+    species:
+    - Human
+    - Felinid # According to TG lore, felinids were creating due to a sabotage of cloning
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Monkey
+    languagesUnderstood:
+    - Monkey
+
+# Kobold language, specific to lizards and humans
+- type: trait
+  id: KoboldLanguage
+  category: TraitsSpeechLanguages
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: TraitsLanguagesBasic
+  - !type:CharacterSpeciesRequirement
+    species:
+    - Human
+    - Reptilian
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Kobold
+    languagesUnderstood:
+    - Kobold

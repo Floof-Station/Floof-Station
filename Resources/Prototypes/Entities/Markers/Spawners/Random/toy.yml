@@ -86,6 +86,7 @@
         # - Plushiegirlfailure
         - PlushieKitsuneCaptain
         - PlushieSapphicHarpyPlushie
+        - PlushieSillyResomi
         # - PlushieFeistyBartender
         # - PlushieCoolVulp
         # - PlushieNoticeableSecurityOfficer
@@ -94,6 +95,13 @@
         - PlushieMort
         - PlushieAvaliHOP 
         - PlushieKoboldCefJustice
+        - PlushieSlimeBartender
+        - PlushieGrumpyQuartermaster
+        - PlushieHardcoreDj
+        - PlushieHos
+        - PlushieRatLogisticsOfficer
+        - PlushieBunnyChiefMedicalOfficer
+        - PlushieAvianMysta
       chance: 0.5
       offset: 0.2
 

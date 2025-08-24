@@ -2,7 +2,8 @@
   id: FelinidFluffyTailRings
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Felinid, SlimePerson, Human, Rodentia, Vulpkanin, Oni, IPC] # FLOOF CHANGE IPCs get furry parts
+  speciesRestriction: [Felinid, SlimePerson, Human, Rodentia, Vulpkanin, Oni, IPC, Tajaran] # FLOOF CHANGE IPCs get furry parts, Tajaran Update b7660b9
+
   sprites:
   - sprite: DeltaV/Mobs/Customization/Felinid/felinid_tails.rsi
     state: Felinid_fluffy_tail_full
@@ -13,7 +14,7 @@
   id: FelinidFluffyTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Felinid, SlimePerson, Human, Rodentia, Vulpkanin, Oni, IPC] # FLOOF CHANGE IPCs get furry parts
+  speciesRestriction: [Felinid, SlimePerson, Human, Rodentia, Vulpkanin, Oni, IPC, Tajaran] # FLOOF CHANGE IPCs get furry parts, Tajaran Update b7660b9
   sprites:
   - sprite: DeltaV/Mobs/Customization/Felinid/felinid_tails.rsi
     state: Felinid_fluffy_tail_full
@@ -22,7 +23,7 @@
   id: FelinidAlternativeTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Felinid, SlimePerson, Human, Rodentia, Vulpkanin, Oni, IPC] # FLOOF CHANGE IPCs get furry parts
+  speciesRestriction: [Felinid, SlimePerson, Human, Rodentia, Vulpkanin, Oni, IPC, Tajaran] # FLOOF CHANGE IPCs get furry parts, Tajaran Update b7660b9
   sprites:
     - sprite: DeltaV/Mobs/Customization/Felinid/alternative_tail.rsi
       state: m_waggingtail_cat_FRONT

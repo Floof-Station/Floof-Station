@@ -1013,3 +1013,11 @@
     Steel: 100
     Glass: 500
     Gold: 100
+
+- type: latheRecipe
+  id: CutterMachineCircuitboard
+  result: CutterMachineCircuitboard
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500

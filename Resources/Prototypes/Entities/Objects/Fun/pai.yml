@@ -42,10 +42,23 @@
     stopSearchVerbText: pai-system-stop-searching-verb-text
     stopSearchVerbPopup: pai-system-stopped-searching
   - type: Examiner
+  # Floof: use encryption keys instead of intrinsic radio channels
+  - type: EncryptionKeyHolder
+    keySlots: 4
+    keysExtractionMethod: Screwing
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBinaryUnremoveable
+      - EncryptionKeyCommon
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
     - Binary
+    - Common
   - type: ActiveRadio
     channels:
     - Binary
@@ -109,11 +122,25 @@
   - type: ToggleableGhostRole
     roleName: pai-system-role-name-syndicate
     roleDescription: pai-system-role-description-syndicate
+  # Floof: use encryption keys instead of intrinsic radio channels
+  - type: EncryptionKeyHolder
+    keySlots: 4
+    keysExtractionMethod: Screwing
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBinaryUnremoveable
+      - EncryptionKeyCommon
+      - EncryptionKeySyndie
   - type: IntrinsicRadioTransmitter
     channels:
+    - Binary
+    - Common
     - Syndicate
   - type: ActiveRadio
     channels:
+    - Binary
+    - Common
     - Syndicate
   - type: Appearance
   - type: GenericVisualizer

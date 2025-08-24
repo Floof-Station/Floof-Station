@@ -7,8 +7,9 @@ using Content.Server.EUI;
 using Content.Shared.Administration;
 using Content.Shared.Database;
 using Content.Shared.Eui;
-using Robust.Server.Player;
+using Content.Shared.Roles;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Administration;
 
@@ -18,9 +19,9 @@ public sealed class BanPanelEui : BaseEui
     [Dependency] private readonly IEntityManager _entities = default!;
     [Dependency] private readonly ILogManager _log = default!;
     [Dependency] private readonly IPlayerLocator _playerLocator = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IAdminManager _admins = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     private readonly ISawmill _sawmill;
 
@@ -123,7 +124,14 @@ public sealed class BanPanelEui : BaseEui
             var now = DateTimeOffset.UtcNow;
             foreach (var role in roles)
             {
-                _banManager.CreateRoleBan(targetUid, target, Player.UserId, addressRange, targetHWid, role, minutes, severity, reason, now);
+                if (_prototypeManager.HasIndex<JobPrototype>(role))
+                {
+                    _banManager.CreateRoleBan(targetUid, target, Player.UserId, addressRange, targetHWid, role, minutes, severity, reason, now);
+                }
+                else
+                {
+                    _sawmill.Warning($"{Player.Name} ({Player.UserId}) tried to issue a job ban with an invalid job: {role}");
+                }
             }
 
             Close();
@@ -131,13 +139,12 @@ public sealed class BanPanelEui : BaseEui
         }
 
         if (erase &&
-            targetUid != null &&
-            _playerManager.TryGetSessionById(targetUid.Value, out var targetPlayer))
+            targetUid != null)
         {
             try
             {
                 if (_entities.TrySystem(out AdminSystem? adminSystem))
-                    adminSystem.Erase(targetPlayer);
+                    adminSystem.Erase(targetUid.Value);
             }
             catch (Exception e)
             {

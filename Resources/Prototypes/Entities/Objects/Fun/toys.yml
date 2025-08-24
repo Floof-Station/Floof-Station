@@ -429,9 +429,23 @@
   - type: Sprite
     sprite: Objects/Fun/sharkplush.rsi
     state: blue
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
   - type: Item
     heldPrefix: blue
     storedRotation: -90
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    soundHit:
+      path: /Audio/Items/Toys/rawr.ogg
+    attackRate: 1.25 # Floofstation - this is hertz, not seconds
+    damage:
+      types:
+        Blunt: 0
   - type: Tag
     tags:
       - PlushieSharkBlue
@@ -1973,6 +1987,26 @@
     - type: Sprite
       sprite: Objects/Fun/toys.rsi
       state: shadowkin
+    - type: EmitSoundOnUse # floof, all sound components
+      sound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Nyanotrasen/Voice/Felinid/cat_mew1.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Shadowkin/mar.ogg
+    - type: MeleeWeapon
+      wideAnimationRotation: 180
+      soundHit:
+        path: /Audio/Voice/Shadowkin/mar.ogg
 
 - type: entity
   parent: BasePlushie
