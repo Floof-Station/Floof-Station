@@ -67,11 +67,18 @@ trait-description-Tiny =
 
 examine-tiny-trait-message = {CAPITALIZE(SUBJECT($entity))} is tiny. Handle with care!
 
+
+trait-name-Succubus = Succubus
+trait-description-Succubus =
+    Your body has evolved to be able to metabolize cum into useful compounds.
+    You can eat normal food, but drinking cum satiates your hunger and thirst better, and also improves your health.
+
 trait-name-FastBatteryDrain = Fast Battery Drain
 trait-description-FastBatteryDrain = Due to poor maintenance, fault battery or other hardware error your battery drains 33% faster then standard.
 
 trait-name-SlowBatteryDrain = Slow Battery Drain
 trait-description-SlowBatteryDrain = A hardware or software modification causes your battery drains 33% slower then standard.
+
 
 # Target Consent Traits: Start
 trait-name-TraitorKillTarget = Marked for Removal

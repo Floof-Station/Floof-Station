@@ -404,7 +404,7 @@
     size: Tiny
   - type: NpcFactionMember
     factions:
-      - Mouse
+      - Critter
   - type: HTN
     rootTask:
       task: MouseCompound

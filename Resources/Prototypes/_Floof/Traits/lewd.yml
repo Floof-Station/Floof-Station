@@ -1,6 +1,7 @@
 - type: trait
   id: CumProducer
   category: Physical
+  slots: 0
   requirements:
     - !type:CharacterJobRequirement
       inverted: true
@@ -23,6 +24,7 @@
 - type: trait
   id: MilkProducer
   category: Physical
+  slots: 0
   requirements:
     - !type:CharacterJobRequirement
       inverted: true
@@ -45,6 +47,7 @@
 - type: trait
   id: SquirtProducer
   category: Physical
+  slots: 0
   requirements:
     - !type:CharacterJobRequirement
       inverted: true
@@ -68,6 +71,7 @@
   id: EggLayer
   category: Physical
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterJobRequirement # Weird if a borg could lay an egg
       inverted: true
@@ -86,3 +90,27 @@
           productionLength: 3
           entityProduced: FoodEgg
           hungerCost: 4
+
+- type: trait
+  id: Succubus
+  category: Physical
+  points: -3
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - IPC
+  functions:
+    - !type:TraitModifyMetabolism
+      add: true
+      types: [ Succubus ]
+      groups: [
+        Poison,
+        Food,
+        Drink,
+      ]

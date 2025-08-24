@@ -11,9 +11,12 @@
        ClothingNeckNonBinaryPin: 3
        ClothingNeckPansexualPin: 3
        ClothingNeckTransPin: 3
+
        PlushieSharkBlue: 2
        PlushieSharkPink: 2
        PlushieSharkGrey: 2
+
+       ClothingNeckCloakProgressPride: 2
        ClothingNeckCloakTrans: 2
        ClothingNeckCloakAro: 2
        ClothingNeckCloakAce: 2
@@ -23,6 +26,40 @@
        ClothingNeckCloakPan: 2
        ClothingNeckCloakGay: 2
        ClothingNeckCloakLesbian: 2
+
+       ClothingNeckScarfStripedAce: 2
+       ClothingNeckScarfStripedAro: 2
+       ClothingNeckScarfStripedBiSexual: 2
+       ClothingNeckScarfStripedGay: 2
+       ClothingNeckScarfStripedInter: 2
+       ClothingNeckScarfStripedLesbian: 2
+       ClothingNeckScarfStripedPan: 2
+       ClothingNeckScarfStripedNonBinary: 2
+       ClothingNeckScarfStripedRainbow: 2
+       ClothingNeckScarfStripedTrans: 2
+       ClothingNeckScarfStripedLesbianLong: 2
+
+       ClothingHandsPrideAro: 2
+       ClothingUnderSocksPrideAro: 2
+       ClothingHandsPrideAce: 2       
+       ClothingUnderSocksPrideAce: 2
+       ClothingHandsPrideBi: 2
+       ClothingUnderSocksPrideBi: 2       
+       ClothingHandsPrideGay: 2
+       ClothingUnderSocksPrideGay: 2
+       ClothingHandsPrideInter: 2
+       ClothingUnderSocksPrideInter: 2       
+       ClothingHandsPrideLesbian: 2
+       ClothingUnderSocksPrideLesbian: 2       
+       ClothingHandsPrideNon: 2
+       ClothingUnderSocksPrideNon: 2       
+       ClothingHandsPridePan: 2
+       ClothingUnderSocksPridePan: 2       
+       ClothingHandsPrideRainbow: 2
+       ClothingUnderSocksPrideRainbow: 2       
+       ClothingHandsPrideTrans: 2
+       ClothingUnderSocksPrideTrans: 2
+
        ClothingHeadHatXmasCrown: 2
        BedsheetRainbow: 2
        ClothingUniformColorRainbow: 2
@@ -39,3 +76,4 @@
       ClothingUnderSocksCoderValid: 3 # Floofstation
       ClothingHandsCoderValidWarmers: 3 # Floofstation
       ClothingUniformThongCoderValid: 3 # Floofstation
+      PlushieSharkPinkBonk: 1 # Floofstation

@@ -354,8 +354,8 @@
     sprite: Clothing/Mask/muzzle.rsi
   - type: IngestionBlocker
   - type: AddAccentClothing
-    accent: ReplacementAccent
-    replacement: mumble
+    accent: MumbleAccent # Vulpstation - better muzzle. If we get more mumble accents, we need to add a way to choose the proto here.
+    # replacement: mumble
   - type: Construction
     graph: Muzzle
     node: muzzle

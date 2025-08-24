@@ -58,7 +58,7 @@
   - type: Examiner
     skipChecks: true
   - type: Ghost
-  - type: GhostHearing
+#  - type: GhostHearing | Floof - M3739 - #1300 | Restrict normal ghosts from hearing everything
   - type: IntrinsicRadioReceiver
   - type: ActiveRadio
     receiveAllChannels: true

@@ -75,6 +75,7 @@ petting-success-recycler = You pet {THE($target)} on {POSS-ADJ($target)} mildly 
 petting-success-gladiabot = You pet {THE($target)} on {POSS-ADJ($target)} vicious cardboard head.
 petting-success-batonbot = You pet {THE($target)} on {POSS-ADJ($target)} protective metal head.
 petting-success-disablerbot = You pet {THE($target)} on {POSS-ADJ($target)} protective metal head.
+petting-success-fillbot = You pet {THE($target)} on {POSS-ADJ($target)} diligent metal head.
 petting-success-station-ai = You pet {THE($target)} on {POSS-ADJ($target)} cold, square screen.
 
 petting-failure-honkbot = You reach out to pet {THE($target)}, but {SUBJECT($target)} honks in refusal!
@@ -94,6 +95,7 @@ petting-failure-weldbot = You reach out to pet {THE($target)}, but {POSS-ADJ($ta
 petting-failure-gladiabot = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} only wants to fight!
 petting-failure-batonbot = You reach out to pet {THE($target)}, but {SUBJECT($target)} nearly prods you with its baton!
 petting-failure-disablerbot = You reach out to pet {THE($target)}, but {SUBJECT($target)} angrily waves its weapon at you!
+petting-failure-fillbot = You reach out to pet {THE($target)}, but {SUBJECT($target)} pushes your hand away!
 petting-failure-syndicate-cyborg = You reach out to pet {THE($target)}, but {POSS-ADJ($target)} treacherous affiliation makes you reconsider.
 petting-failure-derelict-cyborg = You reach out to pet {THE($target)}, but {POSS-ADJ($target)} rusty and jagged exterior makes you reconsider.
 petting-failure-station-ai = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BASIC($target, "zap", "zaps")} your hand away.

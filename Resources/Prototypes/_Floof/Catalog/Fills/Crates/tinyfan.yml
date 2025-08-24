@@ -1,0 +1,10 @@
+- type: entity
+  id: CrateTinyFan
+  parent: CrateEngineering
+  name: tiny fan crate
+  description: Crate containing a tiny fan flatpack for all your shuttle construction desires.
+  components:
+  - type: StorageFill
+    contents:
+      - id: TinyFanFlatpack
+        amount: 1

@@ -1,0 +1,18 @@
+- type: latheRecipe
+  id: HolopadMachineCircuitboard
+  result: HolopadMachineCircuitboard
+  completetime: 4
+  materials:
+    Steel: 300
+    Glass: 900
+    Gold: 100
+    Bluespace: 100
+
+- type: latheRecipe
+  id: FaxMachineCircuitboard
+  result: FaxMachineCircuitboard
+  completetime: 4
+  materials:
+    Steel: 300
+    Glass: 900
+    Gold: 100

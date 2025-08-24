@@ -108,6 +108,7 @@
   whitelist:
     components:
     - Vocal
+    - Slime # imp
   blacklist:
     tags:
       - SiliconEmotes

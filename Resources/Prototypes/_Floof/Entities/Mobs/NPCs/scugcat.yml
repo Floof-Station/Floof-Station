@@ -40,6 +40,8 @@
     interfaces:
       enum.SurgeryUIKey.Key:
         type: SurgeryBui
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
 
   - type: Sprite
     drawdepth: Mobs

@@ -167,6 +167,7 @@
       inverted: true
       species:
         - Felinid
+        - Tajaran
 
 - type: trait
   id: Singer
@@ -302,6 +303,7 @@
       inverted: true
       species:
 #        - Felinid | Floof - M3739 - #1194
+        - Tajaran # Floof - Tajaran
         - Harpy
         - Rodentia # Floof - Rodentia
 

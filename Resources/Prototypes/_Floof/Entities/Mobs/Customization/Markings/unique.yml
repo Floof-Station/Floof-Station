@@ -2,7 +2,7 @@
   id: SingleAntenna
   bodyPart: HeadTop
   markingCategory: Head
-  speciesRestriction: [Reptilian, SlimePerson, Rodentia, Vulpkanin, Felinid, Human, Oni, Kitsune]
+  speciesRestriction: [Reptilian, SlimePerson, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
   sprites:
   - sprite: _Floof/Mobs/Customization/unique.rsi
     state: singleantennaprimary

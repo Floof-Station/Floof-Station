@@ -93,3 +93,163 @@
         - Harpy
   items:
     - ClothingUnderSocksBee
+
+- type: loadout
+  id: LoadoutClothingUnderSocksRainbow
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideRainbow
+
+- type: loadout
+  id: LoadoutClothingUnderSocksAce
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideAce
+
+- type: loadout
+  id: LoadoutClothingUnderSocksAro
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideAro
+
+- type: loadout
+  id: LoadoutClothingUnderSocksBi
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideBi
+
+- type: loadout
+  id: LoadoutClothingUnderSocksGay
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideGay
+
+- type: loadout
+  id: LoadoutClothingUnderSocksInter
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideInter
+
+- type: loadout
+  id: LoadoutClothingUnderSocksLesbian
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideLesbian
+
+- type: loadout
+  id: LoadoutClothingUnderSocksNon
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideNon
+
+- type: loadout
+  id: LoadoutClothingUnderSocksPan
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPridePan
+
+- type: loadout
+  id: LoadoutClothingUnderSocksTrans
+  category: Shoes
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutShoes
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+        - Harpy
+  items:
+    - ClothingUnderSocksPrideTrans

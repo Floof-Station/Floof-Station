@@ -1,6 +1,7 @@
 - type: trait
   id: PirateAccent
   category: TraitsSpeechAccents
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents
@@ -13,6 +14,7 @@
   id: Accentless
   category: TraitsSpeechAccents
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterJobRequirement
       inverted: true
@@ -34,6 +36,7 @@
 - type: trait
   id: Southern
   category: TraitsSpeechAccents
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents
@@ -45,6 +48,7 @@
 - type: trait
   id: NormalVision
   category: Visual
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       species:
@@ -116,6 +120,8 @@
 - type: trait
   id: Liar
   category: Mental
+  points: 1
+  slots: 0
   functions:
     - !type:TraitAddComponent
       components:

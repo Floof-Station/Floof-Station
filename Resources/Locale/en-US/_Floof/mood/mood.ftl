@@ -6,6 +6,8 @@ mood-effect-IceCreamBenefit = Ice cream, Yum!
 
 mood-effect-IceCreamBrainFreeze = Arrggghh, my head. Brain freeze.
 
+mood-effect-SuccubiumBenefit = Let's fucking GOOOOOOO! It's so PEAK! We're so BACK!
+
 mood-effect-FavoriteDrink = My favorite drink!
 
 # Addictions

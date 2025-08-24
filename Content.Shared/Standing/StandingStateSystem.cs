@@ -97,7 +97,7 @@ public sealed class StandingStateSystem : EntitySystem
 
         Climb(uid);
 
-        return true;
+        return standingState.CurrentState is StandingState.Lying; // Floofstation - this CAN be false if climb fails
     }
 
     public bool Stand(EntityUid uid,
@@ -146,7 +146,7 @@ public sealed class StandingStateSystem : EntitySystem
 
         Climb(uid);
 
-        return true;
+        return standingState.CurrentState is StandingState.Standing; // Floofstation - this CAN be false if climb fails
     }
 
     private void Climb(EntityUid uid)

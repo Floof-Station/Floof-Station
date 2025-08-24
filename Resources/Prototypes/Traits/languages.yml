@@ -2,6 +2,7 @@
   id: SignLanguage
   category: TraitsSpeechLanguages
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsLanguagesBasic
@@ -16,6 +17,7 @@
   id: SolCommon
   category: TraitsSpeechLanguages
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsLanguagesBasic
@@ -34,6 +36,7 @@
   id: Tradeband
   category: TraitsSpeechLanguages
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsLanguagesBasic
@@ -52,6 +55,7 @@
   id: Freespeak
   category: TraitsSpeechLanguages
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsLanguagesBasic
@@ -66,6 +70,7 @@
   id: Elyran
   category: TraitsSpeechLanguages
   points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsLanguagesBasic
@@ -79,7 +84,8 @@
 - type: trait
   id: ValyrianStandard
   category: TraitsSpeechLanguages
-  points: -1
+  points: 0
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsLanguagesBasic
@@ -93,7 +99,8 @@
 - type: trait
   id: Azaziba
   category: TraitsSpeechLanguages
-  points: -1
+  points: 0
+  slots: 0
   requirements:
     - !type:CharacterSpeciesRequirement
       species:

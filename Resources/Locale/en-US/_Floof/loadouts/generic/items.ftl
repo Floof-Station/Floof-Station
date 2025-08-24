@@ -18,6 +18,7 @@ loadout-description-LoadoutParamedicBagDuffel = This sterile duffel bag comes wi
 loadout-name-LoadoutParamedicBagSatchel = paramedic satchel (filled)
 loadout-description-LoadoutParamedicBagSatchel = This sterile satchel comes with a bodybag, portafib, and rollerbed. Essential EMT equipment.
 # Security
+loadout-description-LoadoutSecurityBeltJudo = This belt teaches the wearer Corporate Judo™, while being able to hold security equipment. Side effects may include a inability to wield a stun baton.
 # Detective
 loadout-name-LoadoutDetectiveBackpackBackpack = detective backpack (filled, colorable)
 loadout-description-LoadoutDetectiveBackpackBackpack = This inconspicious backpack comes with a box of forensic pads and a hand labeler. Neccessary to gather and organize your clues.
