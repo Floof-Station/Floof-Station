@@ -202,6 +202,8 @@
         Base: blue_adult_slime
       Dead:
         Base: blue_adult_slime_dead
+  - type: NPCRetaliation # Floofstation
+    attackMemoryLength: 20
 
 - type: entity
   name: blue slime

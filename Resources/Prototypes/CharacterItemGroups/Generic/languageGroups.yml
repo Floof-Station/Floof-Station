@@ -39,6 +39,12 @@
       id: MonkeyLanguage
     - type: trait
       id: KoboldLanguage
+    - type: trait
+      id: Bilingual
+    - type: trait
+      id: Trilingual
+    - type: trait
+      id: Quadrilingual
     # Floof section end
 
 - type: characterItemGroup

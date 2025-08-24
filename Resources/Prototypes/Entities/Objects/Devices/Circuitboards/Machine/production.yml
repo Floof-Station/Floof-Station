@@ -1744,3 +1744,17 @@
         Steel: 5
         Gold: 5
         Bluespace: 5
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: CutterMachineCircuitboard
+  name: cutter machine board
+  components:
+  - type: MachineBoard
+    prototype: CutterMachine
+    requirements:
+      Capacitor: 1
+      Manipulator: 1
+    materialRequirements:
+      Steel: 2
+      Cable: 1

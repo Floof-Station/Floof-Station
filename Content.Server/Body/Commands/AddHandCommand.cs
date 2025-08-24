@@ -118,6 +118,8 @@ namespace Content.Server.Body.Commands
                 var text = $"You have no body{(_random.Prob(0.2f) ? " and you must scream." : ".")}";
 
                 shell.WriteLine(text);
+                // Floof
+                shell.WriteLine($"Add one with the {(args.Length == 0 ? "self" : "ent " + entity)} addbody:default command.");
                 return;
             }
 
@@ -128,6 +130,13 @@ namespace Content.Server.Body.Commands
             }
 
             var bodySystem = _entManager.System<BodySystem>();
+
+            // Floof - ensure the entity has a body
+            if (!_entManager.HasComponent<BodyComponent>(entity))
+            {
+                shell.WriteLine($"Specified entity has no body!.");
+                return;
+            }
 
             var attachAt = bodySystem.GetBodyChildrenOfType(entity, BodyPartType.Arm, body).FirstOrDefault();
             if (attachAt == default)

@@ -197,6 +197,17 @@
       group: LoadoutGloves
 
 - type: loadout
+  id: LoadoutClothingUnderHandsLesbian
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsPrideLesbian
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
   id: LoadoutClothingUnderHandsNon
   category: Hands
   cost: 0

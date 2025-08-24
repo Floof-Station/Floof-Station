@@ -6,7 +6,6 @@
   requirements:
   - !type:CharacterOverallTimeRequirement
     min: 14400 # 4hr floof
-  antagAdvantage: 3 # DeltaV - Reduced TC: External Access + Engineering
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce

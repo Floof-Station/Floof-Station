@@ -1,0 +1,244 @@
+- type: construction
+  name: "House Window Vertical Tan"
+  id: HousewindowverticalTan
+  graph: HousewindowverticalTan
+  startNode: start
+  targetNode: housewindowverticaltan
+  category: construction-category-misc
+  description: A vertical tan house window for decoration!
+  icon: { sprite: _Nuclear14/Structures/Windows/window_ruins.rsi, state: housewindowvertical }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: HousewindowverticalTan
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity { }
+    edges:
+    - to: housewindowverticaltan
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 5
+      - material: Glass
+        amount: 2
+        doAfter: 5
+
+  - node: housewindowverticaltan
+    entity: N14WindowHouseVertical
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetGlass1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2
+
+- type: construction
+  name: "House Window Tan"
+  id: HouseWindowTan
+  graph: HouseWindowTan
+  startNode: start
+  targetNode: housewindowtan
+  category: construction-category-misc
+  description: A tan house window for decoration!
+  icon: { sprite: _Nuclear14/Structures/Windows/window_ruins.rsi, state: housewindow }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: HouseWindowTan
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity { }
+    edges:
+    - to: housewindowtan
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 5
+      - material: Glass
+        amount: 2
+        doAfter: 5
+
+  - node: housewindowtan
+    entity: N14WindowHouse
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetGlass1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2
+
+- type: construction
+  name: "House Window Wood Vertical"
+  id: HouseWindowWoodVertical
+  graph: HouseWindowWoodVertical
+  startNode: start
+  targetNode: housewindowwoodvertical
+  category: construction-category-misc
+  description: A vertical house window for decoration!
+  icon: { sprite: _Nuclear14/Structures/Windows/window_ruins.rsi, state: ruinswindowvertical }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: HouseWindowWoodVertical
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity { }
+    edges:
+    - to: housewindowwoodvertical
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 5
+      - material: Glass
+        amount: 2
+        doAfter: 5
+
+  - node: housewindowwoodvertical
+    entity: N14WindowRuinsVertical
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetGlass1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2
+
+- type: construction
+  name: "House Window Wood"
+  id: HouseWindowWood
+  graph: HouseWindowWood
+  startNode: start
+  targetNode: housewindowwood
+  category: construction-category-misc
+  description: A house window for decoration!
+  icon: { sprite: _Nuclear14/Structures/Windows/window_ruins.rsi, state: ruinswindow }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: HouseWindowWood
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity { }
+    edges:
+    - to: housewindowwood
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 5
+      - material: Glass
+        amount: 2
+        doAfter: 5
+
+  - node: housewindowwood
+    entity: N14WindowRuins
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetGlass1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2
+
+- type: construction
+  name: "Wood Window"
+  id: WoodWindow
+  graph: WoodWindow
+  startNode: start
+  targetNode: woodwindow
+  category: construction-category-misc
+  description: A house window for decoration!
+  icon: { sprite: _Nuclear14/Structures/Windows/window_ruins.rsi, state: woodwindow }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: WoodWindow
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity { }
+    edges:
+    - to: woodwindow
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 5
+      - material: Glass
+        amount: 2
+        doAfter: 5
+
+  - node: woodwindow
+    entity: N14WindowHouseWood
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetGlass1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2

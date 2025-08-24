@@ -441,7 +441,7 @@
   - type: MeleeWeapon
     wideAnimationRotation: -135
     soundHit:
-      collection: ToySqueak
+      path: /Audio/Items/Toys/rawr.ogg
     attackRate: 1.25 # Floofstation - this is hertz, not seconds
     damage:
       types:

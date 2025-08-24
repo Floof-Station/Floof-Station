@@ -1,0 +1,85 @@
+- type: mumbleAccent
+  id: BasicMuzzle
+  emoteVolume: -20
+  doubleChance: 0.2
+  dropChance: 0.3
+  replacements:
+  # Length 1
+  - m: n
+    n: ng
+    w: oo
+    y: ee
+    c: sh
+    q: g
+    x: ksh
+    s: sh
+    z: zh
+    r: w
+    l: w
+    v: f
+    p: h
+    b: f
+    t: d
+    k: g
+    g: ng
+    d: n
+    f: h
+    h: hh
+    a: uh
+    e: eh
+    i: eh
+    o: u
+    u: uh
+  # Length 2
+  - ph: h
+    wh: uh
+    tr: nr
+    gr: ng
+    cl: ng
+    bl: mn
+    st: nn
+    sp: hn
+    pr: ng
+    br: ng
+    cr: ng
+    dr: nn
+    fl: hn
+    fr: hn
+    sl: sn
+    sm: nm
+    sn: nn
+    sw: nn
+    tw: nn
+    qu: ng
+    ai: eh
+    ei: eh
+    ie: eh
+    ea: eh
+    ou: uh
+    au: uh
+    oi: uh
+    io: uh
+    ua: uh
+    th: mm
+    ch: mm
+    sh: mm
+    oo: oh
+    on: oh
+    no: nu
+    pl: mn
+    hi: ha
+    ae: eh
+    me: ee
+  # Length 3
+  - str: nnn
+    spl: nnn
+    spr: nnn
+    scr: ng
+    thr: nn
+    shr: nn
+    sch: nn
+    squ: ng
+    yes: ehh
+    the: eh
+    too: oh
+    you: hu

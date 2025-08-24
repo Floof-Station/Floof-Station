@@ -187,7 +187,7 @@
     stateDoorOpen: freezer_open
     stateDoorClosed: freezer_door
   - type: ExplosionResistance
-    damageCoefficient: 0.50
+    damageCoefficient: 0.01 # Goobstation
   - type: AntiRottingContainer
 
 - type: entity
@@ -197,7 +197,7 @@
   suffix: Kitchen, Locked
   components:
   - type: AccessReader
-    access: [ [ "Kitchen" ] ]
+    access: [ [ "Maintenance" ] ] # Floofstation - Why does a fridge need a lock?
 
 # Botanist
 - type: entity

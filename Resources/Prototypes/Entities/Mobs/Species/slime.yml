@@ -132,6 +132,9 @@
   - type: Tag #floof
     tags:
     - SlimeEmotes
+    - CanPilot # Floof - M3739 - 1307 | Fix Tags
+    - FootstepSound
+    - DoorBumpOpener
 
 - type: entity
   parent: MobHumanDummy
