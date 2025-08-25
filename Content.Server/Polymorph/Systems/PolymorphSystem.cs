@@ -302,14 +302,15 @@ public sealed partial class PolymorphSystem : EntitySystem
             // Floof
             // childBloodstream.BloodSolution is always null when the entity is first spawned
             // but we know it'll be filled to maximum volume
-            if (bloodstream?.BloodSolution is not null && childBloodstream is not null)
+            if (bloodstream is not null && _solution.ResolveSolution(uid, bloodstream.BloodSolutionName, ref bloodstream.BloodSolution)
+                && childBloodstream is not null && _solution.ResolveSolution(child, childBloodstream.BloodSolutionName, ref childBloodstream.BloodSolution))
             {
                 childBloodstream.BleedReductionAmount = bloodstream.BleedReductionAmount;
                 _bloodstream.TryModifyBleedAmount(child, bloodstream.BleedAmount, childBloodstream);
                 var scaledBloodLevel = childBloodstream.BloodMaxVolume * bloodstream.BloodSolution.Value.Comp.Solution.FillFraction;
                 _bloodstream.TryModifyBloodLevel(
                     child,
-                    scaledBloodLevel - childBloodstream.BloodMaxVolume,
+                    scaledBloodLevel - childBloodstream.BloodSolution.Value.Comp.Solution.Volume,
                     childBloodstream,
                     false);
             }
@@ -320,8 +321,12 @@ public sealed partial class PolymorphSystem : EntitySystem
             _temperature.ForceChangeTemperature(child, temperature.CurrentTemperature);
 
         // Floof
-        if (configuration.TransferChemicals && bloodstream?.ChemicalSolution is not null && childBloodstream is not null)
-            childBloodstream.ChemicalSolution?.Comp.Solution.SetContents(bloodstream.ChemicalSolution.Value.Comp.Solution.Contents);
+        if (configuration.TransferChemicals
+            && bloodstream is not null && _solution.ResolveSolution(uid, bloodstream.ChemicalSolutionName, ref bloodstream.ChemicalSolution)
+            && childBloodstream is not null && _solution.ResolveSolution(child, childBloodstream.ChemicalSolutionName, ref childBloodstream.ChemicalSolution))
+        {
+            childBloodstream.ChemicalSolution.Value.Comp.Solution.SetContents(bloodstream.ChemicalSolution.Value.Comp.Solution.Contents);
+        }
 
         // Floof
         if (configuration.TransferOrgans && TryComp<BodyComponent>(uid, out var body) && TryComp<BodyComponent>(child, out var childBody))
@@ -489,9 +494,11 @@ public sealed partial class PolymorphSystem : EntitySystem
             _temperature.ForceChangeTemperature(parent, temperature.CurrentTemperature);
 
         // Floof
-        if (component.Configuration.TransferChemicals && bloodstream?.ChemicalSolution is not null && parentBloodstream is not null)
+        if (component.Configuration.TransferChemicals
+            && bloodstream is not null && _solution.ResolveSolution(uid, bloodstream.ChemicalSolutionName, ref bloodstream.ChemicalSolution)
+            && parentBloodstream is not null && _solution.ResolveSolution(parent, parentBloodstream.ChemicalSolutionName, ref parentBloodstream.ChemicalSolution))
         {
-            parentBloodstream.ChemicalSolution?.Comp.Solution.SetContents(bloodstream.ChemicalSolution.Value.Comp.Solution.Contents);
+            parentBloodstream.ChemicalSolution.Value.Comp.Solution.SetContents(bloodstream.ChemicalSolution.Value.Comp.Solution.Contents);
         }
 
         // Floof
