@@ -426,6 +426,21 @@ public sealed partial class PolymorphSystem : EntitySystem
         if (TryComp<LeashedComponent>(uid, out var leashed) && leashed.Puller is not null)
         {
             _leash.RemoveLeash(uid, leashed.Puller.Value);
+
+            if (ent.Comp is not null && ent.Comp.LeashAnchor is null && _inventory.TryGetSlots(parent, out var slots))
+            {
+                foreach (var slot in slots)
+                {
+                    if (!_inventory.TryGetSlotEntity(parent, slot.Name, out var item))
+                        continue;
+                    if (!TryComp<LeashAnchorComponent>(item, out var anchor))
+                        continue;
+
+                    ent.Comp.LeashAnchor = new(item.Value, anchor);
+                    break;
+                }
+            }
+
             if (ent.Comp?.LeashAnchor is not null)
                 // Use a timer to delay the leashing, otherwise we'll crash the client's prediction
                 Timer.Spawn(0, () =>
