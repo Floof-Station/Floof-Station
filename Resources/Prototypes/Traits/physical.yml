@@ -573,6 +573,10 @@
       inverted: true
       traits:
         - BloodDeficiency
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Hemophilia
   functions: # TODO: Code Platelet factories as an actual obtainable implant, and replace this with TraitAddImplant
     - !type:TraitReplaceComponent
       components:
@@ -590,6 +594,9 @@
               Genetic: -0.2
         - type: BloodDeficiency # Incredibly actually works
           bloodLossPercentage: -0.025
+        - type: Hemophilia # Floof: platelets should actually clot?
+          bleedReductionModifier: 2.0
+          damageModifiers: {}
 
 - type: trait
   id: DermalArmor
