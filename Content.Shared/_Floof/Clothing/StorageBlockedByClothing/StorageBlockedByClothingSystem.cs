@@ -1,13 +1,14 @@
 using Content.Shared.Clothing;
 using Content.Shared.Inventory;
 using Content.Shared.Storage;
+using Content.Shared.Tag;
 
 namespace Content.Shared._Floof.Clothing.StorageBlockedByClothing;
 
 public sealed class StorageBlockedByClothingSystem : EntitySystem
 {
-    [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private readonly TagSystem _tag = default!;
 
     public override void Initialize()
     {
@@ -52,7 +53,9 @@ public sealed class StorageBlockedByClothingSystem : EntitySystem
     {
         for (var i = 0; i < ent.Comp.Slots.Length; i++)
         {
-            if ((ent.Comp.Slots[i].SlotFlags & comp.Slots) != 0 && ent.Comp.Containers[i].ContainedEntity is { Valid: true })
+            if ((ent.Comp.Slots[i].SlotFlags & comp.Slots) != 0
+                    && ent.Comp.Containers[i].ContainedEntity is { Valid: true } item
+                    && !_tag.HasAnyTag(item, comp.AllowedTags))
                 return true;
         }
         return false;

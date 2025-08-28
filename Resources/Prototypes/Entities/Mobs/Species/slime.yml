@@ -27,6 +27,8 @@
     slots:
     - INNERCLOTHING
     - OUTERCLOTHING
+    allowedTags:
+    - ShirtlessClothing
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
