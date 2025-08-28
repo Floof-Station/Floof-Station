@@ -14,6 +14,8 @@
           moles:
           - 21.824879 # O2
           - 82.10312  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherStabilizing
 
     # Warm
     warm:
@@ -32,6 +34,8 @@
           moles:
           - 21.824879 # O2
           - 82.10312  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherHot
 
     # Cold
     cold:
@@ -46,6 +50,8 @@
           moles:
           - 21.824879 # O2
           - 82.10312  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherCold
 
     # Rain
     rain:
@@ -92,9 +98,9 @@
     snow:
       proto: SnowfallLight
       weight: 8
-      durationMinutes:
-        min: 5
-        max: 15
+      durationSeconds:
+        min: 300
+        max: 900
       transitions:
         cold: 1
         default: 1
@@ -114,9 +120,9 @@
     snowMedium:
       proto: SnowfallMedium
       weight: 3
-      durationMinutes:
-        min: 5
-        max: 10
+      durationSeconds:
+        min: 300
+        max: 600
       transitions:
         cold: 0.4
         snow: 1
@@ -134,9 +140,9 @@
     snowHeavy:
       proto: SnowfallHeavy
       weight: 1
-      durationMinutes:
-        min: 4
-        max: 10
+      durationSeconds:
+        min: 240
+        max: 600
       transitions:
         cold: 0.2
         snow: 0.4
@@ -160,10 +166,10 @@
     # Ashfall. Adds some CO2 to the air.
     ashfall:
       proto: AshfallLight
-      weight: 3
-      durationMinutes: # I'm afraid people might suffocate
-        min: 5
-        max: 10
+      weight: 5
+      durationSeconds: # I'm afraid people might suffocate
+        min: 30
+        max: 70
       transitions:
         default: 1
       onTransition:
@@ -171,11 +177,13 @@
         mixture:
           volume: 2500
           immutable: True
-          temperature: 293.15
+          temperature: 313.15
           moles:
-          - 21.824879 # O2
-          - 82.10312  # N2
+          - 20.824879 # O2
+          - 78.10312  # N2
           - 3.1415926 # CO2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherAshfall
       onUpdate:
       - !type:WeatherRefillSolutions
         refillChance: 0.01

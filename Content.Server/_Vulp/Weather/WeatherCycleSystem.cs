@@ -114,7 +114,10 @@ public sealed class WeatherCycleSystem : EntitySystem
 
     public void SetState(Entity<WeatherCycleComponent, WeatherComponent> ent, WeatherCycleData state)
     {
-        ent.Comp1.NextWeather = _timing.CurTime + TimeSpan.FromMinutes(state.DurationMinutes.Next(_random) * ent.Comp1.TimeScale);
+        var oldState = ent.Comp1.CurrentState;
+        var isRepeatedTraversal = state == oldState;
+
+        ent.Comp1.NextWeather = _timing.CurTime + TimeSpan.FromSeconds(state.DurationSeconds.Next(_random) * ent.Comp1.TimeScale);
         ent.Comp1.CurrentState = state;
 
         var proto = state.Proto == null ? null : _protoMan.TryIndex(state.Proto, out var weather) ? weather : null;
@@ -123,6 +126,7 @@ public sealed class WeatherCycleSystem : EntitySystem
 
         // Run any transition functions on the new state
         foreach (var func in state.OnTransition)
-            func.Invoke(EntityManager, (ent.Owner, ent.Comp2), 1f);
+            if (!isRepeatedTraversal || func.InvokeOnRepeatedTraversal)
+                func.Invoke(EntityManager, (ent.Owner, ent.Comp2), 1f);
     }
 }

@@ -49,7 +49,14 @@ public sealed partial class WeatherCycleData
     public Dictionary<string, float>? Transitions = null;
 
     [DataField]
-    public MinMax DurationMinutes = new MinMax(10, 20);
+    public MinMax DurationSeconds = new(600, 1200);
+
+    [DataField, Obsolete("Use DurationSeconds instead")]
+    public MinMax DurationMinutes
+    {
+        get => new(DurationSeconds.Min * 60, DurationSeconds.Max * 60);
+        set => DurationSeconds = new(value.Min / 60, value.Max / 60);
+    }
 
     public WeatherCycleData() {}
 }
