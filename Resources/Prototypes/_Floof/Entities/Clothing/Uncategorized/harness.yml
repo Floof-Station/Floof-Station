@@ -39,6 +39,10 @@
       - outerClothing
       - back
       - belt
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Skirt
 
 # Simple harness, colorable - for use in loadouts
 - type: entity

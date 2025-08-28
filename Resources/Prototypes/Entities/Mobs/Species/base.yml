@@ -246,6 +246,22 @@
   - type: FootPrints
   - type: Wagging
   - type: ModifyUndies  # FLOOF Add
+  - type: GenitalStorage
+    slotNames:
+    - vagina
+  - type: ItemSlots
+    slots:
+      vagina:
+        name: pussy
+        insertOnInteract: false
+        insertVerbText: "Insert into pussy"
+        ejectVerbText: "Remove from pussy"
+        swap: false
+        insertSound: /Audio/Voice/Slime/slime_squish.ogg
+        ejectSound: /Audio/Voice/Slime/slime_squish.ogg
+        whitelist:
+          tags:
+          - Dildo
 
 - type: entity
   save: false
