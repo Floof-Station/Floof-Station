@@ -1935,6 +1935,7 @@
   itemDrop: FloorTileItemAstroGrass
   heatCapacity: 10000
   tileRipResistance: 50
+  weather: false # Vulpstation - why?
 
 - type: tile
   id: FloorMowedAstroGrass
@@ -1945,6 +1946,7 @@
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemMowedAstroGrass
   tileRipResistance: 50
+  weather: false # Vulpstation - why?
 
 - type: tile
   id: FloorJungleAstroGrass
@@ -1955,6 +1957,7 @@
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemJungleAstroGrass
   tileRipResistance: 50
+  weather: false # Vulpstation - why?
 
 # Ice
 - type: tile
@@ -1971,6 +1974,7 @@
   mobAcceleration: 2
   itemDrop: FloorTileItemAstroIce
   tileRipResistance: 50
+  weather: false # Vulpstation - why?
 
 - type: tile
   id: FloorAstroSnow
@@ -1981,6 +1985,7 @@
   deconstructTools: [ Prying ]
   itemDrop: FloorTileItemAstroSnow
   tileRipResistance: 50
+  weather: false # Vulpstation - why?
 
 - type: tile
   id: FloorWoodLarge
@@ -2002,3 +2007,4 @@
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 10000
   tileRipResistance: 100
+  weather: false # Vulpstation - why?
