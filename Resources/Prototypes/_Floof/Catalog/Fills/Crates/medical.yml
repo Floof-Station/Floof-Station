@@ -21,7 +21,7 @@
   id: CrateCentCommCryo
   parent: CrateChemistrySecure
   name: CentComm Cryogenics Chemicals crate
-  description: Contains Cryogenics Medicines.
+  description: Contains a suite of cryogenic medications to cure almost any injury.
   components:
     - type: StorageFill
       contents:
