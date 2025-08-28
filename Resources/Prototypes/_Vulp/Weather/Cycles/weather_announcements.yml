@@ -23,3 +23,16 @@
   values:
     prefix: weather-ashfall-
     count: 4
+
+# Tritium cloud
+- type: localizedDataset
+  id: WeatherTritiumCloudApproaching
+  values:
+    prefix: weather-tritium-cloud-approaching-
+    count: 3
+
+- type: localizedDataset
+  id: WeatherTritiumCloud
+  values:
+    prefix: weather-tritium-cloud-
+    count: 1

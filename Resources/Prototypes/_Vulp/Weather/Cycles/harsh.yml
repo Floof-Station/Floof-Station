@@ -1,10 +1,12 @@
+# Currently in use for the mining outpost station
+# Features more dangerous weathers due to the abundance of shelter
 - type: weatherCycle
-  id: Tropical
+  id: Harsh
   weathers:
     # Default
     default:
       proto: null
-      weight: 25
+      weight: 17
       onTransition:
       - !type:WeatherSetAtmos
         mixture:
@@ -19,11 +21,11 @@
     # Warm
     warm:
       proto: null
-      weight: 10
+      weight: 13
       transitions:
         default: 1
-        rain: 0.4 # warm rain?
-        ashfall: 0.2
+        rain: 0.6
+        ashfall: 0.3
       onTransition:
       - !type:WeatherSetAtmos
         mixture:
@@ -38,14 +40,14 @@
     # Cold
     cold:
       proto: null
-      weight: 10
+      weight: 13
       onTransition:
       - !type:WeatherSetAtmos
         mixture:
           volume: 2500
-          temperature: 273.15
+          temperature: 263.15
           moles:
-          - 21.824879 # O2
+          - 23.824879 # O2
           - 82.10312  # N2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherCold
@@ -53,13 +55,21 @@
     # Rain
     rain:
       proto: Rain
-      weight: 15
+      weight: 20
       durationMinutes:
         min: 10
         max: 20
       transitions:
         default: 1
-        storm: 0.4
+        storm: 0.5
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 285
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
       onUpdate:
       - !type:WeatherCleanPuddles
         cleanChance: 0.01
@@ -73,13 +83,21 @@
 
     storm:
       proto: Storm
-      weight: 1 # Unlikely to happen on its own; most of the time will be an extension of a rain
+      weight: 2 # Unlikely to happen on its own; most of the time will be an extension of a rain
       durationMinutes:
         min: 5
         max: 10
       transitions:
         default: 0.4
-        rain: 1
+        rain: 1.2
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 283
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
       onUpdate:
       - !type:WeatherCleanPuddles
         cleanChance: 0.03
@@ -94,7 +112,7 @@
     # Snow
     snow:
       proto: SnowfallLight
-      weight: 8
+      weight: 12
       durationSeconds:
         min: 300
         max: 900
@@ -124,7 +142,7 @@
         snow: 1
         snowHeavy: 0.4
       onTransition:
-       - !type:WeatherSetAtmos
+      - !type:WeatherSetAtmos
         mixture:
           volume: 2500
           temperature: 253.15
@@ -160,12 +178,13 @@
     # Ashfall. Adds some CO2 to the air.
     ashfall:
       proto: AshfallLight
-      weight: 5
+      weight: 7
       durationSeconds: # I'm afraid people might suffocate
-        min: 30
-        max: 70
+        min: 45
+        max: 120
       transitions:
         default: 1
+        tritiumCloudStarting: 0.3
       onTransition:
       - !type:WeatherSetAtmos
         mixture:
@@ -183,5 +202,60 @@
         maxRefilled: 25
         amount: 2
         reagent: Ash
+
+    # OH MY FUCKING GOD RUN FOR YOUR LIVES
+    tritiumCloudStarting:
+      proto: null
+      weight: 0
+      durationSeconds:
+        min: 60
+        max: 120
+      transitions:
+        tritiumCloud: 1
+      onTransition:
+      - !type:WeatherSetAtmos # calm before the storm...
+        mixture:
+          volume: 2500
+          temperature: 313.15
+          moles:
+          - 20.012341 # O2
+          - 78.54321  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherTritiumCloudApproaching
+
+    tritiumCloud:
+      proto: Fallout
+      weight: 0
+      durationSeconds:
+        min: 30
+        max: 100
+      transitions:
+        default: 1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 273.15
+          moles:
+          - 21.1231   # O2
+          - 82.5673   # N2
+          - 0         # CO2
+          - 0         # Plasma
+          - 0.5      # Tritium
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherTritiumCloud
+      onUpdate:
+      - !type:WeatherRefillSolutions
+        refillChance: 0.01
+        maxRefilled: 25
+        amount: 2
+        reagent: Tritium
+      - !type:WeatherDamageMobs
+        chance: 0.334
+        damage:
+          types:
+            Radiation: 2.25 # Roughly 0.75 rad/second. Won't kill unless you're already dying.
+        ignoreNpcs: true
+        ignoreInternalBreathers: true
 
 
