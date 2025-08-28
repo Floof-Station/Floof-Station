@@ -56,7 +56,7 @@ public sealed partial class WeatherRefillSolutions : WeatherFunction
             var tileDef = (ContentTileDefinition) tileMan[tile.Tile.TypeId];
 
             if (!tileDef.Weather
-                || !random.Prob(RefillChance * updateTimeSeconds)
+                || !random.Prob(RefillChance) // Chance is not multplied because the refill amount is.
                 || !solutions.TryGetSolution(uid, refillable.Solution, out var solutionEnt))
                 continue;
 

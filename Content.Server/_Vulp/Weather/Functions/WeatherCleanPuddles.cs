@@ -54,7 +54,8 @@ public sealed partial class WeatherCleanPuddles : WeatherFunction
             var tile = maps.GetTileRef((ent.Owner, grid), xform.Coordinates);
             var tileDef = (ContentTileDefinition) tileMan[tile.Tile.TypeId];
 
-            if (!tileDef.Weather || !random.Prob(CleanChance * updateTimeSeconds))
+            // Chance is not multplied because the amount of cleaning is
+            if (!tileDef.Weather || !random.Prob(CleanChance))
                 continue;
 
             var solution = puddle.Solution;

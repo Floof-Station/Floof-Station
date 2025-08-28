@@ -72,11 +72,11 @@
           - 82.10312  # N2
       onUpdate:
       - !type:WeatherCleanPuddles
-        cleanChance: 0.01
+        cleanChance: 0.02
         maxCleaned: 25
         cleanAmount: 2.5
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 10
         reagent: Water
@@ -100,11 +100,11 @@
           - 82.10312  # N2
       onUpdate:
       - !type:WeatherCleanPuddles
-        cleanChance: 0.03
+        cleanChance: 0.06
         maxCleaned: 50
         cleanAmount: 2.5
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 50
         amount: 10
         reagent: Water
@@ -170,7 +170,7 @@
           - 99.10312  # N2
       onUpdate:
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 2
         reagent: Ice
@@ -198,7 +198,7 @@
         dataset: WeatherAshfall
       onUpdate:
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 2
         reagent: Ash
@@ -246,15 +246,16 @@
         dataset: WeatherTritiumCloud
       onUpdate:
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 2
         reagent: Tritium
       - !type:WeatherDamageMobs
-        chance: 0.334
+        damageChance: 0.5
         damage:
           types:
-            Radiation: 2.25 # Roughly 0.75 rad/second. Won't kill unless you're already dying.
+            Radiation: 1.5 # Roughly 0.75 rad/second. Won't kill unless you're already dying, or unless you are extremely unlucky.
+        alert: Toxins
         ignoreNpcs: true
         ignoreInternalBreathers: true
 

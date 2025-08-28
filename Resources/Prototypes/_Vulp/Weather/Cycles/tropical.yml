@@ -62,11 +62,11 @@
         storm: 0.4
       onUpdate:
       - !type:WeatherCleanPuddles
-        cleanChance: 0.01
+        cleanChance: 0.02
         maxCleaned: 25
         cleanAmount: 2.5
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 10
         reagent: Water
@@ -82,11 +82,11 @@
         rain: 1
       onUpdate:
       - !type:WeatherCleanPuddles
-        cleanChance: 0.03
+        cleanChance: 0.06
         maxCleaned: 50
         cleanAmount: 2.5
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 50
         amount: 10
         reagent: Water
@@ -152,7 +152,7 @@
           - 99.10312  # N2
       onUpdate:
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 2
         reagent: Ice
@@ -179,7 +179,7 @@
         dataset: WeatherAshfall
       onUpdate:
       - !type:WeatherRefillSolutions
-        refillChance: 0.01
+        refillChance: 0.02
         maxRefilled: 25
         amount: 2
         reagent: Ash

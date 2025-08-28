@@ -1,6 +1,7 @@
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Shared._Vulp.Weather;
+using Content.Shared.Alert;
 using Content.Shared.Damage;
 using Content.Shared.Maps;
 using Content.Shared.Mobs.Components;
@@ -8,7 +9,9 @@ using Content.Shared.NPC;
 using Content.Shared.Weather;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 
 
 namespace Content.Server._Vulp.Weather.Functions;
@@ -24,7 +27,10 @@ public sealed partial class WeatherDamageMobs : WeatherFunction
     public DamageSpecifier Damage = default!;
 
     [DataField]
-    public float Chance = 1f;
+    public ProtoId<AlertPrototype>? Alert = default!;
+
+    [DataField]
+    public float DamageChance = 1f;
 
     /// <summary>
     ///     Whether to ignore NPCs, because those dummies won't seek shelter.
@@ -50,6 +56,8 @@ public sealed partial class WeatherDamageMobs : WeatherFunction
         var tileMan = IoCManager.Resolve<ITileDefinitionManager>();
         var damageSystem = entMan.System<DamageableSystem>();
         var internalSystem = entMan.System<InternalsSystem>();
+        var alertsSystem = entMan.System<AlertsSystem>();
+        var timing = IoCManager.Resolve<IGameTiming>();
 
         while (query.MoveNext(out var uid, out var mobState, out var damageable, out var xform))
         {
@@ -62,7 +70,18 @@ public sealed partial class WeatherDamageMobs : WeatherFunction
             var tile = maps.GetTileRef((ent.Owner, grid), xform.Coordinates);
             var tileDef = (ContentTileDefinition) tileMan[tile.Tile.TypeId];
 
-            if (!tileDef.Weather || !random.Prob(Chance * updateTimeSeconds))
+            if (!tileDef.Weather)
+                continue;
+
+            if (Alert is not null)
+            {
+                // TODO this doesn't account for the update interval of the weather cycle
+                var cooldowns = (timing.CurTime, timing.CurTime + TimeSpan.FromSeconds(5));
+                alertsSystem.ShowAlert(uid, Alert.Value, null, cooldowns, true, true);
+            }
+
+            // Note: chance is not multiplied, the amount of damage is
+            if (!random.Prob(DamageChance))
                 continue;
 
             var resultingDamage = Damage * updateTimeSeconds;
