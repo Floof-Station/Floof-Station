@@ -71,7 +71,7 @@ namespace Content.Server.RoundEnd
         /// <summary>
         /// Should we not allow recall due to round hard end being met?
         /// </summary>
-        public bool RespectRoundHardEnd { get; set; } = true;
+        public bool RespectRoundHardEnd { get; set; } = false; // Floof
 
         private CancellationTokenSource? _countdownTokenSource = null;
         private CancellationTokenSource? _cooldownTokenSource = null;
