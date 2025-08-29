@@ -1,3 +1,4 @@
+using Content.Shared._Floof.Clothing.SlotBlocker;
 using Content.Shared.Clothing;
 using Content.Shared.Inventory;
 using Content.Shared.Storage;
@@ -9,6 +10,7 @@ public sealed class StorageBlockedByClothingSystem : EntitySystem
 {
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
     [Dependency] private readonly TagSystem _tag = default!;
+    [Dependency] private readonly SlotBlockerSystem _slotBlocker = default!;
 
     public override void Initialize()
     {
@@ -51,6 +53,16 @@ public sealed class StorageBlockedByClothingSystem : EntitySystem
 
     private bool IsBlocked(Entity<InventoryComponent> ent, StorageBlockedByClothingComponent comp)
     {
+        // if our slots are obstructed
+        if (_slotBlocker.IsSlotObstructed(
+            ent,
+            null,
+            SlotBlockerSystem.CheckType.IgnoreBlockerPreference,
+            comp.Slots,
+            out _))
+            return true;
+
+        // or if they have non-allowed items
         for (var i = 0; i < ent.Comp.Slots.Length; i++)
         {
             if ((ent.Comp.Slots[i].SlotFlags & comp.Slots) != 0

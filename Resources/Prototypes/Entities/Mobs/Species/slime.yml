@@ -26,7 +26,6 @@
   - type: StorageBlockedByClothing # Floof
     slots:
     - INNERCLOTHING
-    - OUTERCLOTHING
     allowedTags:
     - ShirtlessClothing
   - type: ContainerContainer
