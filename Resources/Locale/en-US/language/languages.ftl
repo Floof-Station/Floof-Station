@@ -79,27 +79,28 @@ language-Nehina-name = Nēhina
 language-Nehina-description =  A language spoken by the Feroxi, well adapted to speaking under the waters of ocean planets.
 
 language-Kagebun-name = Kagebun
-language-Kagebun-description = 
-    An ancient language primarily used by the yōkai, originating from their supernatural roots. 
+language-Kagebun-description =
+    An ancient language primarily used by the yōkai, originating from their supernatural roots.
     To the uninitiated, it is a chorus of sounds ranging from eerie whispers to ritualistic chanting.
     To those who speak it, it is a living tongue that links them to the spirit world and their ancient pacts.
 
 # Animal Languages
 
-language-Cat-name = Cat
-language-Cat-description = Meow
+# Floof - some of those are rebranded. Why do we have two sources of truth for language names?
+language-Cat-name = Felidae
+language-Cat-description = The proto-language primarily utilized by felids, such as house cats or lions.
 
-language-Dog-name = Dog
-language-Dog-description = Bark!
+language-Dog-name = Canini
+language-Dog-description = The proto-language primarily utilized by 'dog-like' animals, such as corgis and wolves.
 
-language-Fox-name = Fox
-language-Fox-description = Yeeps!
+language-Fox-name = Vulpini
+language-Fox-description = The proto-language primarily utilized by 'fox-like' animals... Do you really need an example?
 
 language-Xeno-name = Xeno
 language-Xeno-description = Sssss!
 
-language-Monkey-name = Monkey
-language-Monkey-description = Oooook!
+language-Monkey-name = Simian
+language-Monkey-description = The proto-language primarily utilized by anthropoids, such as monkeys and apes.
 
 language-Mouse-name = Mouse
 language-Mouse-description = Squeeek!
@@ -125,8 +126,8 @@ language-Pig-description = Oink!
 language-Crab-name = Crab
 language-Crab-description = Click!
 
-language-Kobold-name = Kobold
-language-Kobold-description = Hiss!
+language-Kobold-name = Draconic
+language-Kobold-description = The proto-language primarily utilized by kobolds. Unlike other proto-languages, some unathi still speak it to this very day.
 
 language-Hissing-name = Hissing
 language-Hissing-description = Hiss!

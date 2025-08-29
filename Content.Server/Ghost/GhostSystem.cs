@@ -194,7 +194,10 @@ namespace Content.Server.Ghost
             component.TimeOfDeath = time;
 
             _actions.AddAction(uid, ref component.BooActionEntity, component.BooAction);
-            _actions.AddAction(uid, ref component.ToggleGhostHearingActionEntity, component.ToggleGhostHearingAction);
+            if (HasComp<GhostHearingComponent>(uid)) // Floof - M3739 - #1300 | Restrict normal ghosts from hearing everything
+            {
+                _actions.AddAction(uid, ref component.ToggleGhostHearingActionEntity, component.ToggleGhostHearingAction);
+            }
             _actions.AddAction(uid, ref component.ToggleLightingActionEntity, component.ToggleLightingAction);
             _actions.AddAction(uid, ref component.ToggleFoVActionEntity, component.ToggleFoVAction);
             _actions.AddAction(uid, ref component.ToggleGhostsActionEntity, component.ToggleGhostsAction);

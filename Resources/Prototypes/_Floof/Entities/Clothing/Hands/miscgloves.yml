@@ -199,3 +199,153 @@
     sprite: _Floof/Clothing/Under/Gloves/Rings/webbingspidergemring.rsi
   - type: Clothing
     sprite: _Floof/Clothing/Under/Gloves/Rings/webbingspidergemring.rsi
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideAce
+  name: asexual arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/ace.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/ace.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideAro
+  name: aromantic arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/aro.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/aro.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideBi
+  name: bisexual arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/bi.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/bi.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideGay
+  name: gay arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/gay.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/gay.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+  
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideInter
+  name: intersex arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/inter.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/inter.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideLesbian
+  name: lesbian arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/lesbian.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/lesbian.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideNon
+  name: non-binary arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/non.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/non.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPridePan
+  name: pansexual arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/pan.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/pan.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideRainbow
+  name: rainbow arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/rainbow.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/rainbow.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsPrideTrans
+  name: trans arm-warmers
+  description: A pair of pride arm-warmers
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/Pride/trans.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/Pride/trans.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-dyed
+  - type: FingerprintMask    

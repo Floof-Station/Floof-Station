@@ -236,6 +236,13 @@
     - state: crypt_silver
     - state: rd_label
 
+# Floof: used for pAI
+- type: entity
+  parent: EncryptionKeyBinary
+  id: EncryptionKeyBinaryUnremoveable
+  components:
+    - type: Unremoveable
+
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyFreelance

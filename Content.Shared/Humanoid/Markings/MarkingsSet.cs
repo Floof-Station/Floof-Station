@@ -254,7 +254,18 @@ public sealed partial class MarkingSet
 
                 if (marking.Sprites.Count != list[i].MarkingColors.Count)
                 {
-                    list[i] = new Marking(marking.ID, marking.Sprites.Count);
+                    // Floofstation section - don't replace the whole color list, just add or remove colors
+                    // list[i] = new Marking(marking.ID, marking.Sprites.Count);
+                    List<Color> colors = list[i].MarkingColors.ToList();
+                    if (list[i].MarkingColors.Count > marking.Sprites.Count)
+                        colors = colors.Take(marking.Sprites.Count).ToList();
+                    else
+                    {
+                        for (var j = list[i].MarkingColors.Count; j < marking.Sprites.Count; j++)
+                            colors.Add(Color.White);
+                    }
+                    list[i] = new(marking.ID, colors);
+                    // Floofstation section end
                 }
             }
 

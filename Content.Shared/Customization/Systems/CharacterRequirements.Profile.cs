@@ -384,22 +384,18 @@ public sealed partial class CharacterItemGroupRequirement : CharacterRequirement
     {
         var group = prototypeManager.Index(Group);
 
-        // Get the count of items in the group that are in the profile
-        var items = group.Items.Select(item => item.TryGetValue(profile, prototypeManager, out _) ? item.ID : null)
-            .Where(id => id != null)
-            .ToList();
-        var count = items.Count;
-
-        // If prototype is selected, decrease the count. Or increase it via negative number. Not my monkey, not my circus.
-        if (items.ToList().Contains(prototype.ID))
+        // Floof: let traits have negative item group slots (allowing more traits to be taken from that category)
+        var count = group.Items.Select(item => item.TryGetValue(profile, prototypeManager, out _) ? item.ID : null)
+            .Where(id => id != null && id != prototype.ID)
+            .Sum(id =>
         {
             // This disgusting ELIF nest requires an engine PR to make less terrible.
-            if (prototypeManager.TryIndex<LoadoutPrototype>(prototype.ID, out var loadoutPrototype))
-                count -= loadoutPrototype.Slots;
-            else if (prototypeManager.TryIndex<TraitPrototype>(prototype.ID, out var traitPrototype))
-                count -= traitPrototype.ItemGroupSlots;
-            else count--;
-        }
+            if (prototypeManager.TryIndex<LoadoutPrototype>(id!, out var loadoutPrototype))
+                return loadoutPrototype.Slots;
+            if (prototypeManager.TryIndex<TraitPrototype>(id!, out var traitPrototype))
+                return traitPrototype.ItemGroupSlots;
+            return 1;
+        });
 
         reason = Loc.GetString(
             "character-item-group-requirement",

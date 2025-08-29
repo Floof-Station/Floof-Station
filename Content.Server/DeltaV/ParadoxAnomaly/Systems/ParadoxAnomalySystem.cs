@@ -18,6 +18,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Consent;
+using Content.Server.GameTicking;
+using Content.Server.Clothing.Systems;
+using Content.Server.Players.PlayTimeTracking;
+using Robust.Server.Player;
+using Content.Shared.Players;
 
 
 namespace Content.Server.DeltaV.ParadoxAnomaly.Systems;
@@ -40,6 +45,10 @@ public sealed class ParadoxAnomalySystem : EntitySystem
     [Dependency] private readonly SharedRoleSystem _role = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
+    [Dependency] private readonly LoadoutSystem _loadout = default!; // Floof
+    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!; // Floof
+    [Dependency] private readonly IPlayerManager _players = default!; // Floof
+
 
     public override void Initialize()
     {
@@ -58,6 +67,13 @@ public sealed class ParadoxAnomalySystem : EntitySystem
         var role = Comp<GhostRoleComponent>(ent);
         _ghostRole.GhostRoleInternalCreateMindAndTransfer(args.Player, ent, twin.Value, role);
         _ghostRole.UnregisterGhostRole((ent.Owner, role));
+
+        // Floof - raise event to handle trait application
+        if (_station.GetOwningStation(twin.Value) is not { } station)
+            return;
+        var humanoid = Comp<HumanoidAppearanceComponent>(twin.Value);
+        var psce = new PlayerSpawnCompleteEvent(twin.Value, args.Player, null, true, 0, station, humanoid.LastProfileLoaded!);
+        RaiseLocalEvent(twin.Value, psce, true);
 
         args.TookRole = true;
         QueueDel(ent);
@@ -122,6 +138,10 @@ public sealed class ParadoxAnomalySystem : EntitySystem
         if (latejoins.Count == 0)
             return null;
 
+        // Floof - bail if we can't get original player's session data
+        if (!_players.TryGetSessionByEntity(uid, out var session))
+            return null;
+
         // Spawn the twin.
         var destination = Transform(_random.Pick(latejoins)).Coordinates;
         var spawned = Spawn(species.Prototype, destination);
@@ -159,6 +179,14 @@ public sealed class ParadoxAnomalySystem : EntitySystem
         {
             special.AfterEquip(spawned);
         }
+
+        // Floof - additionally apply original character's loadout
+        _loadout.ApplyCharacterLoadout(
+            spawned,
+            jobId!.Value,
+            profile,
+            _playTimeTracking.GetTrackerTimes(session),
+            session.ContentData()?.Whitelisted ?? false);
 
         // TODO: In a future PR, make it so that the Paradox Anomaly spawns with a completely 1:1 clone of the victim's entire PsionicComponent.
         if (HasComp<PsionicComponent>(uid))

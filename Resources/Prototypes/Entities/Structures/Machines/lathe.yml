@@ -350,6 +350,8 @@
       - ClothingBackpackSatchelHolding
       - ClothingBackpackDuffelHolding
       - WelderExperimental
+      - WelderIndustrial # Floof
+      - WelderIndustrialAdvanced # Floof
       - JawsOfLife
       - CoreSilver # Nyanotrasen - Silver Golem core
       - FauxTileAstroGrass
@@ -492,6 +494,9 @@
     - DeepFryerMachineCircuitboard #Nyano - Summary: adds deep fryer circuit board
     - SpaceHeaterMachineCircuitBoard
     - StationAnchorCircuitboard
+    - CutterMachineCircuitboard
+    - FaxMachineCircuitboard # Vulp
+    - HolopadMachineCircuitboard # Vulp
     dynamicRecipes:
       - ThermomachineFreezerMachineCircuitBoard
       - HellfireFreezerMachineCircuitBoard
@@ -769,6 +774,8 @@
     - MothroachCube
     - MouseCube
     - CockroachCube
+    - PigCube # Floofstation
+    - ChickenCube # Floofstation
   - type: EmagLatheRecipes
     emagStaticRecipes:
     - AbominationCube
@@ -1223,6 +1230,8 @@
       - HolofanProjector
       - HoloprojectorField
       - WelderExperimental
+      - WelderIndustrial # Floof
+      - WelderIndustrialAdvanced # Floof
       - PowerDrill # Can make two of the three advanced tools - jaws of life are too OP to give them away
       - WeaponParticleDecelerator
       - ClothingMaskWeldingGas
@@ -1831,6 +1840,7 @@
     - MaterialSheetMeat
     - SheetPaper
 
+# Floofstation
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
   id: PrizeCounter
@@ -1972,6 +1982,14 @@
       # - PlushieNoticeableSecurityOfficer
       - PlushieAvaliHOP
       - PlushieKoboldCefJustice
+      - PlushieSlimeBartender
+      - PlushieGrumpyQuartermaster
+      - PlushieHardcoreDj
+      - PlushieHos
+      - PlushieSillyResomi
+      - PlushieRatLogisticsOfficer
+      - PlushieBunnyChiefMedicalOfficer
+      - PlushieAvianMysta
       #Floof Plushies - End
   - type: EmagLatheRecipes
     emagStaticRecipes:
@@ -2043,3 +2061,82 @@
     emagStaticRecipes:
     - PizzaLeftArm
     - PizzaRightArm
+
+- type: entity
+  parent: BaseLathe
+  id: CutterMachine
+  name: cutter machine
+  description: This is a cutter. It cuts. Add variety to your station floor with eye-pleasing patterns! Don't stick your fingers in.
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: Structures/Machines/cuttermachine.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: CutterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/cutter.ogg
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - FloorTileItemDark
+      - FloorTileItemDarkDiagonalMini
+      - FloorTileItemDarkDiagonal
+      - FloorTileItemDarkHerringbone
+      - FloorTileItemDarkMini
+      - FloorTileItemDarkMono
+      - FloorTileItemDarkPavement
+      - FloorTileItemDarkPavementVertical
+      - FloorTileItemDarkOffset
+      - FloorTileItemSteelCheckerDark
+      - FloorTileItemSteel
+      - FloorTileItemSteelOffset
+      - FloorTileItemSteelDiagonalMini
+      - FloorTileItemSteelDiagonal
+      - FloorTileItemSteelHerringbone
+      - FloorTileItemSteelMini
+      - FloorTileItemSteelMono
+      - FloorTileItemSteelPavement
+      - FloorTileItemSteelPavementVertical
+      - FloorTileItemWhite
+      - FloorTileItemWhiteOffset
+      - FloorTileItemWhiteDiagonalMini
+      - FloorTileItemWhiteDiagonal
+      - FloorTileItemWhiteHerringbone
+      - FloorTileItemWhiteMini
+      - FloorTileItemWhiteMono
+      - FloorTileItemWhitePavement
+      - FloorTileItemWhitePavementVertical
+      - FloorTileItemSteelCheckerLight
+      - FloorTileItemGratingMaint
+      - FloorTileItemTechmaint
+      - FloorTileItemSteelMaint
+      - FloorTileItemWood
+      - FloorTileItemWoodLarge
+      - FloorTileItemWoodPattern
+      - FloorTileItemConcrete
+      - FloorTileItemConcreteMono
+      - FloorTileItemConcreteSmooth
+      - FloorTileItemGrayConcrete
+      - FloorTileItemGrayConcreteMono
+      - FloorTileItemGrayConcreteSmooth
+      - FloorTileItemOldConcrete
+      - FloorTileItemOldConcreteMono
+      - FloorTileItemOldConcreteSmooth
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - Metal
+        - Wooden
+        - RawMaterial
+        - Plastic

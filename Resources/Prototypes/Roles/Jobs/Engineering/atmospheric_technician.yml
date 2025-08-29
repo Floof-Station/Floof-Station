@@ -7,7 +7,6 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Engineering
     min: 3600 # Floofstation - 1 hour
-  antagAdvantage: 5 # Floof - Reduced TC: External Access + Fireaxe + Free Hardsuit, but they cannot pump chemicals into the air supply en masse.
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce
@@ -28,3 +27,4 @@
   innerClothingSkirt: ClothingUniformJumpskirtAtmos
   satchel: ClothingBackpackSatchelEngineeringFilled
   duffelbag: ClothingBackpackDuffelEngineeringFilled
+

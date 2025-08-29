@@ -1,6 +1,7 @@
 # Languages spoken by various critters.
 - type: language
   id: Cat
+  isVisibleLanguage: true # Floofstation - can be picked via traits
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -13,6 +14,7 @@
 
 - type: language
   id: Dog
+  isVisibleLanguage: true # Floofstation - can be picked via traits
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -27,6 +29,7 @@
 
 - type: language
   id: Fox
+  isVisibleLanguage: true # Floofstation - can be picked via traits
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -51,6 +54,7 @@
 
 - type: language
   id: Monkey
+  isVisibleLanguage: true # Floofstation - can be picked via traits
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -61,7 +65,7 @@
 
 - type: language
   id: Mouse
-  isVisibleLanguage: true
+  isVisibleLanguage: true # Floofstation - we have rodentia
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2
@@ -157,6 +161,7 @@
 
 - type: language
   id: Kobold
+  isVisibleLanguage: true # Floofstation - can be picked via traits
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2

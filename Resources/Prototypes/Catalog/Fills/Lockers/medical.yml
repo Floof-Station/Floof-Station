@@ -15,6 +15,7 @@
       - id: Bloodpack
         amount: 2
       - id: Gauze
+      - id: BodyBagFolded # Floofstation
 
 - type: entity
   id: LockerWallMedicalFilled
@@ -34,7 +35,7 @@
       - id: Bloodpack
         amount: 2
       - id: Gauze
-
+      - id: BodyBagFolded # Floofstation
 
 - type: entity
   id: LockerMedicalFilled
@@ -192,6 +193,8 @@
         prob: 0.3
       - id: LunchboxMedicalFilledRandom # Delta-V Lunchboxes!
         prob: 0.3 
+      - id: BodyBagFolded  # Floofstation
+        amount: 2
 
 - type: entity
   id: LockerParamedicFilledHardsuit #Delta V - Paramedic locker with suit
@@ -216,3 +219,5 @@
         prob: 0.3
       - id: LunchboxMedicalFilledRandom # Delta-V Lunchboxes!
         prob: 0.3 
+      - id: BodyBagFolded  # Floofstation
+        amount: 2

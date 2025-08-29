@@ -1,6 +1,7 @@
 - type: trait
   id: GermanAccent
   category: TraitsSpeechAccents
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents
@@ -12,6 +13,7 @@
 - type: trait
   id: DrunkardAccent
   category: TraitsSpeechAccents
+  slots: 0
   requirements:
   - !type:CharacterItemGroupRequirement
     group: TraitsAccents
@@ -23,6 +25,7 @@
 - type: trait
   id: FrenchAccent
   category: TraitsSpeechAccents
+  slots: 0
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents
@@ -42,8 +45,6 @@
     - !type:TraitAddComponent
       components:
         - type: BarkAccent
-    - !type:TraitReplaceComponent
-      components:
-        - type: Speech
-          speechSounds: Dog
-          speechVerb: SmallMob
+    - !type:TraitModifySpeech
+      newSounds: Dog
+      newVerb: SmallMob

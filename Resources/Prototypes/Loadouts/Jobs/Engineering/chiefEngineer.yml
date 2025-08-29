@@ -482,6 +482,18 @@
     - ClothingNeckEngineermedal
 
 # Mask
+- type: loadout
+  id: LoadoutChiefEngineerMask
+  category: JobsEngineeringChiefEngineer
+  cost: 1
+  items:
+    - ClothingMaskWeldingGas
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutChiefEngineerMask
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefEngineer
 
 # Outer
 - type: loadout

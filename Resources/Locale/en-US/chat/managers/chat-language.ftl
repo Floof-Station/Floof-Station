@@ -23,18 +23,19 @@ chat-language-Sign-name = Sign language
 
 # Animal Languages
 
-chat-language-Cat-name = Cat
+# Floofstation - some of those are renamed. Why do we have two sources of truth for language names?
+chat-language-Cat-name = {language-Cat-name}
 chat-language-Chicken-name = Chicken
 chat-language-Cow-name = Cow
 chat-language-Crab-name = Crab
-chat-language-Dog-name = Dog
+chat-language-Dog-name = {language-Dog-name}
 chat-language-Duck-name = Duck
 chat-language-Eldritch-name = Eldritch
-chat-language-Fox-name = Fox
+chat-language-Fox-name = {language-Fox-name}
 chat-language-Hissing-name = Hissing
 chat-language-Kangaroo-name = Kangaroo
-chat-language-Kobold-name = Kobold
-chat-language-Monkey-name = Monkey
+chat-language-Kobold-name = {language-Kobold-name}
+chat-language-Monkey-name = {language-Monkey-name}
 chat-language-Mouse-name = Mouse
 chat-language-Penguin-name = Penguin
 chat-language-Pig-name = Pig

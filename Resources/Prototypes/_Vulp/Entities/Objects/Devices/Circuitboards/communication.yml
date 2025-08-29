@@ -1,0 +1,14 @@
+- type: entity
+  id: FaxMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: fax machine board
+  description: A machine printed circuit board for a long-range fax machine.
+  components:
+  - type: MachineBoard
+    prototype: FaxMachineConstructible
+    requirements:
+      Manipulator: 2
+    materialRequirements:
+      Steel: 2
+      Glass: 2
+      Cable: 2

@@ -2,7 +2,7 @@
   id: ScarEyeRight
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Felinid, Harpy, Oni, Rodentia, SlimePerson, Arachne, Feroxi, Lamia, Kitsune]  # Delta V - Felinid, Oni, Harpy, Rodentia, Feroxi
+  speciesRestriction: [Human, Dwarf, Felinid, Harpy, Oni, Rodentia, SlimePerson, Arachne, Feroxi, Lamia, Tajaran, Kitsune]  # Delta V - Felinid, Oni, Harpy, Rodentia, Feroxi; Einstein Engines - Tajaran
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -12,7 +12,7 @@
   id: ScarEyeLeft
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Felinid, Harpy, Oni, Rodentia, SlimePerson, Arachne, Feroxi, Lamia, Kitsune] # Delta V - Felinid, Oni, Harpy, Rodentia, Feroxi
+  speciesRestriction: [Human, Dwarf, Felinid, Harpy, Oni, Rodentia, SlimePerson, Arachne, Feroxi, Lamia, Kitsune, Tajaran] # Delta V - Felinid, Oni, Harpy, Rodentia, Feroxi; Einstein Engines - Tajaran
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -22,7 +22,7 @@
   id: ScarTopSurgeryShort
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Felinid, Oni, SlimePerson, Arachne, Feroxi, Lamia, Kitsune] #Einstein Engines - Felinid, Oni - DeltaV - Feroxi
+  speciesRestriction: [Human, Dwarf, Felinid, Oni, SlimePerson, Arachne, Feroxi, Lamia, Kitsune, Tajaran] #Einstein Engines - Felinid, Oni - DeltaV - Feroxi, Tajaran Update b7660b9
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -33,7 +33,7 @@
   id: ScarTopSurgeryLong
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Felinid,  Oni, SlimePerson, Arachne, Feroxi, Lamia, Kitsune] #Einstein Engines - Felinid, Oni - DeltaV - Feroxi
+  speciesRestriction: [Human, Dwarf, Felinid,  Oni, SlimePerson, Arachne, Feroxi, Lamia, Kitsune, Tajaran] #Einstein Engines - Felinid, Oni - DeltaV - Feroxi, Tajaran Update b7660b9
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -44,7 +44,7 @@
   id: ScarChest
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Felinid, Oni, SlimePerson, Arachne, Feroxi, Lamia, Kitsune] #Einstein Engines - Felinid, Oni - DeltaV - Feroxi
+  speciesRestriction: [Human, Dwarf, Felinid, Oni, SlimePerson, Arachne, Feroxi, Lamia, Kitsune, Tajaran] #Einstein Engines - Felinid, Oni - DeltaV - Feroxi, Tajaran Update b7660b9
   sexRestriction: [Male] # DeltaV: Splitting the scars and tattoos
   followSkinColor: true
   sprites:

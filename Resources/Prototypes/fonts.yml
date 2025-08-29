@@ -77,7 +77,7 @@
 - type: font
   id: OnlyYou
   path: /Fonts/Only_You.otf
-  
+
 - type: font
   id: RyujinAttack
   path: /Fonts/RyujinAttack/RyujinAttack.otf
@@ -85,3 +85,15 @@
 - type: font # Floofstation + Goobstation LRP
   id: Chinese
   path: /Fonts/NotoSans/NotoSansSC-Regular.ttf
+
+- type: font # Floof - Tajaran Update b7660b9
+  id: Sriracha
+  path: /Fonts/Sriracha/Sriracha.ttf
+
+- type: font # Floof - Tajaran Update b7660b9
+  id: GrenzeGotisch
+  path: /Fonts/Grenze_Gotisch/GrenzeGotisch.ttf
+
+- type: font # Floof - Tajaran Update b7660b9
+  id: RubikDirt
+  path: /Fonts/Rubik_Dirt/RubikDirt.ttf

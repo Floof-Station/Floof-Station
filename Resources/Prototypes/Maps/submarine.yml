@@ -59,7 +59,6 @@
             Clown: [ 1, 2 ]
             HeadOfPersonnel: [ 1, 1 ]
             Janitor: [ 2, 3 ]
-            Lawyer: [ 2, 2 ]
             MartialArtist: [ 2, 2 ]
             Mime: [ 1, 2 ]
             Musician: [ 2, 2 ]
@@ -80,3 +79,8 @@
             SalvageSpecialist: [ 3, 5 ]
             Quartermaster: [ 1, 1 ]
             InventorySpecialist: [ 1, 1 ] #FloofStation
+          # Justice added by FloofStation
+            ChiefJustice: [ 1, 1 ] #FloofStation
+            Clerk: [ 1, 1 ] #FloofStation
+            Lawyer: [ 2, 2 ] #FloofStation
+            Prosecutor: [ 1, 1 ] #FloofStation

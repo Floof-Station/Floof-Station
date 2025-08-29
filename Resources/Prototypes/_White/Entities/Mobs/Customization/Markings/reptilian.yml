@@ -3,7 +3,7 @@
   id: LizardHeadVirtuasaur
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Reptilian, Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune] # Floof - M3739 - #1084
+  speciesRestriction: [Reptilian, Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - M3739 - #1084
   sprites:
   - sprite: _White/Mobs/Customization/snouts.rsi
     state: virtuasaur

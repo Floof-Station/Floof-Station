@@ -12,6 +12,7 @@ namespace Content.Shared.Humanoid.Markings
         HeadTop,
         HeadSide,
         Snout,
+        Eyes, //imp, eye customization
         Chest,
         Underwear, // Floof, add underwear
         Undershirt, // Floof, add underwear

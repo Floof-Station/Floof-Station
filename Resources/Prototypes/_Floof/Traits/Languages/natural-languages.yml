@@ -1,21 +1,9 @@
-- type: trait
-  id: Ratvarian
-  category: TraitsSpeechLanguages
-  points: 0
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: TraitsLanguagesBasic
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Ratvarian
-      languagesUnderstood:
-        - Ratvarian
-
+# Note: these languages REPLACE your species' natural language, hence they take no slots.
 - type: trait
   id: NaturalRatvarian
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -34,6 +22,7 @@
   id: NaturalChittin
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -53,6 +42,7 @@
   id: NaturalNehina
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -72,6 +62,7 @@
   id: NaturalMouse
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -91,6 +82,7 @@
   id: NaturalCanilunzt
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -110,6 +102,7 @@
   id: NaturalRobotTalk
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -129,6 +122,7 @@
   id: NaturalArachnic
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -149,6 +143,7 @@
   id: NaturalRootSpeak
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -168,6 +163,7 @@
   id: NaturalSolCommon
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -187,6 +183,7 @@
   id: NaturalValyrianStandard
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -206,6 +203,7 @@
   id: NaturalMoffic
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -225,6 +223,7 @@
   id: NaturalDraconic
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -244,6 +243,7 @@
   id: NaturalBubblish
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -263,6 +263,7 @@
   id: NaturalSchechi
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -282,6 +283,7 @@
   id: NaturalNekomimetic
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -302,6 +304,7 @@
   id: NaturalKagebun
   category: TraitsSpeechLanguages
   points: -1
+  slots: 0
   priority: -1
   requirements:
     - !type:CharacterItemGroupRequirement

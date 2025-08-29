@@ -52,4 +52,3 @@ jobs:
         git commit -m "${{ vars.CHANGELOG_MESSAGE }} (#${{ env.PR_NUMBER }})"
         git push
       shell: bash
-      continue-on-error: true

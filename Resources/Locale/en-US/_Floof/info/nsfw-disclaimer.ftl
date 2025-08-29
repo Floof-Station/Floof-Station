@@ -1,19 +1,17 @@
 nsfw-disclaimer-title = ⚠️ ERP Server Disclaimer – Explicit Adult Content ⚠️
-nsfw-disclaimer-text =
-    This server contains [bold]explicit sexual roleplay (ERP)[/bold] and mature themes that are not suitable for minors or individuals sensitive to adult material.
+nsfw-disclaimer-text = 
+    Please note that [color=yellow]every Sunday is 'Syndie Sunday', where shifts are much less likely to be calm. Admin-driven events on these days also tend to be more chaotic and impactful.[/color]
 
-    By joining, you confirm you are 18+ (or the age of maturity in your location) and consent to viewing and engaging in adult roleplay that may include the following themes:
-    - BDSM (Bondage, Discipline, Dominance/submission, Sadism/Masochism)
-    - Power exchange dynamics (Master/slave, petplay, dom/sub scenarios)
-    - Non-con/consensual non-consent (CNC) – strictly roleplay, with consent
-    - Breeding, impregnation fantasies
-    - Exhibitionism and voyeurism
-    - Transformation and body modification themes
-    - Fetish-focused roleplay (e.g., footplay, latex, size difference)
-    - Other fictional kinks as agreed upon between consenting participants
-    All players are expected to follow strict consent boundaries. Non-consensual behavior outside of pre-negotiated roleplay is strictly prohibited and will result in removal.
+    This server contains [bold]explicit adult sexual roleplay (ERP)[/bold] and mature themes that are not suitable for minors or individuals sensitive to said explicit material.
 
-    If any of this content makes you uncomfortable, or you are not legally permitted to view such content, please disconnect immediately.
+    By joining, you confirm you are 18+ and understand that you may view adult explicit material and topics, including roleplay that includes sexual content.
+    All players are [bold]expected to follow strict out-of-character consent boundaries, understand the boundaries of explicit material of all parties involved in a situation, and to keep extreme content out of generally public spaces, as to avoid violation of others boundaries of consent.[/bold]
+
+    Furthermore, you may inadvertently come across a private explicit scene that includes content you find uncomfortable or extreme in nature. If this happens, you are allowed and encouraged to leave the area without acknowledging such instance. You are not expected to stay in a scene that makes you uncomfortable. [bold]Out-of-Character Non-Consensual behavior outside of pre-negotiated roleplay is strictly prohibited and will result in removal from the community.[/bold]
+
+    If you happen to be in an explicit situation where you feel uncomfortable, you are encouraged to use Out-of-Character mediums, including LOOC & Subtle OOC to request for the party(ies) involved to politely stop. If they continue to knowingly violate the boundaries of your comfort and/or consent, submit an AHelp immediately so our staff can take action. If your are made too uncomfortable to continue playing and feel like you cannot AHelp, we allow and encourage you to leave the round OOCly and in-character means (cryoing) and follow this by writing up a ticket in our discord so that staff may respond.
+
+    If you are uncomfortable with general explicit and/or sexual themes, or you are below our minimum 18+ requirements and/or not legally permitted to view or interact with such content, [bold]please disconnect immediately.[/bold]
 
 nsfw-disclaimer-decline = Decline & exit
 nsfw-disclaimer-accept = Accept & continue
