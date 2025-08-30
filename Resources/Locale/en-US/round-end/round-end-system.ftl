@@ -11,6 +11,6 @@ round-end-system-round-restart-eta-announcement = Restarting the round in {$time
 eta-units-minutes = minutes
 eta-units-seconds = seconds
 
-ui-vote-recall-title = Extend the round?
+ui-vote-recall-title = Call the emergency shuttle (end the shift)?
 ui-vote-yes = Yes
 ui-vote-no = No
