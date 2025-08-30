@@ -66,7 +66,7 @@ public sealed partial class RoundEndSystem
         var localeYes = Loc.GetString("ui-vote-restart-yes");
         var localeNo = Loc.GetString("ui-vote-restart-no");
 
-        options.InitiatorText = "Server";
+        options.InitiatorText = "Central Command";
         options.PlayVoteSound = false; // we expect to be doing this several times a shift.
         options.Options.Add((localeYes, true));
         options.Options.Add((localeNo, false));
