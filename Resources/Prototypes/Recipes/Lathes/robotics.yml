@@ -26,14 +26,6 @@
     Steel: 1500
 
 - type: latheRecipe
-  id: Quadborgendoskeleton
-  result: Quadborgendoskeleton
-  category: Robotics
-  completetime: 3
-  materials:
-    Steel: 1800
-
-- type: latheRecipe
   id: LeftArmBorg
   result: LeftArmBorg
   category: Robotics
