@@ -2,8 +2,8 @@
   id: talos # For some GOD KNOWS WHY unknown reason, the map AND the prototype file both dont like the word "Talos" being capitalized, I tried to make it match up with the other maps but it just doesnt fucking work????
   mapName: 'Talos' #Do not change talos to uppercase, it will break everything.
   mapPath: /Maps/Floof/Talos.yml  # Floofstation
-  minPlayers: 25
-  maxPlayers: 65
+  minPlayers: 35
+  maxPlayers: 70
   stations:
     talos:
       stationProto: StandardNanotrasenStation
