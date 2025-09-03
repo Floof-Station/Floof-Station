@@ -33,20 +33,23 @@
       weightlessModifier: 1.2
     - type: CanMoveInAir
     - type: Sprite
-      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       state: icon
     - type: Item
-      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       size: Huge
     - type: UserInterface
       interfaces:
         enum.SharedGasTankUiKey.Key:
           type: GasTankBoundUserInterface
     - type: Clothing
-      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       quickEquip: false
       slots:
         - Back
+        # Start Floof Modifications - Sleepy-Shinu
+        - suitStorage # Change - Allow jetpack to fit on suit slots
+        # End Floof Modifications - Sleepy-Shinu
     - type: GasTank
       outputPressure: 21.3
       air:
@@ -73,10 +76,10 @@
   components:
   - type: InstantAction
     icon:
-      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       state: icon
     iconOn:
-      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       state: icon-on
     useDelay: 1.0
     event: !type:ToggleJetpackEvent
@@ -89,11 +92,13 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/blue.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/blue.rsi
-    slots:
-      - Back
+    sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
+    # Start Floof Modifications - Sleepy-Shinu
+    #slots:
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
 
 # Filled blue
 - type: entity
@@ -120,13 +125,15 @@
   suffix: Empty
   components:
   - type: Item
-    sprite: Objects/Tanks/Jetpacks/black.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/black.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/black.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/black.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/black.rsi
-    slots:
-      - Back
+    sprite: _Floof/Objects/Tanks/Jetpacks/black.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
+    # Start Floof Modifications - Sleepy-Shinu
+    #slots:
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
 
 # Filled black
 - type: entity
@@ -153,12 +160,14 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/captain.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/captain.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/captain.rsi
-    slots:
-      - Back
-      - SuitStorage
+    sprite: _Floof/Objects/Tanks/Jetpacks/captain.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
+    # Start Floof Modifications - Sleepy-Shinu
+    #slots:
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    #  - suitStorage # Modification - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
   - type: Item
     sprite: Objects/Tanks/Jetpacks/captain.rsi
     size: Normal
@@ -193,14 +202,16 @@
   suffix: Empty
   components:
     - type: Item
-      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/mini.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
     - type: Sprite
-      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/mini.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
     - type: Clothing
-      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/mini.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       slots:
-        - Back
-        - suitStorage
+    # Start Floof Modifications - Sleepy-Shinu
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    #  - suitStorage - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
         - Belt
     - type: GasTank
       outputPressure: 42.6
@@ -236,13 +247,15 @@
   suffix: Empty
   components:
   - type: Item
-    sprite: Objects/Tanks/Jetpacks/security.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/security.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/security.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/security.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/security.rsi
-    slots:
-      - Back
+    sprite: _Floof/Objects/Tanks/Jetpacks/security.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
+    # Start Floof Modifications - Sleepy-Shinu
+    #slots:
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
 
 #Filled security
 - type: entity
@@ -269,14 +282,16 @@
   suffix: Empty
   components:
   - type: Item
-    sprite: Objects/Tanks/Jetpacks/void.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/void.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/void.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/void.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
   - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/void.rsi
+    sprite: _Floof/Objects/Tanks/Jetpacks/void.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
     slots:
-      - Back
-      - suitStorage
+    # Start Floof Modifications - Sleepy-Shinu
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    #  - suitStorage # Modificaiton - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
       - Belt
 
 # Filled void
@@ -304,14 +319,16 @@
   suffix: Empty
   components:
     - type: Item
-      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/mini.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
     - type: Sprite
-      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/mini.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
     - type: Clothing
-      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      sprite: _Floof/Objects/Tanks/Jetpacks/mini.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       slots:
-        - Back
-        - suitStorage
+    # Start Floof Modifications - Sleepy-Shinu
+    #  - Back # Modificaiton - Handled by parent "BaseJetpack"
+    #  - suitStorage # Modificaiton - Handled by parent "BaseJetpack"
+    # End Floof Modifications - Sleepy-Shinu
         - Belt
     - type: GasTank
       outputPressure: 42.6
