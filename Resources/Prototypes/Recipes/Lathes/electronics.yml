@@ -1,4 +1,4 @@
-# Base protoypes
+# Base prototypes
 
 - type: latheRecipe
   abstract: true
@@ -228,10 +228,10 @@
   id: UniformPrinterMachineCircuitboard
   result: UniformPrinterMachineCircuitboard
 
-- type: latheRecipe
-  parent: BaseCircuitboardRecipe
-  id: BiogeneratorMachineCircuitboard
-  result: BiogeneratorMachineCircuitboard
+#- type: latheRecipe
+#  parent: BaseCircuitboardRecipe
+#  id: BiogeneratorMachineCircuitboard
+#  result: BiogeneratorMachineCircuitboard
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
@@ -413,6 +413,26 @@
   parent: PortableGeneratorPacmanMachineCircuitboard
   id: PortableGeneratorJrPacmanMachineCircuitboard
   result: PortableGeneratorJrPacmanMachineCircuitboard
+
+# Floof - Begin
+- type: latheRecipe
+  id: WallmountGeneratorElectronics
+  result: WallmountGeneratorElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 50
+    Glass: 150
+
+- type: latheRecipe
+  id: WallmountGeneratorAPUElectronics
+  result: WallmountGeneratorAPUElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 50
+    Glass: 350
+# Floof - End
 
 - type: latheRecipe
   parent: BaseCircuitboardRecipe
