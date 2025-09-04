@@ -75,7 +75,7 @@
             Boxer: [ 1, 1 ] 
             #silicon
             #StationAi: [ 1, 1 ]
-            Borg: [ 1, 7 ]
+            Borg: [ 5, 5 ]
             #Etc
             Passenger: [ -1 , -1 ]
             Anomaly: [ 2 , 2 ]
