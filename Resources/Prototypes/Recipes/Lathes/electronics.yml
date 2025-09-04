@@ -227,7 +227,7 @@
   parent: BaseCircuitboardRecipe
   id: UniformPrinterMachineCircuitboard
   result: UniformPrinterMachineCircuitboard
-
+# Floof - Uncomment when we get there.
 #- type: latheRecipe
 #  parent: BaseCircuitboardRecipe
 #  id: BiogeneratorMachineCircuitboard
@@ -393,7 +393,7 @@
   parent: BaseCircuitboardRecipe
   id: SMESMachineCircuitboard
   result: SMESMachineCircuitboard
-
+# Floof - Uncomment when we get there.
 #- type: latheRecipe
 #  parent: BaseGoldCircuitboardRecipe
 #  id: SMESAdvancedMachineCircuitboard
