@@ -7,7 +7,7 @@
   icon: "JobIconLawyer"
   supervisors: job-supervisors-cj  # Delta V - Change supervisor to chief justice
   access:
-  - Service
+  # - Service # Yeah we aren't wizden, Lawyers are not service.
   - Lawyer
   - Maintenance
   - Justice
