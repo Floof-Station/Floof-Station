@@ -190,7 +190,7 @@ namespace Content.Server.Ghost
 
             SetCanSeeGhosts(uid, true);
 
-            var time = _gameTiming.CurTime;
+            var time = _gameTiming.CurTime; // Vulpstation note - BodySystem was changed to use CurTime as well. Adjust it if this is ever changed.
             component.TimeOfDeath = time;
 
             _actions.AddAction(uid, ref component.BooActionEntity, component.BooAction);
