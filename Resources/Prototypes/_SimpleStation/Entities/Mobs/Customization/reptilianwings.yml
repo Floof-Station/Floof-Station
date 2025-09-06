@@ -2,7 +2,7 @@
   id: WingsDragon
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune] # floof species restrictions
   sprites:
   - sprite: _SimpleStation/Mobs/Customization/wings64x34.rsi
     state: dragon
@@ -11,7 +11,7 @@
   id: WingsDragonTwotone
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune] # floof species restrictions
   sprites:
   - sprite: _SimpleStation/Mobs/Customization/wings64x34.rsi
     state: dragon
@@ -22,7 +22,7 @@
   id: WingsBigArmWings
   bodyPart: Wings
   markingCategory: Wings
-  speciesRestriction: [Reptilian]
+  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune] # floof species restrictions
   sprites:
   - sprite: SimpleStation14/Mobs/Customization/wings64x32.rsi
     state: harpy
