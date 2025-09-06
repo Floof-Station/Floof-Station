@@ -45,7 +45,6 @@
     RLeg: MobReptilianRLeg
     LFoot: MobReptilianLFoot
     RFoot: MobReptilianRFoot
-    Wings: MobHumanoidAnyMarking
 
 - type: markingPoints
   id: MobReptilianMarkingLimits

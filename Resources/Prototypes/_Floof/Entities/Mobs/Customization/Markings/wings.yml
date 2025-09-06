@@ -1,13 +1,4 @@
 - type: marking
-  id: WingsDragon
-  bodyPart: Wings
-  markingCategory: Wings
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune]
-  sprites:
-    - sprite: SimpleStation14/Mobs/Customization/wings96x34.rsi
-      state: dragon
-
-- type: marking
   id: WingsFly
   bodyPart: Wings
   markingCategory: Wings
