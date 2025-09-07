@@ -23,7 +23,7 @@
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsLaceup
     id: ProsecutorPDA
-    ears: ClothingHeadsetSecurity
+    ears: ClothingHeadsetJustice
     pocket1: HyperlinkBookSecuritySop # Floof - M3739 - Standardization across legal representatives. If the Attorney is going to have one, only makes sense that the Prosecutor does as well.
     pocket2: RubberStampLawyer # Floof - M3739 - DeltaV's Lawyer stamp addition is now a pocket item instead to ensure deployment across loadouts. ClothingBackpackLawyerFilled and it's variants don't really work when people can choose their bags.
     # TODO - Floof - M3739 - Make a stamp specific to the Prosecutor?
