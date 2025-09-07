@@ -33,7 +33,8 @@ namespace Content.IntegrationTests.Tests
             {
                 DummyTicker = false,
                 Connected = true,
-                Dirty = true
+                Dirty = true,
+                Fresh = true // Floof - TODO: Figure out why this test is passing a unexpected pair state to DisposeAsync
             });
 
             var server = pair.Server;
