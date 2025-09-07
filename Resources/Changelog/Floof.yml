@@ -7695,3 +7695,27 @@ Entries:
   id: 814
   time: '2025-09-03T02:21:49.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1235
+- author: WhiteLightningTwister
+  changes:
+    - type: Add
+      message: >-
+        Updated the Shoukou station. It now features a justice department, AI
+        sattelite, a supermatter, some new jobs, Some departments and old areas,
+        as well as wiring and piping, were reworked.
+  id: 815
+  time: '2025-09-04T16:30:25.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1340
+- author: M3739
+  changes:
+    - type: Tweak
+      message: Rule 9.6 has been updated.
+  id: 816
+  time: '2025-09-04T19:53:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1387
+- author: M3739
+  changes:
+    - type: Fix
+      message: The shuttle vote system now understands what "no" means.
+  id: 817
+  time: '2025-09-05T05:19:24.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1372
