@@ -34,7 +34,7 @@ namespace Content.IntegrationTests.Tests
                 DummyTicker = false,
                 Connected = true,
                 Dirty = true,
-                Fresh = true // Floof - TODO: Figure out why this test is passing a unexpected pair state to DisposeAsync
+                Fresh = true // Floof - TODO: Supersede workaround and implement an actual fix
             });
 
             var server = pair.Server;
