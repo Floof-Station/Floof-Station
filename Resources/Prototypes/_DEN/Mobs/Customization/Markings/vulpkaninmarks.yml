@@ -23,7 +23,7 @@
   id: SnoutCheesegal
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
     state:  sergsnoutredux-1
