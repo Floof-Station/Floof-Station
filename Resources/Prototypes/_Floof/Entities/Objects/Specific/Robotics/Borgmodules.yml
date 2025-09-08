@@ -15,7 +15,7 @@
   id: BorgModuleStun
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
   name: disabler cyborg Module
-  description: A Module "incapable of causing harm if used correctly"
+  description: A module that is "incapable of causing harm if used correctly," according to it's labeling.
   components:
   - type: Sprite
     sprite: _Floof/Objects/Specific/Robotics/borgmodule.rsi
