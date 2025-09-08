@@ -3,7 +3,7 @@
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Title="{Loc 'nsfw-disclaimer-title'}"
     MinSize="200 200"
-    MaxWidth="500">
+    MaxWidth="600">
 
     <BoxContainer Orientation="Vertical" HorizontalExpand="True" Margin="4 4 4 4">
         <RichTextLabel Name="DisclaimerText" Text="{Loc 'nsfw-disclaimer-text'}"/>

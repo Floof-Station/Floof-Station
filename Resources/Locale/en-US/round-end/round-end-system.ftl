@@ -8,3 +8,7 @@ round-end-system-round-restart-eta-announcement = Restarting the round in {$time
 
 eta-units-minutes = minutes
 eta-units-seconds = seconds
+
+# Vulpstation
+round-end-system-shuttle-call-vote = Call the emergency shuttle (end the shift)?
+round-end-system-shuttle-call-vote-initiator = Central Command

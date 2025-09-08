@@ -436,6 +436,42 @@
       - id: PlushieAvianMysta
         prob: 0.50
         orGroup: Prize
+      - id: PlushieBunnyStressRelief
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieERTFox
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieRescueFox
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieArachneNobility
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieEldritchCaptain
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieLargeTailedFox
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieTruePirateCaptain
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieHawaiianShirtDoggo
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieTiredCargoTechPlushie
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieUnholyRed
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieDetectiveKitty
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieUrsineGal
+        prob: 0.50
+        orGroup: Prize
 
       # Floof - End
       # Rare
