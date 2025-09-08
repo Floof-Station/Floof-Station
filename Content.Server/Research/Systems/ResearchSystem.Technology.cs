@@ -78,7 +78,7 @@ public sealed partial class ResearchSystem
             || !PrototypeManager.TryIndex(prototype.Discipline, out var disciplinePrototype)
             || !TryComp<ResearchServerComponent>(serverEnt.Value, out var researchServer)
             || !TryComp<TechnologyDatabaseComponent>(serverEnt.Value, out var serverDatabase) // Floofstation
-            || prototype.Cost * clientDatabase.SoftCapMultiplier > researchServer.Points)
+            || prototype.Cost * serverDatabase.SoftCapMultiplier > researchServer.Points)
             return false;
 
         // The den section start
@@ -98,7 +98,7 @@ public sealed partial class ResearchSystem
             && Exists(station)
             && station != EntityUid.Invalid
             && TryComp<StationResearchRecordComponent>(station, out var record))
-            record.SoftCapMultiplier = MathF.Max(clientDatabase.SoftCapMultiplier, record.SoftCapMultiplier); // Floofstation - use max here
+            record.SoftCapMultiplier = MathF.Max(serverDatabase.SoftCapMultiplier, record.SoftCapMultiplier); // Floofstation - use max here
 
         AddTechnology(serverEnt.Value, prototype);
         TrySetMainDiscipline(prototype, serverEnt.Value);
