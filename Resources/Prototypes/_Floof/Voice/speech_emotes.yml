@@ -2,7 +2,7 @@
   id: Gekker
   name: chat-emote-name-gekker
   category: Vocal
-  chatMessages: [ gekkers ]
+  chatMessages: [ floof-chat-emote-msg-gekker ]
   whitelist:
     tags:
       - VulpEmotes
@@ -19,7 +19,7 @@
   id: Yip
   name: chat-emote-name-yip
   category: Vocal
-  chatMessages: [ yips ]
+  chatMessages: [ floof-chat-emote-msg-yip ]
   whitelist:
     tags:
       - UnathiEmotes
@@ -36,7 +36,7 @@
   id: Yap
   name: chat-emote-name-yap
   category: Vocal
-  chatMessages: [ yaps ]
+  chatMessages: [ floof-chat-emote-msg-yap ]
   whitelist:
     tags:
       - VulpEmotes
@@ -54,7 +54,7 @@
   id: Coo
   name: chat-emote-name-coo
   category: Vocal
-  chatMessages: [ coos ]
+  chatMessages: [ floof-chat-emote-msg-coo ]
   whitelist:
     tags:
       - HarpyEmotes

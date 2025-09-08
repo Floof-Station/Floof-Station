@@ -1,0 +1,104 @@
+- type: entity # Floofstation
+  parent: Jug
+  suffix: cryoxadone
+  id: JugCryoxadone
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-cryoxadone
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Cryoxadone
+              Quantity: 200
+
+- type: entity # Floofstation
+  parent: Jug
+  suffix: doxarubixadone
+  id: JugDoxarubixadone
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-doxarubixadone
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Doxarubixadone
+              Quantity: 200
+
+- type: entity # Floofstation
+  parent: Jug
+  suffix: necrosol
+  id: JugNecrosol
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-necrosol
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Necrosol
+              Quantity: 200
+
+- type: entity # Floofstation
+  parent: Jug
+  suffix: aloxadone
+  id: JugAloxadone
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-aloxadone
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Aloxadone
+              Quantity: 200
+
+- type: entity # Floofstation
+  parent: Jug
+  suffix: traumoxadone
+  id: JugTraumoxadone
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-traumoxadone
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Traumoxadone
+              Quantity: 200
+              
+- type: entity # Floofstation
+  parent: Jug
+  suffix: stelloxadone
+  id: JugStelloxadone
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-stelloxadone
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Stelloxadone
+              Quantity: 200
+
+- type: entity # Floofstation
+  parent: Jug
+  suffix: opporozidone
+  id: JugOpporozidone
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Label
+      currentLabel: reagent-name-opporozidone
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Opporozidone
+              Quantity: 200

@@ -33,3 +33,18 @@
     Glass: 50
     Steel: 100
     Plastic: 50
+
+- type: latheRecipe
+  id: WelderIndustrial
+  result: WelderIndustrial
+  completetime: 4
+  materials:
+    Steel: 800
+
+- type: latheRecipe
+  id: WelderIndustrialAdvanced
+  result: WelderIndustrialAdvanced
+  completetime: 5
+  materials:
+    Steel: 600
+    Plasteel: 200

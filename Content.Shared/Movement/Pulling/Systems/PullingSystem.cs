@@ -311,6 +311,9 @@ public sealed class PullingSystem : EntitySystem
             || component.Pulling != args.BlockingEntity)
             return;
 
+        if (!TryComp<PhysicsComponent>(args.BlockingEntity, out var throweePhysics)) // Floof - Get physics info of throwee
+            return;
+
         if (!TryComp(args.BlockingEntity, out PullableComponent? comp))
             return;
 
@@ -318,6 +321,20 @@ public sealed class PullingSystem : EntitySystem
             || HasComp<GrabThrownComponent>(args.BlockingEntity)
             || component.GrabStage <= GrabStage.Soft)
             return;
+        // Floof Start - Check if the thrower is strong enough to throw the throwee.
+        if (throwerPhysics.Mass * 2f < throweePhysics.Mass)
+        {
+            args.Cancel();
+            _popup.PopupEntity(
+                Loc.GetString(
+                    "popup-grab-throw-fail-weight", ("puller", Identity.Entity(uid, EntityManager)),
+                    ("pulled", Identity.Entity(args.BlockingEntity, EntityManager))),
+                args.BlockingEntity,
+                uid,
+                PopupType.MediumCaution);
+            return;
+        }
+        // Floof End
 
         if (_timing.CurTime < component.WhenCanThrow)
         {

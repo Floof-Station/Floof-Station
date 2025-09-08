@@ -60,7 +60,6 @@
             Clown: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             Janitor: [ 2, 4 ]
-            Lawyer: [ 2, 2 ]
             Mime: [ 1, 2 ]
             Musician: [ 2, 3 ]
             Reporter: [ 2, 2 ]
@@ -80,3 +79,8 @@
             CargoTechnician: [ 2, 4 ]
             SalvageSpecialist: [ 3, 5 ]
             MailCarrier: [ 2, 3 ]
+          # Justice added by FloofStation
+            ChiefJustice: [ 1, 1 ] #FloofStation
+            Clerk: [ 1, 1 ] #FloofStation
+            Lawyer: [ 2, 2 ] #FloofStation
+            Prosecutor: [ 1, 1 ] #FloofStation

@@ -61,7 +61,6 @@
             Brigmedic: [ 1, 1 ]
             Prisoner: [ 2, 3 ] # has a small perma so less prisoners
             PrisonGuard: [ 1, 2 ]
-            Lawyer: [ 2, 2 ]
             SeniorOfficer: [ 1, 1 ]
             #supply
             Quartermaster: [ 1, 1 ]
@@ -77,3 +76,8 @@
             Anomaly: [ 4, 4 ] # Floofstation
             #silicon
             Borg: [ 2, 3 ]
+            # Justice added by FloofStation
+            ChiefJustice: [ 1, 1 ] #FloofStation
+            Clerk: [ 1, 1 ] #FloofStation
+            Lawyer: [ 2, 2 ] #FloofStation
+            Prosecutor: [ 1, 1 ] #FloofStation
