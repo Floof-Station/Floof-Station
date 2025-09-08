@@ -83,7 +83,7 @@ public sealed partial class ResearchSystem
 
         // The den section start
         var station = _station.GetOwningStation(client);
-        var oldSoftCap = clientDatabase.SoftCapMultiplier;
+        var oldSoftCap = serverDatabase.SoftCapMultiplier; // Floofstation - server is authoritative
         // The den section end
 
         if (prototype.Tier >= disciplinePrototype.LockoutTier)
