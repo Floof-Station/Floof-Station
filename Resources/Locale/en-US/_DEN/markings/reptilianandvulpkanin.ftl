@@ -3,13 +3,13 @@ marking-ReptilianSharpCobraHood-sharp_cobra_hood = Base
 marking-ReptilianSharpCobraHood-sharp_cobra_hood_overlay = Inner
 
 # New Sergal
-marking-EarsCheesegal=  Sergal Ears
+marking-EarsCheesegal=  Sergal Ears (The Den)
 marking-EarsCheesegal-sergears-1=  External
 marking-EarsCheesegal-sergears-2=  Internal
 marking-SnoutCheesegal =  Sergal Snout
 marking-SnoutCheesegal-sergsnoutredux-1 =  Top trim
 marking-SnoutCheesegal-sergsnoutredux-2 =  Muzzle
-marking-TailCheesegal =  Sergal Tail
+marking-TailCheesegal =  Sergal Tail (The Den)
 marking-TailCheesegal-sergtail-1 =  Primary
 marking-TailCheesegal-sergtail-2 =  Secondary
 
