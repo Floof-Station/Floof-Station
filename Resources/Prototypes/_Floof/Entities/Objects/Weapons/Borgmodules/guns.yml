@@ -46,12 +46,39 @@
     startingCharge: 1000
 
 - type: entity
-  parent: WeaponXrayCannon
+  name: x-ray cannon
+  parent: BaseWeaponBattery
   suffix: Robot
   id: BorgWeaponXrayCannon
   categories: [ HideSpawnMenu ]
-  description: A weapon that is almost as infamous as its users.
+  description: An experimental weapon that uses concentrated x-ray energy against its target.
   components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+  - type: Gun
+    fireRate: 1.5
+    minAngle: 1
+    maxAngle: 20
+    angleIncrease: 2
+    angleDecay: 15 
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: XrayLaser
+    fireCost: 100
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 30

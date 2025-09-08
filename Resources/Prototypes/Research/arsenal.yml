@@ -183,6 +183,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
+  - BorgModuleXray # floof
 
 - type: technology
   id: BasicShuttleArmament

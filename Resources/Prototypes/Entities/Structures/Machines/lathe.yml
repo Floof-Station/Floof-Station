@@ -884,6 +884,7 @@
       - MagazineMagnumLeverRifleEmpty # Goobstation
     dynamicRecipes:
       - BolaEnergy
+      - BorgModuleXray
       - BoxBeanbag
       - BoxShotgunIncendiary
       - BoxShotgunUranium

@@ -14,7 +14,7 @@
 - type: entity
   id: BorgModuleStun
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
-  name: Disabler cyborg Module
+  name: disabler cyborg Module
   description: A Module "incapable of causing harm if used correctly"
   components:
   - type: Sprite
@@ -36,7 +36,7 @@
 - type: entity
   id: BorgModuleKill
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
-  name: Combat cyborg module
+  name: combat cyborg module
   components:
   - type: Sprite
     sprite: _Floof/Objects/Specific/Robotics/borgmodule.rsi
@@ -56,7 +56,7 @@
 - type: entity
   id: BorgModuleInvestigation
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
-  name: Investigation cyborg module
+  name: investigation cyborg module
   components:
   - type: Sprite
     sprite: _Floof/Objects/Specific/Robotics/borgmodule.rsi
@@ -74,18 +74,20 @@
     - Cyborgs
 
 - type: entity
-  id: BorgModuleadvancedmeasures
+  id: BorgModuleXray
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
-  name: advanced combat cyborg module
+  name: x-ray cannon cyborg module
+  description: A Module useful for the irradiation of irritating instigators.
   components:
   - type: Sprite
     sprite: _Floof/Objects/Specific/Robotics/borgmodule.rsi
     layers:
     - state: security
-    - state: icon-Advmeasures
+    - state: icon-x-ray
   - type: ItemBorgModule
     items:
     - BorgWeaponXrayCannon
+    - CombatKnife
   - type: GuideHelp
     guides:
     - Quadborgs
