@@ -2,7 +2,7 @@
   id: NeckChestfluff
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
     state: chestfloof
