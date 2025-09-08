@@ -45,7 +45,7 @@
   id: TailCheesegal
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
     state: sergtail-1
