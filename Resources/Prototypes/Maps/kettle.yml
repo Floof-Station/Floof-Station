@@ -76,5 +76,8 @@
             Reporter: [ 2, 2 ]
             Zookeeper: [ 1, 1 ]
             Anomaly: [ 4, 4 ] # Floofstation
-            #justice
-            Lawyer: [ 2, 2 ]
+            # Justice added by FloofStation
+            ChiefJustice: [ 1, 1 ] #FloofStation
+            Clerk: [ 1, 1 ] #FloofStation
+            Lawyer: [ 2, 2 ] #FloofStation
+            Prosecutor: [ 1, 1 ] #FloofStation

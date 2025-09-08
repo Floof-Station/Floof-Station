@@ -21,6 +21,13 @@
     maxItemSize: Large
     storageInsertSound:
       path: /Audio/Voice/Slime/slime_squish.ogg
+    storageRemoveSound: # Floof: add remove sound too
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: StorageBlockedByClothing # Floof
+    slots:
+    - INNERCLOTHING
+    allowedTags:
+    - ShirtlessClothing
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

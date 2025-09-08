@@ -552,7 +552,7 @@ public sealed class ChatUIController : UIController
             if (_ghost is not {IsGhost: true})
             {
                 FilterableChannels |= ChatChannel.Subtle;
-                FilterableChannels |= ChatChannel.SubtleOOC;
+                /*FilterableChannels |= ChatChannel.SubtleOOC;*/ // Floof - Deprecated
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
@@ -567,14 +567,17 @@ public sealed class ChatUIController : UIController
         {
             FilterableChannels |= ChatChannel.Dead;
             CanSendChannels |= ChatSelectChannel.Dead;
+            FilterableChannels |= ChatChannel.Subtle; // Floof - M3739 - So it can be filtered out proper.
         }
-
+        // Floof Start
+        /* 
         if (_admin.HasFlag(AdminFlags.Pii) && _ghost is { IsGhost: true })
         {
             FilterableChannels |= ChatChannel.Subtle;
             FilterableChannels |= ChatChannel.SubtleOOC;
-        }
-
+        }*/
+        // Floof End
+        
         // only admins can see / filter asay
         if (_admin.HasFlag(AdminFlags.Adminchat))
         {

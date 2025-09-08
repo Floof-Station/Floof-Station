@@ -23,6 +23,10 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Timer = Robust.Shared.Timing.Timer;
 using Content.Server.Announcements.Systems;
+using Content.Server.Voting;
+using Content.Server.Voting.Managers;
+using Content.Shared._Vulp;
+
 
 namespace Content.Server.RoundEnd
 {
@@ -44,6 +48,7 @@ namespace Content.Server.RoundEnd
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly StationSystem _stationSystem = default!;
         [Dependency] private readonly AnnouncerSystem _announcer = default!;
+        [Dependency] private readonly IVoteManager _votes = default!; // Vulpstation
 
         public TimeSpan DefaultCooldownDuration { get; set; } = TimeSpan.FromSeconds(30);
 
@@ -382,10 +387,39 @@ namespace Content.Server.RoundEnd
                                         : _cfg.GetCVar(CCVars.EmergencyShuttleAutoCallTime);
             if (mins != 0 && _gameTiming.CurTime - AutoCallStartTime > TimeSpan.FromMinutes(mins))
             {
-                if (!_shuttle.EmergencyShuttleArrived && ExpectedCountdownEnd is null)
+                // Vulpstation - changed this to start a vote
+                if (!(!_shuttle.EmergencyShuttleArrived && ExpectedCountdownEnd is null))
+                    return;
+
+                Action act = () =>
                 {
                     RequestRoundEnd(null, false, "round-end-system-shuttle-auto-called-announcement");
                     _autoCalledBefore = true;
+                };
+
+                // Vulpstation - start a vote or invoke the round end action directly
+                if (!_cfg.GetCVar(VulpCCVars.DoEvacVotes))
+                    act();
+                else
+                {
+                    var vote = _votes.CreateVote(
+                        new VoteOptions
+                        {
+                            Duration = TimeSpan.FromSeconds(_cfg.GetCVar(VulpCCVars.EvacVoteDuration)),
+                            Title = Loc.GetString("round-end-system-shuttle-call-vote"),
+                            InitiatorText = Loc.GetString("round-end-system-shuttle-call-vote-initiator"),
+                            Options =
+                            [
+                                (Loc.GetString("ui-vote-restart-yes"), true),
+                                (Loc.GetString("ui-vote-restart-no"), false)
+                            ],
+                        });
+
+                    vote.OnFinished += (_, args) =>
+                    {
+                        if (args.Winner is true)
+                            act();
+                    };
                 }
 
                 // Always reset auto-call in case of a recall.

@@ -33,7 +33,8 @@ namespace Content.IntegrationTests.Tests
             {
                 DummyTicker = false,
                 Connected = true,
-                Dirty = true
+                Dirty = true,
+                Fresh = true // Floof - TODO: Supersede workaround and implement an actual fix
             });
 
             var server = pair.Server;

@@ -128,3 +128,27 @@
         - type: ReplacementAccent
           replacementChance: 0.15
           accent: liar
+
+- type: trait # Goobstation
+  id: BoganAccent
+  category: TraitsSpeechAccents
+  slots: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsAccents
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: BoganAccent
+
+- type: trait # Goobstation
+  id: MedievalAccent
+  category: TraitsSpeechAccents
+  slots: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsAccents
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: MedievalAccent

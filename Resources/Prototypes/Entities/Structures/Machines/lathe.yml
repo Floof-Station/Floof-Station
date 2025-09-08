@@ -350,6 +350,8 @@
       - ClothingBackpackSatchelHolding
       - ClothingBackpackDuffelHolding
       - WelderExperimental
+      - WelderIndustrial # Floof
+      - WelderIndustrialAdvanced # Floof
       - JawsOfLife
       - CoreSilver # Nyanotrasen - Silver Golem core
       - FauxTileAstroGrass
@@ -1228,6 +1230,8 @@
       - HolofanProjector
       - HoloprojectorField
       - WelderExperimental
+      - WelderIndustrial # Floof
+      - WelderIndustrialAdvanced # Floof
       - PowerDrill # Can make two of the three advanced tools - jaws of life are too OP to give them away
       - WeaponParticleDecelerator
       - ClothingMaskWeldingGas
@@ -1693,13 +1697,13 @@
       # Floofstation section end
   - type: EmagLatheRecipes
     emagStaticRecipes:
-      - ClothingHeadHatCentcomcap
-      - ClothingHeadHatCentcom
-      - ClothingUniformJumpsuitCentcomAgent
-      - ClothingUniformJumpsuitCentcomFormal
-      - ClothingUniformJumpskirtCentcomFormalDress
-      - ClothingUniformJumpsuitCentcomOfficer
-      - ClothingUniformJumpsuitCentcomOfficial
+      # - ClothingHeadHatCentcomcap # Start - Floof - Remove CC recipes.
+      # - ClothingHeadHatCentcom
+      # - ClothingUniformJumpsuitCentcomAgent
+      # - ClothingUniformJumpsuitCentcomFormal
+      # - ClothingUniformJumpskirtCentcomFormalDress
+      # - ClothingUniformJumpsuitCentcomOfficer
+      # - ClothingUniformJumpsuitCentcomOfficial # End - Floof - Remove CC recipes.
       - ClothingHeadHatSyndieMAA
       - ClothingHeadHatSyndie
       - ClothingUniformJumpsuitOperative
@@ -1712,7 +1716,7 @@
       - ClothingUniformJumpsuitPyjamaSyndicatePink
       - ClothingHeadPyjamaSyndicateRed
       - ClothingUniformJumpsuitPyjamaSyndicateRed
-      - ClothingOuterWinterCentcom
+      # - ClothingOuterWinterCentcom # Floof - Remove CC recipes.
       - ClothingOuterWinterSyndie
       - ClothingOuterWinterSyndieCap
       # Floofstation - Department Socks, Armwarmers ect
@@ -1986,6 +1990,18 @@
       - PlushieRatLogisticsOfficer
       - PlushieBunnyChiefMedicalOfficer
       - PlushieAvianMysta
+      - PlushieBunnyStressRelief
+      - PlushieERTFox
+      - PlushieRescueFox
+      - PlushieArachneNobility
+      - PlushieEldritchCaptain
+      - PlushieLargeTailedFox
+      - PlushieTruePirateCaptain
+      - PlushieHawaiianShirtDoggo
+      - PlushieTiredCargoTechPlushie
+      - PlushieUnholyRed
+      - PlushieDetectiveKitty
+      - PlushieUrsineGal
       #Floof Plushies - End
   - type: EmagLatheRecipes
     emagStaticRecipes:
