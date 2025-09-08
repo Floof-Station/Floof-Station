@@ -581,6 +581,15 @@
 
 - type: entity
   parent: BaseSign
+  id: SignIceCream
+  name: ice cream sign
+  description: A sign indicating a ice cream parlour.
+  components:
+  - type: Sprite
+    state: icecream
+
+- type: entity
+  parent: BaseSign
   id: SignInterrogation
   name: interrogation sign
   description: A sign indicating an interrogation room.

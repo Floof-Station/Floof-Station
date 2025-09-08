@@ -9,6 +9,10 @@
   - type: RotInto
     entity: AshOrganic
     stage: 2
+  # Floof: let organs be preserved in cold environments
+  - type: AtmosExposed
+  - type: Temperature
+    currentTemperature: 290 # copied from meat
 
 # Simply to distinguish from normal ash. TODO: make this an actual unique entity rather than just renamed ash.
 - type: entity

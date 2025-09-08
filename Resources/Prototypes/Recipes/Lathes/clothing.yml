@@ -93,50 +93,52 @@
   materials:
     Cloth: 500 #It's armored but I don't want to include durathread for a non-head
 
-- type: latheRecipe
-  id: ClothingUniformJumpsuitCentcomAgent
-  result: ClothingUniformJumpsuitCentcomAgent
-  category: ClothingOther # Floof - add uniform printer clothing categories
-  completetime: 4
-  materials:
-    Cloth: 300
-    Durathread: 100
+# Start - Floof - To stop potential confusion on who is an admin and accidental rule-breaks.
+# - type: latheRecipe
+#   id: ClothingUniformJumpsuitCentcomAgent
+#   result: ClothingUniformJumpsuitCentcomAgent
+#   category: ClothingOther # Floof - add uniform printer clothing categories
+#   completetime: 4
+#   materials:
+#     Cloth: 300
+#     Durathread: 100
 
-- type: latheRecipe
-  id: ClothingUniformJumpsuitCentcomFormal
-  result: ClothingUniformJumpsuitCentcomFormal
-  category: ClothingOther # Floof - add uniform printer clothing categories
-  completetime: 4
-  materials:
-    Cloth: 300
-    Durathread: 100
+# - type: latheRecipe
+#   id: ClothingUniformJumpsuitCentcomFormal
+#   result: ClothingUniformJumpsuitCentcomFormal
+#   category: ClothingOther # Floof - add uniform printer clothing categories
+#   completetime: 4
+#   materials:
+#     Cloth: 300
+#     Durathread: 100
 
-- type: latheRecipe
-  id: ClothingUniformJumpskirtCentcomFormalDress
-  result: ClothingUniformJumpskirtCentcomFormalDress
-  category: ClothingOther # Floof - add uniform printer clothing categories
-  completetime: 4
-  materials:
-    Cloth: 300
-    Durathread: 100
+# - type: latheRecipe
+#   id: ClothingUniformJumpskirtCentcomFormalDress
+#   result: ClothingUniformJumpskirtCentcomFormalDress
+#   category: ClothingOther # Floof - add uniform printer clothing categories
+#   completetime: 4
+#   materials:
+#     Cloth: 300
+#     Durathread: 100
 
-- type: latheRecipe
-  id: ClothingUniformJumpsuitCentcomOfficer
-  result: ClothingUniformJumpsuitCentcomOfficer
-  category: ClothingOther # Floof - add uniform printer clothing categories
-  completetime: 4
-  materials:
-    Cloth: 300
-    Durathread: 100
+# - type: latheRecipe
+#   id: ClothingUniformJumpsuitCentcomOfficer
+#   result: ClothingUniformJumpsuitCentcomOfficer
+#   category: ClothingOther # Floof - add uniform printer clothing categories
+#   completetime: 4
+#   materials:
+#     Cloth: 300
+#     Durathread: 100
 
-- type: latheRecipe
-  id: ClothingUniformJumpsuitCentcomOfficial
-  result: ClothingUniformJumpsuitCentcomOfficial
-  category: ClothingOther # Floof - add uniform printer clothing categories
-  completetime: 4
-  materials:
-    Cloth: 300
-    Durathread: 100
+# - type: latheRecipe
+#   id: ClothingUniformJumpsuitCentcomOfficial
+#   result: ClothingUniformJumpsuitCentcomOfficial
+#   category: ClothingOther # Floof - add uniform printer clothing categories
+#   completetime: 4
+#   materials:
+#     Cloth: 300
+#     Durathread: 100
+# End - Floof
 
 - type: latheRecipe
   id: ClothingUniformJumpsuitChiefEngineer
