@@ -77,7 +77,7 @@
   id: BorgModuleXray
   parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
   name: x-ray cannon cyborg module
-  description: A Module useful for the irradiation of irritating instigators.
+  description: An expertly designed module for the irradiation of irritating instigators that have insisted to instigate hostilities.
   components:
   - type: Sprite
     sprite: _Floof/Objects/Specific/Robotics/borgmodule.rsi
