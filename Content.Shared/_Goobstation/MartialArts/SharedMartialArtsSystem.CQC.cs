@@ -41,6 +41,9 @@ public partial class SharedMartialArtsSystem
 
             if (TryComp<MartialArtsKnowledgeComponent>(ent, out var knowledge))
                 knowledge.Blocked = true;
+
+            // Floof: Don't leave the component lying around on Chef since it affects examine text.
+            RemComp<GrantCqcComponent>(ent);
         }
 
     private void OnGrantCQCUse(Entity<GrantCqcComponent> ent, ref UseInHandEvent args)

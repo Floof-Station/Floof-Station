@@ -16,7 +16,7 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.28
+          radius: 0.35 # Floof
         density: 140
         restitution: 0.0
         mask:
@@ -109,10 +109,10 @@
     currentTemperature: 311.76  # Body temperature of cat
     heatDamage:
       types:
-        Cold: 0.65 # in line with cold resist
+        Heat: 2 # poor kitty
     coldDamage:
       types:
-        Heat: 2 # poor kitty
+        Cold: 0.65 # in line with cold resist
   - type: ThermalRegulator
     normalBodyTemperature: 311.76
 
