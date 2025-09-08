@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckRedBoetie
+  name: red boetie
+  description: A beautiful red boetie to brighten up your day.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Neck/Boeties/redboetie.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Neck/Boeties/redboetie.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBlackBoetie
+  name: black boetie
+  description: A sleek black boetie ready to head into any formal occasion.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Neck/Boeties/blackboetie.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Neck/Boeties/blackboetie.rsi

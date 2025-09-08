@@ -7719,3 +7719,23 @@ Entries:
   id: 817
   time: '2025-09-05T05:19:24.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1372
+- author: faefyr
+  changes:
+    - type: Tweak
+      message: >-
+        Added Law/Prosecutor access to Chief Justice; removed service access
+        from Attorney, and Lawyer access from HoP.
+  id: 818
+  time: '2025-09-07T15:18:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1392
+- author: ArcanissKenku
+  changes:
+    - type: Tweak
+      message: Major Update to Arena Map
+    - type: Add
+      message: >-
+        Three new clothing items: Black/Red Boetie and Soda Jerk Hat. Currently
+        found only within Arena station.
+  id: 819
+  time: '2025-09-07T16:27:59.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1385
