@@ -12,7 +12,7 @@
   id: TailBrushtip
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune] # Floof - Anthro Marking Restrictions
   sprites:
   - sprite: _DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
     state: brushtiptail
