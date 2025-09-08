@@ -13,7 +13,7 @@ marking-TailCheesegal =  Sergal Tail
 marking-TailCheesegal-sergtail-1 =  Primary
 marking-TailCheesegal-sergtail-2 =  Secondary
 
-#These ones are for the chestfluff and tail
+# These ones are for the chestfluff and tail
 marking-TailBrushtip =  Brushed tip tail
 marking-TailBrushtip-brushtiptail =  Primary
 marking-TailBrushtip-brushtiptail2 =  Tail Tip
