@@ -7739,3 +7739,10 @@ Entries:
   id: 819
   time: '2025-09-07T16:27:59.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1385
+- author: TheRealMasterChief117
+  changes:
+    - type: Tweak
+      message: Apostrophes may now be used in character names.
+  id: 820
+  time: '2025-09-08T00:00:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1398
