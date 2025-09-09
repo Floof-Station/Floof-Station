@@ -406,12 +406,13 @@ namespace Content.Server.RoundEnd
                         new VoteOptions
                         {
                             Duration = TimeSpan.FromSeconds(_cfg.GetCVar(VulpCCVars.EvacVoteDuration)),
-                            Title = Loc.GetString("round-end-system-shuttle-call-vote"),
+                            Title = Loc.GetString("floof-round-end-system-shuttle-call-vote"), // Floof
                             InitiatorText = Loc.GetString("round-end-system-shuttle-call-vote-initiator"),
                             Options =
                             [
-                                (Loc.GetString("ui-vote-restart-yes"), true),
-                                (Loc.GetString("ui-vote-restart-no"), false)
+                                // Floof - Changed to "Stay" or "Leave"
+                                (Loc.GetString("ui-vote-autocall-leave"), true),
+                                (Loc.GetString("ui-vote-autocall-stay"), false)
                             ],
                         });
 
