@@ -33,7 +33,7 @@
       weightlessModifier: 1.2
     - type: CanMoveInAir
     - type: Sprite
-      sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
+      sprite: _Floof/Objects/Tanks/Jetpacks/blulue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
       state: icon
     - type: Item
       sprite: _Floof/Objects/Tanks/Jetpacks/blue.rsi # Modification - Use Floof resources to load SUITSTORAGE texture
@@ -49,6 +49,7 @@
         - Back
         # Start Floof Modifications - Sleepy-Shinu
         - suitStorage # Change - Allow jetpack to fit on suit slots
+      equippedState: equipped # When equiped, add "Equiped" Tag for rendering textures
         # End Floof Modifications - Sleepy-Shinu
     - type: GasTank
       outputPressure: 21.3
@@ -210,8 +211,8 @@
       slots:
     # Start Floof Modifications - Sleepy-Shinu
     #  - Back # Modificaiton - Handled by parent "BaseJetpack"
-    #  - suitStorage - Handled by parent "BaseJetpack"
     # End Floof Modifications - Sleepy-Shinu
+        - suitStorage
         - Belt
     - type: GasTank
       outputPressure: 42.6
@@ -327,14 +328,13 @@
       slots:
     # Start Floof Modifications - Sleepy-Shinu
     #  - Back # Modificaiton - Handled by parent "BaseJetpack"
-    #  - suitStorage # Modificaiton - Handled by parent "BaseJetpack"
     # End Floof Modifications - Sleepy-Shinu
+        - suitStorage 
         - Belt
     - type: GasTank
       outputPressure: 42.6
       air:
         volume: 0.75
-
 
 # Filled micro
 - type: entity
