@@ -47,7 +47,8 @@ public sealed partial class ResearchSystem
             return;
 
         technologyDatabase.SoftCapMultiplier = record.SoftCapMultiplier;
-        ent.Comp.CurrentSoftCapMultiplier = record.SoftCapMultiplier;
+        // Floofstation - removed
+        // ent.Comp.CurrentSoftCapMultiplier = record.SoftCapMultiplier;
     }
     // TheDen section end
 

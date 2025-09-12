@@ -70,10 +70,11 @@ public sealed partial class ResearchSystem
 
         ResearchConsoleBoundInterfaceState state;
 
-        if (TryGetClientServer(uid, out _, out var serverComponent, clientComponent))
+        if (TryGetClientServer(uid, out var serverUid, out var serverComponent, clientComponent))
         {
-            var points = clientComponent.ConnectedToServer ? serverComponent.Points : 0;
-            var softCap = clientComponent.ConnectedToServer ? serverComponent.CurrentSoftCapMultiplier : 1;
+            // Floofstation - use tech DB. Also, this condition succeeding implies ConnectedToServer
+            var points = serverComponent.Points;
+            var softCap = CompOrNull<TechnologyDatabaseComponent>(serverUid)?.SoftCapMultiplier ?? 1;
             state = new ResearchConsoleBoundInterfaceState(points, softCap);
         }
         else

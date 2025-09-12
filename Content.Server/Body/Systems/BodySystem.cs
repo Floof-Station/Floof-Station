@@ -51,7 +51,7 @@ public sealed class BodySystem : SharedBodySystem
 
         if (_mobState.IsDead(ent) && _mindSystem.TryGetMind(ent, out var mindId, out var mind))
         {
-            mind.TimeOfDeath ??= _gameTiming.RealTime;
+            mind.TimeOfDeath ??= _gameTiming.CurTime; // Vulpstation - changed to use CurTime like the ghost system
             _ticker.OnGhostAttempt(mindId, canReturnGlobal: true, mind: mind);
         }
     }

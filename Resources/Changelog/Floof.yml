@@ -7719,3 +7719,96 @@ Entries:
   id: 817
   time: '2025-09-05T05:19:24.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1372
+- author: faefyr
+  changes:
+    - type: Tweak
+      message: >-
+        Added Law/Prosecutor access to Chief Justice; removed service access
+        from Attorney, and Lawyer access from HoP.
+  id: 818
+  time: '2025-09-07T15:18:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1392
+- author: ArcanissKenku
+  changes:
+    - type: Tweak
+      message: Major Update to Arena Map
+    - type: Add
+      message: >-
+        Three new clothing items: Black/Red Boetie and Soda Jerk Hat. Currently
+        found only within Arena station.
+  id: 819
+  time: '2025-09-07T16:27:59.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1385
+- author: TheRealMasterChief117
+  changes:
+    - type: Tweak
+      message: Apostrophes may now be used in character names.
+  id: 820
+  time: '2025-09-08T00:00:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1398
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The R&D console should now correctly preserve the research cost
+        multiplier after getting deconstructed.
+  id: 821
+  time: '2025-09-08T05:47:55.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1397
+- author: Mudyin
+  changes:
+    - type: Tweak
+      message: Tweaked talos based on user feedback
+  id: 822
+  time: '2025-09-09T01:38:02.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1393
+- author: The Den
+  changes:
+    - type: Add
+      message: >-
+        A couple of vulpkanin markings, two tone-wings and a sharp cobra hood
+        for unathi have been added
+  id: 823
+  time: '2025-09-09T05:46:19.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1395
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Returning to body as a ghost should no longer garble your death time and
+        prevent returning to lobby as a consequence.
+  id: 824
+  time: '2025-09-09T05:48:06.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1391
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Heavy Dermal Armor with 3 flat physical damage reduction
+    - type: Tweak
+      message: Tweaked Dermal Armor to have 1.5 flat physical damage reduction
+  id: 825
+  time: '2025-09-09T06:03:17.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1116
+- author: M3739
+  changes:
+    - type: Tweak
+      message: The automatic shuttle call has been revised.
+  id: 826
+  time: '2025-09-09T06:05:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1405
+- author: M3739
+  changes:
+    - type: Remove
+      message: Removed Talos from map rotation.
+  id: 827
+  time: '2025-09-10T18:19:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1408
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: 3 new plushies
+    - type: Fix
+      message: The bunny stress relief plushie is now able to intake fluids.
+  id: 828
+  time: '2025-09-11T21:02:25.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1380
