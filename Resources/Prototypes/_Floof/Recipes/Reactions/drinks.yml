@@ -124,7 +124,6 @@
   products:
     CalicoSunrise: 3
 
-
 - type: reaction
   id: Cream
   requiredMixerCategories:
