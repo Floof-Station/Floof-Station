@@ -177,9 +177,3 @@
 
 - type: playTimeTracker
   id: JobCBURN
-
-- type: playTimeTracker
-  id: JobServiceQuadBorg
-
-- type: playTimeTracker
-  id: JobMedicalQuadBorg
