@@ -411,21 +411,21 @@
 
 - type: artifactEffect
   id: EffectCashSpawn
-  targetDepth: 2
+  targetDepth: 1
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
-    maxSpawns: 3
+    maxSpawns: 10
     spawns:
-    - id: SpaceCash100
+    - id: SpaceCash10
       maxAmount: 5
       prob: 0.75
-    - id: SpaceCash1000
+    - id: SpaceCash100
       maxAmount: 2
       prob: 0.5
-    - id: SpaceCash5000
+    - id: SpaceCash500
       prob: 0.25
-    - id: SpaceCash10000
+    - id: SpaceCash1000
       prob: 0.1
 
 - type: artifactEffect
