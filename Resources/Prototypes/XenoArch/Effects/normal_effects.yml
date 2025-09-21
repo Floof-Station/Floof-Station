@@ -654,16 +654,6 @@
     spawns:
     - id: RandomAnomalySpawner
 
-- type: artifactEffect # Floof - A little radioactive gift
-  id: EffectSupermatterSliver
-  targetDepth: 3
-  effectHint: artifact-effect-hint-creation
-  components:
-  - type: SpawnArtifact
-    maxSpawns: 1
-    spawns:
-    - id: SupermatterSliver
-
 - type: artifactEffect
   id: EffectBoom
   targetDepth: 3
@@ -684,26 +674,6 @@
   effectHint: artifact-effect-hint-displacement
   components:
   - type: PortalArtifact
-
-- type: artifactEffect
-  id: EffectHellspawn
-  targetDepth: 4
-  effectHint: artifact-effect-hint-displacement # Floof - Yeah, it's displacing a demon from hell
-  components:
-  - type: SpawnArtifact
-    maxSpawns: 1
-    spawns:
-    - id: MobHellspawnArtifact
-
-- type: artifactEffect # Floof - A Supermatter is still safer then a Singulo or a Tesla
-  id: EffectSupermatter
-  targetDepth: 8 
-  effectHint: artifact-effect-hint-destruction
-  components:
-  - type: SpawnArtifact
-    maxSpawns: 1
-    spawns:
-    - id: Supermatter
 
 - type: artifactEffect
   id: EffectSingulo
