@@ -415,7 +415,7 @@
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
-    maxSpawns: 10
+    maxSpawns: 3
     spawns:
     - id: SpaceCash100
       maxAmount: 5
