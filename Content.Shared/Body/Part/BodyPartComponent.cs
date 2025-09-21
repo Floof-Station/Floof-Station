@@ -94,7 +94,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     ///     Shitmed Change: How much health to heal on the body part per tick.
     /// </summary>
     [DataField]
-    public float SelfHealingAmount = 1f; // Floof - reduced from 5 due to body part damage nerf. Was 10/min, now 1/min. Reverted.
+    public float SelfHealingAmount = 0.5f; // Floof - reduced from 5 due to body part damage nerf. Was 10/min, now 1/min.
 
     /// <summary>
     ///     Shitmed Change: The name of the container for this body part. Used in insertion surgeries.
