@@ -2004,7 +2004,10 @@
       - PlushieUrsineGal
       - PlushieStealthyBird
       - PlushieMedicalHarpy
-      - PlushieElectricIPC      
+      - PlushieElectricIPC
+      - PlushieCuddlyIPC
+      - PlushieFluffyVulpkanin
+      - PlushieSecurityTank      
       #Floof Plushies - End
   - type: EmagLatheRecipes
     emagStaticRecipes:
