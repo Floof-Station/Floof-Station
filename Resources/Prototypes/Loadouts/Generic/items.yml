@@ -1,6 +1,7 @@
 #Smokes
 - type: loadout
   id: LoadoutItemCig
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -11,6 +12,7 @@
 
 - type: loadout
   id: LoadoutItemCigsGreen
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -21,6 +23,7 @@
 
 - type: loadout
   id: LoadoutItemCigsRed
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -31,6 +34,7 @@
 
 - type: loadout
   id: LoadoutItemCigsBlue
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -41,6 +45,7 @@
 
 - type: loadout
   id: LoadoutItemCigsBlack
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -51,6 +56,7 @@
 
 - type: loadout
   id: LoadoutItemCigsMixed
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -61,6 +67,7 @@
 
 - type: loadout
   id: LoadoutItemCigsSyndicate
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -71,6 +78,7 @@
 
 - type: loadout
   id: LoadoutItemLighter
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   customColorTint: true
@@ -82,6 +90,7 @@
 
 - type: loadout
   id: LoadoutItemLighterCheap
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   customColorTint: true
@@ -93,6 +102,7 @@
 
 - type: loadout
   id: LoadoutItemLighterFlippo
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   customColorTint: true
@@ -104,6 +114,7 @@
 
 - type: loadout
   id: LoadoutItemSmokingPipeFilledTobacco
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -114,6 +125,7 @@
 
 - type: loadout
   id: LoadoutItemBlunt
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -124,6 +136,7 @@
 
 - type: loadout
   id: LoadoutItemJoint
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -135,6 +148,7 @@
 # Instruments
 - type: loadout
   id: LoadoutItemMicrophoneInstrument
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -149,6 +163,7 @@
 
 - type: loadout
   id: LoadoutItemKalimbaInstrument
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -163,6 +178,7 @@
 
 - type: loadout
   id: LoadoutItemTrumpetInstrument
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 4
   items:
@@ -177,6 +193,7 @@
 
 - type: loadout
   id: LoadoutItemElectricGuitar
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 5
   items:
@@ -191,6 +208,7 @@
 
 - type: loadout
   id: LoadoutItemBassGuitar
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 5
   items:
@@ -205,6 +223,7 @@
 
 - type: loadout
   id: LoadoutItemRockGuitar
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 5
   items:
@@ -219,6 +238,7 @@
 
 - type: loadout
   id: LoadoutItemAcousticGuitar
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 5
   items:
@@ -233,6 +253,7 @@
 
 - type: loadout
   id: LoadoutItemViolin
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 4
   items:
@@ -247,6 +268,7 @@
 
 - type: loadout
   id: LoadoutItemHarmonica
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -261,6 +283,7 @@
 
 - type: loadout
   id: LoadoutItemAccordion
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 4
   items:
@@ -275,6 +298,7 @@
 
 - type: loadout
   id: LoadoutItemFlute
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -289,6 +313,7 @@
 
 - type: loadout
   id: LoadoutItemOcarina
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -304,6 +329,7 @@
 # Survival Kit
 - type: loadout
   id: LoadoutItemsEmergencyOxygenTank
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -314,6 +340,7 @@
 
 - type: loadout
   id: LoadoutItemsExtendedEmergencyOxygenTank
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -324,6 +351,7 @@
 
 - type: loadout
   id: LoadoutItemsDoubleEmergencyOxygenTank
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -334,6 +362,7 @@
 
 - type: loadout
   id: LoadoutItemClothingMaskBreath
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -341,14 +370,15 @@
 
 - type: loadout
   id: LoadoutItemsEmergencyCrowbar
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
-  canBeHeirloom: true
   items:
     - CrowbarRed
 
 - type: loadout
   id: LoadoutItemFireExtinguisher
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
   items:
@@ -356,6 +386,7 @@
 
 - type: loadout
   id: LoadoutItemFlashlightLantern
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -363,6 +394,7 @@
 
 - type: loadout
   id: LoadoutItemFlare
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -370,6 +402,7 @@
 
 - type: loadout
   id: LoadoutEmergencyMedipen
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -377,6 +410,7 @@
 
 - type: loadout
   id: LoadoutSpaceMedipen
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -385,6 +419,7 @@
 # Paperwork
 - type: loadout
   id: LoadoutItemPapers
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -398,6 +433,7 @@
 
 - type: loadout
   id: LoadoutItemBoxFolderGrey
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -408,6 +444,7 @@
 
 - type: loadout
   id: LoadoutBookRandom
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -418,6 +455,7 @@
 
 - type: loadout
   id: LoadoutPen
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -429,6 +467,7 @@
 # Food and drink
 - type: loadout
   id: LoadoutDrinkWaterBottleFull
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -436,6 +475,7 @@
 
 - type: loadout
   id: LoadoutItemLunchboxGenericFilledRandom
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
   items:
@@ -443,6 +483,7 @@
 
 - type: loadout
   id: LoadoutItemDrinkMREFlask
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -451,6 +492,7 @@
 # Survival boxes
 - type: loadout
   id: LoadoutItemBoxSurvival
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -475,6 +517,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalWaterVapor
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -498,6 +541,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalEngineering
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -515,6 +559,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalEngineeringWaterVapor
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -531,6 +576,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalSecurity
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -552,6 +598,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalSecurityWaterVapor
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -572,6 +619,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalBrigmedic
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -589,6 +637,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalBrigmedicWaterVapor
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -605,6 +654,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalMedical
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -622,6 +672,7 @@
 
 - type: loadout
   id: LoadoutItemBoxSurvivalMedicalWaterVapor
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -638,6 +689,7 @@
 
 - type: loadout
   id: LoadoutItemBoxHug
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -655,6 +707,7 @@
 
 - type: loadout
   id: LoadoutItemBoxHugWaterVapor
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0
   items:
@@ -672,6 +725,7 @@
 # Medkits
 - type: loadout
   id: LoadoutMedkitFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -682,6 +736,7 @@
 
 - type: loadout
   id: LoadoutMedkitBruteFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -700,6 +755,7 @@
 
 - type: loadout
   id: LoadoutMedkitBurnFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -718,6 +774,7 @@
 
 - type: loadout
   id: LoadoutMedkitToxinFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -736,6 +793,7 @@
 
 - type: loadout
   id: LoadoutMedkitOxygenFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -754,6 +812,7 @@
 
 - type: loadout
   id: LoadoutMedkitRadiationFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -772,6 +831,7 @@
 
 - type: loadout
   id: LoadoutMedkitAdvancedFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
   items:
@@ -790,6 +850,7 @@
 
 - type: loadout
   id: LoadoutMedkitCombatFilled
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
   items:
@@ -805,6 +866,7 @@
 #Misc Items
 - type: loadout
   id: LoadoutItemFlash
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   items:
@@ -819,14 +881,15 @@
 
 - type: loadout
   id: LoadoutItemPAI
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
-  canBeHeirloom: true
   items:
     - PersonalAI
 
 - type: loadout
   id: LoadoutItemWaistbag
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -839,6 +902,7 @@
 
 - type: loadout
   id: LoadoutItemCrayonBox
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 4
   items:
@@ -846,6 +910,7 @@
 
 - type: loadout
   id: LoadoutItemBarberScissors
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 4
   items:
@@ -853,6 +918,7 @@
 
 - type: loadout
   id: LoadoutSolCommonTranslator
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
   items:
@@ -860,6 +926,7 @@
 
 - type: loadout
   id: LoadoutHandLabeler
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 3
   items:
@@ -867,6 +934,7 @@
 
 - type: loadout
   id: LoadoutItemHandheldStationMap
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -874,6 +942,7 @@
 
 - type: loadout
   id: LoadoutItemLantern
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
   items:
@@ -881,15 +950,16 @@
 
 - type: loadout
   id: LoadoutItemDrinkShinyFlask
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   customColorTint: true
-  canBeHeirloom: true
   items:
     - DrinkShinyFlask
 
 - type: loadout
   id: LoadoutItemDrinkLithiumFlask
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   customColorTint: true
@@ -898,6 +968,7 @@
 
 - type: loadout
   id: LoadoutItemDrinkVacuumFlask
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 1
   customColorTint: true
@@ -906,6 +977,7 @@
 
 - type: loadout
   id: LoadoutItemCaneBlind
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0 # It shouldnt cost points to be able to function.
   items:
@@ -913,6 +985,7 @@
 
 - type: loadout
   id: LoadoutItemAACTablet
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 0 # Floof - M3739 - Assistive technologies shall be free for mute people.
   items:
@@ -928,9 +1001,9 @@
 # Pets
 - type: loadout
   id: LoadoutItemPetMouse
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
-  canBeHeirloom: true
   items:
     - MobMousePet
   requirements:
@@ -941,9 +1014,9 @@
 
 - type: loadout
   id: LoadoutItemPetHamster
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
-  canBeHeirloom: true
   items:
     - MobHamsterPet
   requirements:
@@ -954,9 +1027,9 @@
 
 - type: loadout
   id: LoadoutItemPetMothroach
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
-  canBeHeirloom: true
   items:
     - MobMothroachPet
   requirements:
@@ -967,9 +1040,9 @@
 
 - type: loadout
   id: LoadoutItemPetCockroach
+  canBeHeirloom: true #FLOOF
   category: Items
   cost: 2
-  canBeHeirloom: true
   items:
     - MobCockroachPet
   requirements:

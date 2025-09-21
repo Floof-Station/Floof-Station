@@ -7839,3 +7839,68 @@ Entries:
   id: 831
   time: '2025-09-14T01:33:47.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1418
+- author: KyuPolaris
+  changes:
+    - type: Remove
+      message: Removed Raise Glimmer objective (pending rework)
+  id: 832
+  time: '2025-09-21T16:45:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1429
+- author: sprkl
+  changes:
+    - type: Tweak
+      message: >-
+        Engineer hardhats, instruments, lighters, and more can be treasured
+        heirlooms.
+  id: 833
+  time: '2025-09-21T16:46:04.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1421
+- author: TheRealMasterChief117
+  changes:
+    - type: Tweak
+      message: Cold slowdowns are now less impactful.
+  id: 834
+  time: '2025-09-21T16:46:53.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1411
+- author: Einstein Engines
+  changes:
+    - type: Fix
+      message: >-
+        Now the action bar doesn’t turn into a party when it picks up an item
+        with an action.
+  id: 835
+  time: '2025-09-21T16:47:24.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1410
+- author: Wizden
+  changes:
+    - type: Fix
+      message: You can examine entities inside of your own container again.
+  id: 836
+  time: '2025-09-21T16:48:30.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1404
+- author: Various Frontier and Wizden Contributors
+  changes:
+    - type: Add
+      message: Pears and Pear related foods
+    - type: Add
+      message: Avocados and related foods
+    - type: Add
+      message: Cucumbers and their related foods
+    - type: Add
+      message: Honey and their related foods
+    - type: Add
+      message: >-
+        Uranium Pizza, it's hot, it's crunchy, it's spicy, but most of all, IT'S
+        FRESH OUT THE OVEN.
+    - type: Add
+      message: 'Other various food items (including but not limited too: Bagels)'
+  id: 837
+  time: '2025-09-21T16:51:28.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1245
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Changed one of the secret ingredients inside Interdyne Herbals
+  id: 838
+  time: '2025-09-21T16:52:53.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1231
