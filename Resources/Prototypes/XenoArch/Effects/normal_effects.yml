@@ -685,6 +685,16 @@
   components:
   - type: PortalArtifact
 
+- type: artifactEffect
+  id: EffectHellspawn
+  targetDepth: 4
+  effectHint: artifact-effect-hint-displacement # Floof - Yeah, it's displacing a demon from hell
+  components:
+  - type: SpawnArtifact
+    maxSpawns: 1
+    spawns:
+    - id: MobHellspawnArtifact
+
 - type: artifactEffect # Floof - A Supermatter is still safer then a Singulo or a Tesla
   id: EffectSupermatter
   targetDepth: 8 
