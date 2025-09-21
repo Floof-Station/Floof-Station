@@ -214,7 +214,7 @@
       path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
   - type: Gun
     selectedMode: SemiAuto
-    fireRate: 3
+    fireRate: 2
     availableModes:
     - SemiAuto
     - FullAuto # no alien revolver in buildings
