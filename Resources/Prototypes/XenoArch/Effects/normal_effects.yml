@@ -417,15 +417,15 @@
   - type: SpawnArtifact
     maxSpawns: 10
     spawns:
-    - id: SpaceCash10
+    - id: SpaceCash100
       maxAmount: 5
       prob: 0.75
-    - id: SpaceCash100
+    - id: SpaceCash1000
       maxAmount: 2
       prob: 0.5
-    - id: SpaceCash500
+    - id: SpaceCash5000
       prob: 0.25
-    - id: SpaceCash1000
+    - id: SpaceCash10000
       prob: 0.1
 
 - type: artifactEffect
@@ -473,9 +473,7 @@
     - Dermaline
     - Arithrazine
     - Bicaridine
-    - Inaprovaline
-    - Kelotane
-    - Dexalin
+    - DexalinPlus
     - Omnizine
 
 - type: artifactEffect
@@ -492,8 +490,7 @@
     - Arithrazine
     - Bicaridine
     - Inaprovaline
-    - Kelotane
-    - Dexalin
+    - DexalinPlus
     - Omnizine
     - Napalm
     - Toxin
@@ -502,9 +499,11 @@
     - Ultravasculine
     - Desoxyephedrine
     - Pax
-    - Siderlac
     - Libidozenithizine # Floof - Artifact tweaks
     - Philterex # Floof - Artifact tweaks
+    - Vestine # Floof - Artifact tweaks
+    - Nocturine # Floof - Artifact tweaks
+    - Fentanyl # Floof - Artifact tweaks
 
 - type: artifactEffect
   id: EffectEmp
@@ -624,6 +623,7 @@
     - ChloralHydrate
     - Mold
     - Amatoxin
+    - Libidozenithizine # Floof - Foam Dangerous yeah this kills you
 
 - type: artifactEffect
   id: EffectIgnite
@@ -655,6 +655,16 @@
     spawns:
     - id: RandomAnomalySpawner
 
+- type: artifactEffect # Floof - A little radioactive gift
+  id: EffectSupermatterSliver
+  targetDepth: 3
+  effectHint: artifact-effect-hint-creation
+  components:
+  - type: SpawnArtifact
+    maxSpawns: 1
+    spawns:
+    - id: SupermatterSliver
+
 - type: artifactEffect
   id: EffectBoom
   targetDepth: 3
@@ -675,6 +685,16 @@
   effectHint: artifact-effect-hint-displacement
   components:
   - type: PortalArtifact
+
+- type: artifactEffect # Floof - A Supermatter is still safer then a Singulo or a Tesla
+  id: EffectSupermatter
+  targetDepth: 8 
+  effectHint: artifact-effect-hint-destruction
+  components:
+  - type: SpawnArtifact
+    maxSpawns: 1
+    spawns:
+    - id: Supermatter
 
 - type: artifactEffect
   id: EffectSingulo
