@@ -107,7 +107,7 @@
     replacement: FloorEighties
 
 - type: artifactEffect
-  id: EffectCashSpawn
+  id: EffectCashSpawnHigh
   targetDepth: 2
   effectHint: artifact-effect-hint-creation
   components:
