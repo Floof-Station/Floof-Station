@@ -1,0 +1,27 @@
+- type: entity
+  name: hellspawn
+  parent: MobHellspawn
+  id: MobHellspawnArtifact
+  description: An unstoppable force of carnage.
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1
+    baseSprintSpeed: 2
+  - type: Reflect
+    reflectProb: 0.3
+    innate: true
+    reflects:
+      - Energy
+  - type: Butcherable
+    spawned:
+      - id: ArtifactFragment
+        amount: 12
+  - type: MeleeWeapon
+    attackRate: 0.6
+    hidden: true
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    damage:
+      types:
+        Blunt: 35
+        Structural: 70
