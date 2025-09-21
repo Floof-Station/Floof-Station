@@ -1,3 +1,5 @@
+# Altered Hellspawn to be Spawned by Artifact, much slower and doesn't hit as hard. Enough for Epi to scream "SEC TO ART SCI"
+
 - type: entity
   name: hellspawn
   parent: MobHellspawn
