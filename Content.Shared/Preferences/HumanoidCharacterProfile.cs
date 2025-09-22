@@ -142,9 +142,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         HashSet<string> traitPreferences,
         HashSet<LoadoutPreference> loadoutPreferences,
         PlayerProvidedCharacterRecords? cdCharacterRecords,
-
         // Floof
-        PlayerProvidedCharacterRecords? cdCharacterRecords,
         string? favoriteDrink)
     {
         Name = name;
@@ -166,10 +164,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         _traitPreferences = traitPreferences;
         _loadoutPreferences = loadoutPreferences;
         CDCharacterRecords = cdCharacterRecords;
-
         // Floof
         FavoriteDrink = favoriteDrink;
-        CDCharacterRecords = cdCharacterRecords;
     }
 
     /// <summary>Copy constructor</summary>
@@ -192,9 +188,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             other.PreferenceUnavailable,
             new HashSet<string>(other.AntagPreferences),
             new HashSet<string>(other.TraitPreferences),
-
             new HashSet<LoadoutPreference>(other.LoadoutPreferences),
-            other.CDCharacterRecords, other.FavoriteDrink)
+            other.CDCharacterRecords,
+            other.FavoriteDrink)
+
     {
     }
 

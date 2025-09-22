@@ -271,8 +271,9 @@ namespace Content.Server.Database
                 }).ToHashSet(),
 
                 // Floof
-                profile.FavoriteDrink,
-                cdRecords
+                cdRecords,
+                profile.FavoriteDrink
+
             );
         }
 
