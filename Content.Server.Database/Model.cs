@@ -442,6 +442,8 @@ namespace Content.Server.Database
 
         // Floof
         public string? FavoriteDrink { get; set; }
+
+        public CDModel.CDProfile? CDProfile { get; set; } // CD - Character Records
     }
     public class ConsentSettings
     {
