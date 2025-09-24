@@ -411,7 +411,7 @@
 
 - type: artifactEffect
   id: EffectCashSpawn
-  targetDepth: 1
+  targetDepth: 2
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
