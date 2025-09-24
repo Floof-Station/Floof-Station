@@ -127,7 +127,7 @@
 
 - type: artifactEffect # Floof - A little radioactive gift
   id: EffectSupermatterSliver
-  targetDepth: 3
+  targetDepth: 5
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
