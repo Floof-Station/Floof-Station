@@ -2,7 +2,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Humanoid.Markings;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Floofstation.ModifyUndies;
+namespace Content.Shared.FloofStation.ModifyUndies;
 
 [Serializable, NetSerializable]
 public sealed partial class ModifyUndiesDoAfterEvent : SimpleDoAfterEvent

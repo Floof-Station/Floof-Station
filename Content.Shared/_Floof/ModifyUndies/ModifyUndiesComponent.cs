@@ -2,7 +2,7 @@ using Content.Shared.Humanoid;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Floofstation.ModifyUndies;
+namespace Content.Shared.FloofStation.ModifyUndies;
 
 /// <summary>
 /// Component that allows removing and adding underwear to humanoid entities through a verb.

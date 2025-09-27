@@ -11,7 +11,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.Floofstation.ModifyUndies;
+namespace Content.Shared.FloofStation.ModifyUndies;
 
 /// <summary>
 /// System that controls removing and adding underwear to humanoid entities through a verb.
@@ -26,6 +26,8 @@ public sealed class ModifyUndiesSystem : EntitySystem
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly IEntityManager _entMan = default!;
     [Dependency] private readonly INetManager _net = default!;
+
+    public static readonly VerbCategory UndiesCat = new("verb-categories-undies", "/Textures/Interface/VerbIcons/undies.png");
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -88,6 +90,7 @@ public sealed class ModifyUndiesSystem : EntitySystem
                 ),
 
                 Icon = underwearIcon,
+                Category = UndiesCat,
                 Act = () =>
                 {
                     var ev = new ModifyUndiesDoAfterEvent(marking, localizedName, isVisible);
