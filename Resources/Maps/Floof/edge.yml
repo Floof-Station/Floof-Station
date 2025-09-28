@@ -7206,8 +7206,6 @@ entities:
       pos: -29.5,33.5
       parent: 2
     - type: DeviceList
-      configurators:
-      - invalid
       devices:
       - 13208
       - 7574
