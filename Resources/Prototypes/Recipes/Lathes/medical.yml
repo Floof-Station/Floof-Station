@@ -97,6 +97,13 @@
     Steel: 500
 
 - type: latheRecipe
+  id: CandyBowl
+  result: CandyBowl
+  completetime: 2
+  materials:
+    Glass: 200
+
+- type: latheRecipe
   id: ClothingHandsGlovesLatex
   result: ClothingHandsGlovesLatex
   completetime: 2
