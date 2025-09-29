@@ -66,7 +66,7 @@ namespace Content.IntegrationTests.Tests
             "Rad",
             "Meta",
             "Kettle", // Floof
-            "talos", // Floof			
+            //"talos", // Floof	- Derotated, no current maintainer
             "Train", // Floof
             "Fland", // Floof,
             "Amber", // Apparently, floof?

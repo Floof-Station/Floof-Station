@@ -1,0 +1,6 @@
+﻿- type: stealTargetGroup
+  id: ClothingHandsGlovesKravMaga
+  name: Krav Maga gloves
+  sprite:
+    sprite: _Goobstation/Clothing/Hands/Gloves/kravgloves.rsi
+    state: icon

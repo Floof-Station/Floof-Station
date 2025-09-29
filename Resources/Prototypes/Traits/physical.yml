@@ -594,7 +594,7 @@
 - type: trait
   id: DermalArmor
   category: Physical
-  points: -6
+  points: -5
   requirements:
     - !type:CharacterJobRequirement
       inverted: true
@@ -602,9 +602,10 @@
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
         - Gladiator # Floof
         - Anomaly
-    - !type:CharacterSpeciesRequirement # Floof
-      species:
-        - Human
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - HeavyDermalArmor
   functions:
     - !type:TraitAddArmor
       damageModifierSets:
@@ -612,6 +613,31 @@
     - !type:TraitPushDescription
       descriptionExtensions:
         - description: examine-dermal-armor-message
+          fontSize: 12
+          requireDetailRange: true
+
+- type: trait
+  id: HeavyDermalArmor # Floof
+  category: Physical
+  points: -10
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Prisoner # Bionics should be "Confiscated" from long term prisoners.
+        - Gladiator # Floof
+        - Anomaly
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - DermalArmor
+  functions:
+    - !type:TraitAddArmor
+      damageModifierSets:
+        - HeavyDermalArmor
+    - !type:TraitPushDescription
+      descriptionExtensions:
+        - description: examine-heavy-dermal-armor-message
           fontSize: 12
           requireDetailRange: true
 

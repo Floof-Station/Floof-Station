@@ -18,6 +18,7 @@
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
   - SalvageExpeditionsComputerCircuitboard
+  - ClothingShoesBootsJump
 
 - type: technology
   id: AdvancedPowercells

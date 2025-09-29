@@ -1,4 +1,3 @@
-#Floof
 - type: entity
   parent: DrinkCanBaseFull
   id: DrinkNNNCan
@@ -13,6 +12,24 @@
         - ReagentId: NikkosNaughtyNectar
           Quantity: 30
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/nnn_can.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/nnn_can.rsi
   - type: Item
-    sprite: Objects/Consumable/Drinks/nnn_can.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/nnn_can.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkBoykisserEnergy
+  name: Boykisser Energy
+  description: The REAL femboy milk!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: BoykissersEnergy
+          Quantity: 30
+  - type: Sprite
+    sprite: _Floof/Objects/Consumable/Drinks/boykisserenergy.rsi
+  - type: Item
+    sprite: _Floof/Objects/Consumable/Drinks/boykisserenergy.rsi

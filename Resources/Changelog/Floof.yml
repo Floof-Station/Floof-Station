@@ -7728,3 +7728,287 @@ Entries:
   id: 818
   time: '2025-09-07T15:18:01.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1392
+- author: ArcanissKenku
+  changes:
+    - type: Tweak
+      message: Major Update to Arena Map
+    - type: Add
+      message: >-
+        Three new clothing items: Black/Red Boetie and Soda Jerk Hat. Currently
+        found only within Arena station.
+  id: 819
+  time: '2025-09-07T16:27:59.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1385
+- author: TheRealMasterChief117
+  changes:
+    - type: Tweak
+      message: Apostrophes may now be used in character names.
+  id: 820
+  time: '2025-09-08T00:00:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1398
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The R&D console should now correctly preserve the research cost
+        multiplier after getting deconstructed.
+  id: 821
+  time: '2025-09-08T05:47:55.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1397
+- author: Mudyin
+  changes:
+    - type: Tweak
+      message: Tweaked talos based on user feedback
+  id: 822
+  time: '2025-09-09T01:38:02.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1393
+- author: The Den
+  changes:
+    - type: Add
+      message: >-
+        A couple of vulpkanin markings, two tone-wings and a sharp cobra hood
+        for unathi have been added
+  id: 823
+  time: '2025-09-09T05:46:19.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1395
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Returning to body as a ghost should no longer garble your death time and
+        prevent returning to lobby as a consequence.
+  id: 824
+  time: '2025-09-09T05:48:06.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1391
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Heavy Dermal Armor with 3 flat physical damage reduction
+    - type: Tweak
+      message: Tweaked Dermal Armor to have 1.5 flat physical damage reduction
+  id: 825
+  time: '2025-09-09T06:03:17.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1116
+- author: M3739
+  changes:
+    - type: Tweak
+      message: The automatic shuttle call has been revised.
+  id: 826
+  time: '2025-09-09T06:05:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1405
+- author: M3739
+  changes:
+    - type: Remove
+      message: Removed Talos from map rotation.
+  id: 827
+  time: '2025-09-10T18:19:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1408
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: 3 new plushies
+    - type: Fix
+      message: The bunny stress relief plushie is now able to intake fluids.
+  id: 828
+  time: '2025-09-11T21:02:25.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1380
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: The silly resomi plushie will no longer drop from every prize ball.
+  id: 829
+  time: '2025-09-14T00:06:16.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1422
+- author: Memeji
+  changes:
+    - type: Add
+      message: '''Boykisser Energy'' drink.'
+  id: 830
+  time: '2025-09-14T00:17:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1416
+- author: M3739
+  changes:
+    - type: Add
+      message: >-
+        The evac shuttle vote now shows feedback showing the results of the
+        vote.
+    - type: Fix
+      message: >-
+        The evac shuttle vote no longer ceases operations if the first vote's
+        winner is 'stay.'
+  id: 831
+  time: '2025-09-14T01:33:47.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1418
+- author: KyuPolaris
+  changes:
+    - type: Remove
+      message: Removed Raise Glimmer objective (pending rework)
+  id: 832
+  time: '2025-09-21T16:45:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1429
+- author: sprkl
+  changes:
+    - type: Tweak
+      message: >-
+        Engineer hardhats, instruments, lighters, and more can be treasured
+        heirlooms.
+  id: 833
+  time: '2025-09-21T16:46:04.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1421
+- author: TheRealMasterChief117
+  changes:
+    - type: Tweak
+      message: Cold slowdowns are now less impactful.
+  id: 834
+  time: '2025-09-21T16:46:53.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1411
+- author: Einstein Engines
+  changes:
+    - type: Fix
+      message: >-
+        Now the action bar doesn’t turn into a party when it picks up an item
+        with an action.
+  id: 835
+  time: '2025-09-21T16:47:24.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1410
+- author: Wizden
+  changes:
+    - type: Fix
+      message: You can examine entities inside of your own container again.
+  id: 836
+  time: '2025-09-21T16:48:30.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1404
+- author: Various Frontier and Wizden Contributors
+  changes:
+    - type: Add
+      message: Pears and Pear related foods
+    - type: Add
+      message: Avocados and related foods
+    - type: Add
+      message: Cucumbers and their related foods
+    - type: Add
+      message: Honey and their related foods
+    - type: Add
+      message: >-
+        Uranium Pizza, it's hot, it's crunchy, it's spicy, but most of all, IT'S
+        FRESH OUT THE OVEN.
+    - type: Add
+      message: 'Other various food items (including but not limited too: Bagels)'
+  id: 837
+  time: '2025-09-21T16:51:28.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1245
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Changed one of the secret ingredients inside Interdyne Herbals
+  id: 838
+  time: '2025-09-21T16:52:53.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1231
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added variants of the N1984 and Energy Shotgun
+    - type: Tweak
+      message: Seperated weapons into their own tab for security
+    - type: Add
+      message: Added Energy Cutlass for Security
+  id: 839
+  time: '2025-09-23T18:29:49.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1252
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Buffed Necrosol
+  id: 840
+  time: '2025-09-23T18:31:00.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1297
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Add Chocolate Milk Recipe
+  id: 841
+  time: '2025-09-23T18:44:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1426
+- author: Sprkl
+  changes:
+    - type: Tweak
+      message: Syndicate keys are no longer visible while in a headset.
+  id: 842
+  time: '2025-09-23T18:45:21.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1427
+- author: router
+  changes:
+    - type: Tweak
+      message: >-
+        Shuffled some Rodentia sounds. They now have far more expressive
+        variation.
+  id: 843
+  time: '2025-09-23T18:45:50.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1430
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Jump boots
+  id: 844
+  time: '2025-09-23T18:53:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1415
+- author: ArcanissKenku
+  changes:
+    - type: Add
+      message: Added a steal objective for Krav Maga gloves for traitors.
+    - type: Remove
+      message: >-
+        Krav Maga gloves can no longer be obtained via loadouts as the Warden
+        locker already contains a pair.
+  id: 845
+  time: '2025-09-24T14:30:38.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1437
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Blood & Cum reagents to appropriate drinks
+  id: 846
+  time: '2025-09-25T14:25:35.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1440
+- author: ArcanissKenku
+  changes:
+    - type: Fix
+      message: 'Arena Minor Hotfix '
+  id: 847
+  time: '2025-09-25T14:26:27.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1409
+- author: ArcanissKenku
+  changes:
+    - type: Add
+      message: Judicial Department added to Kettle
+  id: 848
+  time: '2025-09-25T14:27:16.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1417
+- author: WhiteLightningTwister
+  changes:
+    - type: Add
+      message: >-
+        Did a collective amount of fixing of minor errors, put things that were
+        missing from the original back.
+  id: 849
+  time: '2025-09-25T21:35:20.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1414
+- author: Memeji
+  changes:
+    - type: Tweak
+      message: Increased minimum width and height for Vox.
+  id: 850
+  time: '2025-09-26T17:43:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1439
+- author: Wizden
+  changes:
+    - type: Add
+      message: >-
+        Smuggler stashes! Will get spawned as a round start event and can also
+        be found in a hacked ClothesMate. Will have loot from a large random
+        pool.
+    - type: Add
+      message: Smuggler stashes can now be bought from the syndicate uplink for 2TC.
+  id: 851
+  time: '2025-09-26T21:12:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1388
