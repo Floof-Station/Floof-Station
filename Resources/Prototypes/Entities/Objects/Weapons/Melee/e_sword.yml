@@ -270,6 +270,23 @@
       right:
       - state: inhand-right-blade
         shader: unshaded
+        
+- type: entity
+  name: energy cutlass
+  parent: EnergyCutlass
+  id: EnergyCutlassSecurity
+  description: A sleek energy weapon, its blade hums with volatile plasma, expertly contained to cut through nearly any material. The serial number on the hilt marks this sword as belonging to an NT Security Officer.
+  suffix: Security Loadouts
+  components:
+  - type: MeleeWeapon
+    attackRate: 1.25
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+        types:
+            Heat: 15 # Floofstation
+            Structural: 20 # "expertly contained to cut through nearly any material" yet it had no structural damage
+  - type: GuideHelp
+    guides: [ SecurityWeapons ]
 
 - type: entity
   name: double-bladed energy sword

@@ -896,6 +896,29 @@
   materials:
     PrizeTicket: 50
 
+- type: latheRecipe
+  id: PlushieStealthyBird
+  result: PlushieStealthyBird
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieMedicalHarpy
+  result: PlushieMedicalHarpy
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieElectricIPC
+  result: PlushieElectricIPC
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
 
 # HypnoTemp Plushies - Start
 - type: latheRecipe

@@ -54,7 +54,19 @@ namespace Content.Client.Voting.UI
             for (var i = 0; i < _voteButtons.Length; i++)
             {
                 var entry = _vote.Entries[i];
-                _voteButtons[i].Text = Loc.GetString("ui-vote-button", ("text", entry.Text), ("votes", entry.Votes));
+                // Floof start - Hide autocall vote numbers to eliminate comformity voting
+                // TODO: Make this an option for the voting system in general
+                // Begin logic
+                var autocall = Loc.GetString("round-end-system-shuttle-call-vote-initiator");
+                if (_vote.Initiator == autocall)
+                {
+                    _voteButtons[i].Text = Loc.GetString("ui-secret-ballot-vote-button", ("text", entry.Text));
+                }
+                else
+                {
+                    _voteButtons[i].Text = Loc.GetString("ui-vote-button", ("text", entry.Text), ("votes", entry.Votes));
+                }
+                // Floof End
 
                 if (_vote.OurVote == i)
                     _voteButtons[i].Pressed = true;

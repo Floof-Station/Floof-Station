@@ -21,6 +21,7 @@ public sealed partial class ResearchSystem
         primaryDb.SupportedDisciplines = otherDb.SupportedDisciplines;
         primaryDb.UnlockedTechnologies = otherDb.UnlockedTechnologies;
         primaryDb.UnlockedRecipes = otherDb.UnlockedRecipes;
+        primaryDb.SoftCapMultiplier = otherDb.SoftCapMultiplier; // Floofstation - why was this missing?!
 
         Dirty(primaryUid, primaryDb);
 
@@ -76,18 +77,20 @@ public sealed partial class ResearchSystem
             || !CanServerUnlockTechnology(client, prototype, clientDatabase, component)
             || !PrototypeManager.TryIndex(prototype.Discipline, out var disciplinePrototype)
             || !TryComp<ResearchServerComponent>(serverEnt.Value, out var researchServer)
-            || prototype.Cost * clientDatabase.SoftCapMultiplier > researchServer.Points)
+            || !TryComp<TechnologyDatabaseComponent>(serverEnt.Value, out var serverDatabase) // Floofstation
+            || prototype.Cost * serverDatabase.SoftCapMultiplier > researchServer.Points)
             return false;
 
         // The den section start
         var station = _station.GetOwningStation(client);
-        var oldSoftCap = clientDatabase.SoftCapMultiplier;
+        var oldSoftCap = serverDatabase.SoftCapMultiplier; // Floofstation - server is authoritative
         // The den section end
 
         if (prototype.Tier >= disciplinePrototype.LockoutTier)
         {
-            clientDatabase.SoftCapMultiplier *= prototype.SoftCapContribution;
-            researchServer.CurrentSoftCapMultiplier *= prototype.SoftCapContribution;
+            // Floofstation - server is authoritative
+            serverDatabase.SoftCapMultiplier *= prototype.SoftCapContribution;
+            clientDatabase.SoftCapMultiplier = serverDatabase.SoftCapMultiplier;
         }
 
         // TheDen edit
@@ -95,7 +98,7 @@ public sealed partial class ResearchSystem
             && Exists(station)
             && station != EntityUid.Invalid
             && TryComp<StationResearchRecordComponent>(station, out var record))
-            record.SoftCapMultiplier = clientDatabase.SoftCapMultiplier;
+            record.SoftCapMultiplier = MathF.Max(serverDatabase.SoftCapMultiplier, record.SoftCapMultiplier); // Floofstation - use max here
 
         AddTechnology(serverEnt.Value, prototype);
         TrySetMainDiscipline(prototype, serverEnt.Value);

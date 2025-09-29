@@ -17,7 +17,6 @@
   - inrangeunoccluded
   - lsgrid
   - lsmap
-  - listplayers
   - loc
   - mem
   - netaudit
@@ -70,7 +69,6 @@
   - pvs_override_info
   - merge_grids
 
-
 - Flags: MAPPING
   Commands:
   - addmap
@@ -92,12 +90,15 @@
   Commands:
   - delete
   - kick
-  - listplayers
   - tp
   - tpto
   - respawn
   - tippy
   - tip
+    
+- Flags: PII
+  Commands:
+    - listplayers
 
 - Flags: SERVER
   Commands:

@@ -393,7 +393,19 @@ namespace Content.Server.RoundEnd
 
                 Action act = () =>
                 {
-                    RequestRoundEnd(null, false, "round-end-system-shuttle-auto-called-announcement");
+                    RequestRoundEnd(null, false, "floof-round-end-system-shuttle-autocall-announcement"); // Floof
+                    _autoCalledBefore = true;
+                };
+
+                Action wontact = () =>
+                {
+                    _chatSystem.DispatchGlobalAnnouncement( Loc.GetString("floof-round-end-system-autocall-stay"), "Central Command",true, null, Color.Gold);
+                    _autoCalledBefore = true;
+                };
+                
+                Action cantact = () =>
+                {
+                    RequestRoundEnd(null, false, "floof-round-end-system-autocall-tie");
                     _autoCalledBefore = true;
                 };
 
@@ -406,19 +418,24 @@ namespace Content.Server.RoundEnd
                         new VoteOptions
                         {
                             Duration = TimeSpan.FromSeconds(_cfg.GetCVar(VulpCCVars.EvacVoteDuration)),
-                            Title = Loc.GetString("round-end-system-shuttle-call-vote"),
+                            Title = Loc.GetString("floof-round-end-system-shuttle-call-vote"), // Floof
                             InitiatorText = Loc.GetString("round-end-system-shuttle-call-vote-initiator"),
                             Options =
                             [
-                                (Loc.GetString("ui-vote-restart-yes"), true),
-                                (Loc.GetString("ui-vote-restart-no"), false)
+                                // Floof - Changed to "Stay" or "Leave"
+                                (Loc.GetString("ui-vote-autocall-leave"), true),
+                                (Loc.GetString("ui-vote-autocall-stay"), false)
                             ],
                         });
 
                     vote.OnFinished += (_, args) =>
                     {
+                        if (args.Winner == null)
+                            cantact();
                         if (args.Winner is true)
                             act();
+                        if (args.Winner is false)
+                            wontact();
                     };
                 }
 

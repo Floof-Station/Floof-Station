@@ -1293,6 +1293,7 @@
     - WeaponProtoKineticAccelerator
     - MiningDrill
     - HandHeldMassScanner
+    - ClothingShoesBootsJump # Floof station
     # Shuttle building
     - ShuttleConsoleCircuitboard
     - RadarConsoleCircuitboard
@@ -2003,6 +2004,9 @@
       - PlushieUnholyRed
       - PlushieDetectiveKitty
       - PlushieUrsineGal
+      - PlushieStealthyBird
+      - PlushieMedicalHarpy
+      - PlushieElectricIPC      
       #Floof Plushies - End
   - type: EmagLatheRecipes
     emagStaticRecipes:
