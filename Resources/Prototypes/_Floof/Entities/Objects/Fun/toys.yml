@@ -1200,15 +1200,15 @@
     delay: 3.0
   - type: EmitSoundOnActivate
     sound:
-      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      path: /Audio/Effects/metal_break1.ogg
       params:
-        variation: 0.05
+        variation: 0.2
         volume: 2
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      path: /Audio/Effects/metal_break1.ogg
       params:
-        variation: 0.05
+        variation: 0.2
         volume: 2
   - type: EmitSoundOnLand
     sound:
