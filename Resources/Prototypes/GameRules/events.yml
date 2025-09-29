@@ -617,3 +617,15 @@
       maxOccurrences: 1
       weight: 1 # Annoying.
     - type: AirlockVirusRule
+
+- type: entity
+  id: SmugglerStashVariationPass
+  components:
+  - type: StationEvent
+    earliestStart: 0
+    duration: 1
+    minimumPlayers: 1
+    maxOccurrences: 2
+    weight: 10
+  - type: RandomSpawnRule
+    prototype: RandomSatchelSpawner

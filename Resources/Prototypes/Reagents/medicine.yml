@@ -1191,10 +1191,10 @@
             max: 213.0
           damage:
             groups:
-              Brute: -4
-              Burn: -5
-            types:
-              Poison: -2
+              Brute: -15
+              Burn: -15
+              Toxin: -10
+              Airloss: -10
 
 - type: reagent
   id : Aloxadone
