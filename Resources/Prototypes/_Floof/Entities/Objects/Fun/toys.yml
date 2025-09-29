@@ -1160,7 +1160,7 @@
   parent: PlushieHuman
   id: PlushieFluffyVulpkanin
   name: Fluffy vulpkanin plushie
-  description: This snow-white Vulpknin plushie is so soft and cuddly that you could squeeze it all day long! It has the right half of a matching tag.
+  description: This snow-white vulpkanin plushie is so soft and cuddly that you could squeeze it all day long! It has the right half of a matching tag.
   components:
   - type: Sprite
     sprite: _Floof/Objects/Fun/floof_plush.rsi
