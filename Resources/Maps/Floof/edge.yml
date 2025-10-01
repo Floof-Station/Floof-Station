@@ -8978,7 +8978,7 @@ entities:
   - uid: 20968
     components:
     - type: MetaData
-      name: ' ̶J̶a̶n̶i̶t̶o̶r̶ ̶c̶l̶o̶s̶e̶t̶  Administrative Assistant Office'
+      name: ' ̶J̶a̶n̶i̶t̶o̶r̶ ̶c̶l̶o̶s̶e̶t̶  Administrative assistant office'
     - type: Transform
       pos: 1.5,30.5
       parent: 2
