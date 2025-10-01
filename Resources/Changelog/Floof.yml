@@ -8012,3 +8012,33 @@ Entries:
   id: 851
   time: '2025-09-26T21:12:51.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1388
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Added recipes for Eggnog & Syndicate Eggnog.
+  id: 852
+  time: '2025-09-29T16:06:10.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1441
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: Added 3 new plushies
+  id: 853
+  time: '2025-09-29T16:18:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1433
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: >-
+        Changed Limb Severing Threshold, Delimbing before death is possible
+        again, beheading will still be very hard.
+  id: 854
+  time: '2025-09-29T16:39:48.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1432
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Candybowl recipe to Medical Techfab
+  id: 855
+  time: '2025-10-01T06:03:03.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1452
