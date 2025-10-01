@@ -40361,6 +40361,11 @@ entities:
     - type: Transform
       pos: 32.5,2.5
       parent: 2
+  - uid: 20430
+    components:
+    - type: Transform
+      pos: 37.5,16.5
+      parent: 2
   - uid: 20702
     components:
     - type: Transform
@@ -40475,11 +40480,6 @@ entities:
     components:
     - type: Transform
       pos: 75.5,7.5
-      parent: 2
-  - uid: 21498
-    components:
-    - type: Transform
-      pos: 37.5,16.5
       parent: 2
 - proto: CableMVStack
   entities:
@@ -49205,12 +49205,12 @@ entities:
       parent: 2
 - proto: DefaultStationBeaconBoxing
   entities:
-  - uid: 12785
+  - uid: 9502
     components:
     - type: Transform
       pos: 35.5,12.5
       parent: 2
-  - uid: 20430
+  - uid: 19573
     components:
     - type: Transform
       pos: 34.5,6.5
@@ -49275,10 +49275,10 @@ entities:
       parent: 2
 - proto: DefaultStationBeaconChiefJustice
   entities:
-  - uid: 6089
+  - uid: 12271
     components:
     - type: Transform
-      pos: -31.5,45.5
+      pos: -31.5,43.5
       parent: 2
 - proto: DefaultStationBeaconCMORoom
   entities:
@@ -49357,7 +49357,7 @@ entities:
     - type: Transform
       pos: -36.5,47.5
       parent: 2
-  - uid: 12271
+  - uid: 6089
     components:
     - type: Transform
       pos: 71.5,-2.5
@@ -49418,10 +49418,10 @@ entities:
       parent: 2
 - proto: DefaultStationBeaconJustice
   entities:
-  - uid: 17776
+  - uid: 12785
     components:
     - type: Transform
-      pos: -23.5,39.5
+      pos: -23.5,37.5
       parent: 2
 - proto: DefaultStationBeaconKitchen
   entities:
@@ -49439,11 +49439,6 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Prosecutor office
-  - uid: 5202
-    components:
-    - type: Transform
-      pos: -31.5,46.5
-      parent: 2
   - uid: 14457
     components:
     - type: Transform
@@ -60733,7 +60728,7 @@ entities:
       pos: 40.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -125721.17
+      secondsUntilStateChange: -126253.36
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -95544,6 +95539,12 @@ entities:
     - type: Transform
       pos: -72.5,24.5
       parent: 2
+  - uid: 17776
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 47.5,-0.5
+      parent: 2
   - uid: 17778
     components:
     - type: Transform
@@ -95748,12 +95749,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 50.5,1.5
-      parent: 2
-  - uid: 18624
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 47.5,-0.5
       parent: 2
   - uid: 18634
     components:
@@ -99771,7 +99766,7 @@ entities:
     - type: Transform
       pos: 28.540997,-2.397686
       parent: 2
-  - uid: 21516
+  - uid: 21499
     components:
     - type: Transform
       pos: 21.288485,-7.4706936
@@ -105525,7 +105520,7 @@ entities:
       parent: 2
 - proto: PoweredlightPink
   entities:
-  - uid: 19573
+  - uid: 19150
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -105692,6 +105687,11 @@ entities:
     - type: Transform
       pos: -0.5,30.5
       parent: 2
+  - uid: 18624
+    components:
+    - type: Transform
+      pos: 33.5,16.5
+      parent: 2
   - uid: 18821
     components:
     - type: Transform
@@ -105703,12 +105703,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 49.5,33.5
       parent: 2
-  - uid: 19150
-    components:
-    - type: Transform
-      pos: 33.5,16.5
-      parent: 2
-  - uid: 21499
+  - uid: 21498
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -122324,7 +122319,7 @@ entities:
       parent: 2
 - proto: UniformPrinter
   entities:
-  - uid: 9502
+  - uid: 5202
     components:
     - type: Transform
       pos: 17.5,-4.5
