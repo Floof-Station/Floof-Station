@@ -17,6 +17,14 @@
     Plastic: 100
 
 - type: latheRecipe
+  id: Cane
+  result: Cane
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+
+- type: latheRecipe
   id: SterileBag
   result: SterileBag
   completetime: 2
