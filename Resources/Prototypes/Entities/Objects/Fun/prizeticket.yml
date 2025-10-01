@@ -483,7 +483,15 @@
       - id: PlushieElectricIPC
         prob: 0.50
         orGroup: Prize
-        
+      - id: PlushieCuddlyIPC
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieFluffyVulpkanin
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieSecurityTank
+        prob: 0.50
+        orGroup: Prize        
       # Floof - End
       # Rare
       - id: PlushieAbductorAgent
