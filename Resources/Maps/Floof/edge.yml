@@ -49182,6 +49182,8 @@ entities:
     - type: Transform
       pos: 34.5,-15.5
       parent: 2
+    - type: NavMapBeacon
+      text: Sauna
   - uid: 6442
     components:
     - type: Transform
@@ -60731,7 +60733,7 @@ entities:
       pos: 40.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -125301.65
+      secondsUntilStateChange: -125721.17
       state: Closing
     - type: DeviceNetwork
       deviceLists:
