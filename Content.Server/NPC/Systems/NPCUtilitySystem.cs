@@ -25,6 +25,9 @@ using Robust.Server.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Server._Floof.NPC.HTN.Queries.Considerations;
+using Robust.Shared.Physics;
+
 
 namespace Content.Server.NPC.Systems;
 
@@ -243,6 +246,20 @@ public sealed class NPCUtilitySystem : EntitySystem
                 // TODO: Pathfind there, though probably do it in a separate con.
                 return 1f;
             }
+            // Floofstation - because upstream didnt implement anything to prevent e.g. cleanbots from trying to clean under walls.
+            case TargetUnobstructedCon:
+            {
+                if (_lookup.GetEntitiesIntersecting(targetUid, LookupFlags.Uncontained)
+                        is { Count: > 0 } intersectors
+                    && intersectors.Any(ent =>
+                        TryComp<FixturesComponent>(ent, out var fixs) && fixs.Fixtures.Values.Any(fix => fix.Hard)
+                        || TryComp<OccluderComponent>(ent, out var occluder) && occluder.Enabled))
+                    return 0f;
+
+                return 1f;
+                break;
+            }
+            // Floofstation section end
             case TargetAmmoMatchesCon:
             {
                 if (!blackboard.TryGetValue(NPCBlackboard.ActiveHand, out Hand? activeHand, EntityManager) ||
