@@ -37,11 +37,9 @@
 - type: speechSounds
   id: Squeak
   saySound:
-    path: /Audio/Items/Toys/mousesqueek.ogg # Floof - calmer mice
+    path: /Audio/Animals/mouse_squeak.ogg
   askSound:
-    path: /Audio/Items/Toys/mousesqueek.ogg # Floof - calmer mice
-    params: # Floof
-      pitch: 0.95 # the variation is still there but we want it to sound questioney
+    path: /Audio/Animals/mouse_squeak.ogg
   exclaimSound:
     path: /Audio/Animals/mouse_squeak.ogg
 
