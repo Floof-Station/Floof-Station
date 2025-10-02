@@ -105,7 +105,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 50 # Floofstation - EE forgot to change this to 50.
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -161,6 +161,15 @@
   - type: HTN
     rootTask:
       task: GlimmerWispCompound
+    blackboard: # Floofstation - make wisps less passive
+      NavSmash: !type:Bool
+        true
+      NavClimb: !type:Bool
+        true
+      MinimumIdleTime: !type:Single
+        1
+      MaximumIdleTime: !type:Single
+        2
   - type: NpcFactionMember
     factions:
     - GlimmerMonster
