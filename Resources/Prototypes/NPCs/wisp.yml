@@ -9,7 +9,7 @@
       task: DrainPsionicCompound
   - tasks:
     - !type:HTNCompoundTask
-      task: IdleCompound
+      task: IdleEtherealCompound # Floofstation - woo, spooky.
 
 - type: htnCompound
   id: DrainPsionicCompound
@@ -26,3 +26,36 @@
     - !type:HTNPrimitiveTask
       operator: !type:DrainOperator
         drainKey: DrainTarget
+
+# Floofstation. Pick a random location regardless of accessibility and idle.
+- type: htnCompound
+  id: IdleEtherealCompound
+  branches:
+  # Pick a new spot and wait there.
+  - preconditions:
+    - !type:BuckledPrecondition
+      isBuckled: false
+    - !type:PulledPrecondition
+      isPulled: false
+    tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:PickRandomPositionOperator
+        rangeKey: IdleRange
+
+    - !type:HTNPrimitiveTask
+      operator: !type:MoveToOperator
+        pathfindInPlanning: false
+        requireLos: false
+
+    - !type:HTNPrimitiveTask
+      operator: !type:RandomOperator
+        targetKey: IdleTime
+        minKey: MinimumIdleTime
+        maxKey: MaximumIdleTime
+
+    - !type:HTNPrimitiveTask
+      operator: !type:WaitOperator
+        key: IdleTime
+      preconditions:
+      - !type:KeyExistsPrecondition
+        key: IdleTime

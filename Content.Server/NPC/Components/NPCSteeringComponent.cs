@@ -119,6 +119,12 @@ public sealed partial class NPCSteeringComponent : Component
     /// </summary>
     [DataField("doAfterId")]
     public DoAfterId? DoAfterId = null;
+
+    /// <summary>
+    ///     Floofstation - if false, the mob will ignore LOS when moving to its coordinates. Useful for ethereal entities.
+    /// </summary>
+    [DataField]
+    public bool RequireLos = true;
 }
 
 public enum SteeringStatus : byte

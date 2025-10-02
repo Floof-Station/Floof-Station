@@ -106,7 +106,8 @@ public sealed partial class NPCSteeringSystem
         if (!steering.ForceMove && steering.ArriveOnLineOfSight)
         {
             // TODO: use vision range
-            inLos = _interaction.InRangeUnobstructed(uid, steering.Coordinates, 10f);
+            // Floofstation - allow to skip LOS
+            inLos = steering.RequireLos && _interaction.InRangeUnobstructed(uid, steering.Coordinates, 10f);
 
             if (inLos)
             {
