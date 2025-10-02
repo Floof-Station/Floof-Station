@@ -61,12 +61,6 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
     [DataField("stopOnLineOfSight")]
     public bool StopOnLineOfSight;
 
-    /// <summary>
-    ///     Floofstation - if true, ignore any obstacles between the NPC and the target coordinates. Useful for ethereal entities,
-    /// </summary>
-    [DataField]
-    public bool RequireLos = true;
-
     private const string MovementCancelToken = "MovementCancelToken";
 
     public override void Initialize(IEntitySystemManager sysManager)
@@ -151,7 +145,6 @@ public sealed partial class MoveToOperator : HTNOperator, IHtnConditionalShutdow
         // Re-use the path we may have if applicable.
         var comp = _steering.Register(uid, targetCoordinates);
         comp.ArriveOnLineOfSight = StopOnLineOfSight;
-        comp.RequireLos = RequireLos; // Floofstation
 
         if (blackboard.TryGetValue<float>(RangeKey, out var range, _entManager))
         {
