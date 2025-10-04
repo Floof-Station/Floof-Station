@@ -158,6 +158,8 @@
       curve: !type:BoolCurve
     - !type:TargetInLOSOrCurrentCon
       curve: !type:BoolCurve
+    - !type:TargetUnobstructedCon # Floofstation
+      curve: !type:BoolCurve
 
 - type: utilityQuery
   id: NearbyGunTargets
