@@ -1,6 +1,6 @@
 using Content.Shared.Abilities.Psionics;
 using Content.Shared.Actions.Events;
-using Content.Shared.Floofstation.Hypno;
+using Content.Shared._Floof.Hypno;
 using Content.Shared.Popups;
 using Content.Server.DoAfter;
 using Content.Shared.DoAfter;
@@ -251,7 +251,7 @@ namespace Content.Server.Abilities.Psionics
         private void OnExamine(EntityUid uid, ExaminedEvent args)
         {
             if (args.IsInDetailsRange)
-                args.PushMarkup(Loc.GetString("examined-hypno"), -1);
+                args.PushMarkup(Loc.GetString("examined-hypno", ("entity", uid)), -1);
         }
     }
 }
