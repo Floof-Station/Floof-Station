@@ -29,7 +29,7 @@ public sealed class PsionicHypnoSystem : EquipmentHudSystem<PsionicHypnoComponen
             || component.Master != player)
             return;
 
-        if (_prototype.TryIndex<HypnoIconPrototype>(hypnoComp.SubjectIcon, out var iconPrototype))
+        if (_prototype.TryIndex<StatusIconPrototype>(hypnoComp.SubjectIcon, out var iconPrototype))
             args.StatusIcons.Add(iconPrototype);
     }
 }
