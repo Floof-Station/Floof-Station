@@ -51,6 +51,45 @@
   - yaps
 
 - type: emote
+  id: VulpYip
+  name: chat-emote-name-yip
+  category: Vocal
+  chatMessages: [ chat-emote-msg-yip ]
+  whitelist:
+    tags:
+    - VulpEmotes
+    - KitsuneEmotes
+    - HarpyEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
+    components:
+    - BorgChassis
+  chatTriggers:
+  - yip
+  - yips
+
+# This is a new whine. The old one was renamed to @whimper. For comparison, the old whine (whimper) is a long dog whine, while this is a short fox whine.
+- type: emote
+  id: Whine
+  name: chat-emote-name-whine
+  category: Vocal
+  chatMessages: [ chat-emote-msg-whine ]
+  icon: Interface/Emotes/whine.png
+  whitelist:
+    tags:
+    - VulpEmotes
+    - KitsuneEmotes
+    - HarpyEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
+    components:
+    - BorgChassis
+  chatTriggers:
+  - whimpers
+
+- type: emote
   id: Coo
   name: chat-emote-name-coo
   category: Vocal

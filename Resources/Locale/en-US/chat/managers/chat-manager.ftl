@@ -137,8 +137,6 @@ chat-speech-verb-name-canine = Canine
 chat-speech-verb-canine-1 = barks
 chat-speech-verb-canine-2 = woofs
 chat-speech-verb-canine-3 = howls
-#starlight
-chat-speech-verb-canine-4 = yips
 
 chat-speech-verb-name-small-mob = Mouse
 chat-speech-verb-small-mob-1 = squeaks
