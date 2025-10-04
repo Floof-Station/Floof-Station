@@ -12,10 +12,10 @@
   femaleFirstNames: names_vox
   naming: First
 
-  minHeight: 0.45
+  minHeight: 0.65 # Floof - Changed from 0.45, too small.
   #defaultHeight: 0.8 Floofstation - disabled due to upstream bug, this is broken for any value other than 1.
   maxHeight: 1.04
-  minWidth: 0.4
+  minWidth: 0.6 # Floof - changed from 0.4, too small.
   #defaultWidth: 0.8 Floofstation - disabled due to upstream bug, this is broken for any value other than 1.
   maxWidth: 1.1
 

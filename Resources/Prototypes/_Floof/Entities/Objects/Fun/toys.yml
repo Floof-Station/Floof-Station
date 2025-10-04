@@ -631,6 +631,626 @@
         variation: 0.05
         volume: 4
 
+- type: entity
+  parent: [PlushieHuman, BaseFleshlight]
+  id: PlushieBunnyStressRelief
+  name: Bunny stress relief plushie
+  description: This plushie smells sweet and feels super soft to the touch. Great for relieving stress in every way. 
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: stressbunny
+  - type: UseDelay
+    delay: 1.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Animals/mouse_squeak.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Animals/mouse_squeak.ogg
+      params:
+        variation: 0.05
+        volume: 1.2
+  - type: Drink
+    solution: fleshlight
+    ignoreEmpty: true
+  - type: SolutionContainerManager
+    solutions:
+      fleshlight:
+        maxVol: 10
+  - type: SolutionTransfer
+    transferAmount: 5
+    maxTransferAmount: 10
+    minTransferAmount: 1
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: fleshlight
+  - type: DrawableSolution
+    solution: fleshlight
+  - type: RefillableSolution
+    solution: fleshlight
+  - type: DrainableSolution
+    solution: fleshlight
+  - type: ExaminableSolution
+    solution: fleshlight
+  - type: Tag
+    tags:
+     - Fleshlight
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieERTFox
+  name: ERT fox plushie
+  description: Smells faintly of coffee and sterile surgical tools. She looks tired...
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: ertfox
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/hypospray.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/hypospray.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieRescueFox
+  name: Rescue fox plushie
+  description: These plushies always struggle to stand upright due to misbalancing but their tails are very soft! Wait, doesn't this look familiar to someone...?
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: parafox
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Vulpkanin/vulpscream3.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Vulpkanin/vulpscream3.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieArachneNobility
+  name: Arachne Nobility Plushie
+  description: Soft as spider silk, this arachne plushie is here to be of assistance. Do not poke, submit to them poking you instead!
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: noblearachne
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Human/womanlaugh.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Human/womanlaugh.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieEldritchCaptain
+  name: Eldritch captain plushie
+  description: This odd plushie semi-seems to be watching you somehow, and its eyes glow in the dark... Wait, why can it do th-
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: eldrichcap
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Shadowkin/mar.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Slime/slime_scream_m1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Shadowkin/mar.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Slime/slime_scream_m1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieLargeTailedFox
+  name: Large-tailed fox plushie
+  description: A perpetually warm plushie with a massive and fluffy tail. It's practically begging to be carried around. Comes with a miniature defibrillator! Manufactured by Donk Co. in cooperation with Interdyne Pharmaceuticals.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: largetail
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/fox_squeak.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/sparks4.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Animals/fox_squeak.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/sparks4.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieTruePirateCaptain
+  name: True Pirate Captain Plushie
+  description: I'm the Captain now... This plushie seems to be covered with rust.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: rust
+  - type: UseDelay
+    delay: 300.0
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/explosionfar.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/picaxe2.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/explosionfar.ogg
+      params:
+        volume: 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/picaxe2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieHawaiianShirtDoggo
+  name: Hawaiian shirt doggo plushie
+  description: A plushie of a vulp wearing a red hawaiian shirt and a toothy grin. Smells like oranges.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: hawaiidoggo
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/toysqueak1.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/toysqueak1.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Vulpkanin/vulpscream2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Vulpkanin/vulpscream2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieTiredCargoTechPlushie
+  name: Tired cargo tech plushie
+  description: Smells like welding fuel. A tag on the side says it’s made from recycled materials. Manufactured by AR.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: tiredcargo
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieUnholyRed
+  name: Unholy red plushie
+  description: Good grief, it's the red.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: unholyred
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/metal_break3.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/metal_break3.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieDetectiveKitty
+  name: Detective kitty plushie
+  description: A cute and rather generic-looking kitty with a little fedora and a rather rough-looking detective's trench coat! It smells faintly of bluespace...
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: detective
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_scream2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Nyanotrasen/Voice/Felinid/cat_scream2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieUrsineGal
+  name: Ursine gal plushie
+  description: It's surprisingly soft and squeezable. Smells of xenos.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: ursinegal
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Animals/bear.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/bear.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieStealthyBird
+  name: Stealthy bird plushie 
+  description: Stelf! #misspelled on purpouse
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: harpy2
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Harpy/harpy_coo3.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Harpy/harpy_coo3.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieMedicalHarpy
+  name: Medical harpy plushie 
+  description: This plushie gives you the sense that it just wants to be helpful.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: harpy3
+  - type: UseDelay
+    delay: 6.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_DV/Medical/CrewMonitoring/crew_alert.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_DV/Medical/CrewMonitoring/crew_alert.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieElectricIPC
+  name: Electric IPC plushie
+  description: A strangely comfortable plushie. It smells rather sweet, though you swear there’s a faint electrical buzz in your fingers when you hold it.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: electric
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/Cargo/ping.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/Cargo/ping.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/sparks2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/sparks2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieCuddlyIPC
+  name: Cuddly IPC plushie
+  description: This plump, pink IPC plushie is extra-huggable, to the point of being a little bulky! It has the left half of a matching tag.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: cuddlyipc
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Talk/pai_exclaim.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Talk/pai_exclaim.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Talk/pai_ask.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Talk/pai_ask.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieFluffyVulpkanin
+  name: Fluffy vulpkanin plushie
+  description: This snow-white vulpkanin plushie is so soft and cuddly that you could squeeze it all day long! It has the right half of a matching tag.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: fluffyvulp
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieSecurityTank
+  name: Security tank Plushie
+  description: It weighs a ton and smells like gunpowder.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: tank
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/metal_break1.ogg
+      params:
+        variation: 0.2
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/metal_break1.ogg
+      params:
+        variation: 0.2
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/metal_thud2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/metal_thud2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+  - type: MultiHandedItem
+  - type: Drink
+    solution: fleshlight
+    ignoreEmpty: true
+  - type: SolutionContainerManager
+    solutions:
+      fleshlight:
+        maxVol: 10
+  - type: SolutionTransfer
+    transferAmount: 5
+    maxTransferAmount: 10
+    minTransferAmount: 1
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: fleshlight
+  - type: DrawableSolution
+    solution: fleshlight
+  - type: RefillableSolution
+    solution: fleshlight
+  - type: DrainableSolution
+    solution: fleshlight
+  - type: ExaminableSolution
+    solution: fleshlight
+  - type: Tag
+    tags:
+     - Fleshlight
+
+
 # Banned individual
 # - type: entity
 #   parent: PlushieHuman

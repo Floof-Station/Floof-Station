@@ -442,10 +442,15 @@ trait-description-PlateletFactories =
     to keep the user alive, even in the face of advanced trauma, all the way up until - but not including - death.
     Your natural healing is no longer capped, and will now slowly heal any damage type. This includes more exotic injuries like radiation exposure, or cancer.
 
-trait-name-DermalArmor = Dermal Armor
+trait-name-DermalArmor = Subdermal Armor
 trait-description-DermalArmor =
-    Your skin has been replaced with a flexible, yet sturdy, hard-polymer shell wrapped in a layer of synthetic flesh.
-    This augmentation provides an innate 10% resistance to physical damage.
+    Your skin contains an array of nanoweave layers embedded beneath the surface, engineered as a cost-effective solution for integrated protection that maintains full flexibility.
+    This augmentation provides 1.5 points of flat reduction from all physical damage.
+
+trait-name-HeavyDermalArmor = Heavy Subdermal Armor
+trait-description-HeavyDermalArmor =
+    Your skin contains an advanced composite lattice embedded beneath the surface, engineered to reduce physical trauma to the body without compromising flexibility.
+    This augmentation provides 3 points of flat reduction from all physical damage.
 
 trait-name-CyberEyes = Cyber-Eyes Basic System
 trait-description-CyberEyes =

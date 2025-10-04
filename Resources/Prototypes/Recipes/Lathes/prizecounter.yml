@@ -800,6 +800,150 @@
   materials:
     PrizeTicket: 50
 
+- type: latheRecipe
+  id: PlushieBunnyStressRelief
+  result: PlushieBunnyStressRelief
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieERTFox
+  result: PlushieERTFox
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieRescueFox
+  result: PlushieRescueFox
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieArachneNobility
+  result: PlushieArachneNobility
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieEldritchCaptain
+  result: PlushieEldritchCaptain
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieLargeTailedFox
+  result: PlushieLargeTailedFox
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieTruePirateCaptain
+  result: PlushieTruePirateCaptain
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieHawaiianShirtDoggo
+  result: PlushieHawaiianShirtDoggo
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieTiredCargoTechPlushie
+  result: PlushieTiredCargoTechPlushie
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieUnholyRed
+  result: PlushieUnholyRed
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieDetectiveKitty
+  result: PlushieDetectiveKitty
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieUrsineGal
+  result: PlushieUrsineGal
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieStealthyBird
+  result: PlushieStealthyBird
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieMedicalHarpy
+  result: PlushieMedicalHarpy
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieElectricIPC
+  result: PlushieElectricIPC
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieCuddlyIPC
+  result: PlushieCuddlyIPC
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieFluffyVulpkanin
+  result: PlushieFluffyVulpkanin
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieSecurityTank
+  result: PlushieSecurityTank
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
 # HypnoTemp Plushies - Start
 - type: latheRecipe
   id: PlushieHypnoTempCap

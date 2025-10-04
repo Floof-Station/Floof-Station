@@ -114,6 +114,7 @@
     partType: Head
     toolName: "a head" # Shitmed Change
     vital: true
+    SeverIntegrity: 200 # Floof - Makes it so RR via beheading is harder
   - type: Input
     context: "ghost"
   - type: Tag

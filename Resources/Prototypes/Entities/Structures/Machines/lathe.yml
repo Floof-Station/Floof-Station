@@ -1100,6 +1100,7 @@
       - HandLabeler
       - Defibrillator
       - HandheldHealthAnalyzer
+      - CandyBowl
       - ClothingHandsGlovesLatex
       - ClothingHandsGlovesNitrile
       - ClothingMaskSterile
@@ -1292,6 +1293,7 @@
     - WeaponProtoKineticAccelerator
     - MiningDrill
     - HandHeldMassScanner
+    - ClothingShoesBootsJump # Floof station
     # Shuttle building
     - ShuttleConsoleCircuitboard
     - RadarConsoleCircuitboard
@@ -1697,13 +1699,13 @@
       # Floofstation section end
   - type: EmagLatheRecipes
     emagStaticRecipes:
-      - ClothingHeadHatCentcomcap
-      - ClothingHeadHatCentcom
-      - ClothingUniformJumpsuitCentcomAgent
-      - ClothingUniformJumpsuitCentcomFormal
-      - ClothingUniformJumpskirtCentcomFormalDress
-      - ClothingUniformJumpsuitCentcomOfficer
-      - ClothingUniformJumpsuitCentcomOfficial
+      # - ClothingHeadHatCentcomcap # Start - Floof - Remove CC recipes.
+      # - ClothingHeadHatCentcom
+      # - ClothingUniformJumpsuitCentcomAgent
+      # - ClothingUniformJumpsuitCentcomFormal
+      # - ClothingUniformJumpskirtCentcomFormalDress
+      # - ClothingUniformJumpsuitCentcomOfficer
+      # - ClothingUniformJumpsuitCentcomOfficial # End - Floof - Remove CC recipes.
       - ClothingHeadHatSyndieMAA
       - ClothingHeadHatSyndie
       - ClothingUniformJumpsuitOperative
@@ -1716,7 +1718,7 @@
       - ClothingUniformJumpsuitPyjamaSyndicatePink
       - ClothingHeadPyjamaSyndicateRed
       - ClothingUniformJumpsuitPyjamaSyndicateRed
-      - ClothingOuterWinterCentcom
+      # - ClothingOuterWinterCentcom # Floof - Remove CC recipes.
       - ClothingOuterWinterSyndie
       - ClothingOuterWinterSyndieCap
       # Floofstation - Department Socks, Armwarmers ect
@@ -1990,6 +1992,24 @@
       - PlushieRatLogisticsOfficer
       - PlushieBunnyChiefMedicalOfficer
       - PlushieAvianMysta
+      - PlushieBunnyStressRelief
+      - PlushieERTFox
+      - PlushieRescueFox
+      - PlushieArachneNobility
+      - PlushieEldritchCaptain
+      - PlushieLargeTailedFox
+      - PlushieTruePirateCaptain
+      - PlushieHawaiianShirtDoggo
+      - PlushieTiredCargoTechPlushie
+      - PlushieUnholyRed
+      - PlushieDetectiveKitty
+      - PlushieUrsineGal
+      - PlushieStealthyBird
+      - PlushieMedicalHarpy
+      - PlushieElectricIPC
+      - PlushieCuddlyIPC
+      - PlushieFluffyVulpkanin
+      - PlushieSecurityTank
       #Floof Plushies - End
   - type: EmagLatheRecipes
     emagStaticRecipes:

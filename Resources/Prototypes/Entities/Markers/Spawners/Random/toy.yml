@@ -90,7 +90,6 @@
         # - PlushieFeistyBartender
         # - PlushieCoolVulp
         # - PlushieNoticeableSecurityOfficer
-        # Floof Plushies End
         - PlushieHarpy
         - PlushieMort
         - PlushieAvaliHOP 
@@ -102,6 +101,25 @@
         - PlushieRatLogisticsOfficer
         - PlushieBunnyChiefMedicalOfficer
         - PlushieAvianMysta
+        - PlushieBunnyStressRelief
+        - PlushieERTFox
+        - PlushieRescueFox
+        - PlushieArachneNobility
+        - PlushieEldritchCaptain
+        - PlushieLargeTailedFox
+        - PlushieTruePirateCaptain
+        - PlushieHawaiianShirtDoggo
+        - PlushieTiredCargoTechPlushie
+        - PlushieUnholyRed
+        - PlushieDetectiveKitty
+        - PlushieUrsineGal
+        - PlushieStealthyBird
+        - PlushieMedicalHarpy
+        - PlushieElectricIPC
+        - PlushieCuddlyIPC
+        - PlushieFluffyVulpkanin
+        - PlushieSecurityTank
+        # Floof Plushies End 
       chance: 0.5
       offset: 0.2
 

@@ -50,6 +50,9 @@ public sealed class FootPrintsSystem : EntitySystem
 
     private void OnMove(EntityUid uid, FootPrintsComponent component, ref MoveEvent args)
     {
+        #if DEBUG // Floof - do not create footprints on debug, nor in CI tests
+        return;
+        #endif
         if (component.ContainedSolution.Volume <= 0
             || TryComp<PhysicsComponent>(uid, out var physics) && physics.BodyStatus != BodyStatus.OnGround // Floof: do not create footprints if the entity is flying
             || args.Entity.Comp1.GridUid is not {} gridUid)

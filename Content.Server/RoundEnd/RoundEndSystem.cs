@@ -23,6 +23,10 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Timer = Robust.Shared.Timing.Timer;
 using Content.Server.Announcements.Systems;
+using Content.Server.Voting;
+using Content.Server.Voting.Managers;
+using Content.Shared._Vulp;
+
 
 namespace Content.Server.RoundEnd
 {
@@ -44,6 +48,7 @@ namespace Content.Server.RoundEnd
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly StationSystem _stationSystem = default!;
         [Dependency] private readonly AnnouncerSystem _announcer = default!;
+        [Dependency] private readonly IVoteManager _votes = default!; // Vulpstation
 
         public TimeSpan DefaultCooldownDuration { get; set; } = TimeSpan.FromSeconds(30);
 
@@ -382,10 +387,56 @@ namespace Content.Server.RoundEnd
                                         : _cfg.GetCVar(CCVars.EmergencyShuttleAutoCallTime);
             if (mins != 0 && _gameTiming.CurTime - AutoCallStartTime > TimeSpan.FromMinutes(mins))
             {
-                if (!_shuttle.EmergencyShuttleArrived && ExpectedCountdownEnd is null)
+                // Vulpstation - changed this to start a vote
+                if (!(!_shuttle.EmergencyShuttleArrived && ExpectedCountdownEnd is null))
+                    return;
+
+                Action act = () =>
                 {
-                    RequestRoundEnd(null, false, "round-end-system-shuttle-auto-called-announcement");
+                    RequestRoundEnd(null, false, "floof-round-end-system-shuttle-autocall-announcement"); // Floof
                     _autoCalledBefore = true;
+                };
+
+                Action wontact = () =>
+                {
+                    _chatSystem.DispatchGlobalAnnouncement( Loc.GetString("floof-round-end-system-autocall-stay"), "Central Command",true, null, Color.Gold);
+                    _autoCalledBefore = true;
+                };
+                
+                Action cantact = () =>
+                {
+                    RequestRoundEnd(null, false, "floof-round-end-system-autocall-tie");
+                    _autoCalledBefore = true;
+                };
+
+                // Vulpstation - start a vote or invoke the round end action directly
+                if (!_cfg.GetCVar(VulpCCVars.DoEvacVotes))
+                    act();
+                else
+                {
+                    var vote = _votes.CreateVote(
+                        new VoteOptions
+                        {
+                            Duration = TimeSpan.FromSeconds(_cfg.GetCVar(VulpCCVars.EvacVoteDuration)),
+                            Title = Loc.GetString("floof-round-end-system-shuttle-call-vote"), // Floof
+                            InitiatorText = Loc.GetString("round-end-system-shuttle-call-vote-initiator"),
+                            Options =
+                            [
+                                // Floof - Changed to "Stay" or "Leave"
+                                (Loc.GetString("ui-vote-autocall-leave"), true),
+                                (Loc.GetString("ui-vote-autocall-stay"), false)
+                            ],
+                        });
+
+                    vote.OnFinished += (_, args) =>
+                    {
+                        if (args.Winner == null)
+                            cantact();
+                        if (args.Winner is true)
+                            act();
+                        if (args.Winner is false)
+                            wontact();
+                    };
                 }
 
                 // Always reset auto-call in case of a recall.

@@ -161,7 +161,7 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
-  
+
 - type: listing
   id: UplinkC20RBundle
   name: uplink-c20r-bundle-name
@@ -1872,7 +1872,7 @@
     blacklist:
       components:
       - SurplusBundle
-      
+
 #- type: listing
 #  id: UplinkSingarityBeacon
 #  name: uplink-singularity-beacon-name
@@ -2104,3 +2104,15 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: UplinkSmugglerSatchel
+  name: uplink-smuggler-satchel-name
+  description: uplink-smuggler-satchel-desc
+  productEntity: ClothingBackpackSatchelSmugglerUnanchored
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkDeception
