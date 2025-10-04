@@ -29,7 +29,7 @@ public sealed class HypnotizedSystem : EquipmentHudSystem<HypnotizedComponent>
             || hypnoComp.Master != uid)
             return;
 
-        if (_prototype.TryIndex<StatusIconPrototype>(component.MasterIcon, out var iconPrototype))
+        if (_prototype.TryIndex<HypnoIconPrototype>(component.MasterIcon, out var iconPrototype))
             args.StatusIcons.Add(iconPrototype);
     }
 }
