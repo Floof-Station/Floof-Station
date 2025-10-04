@@ -3,6 +3,7 @@
   name: chat-emote-name-gekker
   category: Vocal
   chatMessages: [ floof-chat-emote-msg-gekker ]
+  icon: Interface/Emotes/laugh.png
   whitelist:
     tags:
       - VulpEmotes
@@ -20,6 +21,7 @@
   name: chat-emote-name-yip
   category: Vocal
   chatMessages: [ floof-chat-emote-msg-yip ]
+  icon: Interface/Emotes/laugh.png
   whitelist:
     tags: # Note: under the hood, it is used by both vulps and kitsunes.
       - UnathiEmotes
@@ -39,6 +41,7 @@
   name: chat-emote-name-yap
   category: Vocal
   chatMessages: [ floof-chat-emote-msg-yap ]
+  icon: Interface/Emotes/laugh.png
   whitelist:
     tags:
       - VulpEmotes
