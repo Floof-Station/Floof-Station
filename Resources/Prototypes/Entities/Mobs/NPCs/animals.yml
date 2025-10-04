@@ -2794,6 +2794,10 @@
   - type: Grammar
     attributes:
       gender: epicene
+  - type: Emoting # Floofstation
+  - type: Vocal # Floofstation
+    sounds:
+      Unsexed: Fox
   - type: Bloodstream
     bloodMaxVolume: 100
   - type: MeleeWeapon
@@ -2815,6 +2819,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - VulpEmotes # Floof
   - type: LanguageKnowledge
     speaks:
     - Fox
@@ -2880,6 +2885,10 @@
   - type: Grammar
     attributes:
       gender: epicene
+  - type: Emoting # Floofstation
+  - type: Vocal # Floofstation
+    sounds:
+      Unsexed: Dog
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-corgi
   - type: MobPrice
@@ -2887,6 +2896,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - VulpEmotes # Floof
   - type: RandomBark
     barkType: dog
   - type: LeashAnchor # Floofstation
