@@ -23,7 +23,7 @@
   - /Audio/DeltaV/Voice/Vulpkanin/dog_snarl3.ogg
 
 - type: soundCollection
-  id: VulpkaninWhimper # Floofstation - renamed to whimper
+  id: VulpkaninWhimpers # Floofstation - renamed to whimper
   files:
   - /Audio/DeltaV/Voice/Vulpkanin/dog_whine.ogg
 
