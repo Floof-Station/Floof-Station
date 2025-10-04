@@ -433,6 +433,8 @@
         prob: 0.50
         orGroup: Prize
       - id: PlushieSillyResomi
+        prob: 0.50
+        orGroup: Prize
       - id: PlushieAvianMysta
         prob: 0.50
         orGroup: Prize
@@ -472,7 +474,24 @@
       - id: PlushieUrsineGal
         prob: 0.50
         orGroup: Prize
-
+      - id: PlushieStealthyBird
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieMedicalHarpy
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieElectricIPC
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieCuddlyIPC
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieFluffyVulpkanin
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieSecurityTank
+        prob: 0.50
+        orGroup: Prize        
       # Floof - End
       # Rare
       - id: PlushieAbductorAgent

@@ -1,0 +1,53 @@
+﻿- type: marking
+  id: NeckChestfluff
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
+    state: chestfloof
+
+
+- type: marking
+  id: TailBrushtip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune] # Floof - Anthro Marking Restrictions
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
+    state: brushtiptail
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
+    state: brushtiptail2
+
+- type: marking
+  id: SnoutCheesegal
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state:  sergsnoutredux-1
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state:  sergsnoutredux-2
+
+- type: marking
+  id: EarsCheesegal
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergears-1
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergears-2
+
+- type: marking
+  id: TailCheesegal
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergtail-1
+  - sprite: _DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergtail-2

@@ -13,6 +13,3 @@ marking-WingsRobotic-robotic = Wings
 
 marking-WingsFly = Insectoid Wings
 marking-WingsFly-fly = Wings
-
-marking-WingsDragon = Draconic Wings
-marking-WingsDragon-dragon = Wings

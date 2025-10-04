@@ -120,7 +120,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     ///     to make possible severing it.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SeverIntegrity = 300; // Floof - increased to 300 due to frequent RR
+    public float SeverIntegrity = 100; // Floof - increased to 300 due to frequent RR - Changed to 100, heads will have a higher value to prevent RR
 
     /// <summary>
     ///     Shitmed Change: The ID of the base layer for this body part.

@@ -661,6 +661,35 @@
       params:
         variation: 0.05
         volume: 1.2
+  - type: Drink
+    solution: fleshlight
+    ignoreEmpty: true
+  - type: SolutionContainerManager
+    solutions:
+      fleshlight:
+        maxVol: 10
+  - type: SolutionTransfer
+    transferAmount: 5
+    maxTransferAmount: 10
+    minTransferAmount: 1
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: fleshlight
+  - type: DrawableSolution
+    solution: fleshlight
+  - type: RefillableSolution
+    solution: fleshlight
+  - type: DrainableSolution
+    solution: fleshlight
+  - type: ExaminableSolution
+    solution: fleshlight
+  - type: Tag
+    tags:
+     - Fleshlight
 
 - type: entity
   parent: PlushieHuman
@@ -1002,6 +1031,225 @@
       params:
         variation: 0.05
         volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieStealthyBird
+  name: Stealthy bird plushie 
+  description: Stelf! #misspelled on purpouse
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: harpy2
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Harpy/harpy_coo3.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Harpy/harpy_coo3.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieMedicalHarpy
+  name: Medical harpy plushie 
+  description: This plushie gives you the sense that it just wants to be helpful.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: harpy3
+  - type: UseDelay
+    delay: 6.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_DV/Medical/CrewMonitoring/crew_alert.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_DV/Medical/CrewMonitoring/crew_alert.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieElectricIPC
+  name: Electric IPC plushie
+  description: A strangely comfortable plushie. It smells rather sweet, though you swear there’s a faint electrical buzz in your fingers when you hold it.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: electric
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/Cargo/ping.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/Cargo/ping.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/sparks2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/sparks2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieCuddlyIPC
+  name: Cuddly IPC plushie
+  description: This plump, pink IPC plushie is extra-huggable, to the point of being a little bulky! It has the left half of a matching tag.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: cuddlyipc
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Talk/pai_exclaim.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Talk/pai_exclaim.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Talk/pai_ask.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Talk/pai_ask.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieFluffyVulpkanin
+  name: Fluffy vulpkanin plushie
+  description: This snow-white vulpkanin plushie is so soft and cuddly that you could squeeze it all day long! It has the right half of a matching tag.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: fluffyvulp
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieSecurityTank
+  name: Security tank Plushie
+  description: It weighs a ton and smells like gunpowder.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: tank
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/metal_break1.ogg
+      params:
+        variation: 0.2
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/metal_break1.ogg
+      params:
+        variation: 0.2
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/metal_thud2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/metal_thud2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+  - type: MultiHandedItem
+  - type: Drink
+    solution: fleshlight
+    ignoreEmpty: true
+  - type: SolutionContainerManager
+    solutions:
+      fleshlight:
+        maxVol: 10
+  - type: SolutionTransfer
+    transferAmount: 5
+    maxTransferAmount: 10
+    minTransferAmount: 1
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: fleshlight
+  - type: DrawableSolution
+    solution: fleshlight
+  - type: RefillableSolution
+    solution: fleshlight
+  - type: DrainableSolution
+    solution: fleshlight
+  - type: ExaminableSolution
+    solution: fleshlight
+  - type: Tag
+    tags:
+     - Fleshlight
+
 
 # Banned individual
 # - type: entity

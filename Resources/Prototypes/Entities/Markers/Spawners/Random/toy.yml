@@ -113,7 +113,13 @@
         - PlushieUnholyRed
         - PlushieDetectiveKitty
         - PlushieUrsineGal
-        # Floof Plushies End
+        - PlushieStealthyBird
+        - PlushieMedicalHarpy
+        - PlushieElectricIPC
+        - PlushieCuddlyIPC
+        - PlushieFluffyVulpkanin
+        - PlushieSecurityTank
+        # Floof Plushies End 
       chance: 0.5
       offset: 0.2
 
