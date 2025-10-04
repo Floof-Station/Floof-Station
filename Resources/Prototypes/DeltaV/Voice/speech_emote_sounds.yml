@@ -96,7 +96,7 @@
       collection: VulpkaninGekker
     Yap: #Floof
       collection: VulpkaninYap
-    Yip: # Floof - port from starlight, changed to use its own collection
+    Yip:
       collection: VulpkaninYips
     Whine:
       collection: VulpkaninWhines
@@ -142,7 +142,7 @@
       collection: VulpkaninGekker
     Yap: #Floof
       collection: VulpkaninYap
-    Yip: # Floof - port from starlight, changed to use its own collection
+    Yip:
       collection: VulpkaninYips
     Whine:
       collection: VulpkaninWhines
