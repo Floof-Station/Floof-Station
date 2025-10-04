@@ -8042,3 +8042,63 @@ Entries:
   id: 855
   time: '2025-10-01T06:03:03.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1452
+- author: Raikyr0
+  changes:
+    - type: Fix
+      message: The Argenti is now properly labeled in the loadout.
+  id: 856
+  time: '2025-10-03T19:18:38.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1462
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The "spawn here" admin verb will now correctly load the loadouts and
+        traits of the spawned player (but will ignore their current job)
+    - type: Fix
+      message: >-
+        Passive mobs are no longer guaranteed to immediately break out from a
+        pull. Hard grabs will make it harder for them.
+    - type: Fix
+      message: >-
+        Glimmer wisps can now pass over probers, machines, and under doors, as
+        intended. They will no longer get stuck each time, and are more likely
+        to wander around than other mobs.
+    - type: Fix
+      message: >-
+        Cleanbots will no longer try to clean puddles under solid obstacles.
+        Unfortunately, that does include tables.
+    - type: Remove
+      message: Reverted the necrosol buff.
+  id: 857
+  time: '2025-10-03T19:24:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1463
+- author: Forzii
+  changes:
+    - type: Tweak
+      message: Vox can now receive uppies.
+  id: 858
+  time: '2025-10-04T08:29:14.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1466
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Added Honey, Corn Oil, Olive Oil (Large), and Cream to the Chefvend.
+    - type: Tweak
+      message: Increased Flour, Rice, Cornmeal, and Sugar per bag from 50->100
+    - type: Tweak
+      message: Increased Egg Carton & Soy Milk quantities in Chefvend
+    - type: Tweak
+      message: Increased Chefvend restock price from 680->800 spesos.
+  id: 859
+  time: '2025-10-04T08:32:56.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1456
+- author: Einstein Engines
+  changes:
+    - type: Add
+      message: >-
+        The document printer has been added. Embrace bureaucracy and print
+        templates without needing the template filing cabinet.
+  id: 860
+  time: '2025-10-04T11:24:23.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1386

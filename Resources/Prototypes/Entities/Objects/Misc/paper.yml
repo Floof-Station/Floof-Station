@@ -90,6 +90,12 @@
         restitution: 0.3
         friction: 0.2
   # FLOOF ADD END
+# Corvax-Printer-Start
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      SheetPrinter: 100
+# Corvax-Printer-End
 
 - type: entity
   name: paper scrap

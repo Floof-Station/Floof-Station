@@ -35,10 +35,12 @@ using Robust.Shared.Toolshed;
 using Robust.Shared.Utility;
 using System.Linq;
 using Content.Server.Silicons.Laws;
+using Content.Shared.Clothing.Components;
 using Content.Shared.Silicons.Laws;
 using Content.Shared.Silicons.Laws.Components;
 using Robust.Server.Player;
 using Content.Shared.Mind;
+using Content.Shared.Roles;
 using Robust.Shared.Physics.Components;
 using static Content.Shared.Configurable.ConfigurationComponent;
 
@@ -76,6 +78,13 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly SiliconLawSystem _siliconLawSystem = default!;
 
         private readonly Dictionary<ICommonSession, List<EditSolutionsEui>> _openSolutionUis = new();
+
+        // Vulpstation section
+        [ValidatePrototypeId<JobPrototype>]
+        private static ProtoId<JobPrototype> _passengerJob = "Passenger";
+        [ValidatePrototypeId<StartingGearPrototype>]
+        private static ProtoId<StartingGearPrototype> _passengerGear = "PassengerGear";
+        // Vulpstation section end
 
         public override void Initialize()
         {
@@ -155,11 +164,18 @@ namespace Content.Server.Administration.Systems
                             var profile = _ticker.GetPlayerProfile(targetActor.PlayerSession);
                             var mobUid = _spawning.SpawnPlayerMob(coords.Value, null, profile, stationUid);
                             var targetMind = _mindSystem.GetMind(args.Target);
+                            var session = targetActor.PlayerSession; // Vulpstation - cache it because it will be reset after mind transfer
 
                             if (targetMind != null)
                             {
                                 _mindSystem.TransferTo(targetMind.Value, mobUid, true);
                             }
+
+                            // Vulpstation - raise PlayerSpawnCompleteEvent to load traits and loadouts.
+                            AddComp(mobUid, new LoadoutComponent { StartingGear = [ _passengerGear ] }, true);
+                            RaiseLocalEvent(mobUid,
+                                new PlayerSpawnCompleteEvent(mobUid, session, _passengerJob, false, 0, stationUid ?? EntityUid.Invalid, profile),
+                                true);
                         },
                         ConfirmationPopup = true,
                         Impact = LogImpact.High,

@@ -322,7 +322,7 @@
   parent: BaseCircuitboardRecipe
   id: CentrifugeMachineCircuitboard
   result: CentrifugeMachineCircuitboard
-
+  
 - type: latheRecipe # Floof
   parent: BaseCircuitboardRecipe
   id: MaterialReclaimerMachineCircuitboard
