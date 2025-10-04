@@ -21,8 +21,10 @@
   category: Vocal
   chatMessages: [ floof-chat-emote-msg-yip ]
   whitelist:
-    tags:
+    tags: # Note: under the hood, it is used by both vulps and kitsunes.
       - UnathiEmotes
+      - VulpEmotes
+      - KitsuneEmotes
   blacklist:
     tags:
       - SiliconEmotes
@@ -50,31 +52,12 @@
   - yap
   - yaps
 
-- type: emote
-  id: VulpYip
-  name: chat-emote-name-yip
-  category: Vocal
-  chatMessages: [ chat-emote-msg-yip ]
-  whitelist:
-    tags:
-    - VulpEmotes
-    - KitsuneEmotes
-    - HarpyEmotes
-  blacklist:
-    tags:
-    - SiliconEmotes
-    components:
-    - BorgChassis
-  chatTriggers:
-  - yip
-  - yips
-
 # This is a new whine. The old one was renamed to @whimper. For comparison, the old whine (whimper) is a long dog whine, while this is a short fox whine.
 - type: emote
   id: Whine
   name: chat-emote-name-whine
   category: Vocal
-  chatMessages: [ chat-emote-msg-whine ]
+  chatMessages: [ whines. ]
   icon: Interface/Emotes/whine.png
   whitelist:
     tags:
@@ -87,7 +70,8 @@
     components:
     - BorgChassis
   chatTriggers:
-  - whimpers
+  - whines
+  - whine
 
 - type: emote
   id: Coo

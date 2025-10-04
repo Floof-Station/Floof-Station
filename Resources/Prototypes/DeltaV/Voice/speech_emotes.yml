@@ -109,7 +109,7 @@
 
 - type: emote
   id: Whimper # Floof - old whine renamed to whimper
-  name: chat-emote-name-whine
+  name: Whine
   category: Vocal
   icon: Interface/Emotes/whine.png
   whitelist:

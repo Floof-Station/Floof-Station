@@ -97,9 +97,9 @@
     Yap: #Floof
       collection: VulpkaninYap
     Yip: # Floof - port from starlight, changed to use its own collection
-      path: VulpkaninYips
+      collection: VulpkaninYips
     Whine:
-      path: VulpkaninWhines
+      collection: VulpkaninWhines
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -143,9 +143,9 @@
     Yap: #Floof
       collection: VulpkaninYap
     Yip: # Floof - port from starlight, changed to use its own collection
-      path: VulpkaninYips
+      collection: VulpkaninYips
     Whine:
-      path: VulpkaninWhines
+      collection: VulpkaninWhines
     Sneeze:
       collection: FemaleSneezes
     Cough:
