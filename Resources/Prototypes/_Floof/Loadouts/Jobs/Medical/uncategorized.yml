@@ -358,8 +358,6 @@
   requirements:
   - !type:CharacterItemGroupRequirement
     group: LoadoutMedicalUniforms
-  - !type:CharacterJobRequirement
-    jobs:
-    - MedicalDoctor
-    - MedicalIntern
-    - SeniorPhysician
+  - !type:CharacterDepartmentRequirement
+    departments:
+    - Medical
