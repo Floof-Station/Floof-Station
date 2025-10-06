@@ -73,9 +73,7 @@
     - TauCetiBasic
     - SolCommon
     - Nekomimetic
-    naturalLanguage: 
-    - SolCommon # Floof: explicitly stated natural languages
-    - Nekomimetic
+    naturalLanguage: SolCommon # Floof: explicitly stated natural languages
 #  - type: Thieving | Floof - M3739 - #1194 - Removed due to balancing and SoP concerns
 #    ignoreStripHidden: true
 #    stealth: Subtle
