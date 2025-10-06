@@ -57,6 +57,7 @@
     understands:
       - TauCetiBasic
       - Kagebun
+      - Nekomimetic
     naturalLanguage: Kagebun # Floof - M3739 - #937 - Shadow Sentence
   - type: Tag
     tags:
