@@ -52,6 +52,7 @@
     understands:
     - TauCetiBasic
     - Kagebun
+    - Nekomimetic
     naturalLanguage: Kagebun # Floof: explicitly stated natural languages
   - type: PotentiaModifier
     potentiaMultiplier: 0.5
