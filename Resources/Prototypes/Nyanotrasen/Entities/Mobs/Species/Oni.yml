@@ -48,11 +48,11 @@
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
-    - Nekomimetic
+    - Kagebun
     understands:
     - TauCetiBasic
-    - Nekomimetic
-    naturalLanguage: Nekomimetic # Floof: explicitly stated natural languages
+    - Kagebun
+    naturalLanguage: Kagebun # Floof: explicitly stated natural languages
   - type: PotentiaModifier
     potentiaMultiplier: 0.5
 
