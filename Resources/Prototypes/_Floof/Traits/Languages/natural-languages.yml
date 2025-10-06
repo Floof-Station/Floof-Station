@@ -173,6 +173,7 @@
       species:
         - Human
         - Shadowkin
+        - Felinid
   functions:
     - !type:TraitAddComponent
       components:
@@ -292,7 +293,6 @@
       inverted: true
       species:
         - Felinid
-        - Oni
         - Shadowkin
   functions:
     - !type:TraitAddComponent
@@ -313,6 +313,7 @@
       inverted: true
       species:
         - Kitsune
+        - Oni
         - Shadowkin
   functions:
     - !type:TraitAddComponent
