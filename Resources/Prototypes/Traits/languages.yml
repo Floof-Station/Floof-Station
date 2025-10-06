@@ -25,6 +25,7 @@
       inverted: true
       species:
         - Human
+        - Felinid
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
