@@ -12,8 +12,8 @@
     revertOnDeath: true
     syncComponents: true # Floof
     copiedComponents: # Floof
+    - FootstepVolumeModifier
     - Grammar
-    - Hemophilia
     - Hunger
     - LanguageKnowledge
     - LanguageSpeaker
@@ -21,16 +21,8 @@
     - Muted
     - Narcolepsy
     - Thirst
-    - Grammar
-    - Hunger
-    - LanguageKnowledge
-    - LanguageSpeaker
-    - Muted
-    - Narcolepsy
-    - Thirst
     - Pacified
     - Paracusia
-    - FootstepVolumeModifier
     - SelfAware
     - Vampirism
     - UltraVision
