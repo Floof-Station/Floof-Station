@@ -159,7 +159,9 @@
     - !type:TargetInLOSOrCurrentCon
       curve: !type:BoolCurve
     - !type:TargetUnobstructedCon # Floofstation
-      curve: !type:BoolCurve
+      curve: !type:QuadraticCurve # y = x, the con returns a score value which doesn't need to be adjusted
+        slope: 1
+        exponent: 0
 
 - type: utilityQuery
   id: NearbyGunTargets

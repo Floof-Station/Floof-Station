@@ -26,6 +26,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
 using Content.Server._Floof.NPC.HTN.Queries.Considerations;
+using Content.Server.Atmos.Components;
+using Robust.Server.GameObjects;
 using Robust.Shared.Physics;
 
 
@@ -51,6 +53,7 @@ public sealed class NPCUtilitySystem : EntitySystem
     [Dependency] private readonly WeldableSystem _weldable = default!;
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly PhysicsSystem _physics = default!; // Floof
 
     private EntityQuery<PuddleComponent> _puddleQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -249,15 +252,23 @@ public sealed class NPCUtilitySystem : EntitySystem
             // Floofstation - because upstream didnt implement anything to prevent e.g. cleanbots from trying to clean under walls.
             case TargetUnobstructedCon:
             {
-                if (_lookup.GetEntitiesIntersecting(targetUid, LookupFlags.Uncontained)
-                        is { Count: > 0 } intersectors
-                    && intersectors.Any(ent =>
-                        TryComp<FixturesComponent>(ent, out var fixs) && fixs.Fixtures.Values.Any(fix => fix.Hard)
-                        || TryComp<OccluderComponent>(ent, out var occluder) && occluder.Enabled))
-                    return 0f;
+                if (_lookup.GetEntitiesIntersecting(targetUid, LookupFlags.Uncontained) is not { Count: > 0 } intersectors)
+                    return 1f;
 
-                return 1f;
-                break;
+                // For each obstructor, multiply the score by 0.1. This way unobstructed entities will be prioritized.
+                var score = 1f;
+                var (_, ownCollisionMask) = _physics.GetHardCollision(owner);
+                foreach (var intersector in intersectors)
+                {
+                    if (TryComp<FixturesComponent>(intersector, out var fixs)
+                        && fixs.Fixtures.Values.Any(it => it.Hard && (it.CollisionLayer & ownCollisionMask) != 0))
+                        score *= 0.1f;
+
+                    if (TryComp<AirtightComponent>(intersector, out var airtight) && airtight.AirBlocked)
+                        score *= 0.25f; // This can be a door, so we don't penalize as much, because someone might just open it for the mob
+                }
+
+                return score;
             }
             // Floofstation section end
             case TargetAmmoMatchesCon:
