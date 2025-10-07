@@ -26,10 +26,12 @@
     TailBehind: MobHumanoidAnyMarking
     TailOversuit: MobHumanoidAnyMarking
     Head: MobShadowkinHead
-    Snout: MobShadowkinAnyMarkingFollowSkin
-    HeadTop: MobShadowkinAnyMarkingFollowSkin
-    HeadSide: MobShadowkinAnyMarkingFollowSkin
-    Tail: MobShadowkinAnyMarkingFollowSkin
+    # Begin Floof - M3739 - Was originally 'MobShadowkinAnyMarkingFollowSkin'. Changed to allow for proper marking customization.
+    Snout: MobShadowkinAnyMarking
+    HeadTop: MobShadowkinAnyMarking
+    HeadSide: MobShadowkinAnyMarking
+    Tail: MobShadowkinAnyMarking
+    # End Floof - M3739
     Chest: MobShadowkinTorso
     Underwear: MobHumanoidAnyMarking # Floof, add underwear
     Undershirt: MobHumanoidAnyMarking # Floof, add underwear
