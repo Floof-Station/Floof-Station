@@ -316,41 +316,39 @@
       psionicPowers:
         - MetapsionicPower
 
-# Floof - this is an extreme invasion of privacy and is basically a way to opt out from languages.
-# As such, this is commented out for now.
-#- type: trait
-#  id: XenoglossyPower
-#  category: Mental
-#  points: -12
-#  requirements:
-#    - !type:CharacterLogicOrRequirement
-#      requirements:
-#        - !type:CharacterTraitRequirement
-#          traits:
-#            - LatentPsychic
-#            - NaturalTelepath
-#        - !type:CharacterJobRequirement
-#          jobs:
-#            - Chaplain
-#            - ResearchDirector
-#            - ForensicMantis
-#    - !type:CharacterLogicOrRequirement
-#      requirements:
-#        - !type:CharacterSpeciesRequirement
-#          inverted: true
-#          species:
-#            - IPC
-#        - !type:CharacterTraitRequirement
-#          traits:
-#            - AnomalousPositronics
-#    - !type:CharacterJobRequirement
-#      inverted: true
-#      jobs:
-#        - Librarian
-#  functions:
-#    - !type:TraitAddPsionics
-#      psionicPowers:
-#        - XenoglossyPower
+- type: trait
+  id: XenoglossyPower
+  category: Mental
+  points: -12
+  requirements:
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterTraitRequirement
+          traits:
+            - LatentPsychic
+            - NaturalTelepath
+        - !type:CharacterJobRequirement
+          jobs:
+            - Chaplain
+            - ResearchDirector
+            - ForensicMantis
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - AnomalousPositronics
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Librarian
+  functions:
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - XenoglossyPower
 
 - type: trait
   id: PsychognomyPower
