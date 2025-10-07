@@ -413,7 +413,7 @@
   itemDrop: FloorTileItemWoodOak
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 - type: tile
   id: FloorWoodOakBroken
@@ -429,7 +429,7 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: true # We allow weather here because it's a broken tile
 
 - type: tile
   id: FloorWoodHouse
@@ -446,7 +446,7 @@
   itemDrop: FloorTileItemWoodHouse
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 - type: tile
   id: FloorWoodHouseBroken
@@ -495,7 +495,7 @@
   itemDrop: FloorTileItemWoodMaple
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 # MS13 wood
 - type: tile
@@ -513,7 +513,7 @@
   # itemDrop: FloorTileItemWoodMaple
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 - type: tile
   id: FloorMS13WoodCommonDamaged
@@ -530,7 +530,7 @@
   # itemDrop: FloorTileItemWoodMaple
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: true # We allow weather here because it's a damaged tile
 
 - type: tile
   id: FloorMS13WoodFancy
@@ -547,7 +547,7 @@
   # itemDrop: FloorTileItemWoodMaple
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 - type: tile
   id: FloorMS13WoodFancyDamaged
@@ -581,7 +581,7 @@
   # itemDrop: FloorTileItemWoodMaple
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 - type: tile
   id: FloorMS13WoodMosaicDamaged
@@ -648,7 +648,7 @@
   itemDrop: FloorTileItemCarpetRed
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 # MS13 Carpet
 - type: tile
@@ -1055,7 +1055,7 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
-  weather: true
+  weather: false # Vulpstation
 
 - type: tile
   id: FloorMS13TileLongBlue
