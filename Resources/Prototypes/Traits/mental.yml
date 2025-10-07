@@ -319,7 +319,7 @@
 - type: trait
   id: XenoglossyPower
   category: Mental
-  points: -12
+  points: -8
   requirements:
     - !type:CharacterLogicOrRequirement
       requirements:
