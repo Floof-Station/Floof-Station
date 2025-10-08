@@ -9,6 +9,9 @@ invoke-verb-command-invalid-args = invokeverb takes 2 arguments.
 invoke-verb-command-invalid-player-uid = Player uid could not be parsed, or "self" was not passed.
 invoke-verb-command-invalid-target-uid = Target uid could not be parsed.
 
+# Floof: allow `invokeverb self` as normal player.
+invoke-verb-command-no-perms = Must be admin to invoke verbs as UID other than "self".
+
 invoke-verb-command-invalid-player-entity = Player uid given does not correspond to a valid entity.
 invoke-verb-command-invalid-target-entity = Target uid given does not correspond to a valid entity.
 
