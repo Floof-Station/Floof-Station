@@ -46,7 +46,7 @@ namespace Content.Server.Verbs.Commands
                 // Floof: allow `listverb self` as any user.
                 if (shell.Player is not null && (_adminManager.GetAdminData(shell.Player)?.Flags & AdminFlags.Admin) != AdminFlags.Admin)
                 {
-                    shell.WriteError(Loc.GetString("invoke-verb-command-no-perms"));
+                    shell.WriteError(Loc.GetString("list-verbs-command-no-perms"));
                     return;
                 }
 
