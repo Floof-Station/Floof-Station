@@ -45,8 +45,6 @@ public abstract partial class SharedDoorSystem : EntitySystem
     [Dependency] protected readonly SharedPopupSystem Popup = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiver = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!; // Floof
-
 
     [ValidatePrototypeId<TagPrototype>]
     public const string DoorBumpTag = "DoorBumpOpener";
@@ -58,8 +56,10 @@ public abstract partial class SharedDoorSystem : EntitySystem
     /// <remarks>
     ///     The intersection percentage relies on WORLD AABBs. So if this is too small, and the grid is rotated 45
     ///     degrees, then an entity outside of the airlock may be crushed.
+    ///     Floof: increased to 0.5 due to changing the way intersection is calculated.
+    ///     TODO: use fixtures instead of world AABB??
     /// </remarks>
-    public const float IntersectPercentage = 0.2f;
+    public const float IntersectPercentage = 0.5f;
 
     /// <summary>
     ///     A set of doors that are currently opening, closing, or just queued to open/close after some delay.
