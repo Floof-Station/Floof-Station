@@ -5,6 +5,7 @@ chat-emote-name-coo = Coo
 chat-emote-name-whimper = Whimper
 chat-emote-name-whine = Whine
 
+floof-chat-emote-msg-yip = yips!
 floof-chat-emote-msg-yap = yaps!
 floof-chat-emote-msg-gekker = gekkers!
 floof-chat-emote-msg-coo = coos.
