@@ -106,6 +106,8 @@ entities:
         colorHex: '#02020b'
       - time: 1
         colorHex: '#000000'
+    - type: WeatherCycle
+      prototype: Winter
     - type: Map
       mapPaused: True
     - type: PhysicsMap

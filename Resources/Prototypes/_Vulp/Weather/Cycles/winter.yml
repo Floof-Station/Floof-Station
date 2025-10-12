@@ -1,0 +1,209 @@
+# Generally cold, but not overly cold weather for winter maps
+- type: weatherCycle
+  id: Winter
+  weathers:
+    # Default -40°C
+    default:
+      proto: null
+      weight: 20
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 233
+          moles:
+          - 25.047993
+          - 92.20056
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherStabilizing
+
+    # Warm -15°C
+    warm:
+      proto: null
+      weight: 25
+      transitions:
+        default: 1
+        hot: 0.5
+        snow: 0.3
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 258
+          moles:
+          - 21.824879 # O2
+          - 82.10312  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherHot
+
+    # Hot +5°C. Rarely happpens on its own.
+    hot:
+      proto: null
+      weight: 1
+      transitions:
+        default: 0.5
+        warm: 0.8
+        rain: 1.9 # 50% chance to rain after a hot weather
+        ashfall: 0.3
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 278
+          moles:
+          - 17.947363 # O2
+          - 80.76313  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherHot
+
+    # Cold -60°C. Unlikely to happpen on its own.
+    cold:
+      proto: null
+      weight: 2
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 213
+          moles:
+          - 28.244223   # O2
+          - 106.252075  # N2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherCold
+
+    # Rain
+    rain:
+      proto: Rain
+      weight: 20
+      durationMinutes:
+        min: 10
+        max: 20
+      transitions:
+        hot: 1
+        warm: 0.5
+        storm: 0.3
+      onUpdate:
+      - !type:WeatherCleanPuddles
+        cleanChance: 0.02
+        maxCleaned: 25
+        cleanAmount: 2.5
+      - !type:WeatherRefillSolutions
+        refillChance: 0.02
+        maxRefilled: 25
+        amount: 10
+        reagent: Water
+
+    storm:
+      proto: Storm
+      weight: 1 # Unlikely to happen on its own; most of the time will be an extension of a rain
+      durationMinutes:
+        min: 5
+        max: 10
+      transitions:
+        hot: 0.5
+        warm: 0.1
+        rain: 1
+      onUpdate:
+      - !type:WeatherCleanPuddles
+        cleanChance: 0.06
+        maxCleaned: 50
+        cleanAmount: 2.5
+      - !type:WeatherRefillSolutions
+        refillChance: 0.02
+        maxRefilled: 50
+        amount: 10
+        reagent: Water
+
+    # Snow
+    snow:
+      proto: SnowfallLight
+      weight: 25 # Way higher than most other cycles
+      durationSeconds:
+        min: 300
+        max: 900
+      transitions:
+        warm: 1
+        default: 1
+        snowMedium: 0.4
+        snowHeavy: 0.1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 253 # -20
+          moles:
+          - 25.486818 # O2
+          - 90.10312  # N2
+
+    snowMedium:
+      proto: SnowfallMedium
+      weight: 3
+      durationSeconds:
+        min: 300
+        max: 600
+      transitions:
+        cold: 0.4
+        snow: 1
+        snowHeavy: 0.4
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 233 # -40
+          moles:
+          - 25.824879 # O2
+          - 90.10312  # N2
+
+    snowHeavy:
+      proto: SnowfallHeavy
+      weight: 1
+      durationSeconds:
+        min: 240
+        max: 600
+      transitions:
+        cold: 0.2
+        snow: 0.4
+        snowMedium: 1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 213.15 # Shiver me timbers
+          moles:
+          - 29.824879 # O2
+          - 99.10312  # N2
+      onUpdate:
+      - !type:WeatherRefillSolutions
+        refillChance: 0.02
+        maxRefilled: 25
+        amount: 2
+        reagent: Ice
+
+    # Ashfall. Adds some CO2 to the air.
+    ashfall:
+      proto: AshfallLight
+      weight: 5
+      durationSeconds: # I'm afraid people might suffocate
+        min: 30
+        max: 70
+      transitions:
+        default: 1
+      onTransition:
+      - !type:WeatherSetAtmos
+        mixture:
+          volume: 2500
+          temperature: 273.15
+          moles:
+          - 20.824879 # O2
+          - 78.10312  # N2
+          - 3.1415926 # CO2
+      - !type:WeatherDispatchAnnouncement
+        dataset: WeatherAshfall
+      onUpdate:
+      - !type:WeatherRefillSolutions
+        refillChance: 0.02
+        maxRefilled: 25
+        amount: 2
+        reagent: Ash
+
+
