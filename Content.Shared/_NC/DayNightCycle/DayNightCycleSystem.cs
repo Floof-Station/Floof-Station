@@ -1,5 +1,6 @@
 using System.Linq;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Network;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._NC14.DayNightCycle
@@ -7,6 +8,7 @@ namespace Content.Shared._NC14.DayNightCycle
     public sealed class DayNightCycleSystem : EntitySystem
     {
         [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly INetManager _net = default!;
 
         private const float EARLY_MORNING_TIME = 0.2f; // This represents 20% into the cycle, which is early morning
 
@@ -58,6 +60,9 @@ namespace Content.Shared._NC14.DayNightCycle
         public override void Update(float frameTime)
         {
             base.Update(frameTime);
+            // Vulpstation - DO NOT TRY TO PREDICT THE D/N CYCLE
+            if (_net.IsClient)
+                return;
 
             var query = EntityQueryEnumerator<DayNightCycleComponent, MapLightComponent>();
             while (query.MoveNext(out var uid, out var dayNight, out var mapLight))
