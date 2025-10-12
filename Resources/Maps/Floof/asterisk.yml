@@ -95,7 +95,7 @@ entities:
       enabled: True
     - type: LoadedMap
     - type: WeatherCycle
-      prototype: WinterCold
+      prototype: Winter
   - uid: 2
     components:
     - type: MetaData
