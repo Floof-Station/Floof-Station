@@ -23,6 +23,12 @@ public sealed partial class WeatherCyclePrototype : IPrototype
 [DataDefinition, Serializable]
 public sealed partial class WeatherCycleData
 {
+    /// <summary>
+    ///     ID of this state. Evaluated at runtime if this state is part of a weather cycle prototype.
+    /// </summary>
+    [NonSerialized]
+    public string? StateId;
+
     [DataField(required: true)]
     public ProtoId<WeatherPrototype>? Proto;
 

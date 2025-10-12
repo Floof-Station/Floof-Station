@@ -30,20 +30,28 @@ public sealed class WeatherCycleSystem : EntitySystem
         if (args != null && !args.WasModified<WeatherCyclePrototype>())
             return;
 
+        // TODO: should this be an integration test?
         foreach (var proto in _protoMan.EnumeratePrototypes<WeatherCyclePrototype>())
+            ValidatePrototype(proto);
+    }
+
+    /// <summary>
+    ///     Validates the prototype data and sets up state IDs (WeatherCycleData.StateId). Logs errors to the console.
+    /// </summary>
+    public void ValidatePrototype(WeatherCyclePrototype proto)
+    {
+        foreach (var (id, data) in proto.Weathers)
         {
-            foreach (var (id, data) in proto.Weathers)
+            data.StateId = id;
+            if (data.Transitions is null)
+                continue;
+
+            foreach (var (refId, _) in data.Transitions)
             {
-                if (data.Transitions is null)
+                if (proto.Weathers.ContainsKey(refId))
                     continue;
 
-                foreach (var (refId, _) in data.Transitions)
-                {
-                    if (proto.Weathers.ContainsKey(refId))
-                        continue;
-
-                    Log.Error($"Weather prototype {proto.ID} contains an unresolved transition {refId} in its state {id}.");
-                }
+                Log.Error($"Weather prototype {proto.ID} contains an unresolved transition {refId} in its state {id}.");
             }
         }
     }
