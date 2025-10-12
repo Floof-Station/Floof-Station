@@ -1,3 +1,4 @@
+# Currently unused on Floof, port from Vulpstation. Serves as an example.
 - type: weatherCycle
   id: Tropical
   weathers:
@@ -30,8 +31,8 @@
           volume: 2500
           temperature: 323.15
           moles:
-          - 21.824879 # O2
-          - 82.10312  # N2
+          - 19.394283 # O2
+          - 72.95945  # N2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherHot
 
@@ -45,8 +46,8 @@
           volume: 2500
           temperature: 273.15
           moles:
-          - 21.824879 # O2
-          - 82.10312  # N2
+          - 23.327806  # O2
+          - 87.75699  # N2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherCold
 
@@ -110,8 +111,8 @@
           volume: 2500
           temperature: 273.15
           moles:
-          - 25.824879 # O2
-          - 90.10312  # N2
+          - 24.300444 # O2
+          - 84.784355  # N2
 
     snowMedium:
       proto: SnowfallMedium
@@ -172,9 +173,9 @@
           volume: 2500
           temperature: 313.15
           moles:
-          - 20.824879 # O2
-          - 78.10312  # N2
-          - 3.1415926 # CO2
+          - 19.381002 # O2
+          - 72.687904 # N2
+          - 2.9237726 # CO2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherAshfall
       onUpdate:

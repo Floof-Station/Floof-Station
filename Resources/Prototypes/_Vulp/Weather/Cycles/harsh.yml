@@ -1,4 +1,4 @@
-# Currently in use for the mining outpost station
+# Currently unused on Floof, port from Vulpstation. Serves as an example.
 # Features more dangerous weathers due to the abundance of shelter
 - type: weatherCycle
   id: Harsh
@@ -32,8 +32,8 @@
           volume: 2500
           temperature: 323.15
           moles:
-          - 21.824879 # O2
-          - 82.10312  # N2
+          - 19.394283 # O2
+          - 72.95945  # N2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherHot
 
@@ -47,8 +47,8 @@
           volume: 2500
           temperature: 263.15
           moles:
-          - 23.824879 # O2
-          - 82.10312  # N2
+          - 25.486818 # O2
+          - 87.830345  # N2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherCold
 
@@ -128,8 +128,8 @@
           volume: 2500
           temperature: 273.15
           moles:
-          - 25.824879 # O2
-          - 90.10312  # N2
+          - 24.009964 # O2
+          - 83.770874  # N2
 
     snowMedium:
       proto: SnowfallMedium
@@ -191,9 +191,9 @@
           volume: 2500
           temperature: 313.15
           moles:
-          - 20.824879 # O2
-          - 78.10312  # N2
-          - 3.1415926 # CO2
+          - 19.381002 # O2
+          - 72.687904 # N2
+          - 2.9237726 # CO2
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherAshfall
       onUpdate:
