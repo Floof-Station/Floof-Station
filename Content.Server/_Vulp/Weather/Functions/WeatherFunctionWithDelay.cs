@@ -28,6 +28,7 @@ public abstract partial class WeatherFunctionWithDelay : WeatherFunction
         cts = new CancellationTokenSource();
         var delay = DelaySeconds.Next(IoCManager.Resolve<IRobustRandom>());
 
+        // FIXME: Timers are getting obsoleted, replace this with a custom timer implementation
         Robust.Shared.Timing.Timer.Spawn(TimeSpan.FromSeconds(delay),
             () =>
             {

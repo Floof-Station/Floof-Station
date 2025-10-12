@@ -58,9 +58,9 @@ public sealed class WeatherCycleSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        var query = EntityQueryEnumerator<WeatherCycleComponent, MapGridComponent>();
+        var query = EntityQueryEnumerator<WeatherCycleComponent, MapComponent>();
 
-        while (query.MoveNext(out var uid, out var weatherCycle, out var grid))
+        while (query.MoveNext(out var uid, out var weatherCycle, out var map))
         {
             if (_timing.CurTime < weatherCycle.NextUpdate)
                 continue;

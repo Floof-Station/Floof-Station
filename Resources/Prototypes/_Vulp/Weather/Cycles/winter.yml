@@ -20,7 +20,7 @@
     # Warm -15°C
     warm:
       proto: null
-      weight: 25
+      weight: 8
       transitions:
         default: 1
         hot: 0.5
@@ -71,10 +71,10 @@
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherCold
 
-    # Rain
+    # Rain. Rarely happens on its own.
     rain:
       proto: Rain
-      weight: 20
+      weight: 2
       durationMinutes:
         min: 10
         max: 20
