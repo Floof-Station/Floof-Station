@@ -14,6 +14,8 @@ using Serilog;
 
 namespace Content.IntegrationTests.Tests._Vulp;
 
+#nullable enable
+
 [TestFixture]
 public sealed class WeatherCycleTest
 {
@@ -53,7 +55,7 @@ public sealed class WeatherCycleTest
             var avgPressure = proto.Weathers.Values
                 .Select(it => GetAtmos(proto, it, out var atmos) ? atmos : null)
                 .Where(it => it != null)
-                .Select(it => it.Pressure)
+                .Select(it => it!.Pressure)
                 .DefaultIfEmpty(-1)
                 .Average();
 
