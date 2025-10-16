@@ -132,8 +132,8 @@
           volume: 2500
           temperature: 253 # -20
           moles:
-          - 25.486818 # O2
-          - 90.10312  # N2
+          - 23.800636  # O2
+          - 84.14199   # N2
 
     snowMedium:
       proto: SnowfallMedium
