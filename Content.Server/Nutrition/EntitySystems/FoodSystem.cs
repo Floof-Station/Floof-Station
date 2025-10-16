@@ -205,6 +205,9 @@ public sealed class FoodSystem : EntitySystem
             BreakOnDamage = true,
             MovementThreshold = 0.01f,
             DistanceThreshold = MaxFeedDistance,
+            // Floof: stop people from stuffing seventeen hamburgers in their mouth at once
+            BlockDuplicate = true,
+            DuplicateCondition = DuplicateConditions.SameEvent,
             // Mice and the like can eat without hands.
             // TODO maybe set this based on some CanEatWithoutHands event or component?
             NeedHand = forceFeed

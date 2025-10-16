@@ -223,6 +223,9 @@ public sealed class DrinkSystem : SharedDrinkSystem
             BreakOnDamage = true,
             MovementThreshold = 0.01f,
             DistanceThreshold = 1.0f,
+            // Floof: stop people from drinking nine puddles of blood at once
+            BlockDuplicate = true,
+            DuplicateCondition = DuplicateConditions.SameEvent,
             // Mice and the like can eat without hands.
             // TODO maybe set this based on some CanEatWithoutHands event or component?
             NeedHand = forceDrink,
