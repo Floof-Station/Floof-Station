@@ -56,6 +56,7 @@ public sealed class EntityPainter
             return;
         }
 
+        if (!_sEntityManager.HasComponent<TransformComponent>(entity.Owner)) return; //Floof Station
         var worldRotation = xformSystem.GetWorldRotation(entity.Owner);
         foreach (var layer in entity.Sprite.AllLayers)
         {
