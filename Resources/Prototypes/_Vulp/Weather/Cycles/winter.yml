@@ -20,10 +20,10 @@
     # Warm -15°C
     warm:
       proto: null
-      weight: 8
+      weight: 7
       transitions:
         default: 1
-        hot: 0.5
+        hot: 0.4
         snow: 0.3
       onTransition:
       - !type:WeatherSetAtmos
@@ -42,7 +42,7 @@
       weight: 1
       transitions:
         default: 0.5
-        warm: 0.8
+        warm: 0.6
         rain: 1.9 # 50% chance to rain after a hot weather
         ashfall: 0.3
       onTransition:
@@ -56,10 +56,10 @@
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherHot
 
-    # Cold -68°C. Unlikely to happpen on its own.
+    # Cold -68°C.
     cold:
       proto: null
-      weight: 2
+      weight: 5
       onTransition:
       - !type:WeatherSetAtmos
         mixture:
@@ -74,7 +74,7 @@
     # Rain. Rarely happens on its own.
     rain:
       proto: Rain
-      weight: 2
+      weight: 3
       durationMinutes:
         min: 10
         max: 20
@@ -182,7 +182,7 @@
     # Ashfall. Adds some CO2 to the air.
     ashfall:
       proto: AshfallLight
-      weight: 5
+      weight: 1
       durationSeconds: # I'm afraid people might suffocate
         min: 30
         max: 70
