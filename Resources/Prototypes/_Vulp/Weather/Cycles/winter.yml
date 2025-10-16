@@ -2,7 +2,7 @@
 - type: weatherCycle
   id: Winter
   weathers:
-    # Default -40°C
+    # Default -37°C
     default:
       proto: null
       weight: 20
@@ -10,12 +10,12 @@
       - !type:WeatherSetAtmos
         mixture:
           volume: 2500
-          temperature: 233
+          temperature: 230
           moles:
           - 25.047993
           - 92.20056
       - !type:WeatherDispatchAnnouncement
-        dataset: WeatherStabilizing
+        dataset: WeatherWinterStabilizing
 
     # Warm -15°C
     warm:
@@ -34,7 +34,7 @@
           - 21.824879 # O2
           - 82.10312  # N2
       - !type:WeatherDispatchAnnouncement
-        dataset: WeatherHot
+        dataset: WeatherWinterWarm
 
     # Hot +5°C. Rarely happpens on its own.
     hot:
@@ -56,7 +56,7 @@
       - !type:WeatherDispatchAnnouncement
         dataset: WeatherHot
 
-    # Cold -60°C. Unlikely to happpen on its own.
+    # Cold -68°C. Unlikely to happpen on its own.
     cold:
       proto: null
       weight: 2
@@ -64,7 +64,7 @@
       - !type:WeatherSetAtmos
         mixture:
           volume: 2500
-          temperature: 213
+          temperature: 205
           moles:
           - 28.244223   # O2
           - 106.252075  # N2

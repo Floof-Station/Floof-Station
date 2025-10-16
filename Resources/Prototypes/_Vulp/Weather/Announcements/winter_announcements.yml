@@ -1,0 +1,31 @@
+# TODO: whenever wizden fixes their 0-based indexing, update the ftl file
+# It's currently caused by RobustRandom not respective LocalizedDataset's 1-based indexing
+
+# Specific datasets for winter.
+# -45°C
+- type: localizedDataset
+  id: WeatherWinterStabilizing
+  values:
+    prefix: weather-winter-stabilizing-
+    count: 2
+
+# +0°C
+- type: localizedDataset
+  id: WeatherWinterHot
+  values:
+    prefix: weather-winter-hot-
+    count: 4
+
+# -20°C
+- type: localizedDataset
+  id: WeatherWinterWarm
+  values:
+    prefix: weather-winter-hot-
+    count: 3
+
+# -68°C
+- type: localizedDataset
+  id: WeatherWinterCold
+  values:
+    prefix: weather-winter-cold-
+    count: 3
