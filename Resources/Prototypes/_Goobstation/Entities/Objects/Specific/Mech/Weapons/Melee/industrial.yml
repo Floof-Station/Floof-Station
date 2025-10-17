@@ -45,7 +45,7 @@
       wideAnimationRotation: -90
       soundHit:
         path: "/Audio/Items/drill_hit.ogg"
-      attackRate: 4 # Should be better then a normal drill not worse
+      attackRate: 4 # Should be better then a normal drill not worse # Floofstation - this is in hertz, not seoconds
       damage:
         groups:
           Brute: 24
