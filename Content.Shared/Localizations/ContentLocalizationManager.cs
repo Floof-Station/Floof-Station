@@ -230,7 +230,6 @@ namespace Content.Shared.Localizations
 
             return new LocValueString(res);
         }
-
         // Floof
         private static readonly string[] ZeroToNineteen =
         [

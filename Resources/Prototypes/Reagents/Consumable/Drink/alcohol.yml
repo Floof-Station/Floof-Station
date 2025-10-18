@@ -1024,6 +1024,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.20
+      - !type:AdjustReagent
+        reagent: Blood
+        amount: 0.15
 
 - type: reagent
   id: DoctorsDelight
@@ -1618,6 +1621,17 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.4
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.25
+      - !type:AdjustReagent
+        reagent: Blood
+        amount: 0.25
 
 - type: reagent
   id: PinaColada

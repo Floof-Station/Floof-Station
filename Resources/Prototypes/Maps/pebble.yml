@@ -30,7 +30,6 @@
             Boxer: [ 2, 2 ]
             Chef: [ 2 , 2 ]
             Clown: [ 1, 1 ]
-            Lawyer: [ 1, 1 ]
             Musician: [ 1, 1 ]
             Janitor: [ 1, 2 ]
             Mime: [ 1, 1 ]
@@ -71,3 +70,8 @@
             CargoTechnician: [ 2, 3 ]
           #civilian
             Passenger: [ -1, -1 ]
+          # Justice added by FloofStation
+            ChiefJustice: [ 1, 1 ] #FloofStation
+            Clerk: [ 1, 1 ] #FloofStation
+            Lawyer: [ 2, 2 ] #FloofStation
+            Prosecutor: [ 1, 1 ] #FloofStation

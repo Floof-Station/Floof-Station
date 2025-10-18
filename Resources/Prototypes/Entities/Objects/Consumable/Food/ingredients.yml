@@ -92,10 +92,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 100
         reagents:
         - ReagentId: Flour
-          Quantity: 50
+          Quantity: 100
 
 - type: entity
   parent: [ReagentPacketBase, ItemHeftyBase]
@@ -124,9 +124,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 100
         reagents:
         - ReagentId: Cornmeal
-          Quantity: 50
+          Quantity: 100
 
 - type: entity
   parent: ReagentPacketBase
@@ -155,9 +156,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 100
         reagents:
         - ReagentId: Rice
-          Quantity: 50
+          Quantity: 100
 
 - type: entity
   parent: ReagentPacketBase
@@ -186,9 +188,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 100
         reagents:
         - ReagentId: Sugar
-          Quantity: 50
+          Quantity: 100
 
 - type: entity
   parent: ReagentPacketBase
@@ -211,8 +214,8 @@
 - type: entity
   parent: ReagentPacketBase
   id: ReagentContainerOliveoil
-  name: olive oil
-  description: Olive oil. From space olives presumably.
+  name: olive oil #frontier for consolidating vegetable oils
+  description: Olive oil. From space olives presumably. #frontier
   components:
   - type: Sprite
     state: oliveoil
@@ -311,6 +314,24 @@
   - type: Tag
     tags:
     - Slice
+  - type: Construction
+    graph: DoughRope
+    node: start
+
+- type: entity
+  name: dough rope
+  parent: FoodBakingBase
+  id: FoodDoughRope
+  description: A thin noodle of dough. Can be cooked into a bagel.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    state: dough-rope
+  - type: Construction
+    graph: DoughRope
+    node: rolled
 
 - type: entity
   name: cornmeal dough

@@ -16,7 +16,7 @@
       - SiliconEmotes
     components:
     - BorgChassis
-  chatMessages: [ hisses ]
+  chatMessages: [ floof-chat-emote-msg-hiss ]
   chatTriggers:
     - hisses
 
@@ -35,7 +35,7 @@
       - SiliconEmotes
     components:
     - BorgChassis
-  chatMessages: [ meows ]
+  chatMessages: [ floof-chat-emote-msg-meow ]
   chatTriggers:
     - meows
     - miaus
@@ -57,7 +57,7 @@
       - SiliconEmotes
     components:
     - BorgChassis
-  chatMessages: [ mews ]
+  chatMessages: [ floof-chat-emote-msg-mew ]
   chatTriggers:
     - mews
 
@@ -78,7 +78,7 @@
       - SiliconEmotes
     components:
     - BorgChassis
-  chatMessages: [ growls ]
+  chatMessages: [ floof-chat-emote-msg-growl ]
   chatTriggers:
     - growls
 
@@ -97,6 +97,6 @@
       - SiliconEmotes
     components:
     - BorgChassis
-  chatMessages: [ purrs ]
+  chatMessages: [ floof-chat-emote-msg-purr ]
   chatTriggers:
     - purrs

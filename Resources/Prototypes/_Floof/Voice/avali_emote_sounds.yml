@@ -40,6 +40,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Coo:
+      collection: HarpyCoos
 
 - type: emoteSounds
   id: FemaleAvali
@@ -78,3 +80,5 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Coo:
+      collection: HarpyCoos

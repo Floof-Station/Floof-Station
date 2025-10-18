@@ -350,6 +350,8 @@
       - ClothingBackpackSatchelHolding
       - ClothingBackpackDuffelHolding
       - WelderExperimental
+      - WelderIndustrial # Floof
+      - WelderIndustrialAdvanced # Floof
       - JawsOfLife
       - CoreSilver # Nyanotrasen - Silver Golem core
       - FauxTileAstroGrass
@@ -481,6 +483,7 @@
     - ChemMasterMachineCircuitboard
     - CondenserMachineCircuitBoard
     - HotplateMachineCircuitboard
+    - PrinterDocMachineCircuitboard  # Corvax-Printer
     - UniformPrinterMachineCircuitboard
     - FloorGreenCircuit
     - FloorBlueCircuit
@@ -581,6 +584,14 @@
       - AutodocCircuitboard # Shitmed Change
       - OperatingTableCircuitboard # Shitmed Change
       - MaterialSiloCircuitboard
+      - GygaxCentralElectronics
+      - GygaxPeripheralsElectronics
+      - GygaxTargetingElectronics
+      - DurandCentralElectronics
+      - DurandPeripheralsElectronics
+      - DurandTargetingElectronics
+      - ClarkeCentralElectronics
+      - ClarkePeripheralsElectronics
   - type: EmagLatheRecipes
     emagDynamicRecipes:
     - ShuttleGunDusterCircuitboard
@@ -675,6 +686,8 @@
     - RightLegBorgService
     - HeadBorgService
     - TorsoBorgService
+    - MechAirTank # Goobstation
+    - MechThruster # Goobstation
     - Quadborgendoskeleton
     dynamicRecipes:
     - ProximitySensor
@@ -707,6 +720,8 @@
     - RipleyRArm
     - RipleyLLeg
     - RipleyRLeg
+    - RipleyMKIIHarness
+    - RipleyUpgradeKit
     - MechEquipmentGrabber
     - HonkerHarness
     - HonkerLArm
@@ -725,6 +740,41 @@
     - JetpackBlue
     - JetpackMini
   # End Nyano additions
+    - ClarkeHarness
+    - ClarkeHead
+    - ClarkeLArm
+    - ClarkeRArm
+    - ClarkeTreads
+    - DurandHarness
+    - DurandArmor
+    - DurandHead
+    - DurandLArm
+    - DurandLLeg
+    - DurandRArm
+    - DurandRLeg
+    - GygaxHarness
+    - GygaxArmor
+    - GygaxHead
+    - GygaxLArm
+    - GygaxLLeg
+    - GygaxRArm
+    - GygaxRLeg
+    - MechEquipmentDrill
+    - MechEquipmentDrillDiamond
+    - MechEquipmentKineticAccelerator
+    - MechEquipmentHonkerBananaMortar
+    - MechEquipmentHonkerMousetrapMortar
+  - type: EmagLatheRecipes
+    emagDynamicRecipes:
+    - WeaponMechCombatImmolationGun
+    - WeaponMechCombatSolarisLaser
+    - WeaponMechCombatFiredartLaser
+    - WeaponMechCombatUltraRifle
+    - WeaponMechCombatShotgun
+    - WeaponMechCombatShotgunIncendiary
+    - WeaponMechCombatDisabler
+    - WeaponMechCombatFlashbangLauncher
+    - WeaponMechCombatMissileRack8
   - type: MaterialStorage
     whitelist:
       tags:
@@ -772,6 +822,8 @@
     - MothroachCube
     - MouseCube
     - CockroachCube
+    - PigCube # Floofstation
+    - ChickenCube # Floofstation
   - type: EmagLatheRecipes
     emagStaticRecipes:
     - AbominationCube
@@ -1001,6 +1053,15 @@
       - MedicalCyberneticEyes
       - MagazineLightRifleMarkOneEmpty
       - MagazineLightRifleMarkOne
+      - WeaponMechCombatImmolationGun
+      - WeaponMechCombatSolarisLaser
+      - WeaponMechCombatFiredartLaser
+      - WeaponMechCombatUltraRifle
+      - WeaponMechCombatShotgun
+      - WeaponMechCombatShotgunIncendiary
+      - WeaponMechCombatDisabler
+      - WeaponMechCombatFlashbangLauncher
+      - WeaponMechCombatMissileRack8
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1096,6 +1157,7 @@
       - HandLabeler
       - Defibrillator
       - HandheldHealthAnalyzer
+      - CandyBowl
       - ClothingHandsGlovesLatex
       - ClothingHandsGlovesNitrile
       - ClothingMaskSterile
@@ -1129,6 +1191,7 @@
       - ClothingEyesGlassesChemical
       - BoneGel # Shitmed Change
       - WhiteCane # Floof
+      - Cane # Floof
       - HandheldGPSBasic # Floof - port to EE
       - HandheldStationMap # Floof - port to EE
       - SterileBag # floof
@@ -1226,6 +1289,8 @@
       - HolofanProjector
       - HoloprojectorField
       - WelderExperimental
+      - WelderIndustrial # Floof
+      - WelderIndustrialAdvanced # Floof
       - PowerDrill # Can make two of the three advanced tools - jaws of life are too OP to give them away
       - WeaponParticleDecelerator
       - ClothingMaskWeldingGas
@@ -1286,6 +1351,7 @@
     - WeaponProtoKineticAccelerator
     - MiningDrill
     - HandHeldMassScanner
+    - ClothingShoesBootsJump # Floof station
     # Shuttle building
     - ShuttleConsoleCircuitboard
     - RadarConsoleCircuitboard
@@ -1691,13 +1757,13 @@
       # Floofstation section end
   - type: EmagLatheRecipes
     emagStaticRecipes:
-      - ClothingHeadHatCentcomcap
-      - ClothingHeadHatCentcom
-      - ClothingUniformJumpsuitCentcomAgent
-      - ClothingUniformJumpsuitCentcomFormal
-      - ClothingUniformJumpskirtCentcomFormalDress
-      - ClothingUniformJumpsuitCentcomOfficer
-      - ClothingUniformJumpsuitCentcomOfficial
+      # - ClothingHeadHatCentcomcap # Start - Floof - Remove CC recipes.
+      # - ClothingHeadHatCentcom
+      # - ClothingUniformJumpsuitCentcomAgent
+      # - ClothingUniformJumpsuitCentcomFormal
+      # - ClothingUniformJumpskirtCentcomFormalDress
+      # - ClothingUniformJumpsuitCentcomOfficer
+      # - ClothingUniformJumpsuitCentcomOfficial # End - Floof - Remove CC recipes.
       - ClothingHeadHatSyndieMAA
       - ClothingHeadHatSyndie
       - ClothingUniformJumpsuitOperative
@@ -1710,7 +1776,7 @@
       - ClothingUniformJumpsuitPyjamaSyndicatePink
       - ClothingHeadPyjamaSyndicateRed
       - ClothingUniformJumpsuitPyjamaSyndicateRed
-      - ClothingOuterWinterCentcom
+      # - ClothingOuterWinterCentcom # Floof - Remove CC recipes.
       - ClothingOuterWinterSyndie
       - ClothingOuterWinterSyndieCap
       # Floofstation - Department Socks, Armwarmers ect
@@ -1980,6 +2046,28 @@
       - PlushieGrumpyQuartermaster
       - PlushieHardcoreDj
       - PlushieHos
+      - PlushieSillyResomi
+      - PlushieRatLogisticsOfficer
+      - PlushieBunnyChiefMedicalOfficer
+      - PlushieAvianMysta
+      - PlushieBunnyStressRelief
+      - PlushieERTFox
+      - PlushieRescueFox
+      - PlushieArachneNobility
+      - PlushieEldritchCaptain
+      - PlushieLargeTailedFox
+      - PlushieTruePirateCaptain
+      - PlushieHawaiianShirtDoggo
+      - PlushieTiredCargoTechPlushie
+      - PlushieUnholyRed
+      - PlushieDetectiveKitty
+      - PlushieUrsineGal
+      - PlushieStealthyBird
+      - PlushieMedicalHarpy
+      - PlushieElectricIPC
+      - PlushieCuddlyIPC
+      - PlushieFluffyVulpkanin
+      - PlushieSecurityTank
       #Floof Plushies - End
   - type: EmagLatheRecipes
     emagStaticRecipes:

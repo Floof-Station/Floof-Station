@@ -96,6 +96,10 @@
       collection: VulpkaninGekker
     Yap: #Floof
       collection: VulpkaninYap
+    Yip:
+      collection: VulpkaninYips
+    Whine:
+      collection: VulpkaninWhines
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -120,8 +124,8 @@
       collection: VulpkaninSnarls
     Bark:
       collection: VulpkaninBarks
-    Whine:
-      collection: VulpkaninWhines
+    Whimper: # Floof - old whine renamed to whimper
+      collection: VulpkaninWhimpers
     Howl:
       collection: VulpkaninHowls
 
@@ -138,6 +142,10 @@
       collection: VulpkaninGekker
     Yap: #Floof
       collection: VulpkaninYap
+    Yip:
+      collection: VulpkaninYips
+    Whine:
+      collection: VulpkaninWhines
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -162,8 +170,8 @@
       collection: VulpkaninSnarls
     Bark:
       collection: VulpkaninBarks
-    Whine:
-      collection: VulpkaninWhines
+    Whimper: # Floof - old whine renamed to whimper
+      collection: VulpkaninWhimpers
     Howl:
       collection: VulpkaninHowls
 
@@ -348,6 +356,10 @@
       collection: VulpkaninGekker
     Yap: #Floof - M3739 - #937 - Foxes do be yappin a lot.
       collection: VulpkaninYap
+    Whimper: # Floof - old whine renamed to whimper
+      collection: VulpkaninWhimpers
+    Yip: # Floof
+      collection: VulpkaninYips
 #    Gasp: | Floof - M3739 - #937 - We do not have these... yet.
 #      collection: MaleGasp
 #    DefaultDeathgasp:
@@ -390,6 +402,10 @@
       collection: VulpkaninGekker
     Yap: #Floof - M3739 - #937 - Foxes do be yappin a lot.
       collection: VulpkaninYap
+    Whimper: # Floof - old whine renamed to whimper
+      collection: VulpkaninWhimpers
+    Yip: # Floof
+      collection: VulpkaninYips
 #    Gasp: | Floof - M3739 - #937 - We do not have these... yet.
 #      collection: FemaleGasp
 #    DefaultDeathgasp:

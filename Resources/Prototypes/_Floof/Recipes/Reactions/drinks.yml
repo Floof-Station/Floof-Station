@@ -281,6 +281,22 @@
     DragonsSeed: 4
 
 - type: reaction
+  id: Eggnog
+  reactants:
+    Cream:
+      amount: 1
+    Egg:
+      amount: 1
+    Milk:
+      amount: 1
+    Pomelustine:
+      amount: 1
+    Sugar:
+      amount: 1
+  products:
+    Eggnog: 5
+
+- type: reaction
   id: EmeraldSwinger
   requiredMixerCategories:
   - Shake
@@ -477,6 +493,18 @@
       amount: 1
   products:
     MarsBar: 3
+
+- type: reaction
+  id: MilkChoco
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Milk:
+      amount: 1
+    CocoaPowder:
+      amount: 1
+  products:
+    MilkChoco: 2
 
 - type: reaction
   id: MossBloodShot
@@ -752,6 +780,22 @@
       amount: 1
   products:
     SpecialSundae: 3
+
+- type: reaction
+  id: SyndicateEggnog
+  reactants:
+    Cream:
+      amount: 1
+    Egg:
+      amount: 1
+    Milk:
+      amount: 1
+    Rum:
+      amount: 1
+    Sugar:
+      amount: 1
+  products:
+    SyndicateEggnog: 5
 
 - type: reaction
   id: SyndicatesOverseer

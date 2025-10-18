@@ -42,7 +42,7 @@
   id: CableStack
   result: CableApcStack1
   category: Parts
-  completetime: 2
+  completetime: 0.2
   materials:
     Steel: 30
 
@@ -50,7 +50,7 @@
   id: CableMVStack
   result: CableMVStack1
   category: Parts
-  completetime: 2
+  completetime: 0.2
   materials:
     Steel: 30
 
@@ -58,7 +58,7 @@
   id: CableHVStack
   result: CableHVStack1
   category: Parts
-  completetime: 2
+  completetime: 0.2
   materials:
     Steel: 30
 

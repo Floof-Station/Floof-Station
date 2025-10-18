@@ -62,14 +62,15 @@ namespace Content.IntegrationTests.Tests
             "Hammurabi", //DeltaV
             "Lighthouse", //DeltaV
             "Submarine", //DeltaV
-            "Gax",
+            //"Gax", // Floof - Derotated, no current maintainer
             "Rad",
             "Meta",
             "Kettle", // Floof
+            //"talos", // Floof	- Derotated, no current maintainer
             "Train", // Floof
             "Fland", // Floof,
             "Amber", // Apparently, floof?
-            "Europa"
+            //"Europa" // Floof - Derotated, no current maintainer
         };
 
         /// <summary>

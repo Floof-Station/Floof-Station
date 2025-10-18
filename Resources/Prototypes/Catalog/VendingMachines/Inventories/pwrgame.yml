@@ -3,13 +3,14 @@
   startingInventory:
     DrinkPwrGameCan: 4
     DrinkEnergyDrinkCan: 4
+    DrinkBoykisserEnergy: 4 #Floofstation
     DrinkGrapeCan: 2
     DrinkRootBeerCan: 2
     DrinkIcedTeaCan: 2
     DrinkSolDryCan: 2
     DrinkLemonLimeCan: 2
     DrinkFourteenLokoCan: 2
-    DrinkNNNCan: 3 #Floofstation
+    DrinkNNNCan: 2 #Floofstation
   emaggedInventory:
     DrinkNukieCan: 2
     DrinkChangelingStingCan: 2

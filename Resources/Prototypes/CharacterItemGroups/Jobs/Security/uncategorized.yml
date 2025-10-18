@@ -20,6 +20,8 @@
       id: LoadoutClothingBeltSecurity
     - type: loadout
       id: LoadoutClothingBeltHolster
+    - type: loadout # Floof - M3739 - #1328
+      id: LoadoutSecurityBeltJudo
 
 #- type: characterItemGroup
 #  id: LoadoutSecurityEars
@@ -50,14 +52,14 @@
       id: LoadoutSpeedLoaderMagnumRubber
     - type: loadout
       id: LoadoutSpeedLoaderMagnumRubberSpare
-    - type: loadout
-      id: LoadoutMagazineMagnum
-    - type: loadout
-      id: LoadoutMagazineMagnumRubber
-    - type: loadout
-      id: LoadoutMagazineMagnumSpare
-    - type: loadout
-      id: LoadoutMagazineMagnumRubberSpare
+    # - type: loadout
+    #  id: LoadoutMagazineMagnum
+    # - type: loadout
+    #  id: LoadoutMagazineMagnumRubber
+    # - type: loadout
+    #  id: LoadoutMagazineMagnumSpare
+    # - type: loadout
+    #  id: LoadoutMagazineMagnumRubberSpare
     - type: loadout
       id: LoadoutSpeedLoaderRifleHeavy
     - type: loadout
@@ -85,10 +87,10 @@
       id: LoadoutSecurityRevolverDeckard
     - type: loadout
       id: LoadoutSecurityRevolverDeckardNonLethal
-    # - type: loadout # Floof - N1984 is too much.
-    #   id: LoadoutSecurityPistolN1984
-    # - type: loadout
-    #   id: LoadoutSecurityPistolN1984NonLethal
+   # - type: loadout
+   #   id: LoadoutSecurityPistolN1984
+   # - type: loadout
+   #   id: LoadoutSecurityPistolN1984NonLethal
     - type: loadout
       id: LoadoutSecurityPistolViper
     - type: loadout
@@ -127,6 +129,16 @@
       id: LoadoutSecurityArgenti
     - type: loadout
       id: LoadoutSecurityArgentiNonLethal
+    - type: loadout
+      id: LoadoutSecurityEquipmentEnergySword
+    - type: loadout # Floofstation - A little special something for the weebs
+      id: LoadoutSecurityKatanaSheath
+    - type: loadout
+      id: LoadoutSecurityDisablerSMG
+    - type: loadout # Floofstation - Wardens need a little love
+      id: LoadoutSecurityWeaponEnergyShotgun
+    - type: loadout # Floofstation - BSO Energy Revolver
+      id: LoadoutSecurityEnergyRevolver
 
 - type: characterItemGroup
   id: LoadoutSecurityEyes

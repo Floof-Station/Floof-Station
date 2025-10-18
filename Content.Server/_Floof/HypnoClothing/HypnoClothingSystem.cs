@@ -1,6 +1,6 @@
 using Content.Shared.Inventory.Events;
 using Content.Shared.Clothing.Components;
-using Content.Shared.Floofstation.Hypno;
+using Content.Shared._Floof.Hypno;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 using Content.Server.Consent;

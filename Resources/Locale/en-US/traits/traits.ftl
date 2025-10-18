@@ -82,6 +82,12 @@ trait-description-Stutter =
 trait-name-Southern = Southern Drawl
 trait-description-Southern = You have a different way of speakin'.
 
+trait-name-BoganAccent = Australian Accent
+trait-description-BoganAccent = You have accent from Australia district on Sol.
+
+trait-name-MedievalAccent = Medieval Accent
+trait-description-MedievalAccent = You doth speakth in a peculiar manner.
+
 trait-name-Snoring = Snoring
 trait-description-Snoring = You tend to snore loudly while sleeping.
 
@@ -181,9 +187,11 @@ trait-description-Feeble =
 
 trait-name-MartialArtist = Martial Artist
 trait-description-MartialArtist =
-    You have received formal training in unarmed combat, whether with Fists, Feet, or Claws.
-    Your unarmed melee attacks have a small range increase, and deal 50% more damage.
-    This does not apply to any form of armed melee, only the weapons you were naturally born with.
+    You have received formal training in unarmed combat, whether with fists, claws, feet, or teeth.
+    Your unarmed melee attack is now considered a single-target [color=orange]Power Attack[/color], requiring less precision.
+    Additionally, your unarmed melee attacks deal [color=yellow]20%[/color] more damage, attack [color=yellow]25%[/color] faster, and have [color=yellow]10%[/color] increased range.
+    This has no effect on damage dealt with any form of armed melee.
+    The [color=#9FED58]Boxer[/color], [color=#9FED58]Martial Artist[/color], and [color=#9FED58]Gladiator[/color] jobs start with this trait by default.
 
 trait-name-Vigor = Vigor
 trait-description-Vigor =
@@ -434,10 +442,15 @@ trait-description-PlateletFactories =
     to keep the user alive, even in the face of advanced trauma, all the way up until - but not including - death.
     Your natural healing is no longer capped, and will now slowly heal any damage type. This includes more exotic injuries like radiation exposure, or cancer.
 
-trait-name-DermalArmor = Dermal Armor
+trait-name-DermalArmor = Subdermal Armor
 trait-description-DermalArmor =
-    Your skin has been replaced with a flexible, yet sturdy, hard-polymer shell wrapped in a layer of synthetic flesh.
-    This augmentation provides an innate 10% resistance to physical damage.
+    Your skin contains an array of nanoweave layers embedded beneath the surface, engineered as a cost-effective solution for integrated protection that maintains full flexibility.
+    This augmentation provides 1.5 points of flat reduction from all physical damage.
+
+trait-name-HeavyDermalArmor = Heavy Subdermal Armor
+trait-description-HeavyDermalArmor =
+    Your skin contains an advanced composite lattice embedded beneath the surface, engineered to reduce physical trauma to the body without compromising flexibility.
+    This augmentation provides 3 points of flat reduction from all physical damage.
 
 trait-name-CyberEyes = Cyber-Eyes Basic System
 trait-description-CyberEyes =

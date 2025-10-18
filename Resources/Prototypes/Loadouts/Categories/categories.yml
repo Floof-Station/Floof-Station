@@ -55,6 +55,7 @@
     - JobsCommandAdminAssistant
     - JobsCommandBlueshieldOfficer
     - JobsCommandNanorep
+    - JobsCommandMagistrate
 
 - type: loadoutCategory
   id: JobsCommandAUncategorized
@@ -73,6 +74,9 @@
 
 - type: loadoutCategory
   id: JobsCommandNanorep
+
+- type: loadoutCategory
+  id: JobsCommandMagistrate
 
 # Engineering
 - type: loadoutCategory
@@ -215,6 +219,7 @@
   id: JobsSecurity
   subCategories:
     - JobsSecurityAUncategorized
+    - JobsSecurityWeapons
     - JobsSecurityCadet
     - JobsSecurityCorpsman
     - JobsSecurityDetective
@@ -226,6 +231,9 @@
 
 - type: loadoutCategory
   id: JobsSecurityAUncategorized
+
+- type: loadoutCategory
+  id: JobsSecurityWeapons
 
 - type: loadoutCategory
   id: JobsSecurityCadet

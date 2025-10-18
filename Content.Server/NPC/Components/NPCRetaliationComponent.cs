@@ -26,5 +26,5 @@ public sealed partial class NPCRetaliationComponent : Component
     ///     Whether this NPC will retaliate against a "Friendly" NPC.
     /// </summary>
     [DataField]
-    public bool RetaliateFriendlies;
+    public bool RetaliateFriendlies = true; // Floofstation - changed this to default to true so animal friends can't abuse it
 }

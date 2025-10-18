@@ -2,7 +2,7 @@
   id: BullishHorns
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Rodentia] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:
@@ -73,7 +73,7 @@
   id: GoatHorns
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Rodentia] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:

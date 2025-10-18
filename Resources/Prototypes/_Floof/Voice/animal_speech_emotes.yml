@@ -1,0 +1,41 @@
+- type: emoteSounds
+  id: Fox
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: VulpkaninScreams
+    Gekker: #Floof
+      collection: VulpkaninGekker
+    Yap: #Floof
+      collection: VulpkaninYap
+    Yip:
+      collection: VulpkaninYips
+    Whine:
+      collection: VulpkaninWhines
+    Growl:
+      collection: VulpkaninGrowls
+    Snarl:
+      collection: VulpkaninSnarls
+    Bark:
+      collection: VulpkaninBarks # Foxes do in fact bark.
+
+- type: emoteSounds
+  id: Dog
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: VulpkaninScreams
+    Yap: #Floof
+      collection: VulpkaninYap
+    Growl:
+      collection: VulpkaninGrowls
+    Snarl:
+      collection: VulpkaninSnarls
+    Bark:
+      collection: VulpkaninBarks
+    Whimper: # Floof - old whine renamed to whimper
+      collection: VulpkaninWhimpers
+    Howl:
+      collection: VulpkaninHowls

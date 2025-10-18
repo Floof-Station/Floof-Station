@@ -8,7 +8,8 @@
     DrinkSolDryCan: 2
     DrinkLemonLimeCan: 2
     DrinkFourteenLokoCan: 2
-    DrinkNNNCan: 3 #Floofstation
+    DrinkNNNCan: 2 #Floofstation
+    DrinkBoykisserEnergy: 2 #Floofstation
   emaggedInventory:
     DrinkNukieCan: 2
     DrinkChangelingStingCan: 2

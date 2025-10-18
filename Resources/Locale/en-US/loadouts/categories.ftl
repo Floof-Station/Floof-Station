@@ -20,6 +20,7 @@ loadout-category-JobsCommandHeadOfPersonnel = Head of Personnel
 loadout-category-JobsCommandAdminAssistant = Administrative Assistant
 loadout-category-JobsCommandBlueshieldOfficer = Blueshield Officer
 loadout-category-JobsCommandNanorep = Nanotrasen Representative
+loadout-category-JobsCommandMagistrate = Magistrate
 
 # Engineering
 loadout-category-JobsEngineering = Engineering
@@ -67,6 +68,7 @@ loadout-category-JobsMedicalSeniorPhysician = Senior Physician
 # Security
 loadout-category-JobsSecurity = Security
 loadout-category-JobsSecurityAUncategorized = All Security
+loadout-category-JobsSecurityWeapons = Service Weapons 
 loadout-category-JobsSecurityCadet = Cadet
 loadout-category-JobsSecurityCorpsman = Corpsman
 loadout-category-JobsSecurityDetective = Detective

@@ -183,6 +183,9 @@ public abstract partial class InventorySystem
             return false;
         }
 
+        // Floofstation - do contact interaction just in case it's called from loadouts or roundstart spawn
+        _interactionSystem.DoContactInteraction(actor, itemUid);
+
         if (!_containerSystem.Insert(itemUid, slotContainer))
         {
             if(!silent && _gameTiming.IsFirstTimePredicted)

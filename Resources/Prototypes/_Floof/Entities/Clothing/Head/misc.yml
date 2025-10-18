@@ -98,3 +98,14 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHatChef
+  id: ClothingHeadHatSodaJerk
+  name: soda jerk hat
+  description: A old world styled hat commonly used by purveyors of Ice Cream and Soda Drinks.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Head/sodajerkhat.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Head/sodajerkhat.rsi

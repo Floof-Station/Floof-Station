@@ -2,7 +2,7 @@
 
 - type: loadout
   id: LoadoutMagazineSpecialRubber
-  category: JobsSecurityAUncategorized
+  category: JobsSecurityWeapons
   cost: 2
   requirements:
     - !type:CharacterDepartmentTimeRequirement
@@ -18,7 +18,7 @@
 
 - type: loadout
   id: LoadoutSpeedLoaderSpecialRubberSpare
-  category: JobsSecurityAUncategorized
+  category: JobsSecurityWeapons
   cost: 4
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -31,7 +31,7 @@
 
 - type: loadout
   id: LoadoutSpeedLoaderSpecial
-  category: JobsSecurityAUncategorized
+  category: JobsSecurityWeapons
   cost: 2
   requirements:
     - !type:CharacterDepartmentTimeRequirement
@@ -47,7 +47,7 @@
 
 - type: loadout
   id: LoadoutSpeedLoaderSpecialSpare
-  category: JobsSecurityAUncategorized
+  category: JobsSecurityWeapons
   cost: 4
   requirements:
     - !type:CharacterDepartmentTimeRequirement
@@ -64,6 +64,19 @@
 # Backpack
 
 # Belt
+
+- type: loadout
+  id: LoadoutSecurityBeltJudo
+  category: JobsSecurityAUncategorized
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityBelt
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+  - ClothingBeltCorporateJudo
 
 # Ears
 

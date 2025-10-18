@@ -149,6 +149,14 @@
         - AddictionNicotine
 
 - type: loadout
+  id: LoadoutItemCane
+  category: Items
+  cost: 0
+  canBeHeirloom: true
+  items:
+  - Cane
+
+- type: loadout
   id: LoadoutItemCigarBluespace
   category: Items
   cost: 5

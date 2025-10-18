@@ -9,6 +9,9 @@ list-verbs-command-invalid-args = listverbs takes 2 arguments.
 list-verbs-command-invalid-player-uid = Player uid could not be parsed, or "self" was not passed.
 list-verbs-command-invalid-target-uid = Target uid could not be parsed.
 
+# Floof: allow `listverbs self` as normal player.
+list-verbs-command-no-perms = Must be admin to list verbs as UID other than "self".
+
 list-verbs-command-invalid-player-entity = Player uid given does not correspond to a valid entity.
 list-verbs-command-invalid-target-entity = Target uid given does not correspond to a valid entity.
 

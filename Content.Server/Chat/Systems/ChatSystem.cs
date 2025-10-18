@@ -1010,8 +1010,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             newMessage = SanitizeMessageCapital(newMessage);
         if (capitalizeTheWordI)
             newMessage = SanitizeMessageCapitalizeTheWordI(newMessage, "i");
-        if (numbersAsWords) // Floof
-            newMessage = SanitizeMessageNumbersAsWords(newMessage);
         if (punctuate)
             newMessage = SanitizeMessagePeriod(newMessage);
 

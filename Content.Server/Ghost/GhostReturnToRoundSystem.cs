@@ -56,7 +56,14 @@ public sealed class GhostReturnToRoundSystem : EntitySystem
             return;
         }
 
-        var deathTime = EnsureComp<GhostComponent>(uid).TimeOfDeath;
+        // Vulpstation - who on EE let this exploit through?
+        if (!TryComp<GhostComponent>(uid, out var ghost))
+        {
+            message = wrappedMessage = "sus";
+            return;
+        }
+
+        var deathTime = ghost.TimeOfDeath;
         var timeUntilRespawn = _cfg.GetCVar(CCVars.GhostRespawnTime);
         var timePast = (_gameTiming.CurTime - deathTime).TotalMinutes;
         if (timePast >= timeUntilRespawn)

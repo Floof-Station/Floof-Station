@@ -16,3 +16,26 @@
       - id: Multitool
       - id: MaterialBiomass
         amount: 3
+
+- type: entity # Floofstation - To be Mapped to CC Medical
+  id: CrateCentCommCryo
+  parent: CrateChemistrySecure
+  name: CentComm Cryogenics Chemicals crate
+  description: Contains a suite of cryogenic medications to cure almost any injury.
+  components:
+    - type: StorageFill
+      contents:
+        - id: JugCryoxadone
+          amount: 1
+        - id: JugDoxarubixadone
+          amount: 1
+        - id: JugNecrosol
+          amount: 1
+        - id: JugAloxadone
+          amount: 1
+        - id: JugTraumoxadone
+          amount: 1
+        - id: JugStelloxadone
+          amount: 1
+        - id: JugOpporozidone
+          amount: 1

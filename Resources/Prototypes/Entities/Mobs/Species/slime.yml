@@ -21,6 +21,13 @@
     maxItemSize: Large
     storageInsertSound:
       path: /Audio/Voice/Slime/slime_squish.ogg
+    storageRemoveSound: # Floof: add remove sound too
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: StorageBlockedByClothing # Floof
+    slots:
+    - INNERCLOTHING
+    allowedTags:
+    - ShirtlessClothing
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -132,6 +139,9 @@
   - type: Tag #floof
     tags:
     - SlimeEmotes
+    - CanPilot # Floof - M3739 - 1307 | Fix Tags
+    - FootstepSound
+    - DoorBumpOpener
 
 - type: entity
   parent: MobHumanDummy

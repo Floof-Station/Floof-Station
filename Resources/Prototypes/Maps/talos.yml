@@ -1,0 +1,84 @@
+#- type: gameMap
+#  id: talos # For some GOD KNOWS WHY unknown reason, the map AND the prototype file both dont like the word "Talos" being capitalized, I tried to make it match up with the other maps but it just doesnt fucking work????
+#  mapName: 'Talos' #Do not change talos to uppercase, it will break everything.
+#  mapPath: /Maps/Floof/Talos.yml  # Floofstation
+#  minPlayers: 35
+#  maxPlayers: 70
+#  stations:
+#    talos:
+#      stationProto: StandardNanotrasenStation
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: '{0} Talos {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+#        - type: StationEmergencyShuttle
+#          emergencyShuttlePath: /Maps/Shuttles/DeltaV/NTES_UCLB.yml
+#        - type: StationJobs
+#          overflowJobs:
+#            - Passenger
+#            #- Anomaly
+#          availableJobs:
+#            #command
+#            Captain: [ 1, 1 ]
+#            AdministrativeAssistant: [ 1, 1 ] #Floof 
+#            #BlueshieldOfficer: [ 1, 1] #Floof - not yer
+#            #NanotrasenRepresentative: [ 1, 1 ] #Floof. nuh uh
+#            #security
+#            HeadOfSecurity: [ 1, 1 ]
+#            Brigmedic: [ 1, 1 ]
+#            Warden: [ 1, 1 ]
+#            SecurityOfficer: [ 4, 6 ]
+#            Detective: [ 1, 1 ]
+#            SecurityCadet: [ 2, 2 ]
+#            Prisoner: [ 3, 4 ]
+#            PrisonGuard: [ 1, 2 ]
+#            SeniorOfficer: [ 1, 1 ]
+#            #justice added by FloofStation
+#            ChiefJustice: [ 1, 1 ] #FloofStation
+#            Clerk: [ 1, 1 ] #FloofStation
+#            Lawyer: [ 2, 2 ] #FloofStation
+#            Prosecutor: [ 1, 1 ] #FloofStation
+#            #engineering
+#            ChiefEngineer: [ 1, 1 ]
+#            AtmosphericTechnician: [ 3, 3 ]
+#            StationEngineer: [ 3, 3 ]
+#            TechnicalAssistant: [ 2, 2 ]
+#            SeniorEngineer: [ 1, 1 ]
+#            #medical
+#            ChiefMedicalOfficer: [ 1, 1 ]
+#            Chemist: [ 2, 2 ]
+#            MedicalDoctor: [ 2, 2 ]
+#            Paramedic: [ 1, 1 ]
+#            MedicalBorg: [ 1, 2 ]
+#            MedicalIntern: [ 2, 2 ]
+#            Psychologist: [ 1, 1 ]
+#            SeniorPhysician: [ 1, 1 ]
+#            #science
+#            ResearchDirector: [ 1, 1 ]
+#            Scientist: [ 3, 3 ]
+#            ResearchAssistant: [ 2, 2 ]
+#            Chaplain: [ 1, 1 ]
+#            Librarian: [ 1, 1 ]
+#            ForensicMantis: [ 1, 1 ]
+#            Roboticist: [ 1, 2 ]
+#            SeniorResearcher: [ 1, 1 ]
+#            #service
+#            HeadOfPersonnel: [ 1, 1 ]
+#            Bartender: [ 2, 2 ]
+#            Botanist: [ 3, 3 ]
+#            Chef: [ 2, 2 ]
+#            Janitor: [ 2, 2 ]
+#            ServiceWorker: [ 2, 2 ]
+#            Clown: [ 1, 1 ]
+#            Mime: [ 1, 1 ]
+#            Boxer: [ 1, 1 ] 
+#            #silicon
+#            #StationAi: [ 1, 1 ]
+#            Borg: [ 3, 4 ]
+#            #Etc
+#            Passenger: [ -1 , -1 ]
+#            Anomaly: [ 2 , 2 ]
+#
+#

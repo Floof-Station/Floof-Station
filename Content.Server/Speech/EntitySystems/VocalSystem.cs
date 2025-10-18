@@ -1,3 +1,4 @@
+using Content.Server._Vulp.Speech.Accents.Mumble;
 using Content.Server.Actions;
 using Content.Server.Chat.Systems;
 using Content.Server.Speech.Components;
@@ -61,19 +62,24 @@ public sealed class VocalSystem : EntitySystem
     {
         if (args.Handled
             || !args.Emote.Category.HasFlag(EmoteCategory.Vocal)
-            || !_actionBlocker.CanSpeak(uid)
-            || TryComp<ReplacementAccentComponent>(uid, out var replacement) && replacement.Accent == MuzzleAccent) // This is not ideal, but it works.
+            || !_actionBlocker.CanSpeak(uid)) // Vulpstation - removed the muzzle check
             return;
 
         // snowflake case for wilhelm scream easter egg
-        if (args.Emote.ID == component.ScreamId)
-        {
-            args.Handled = TryPlayScreamSound(uid, component);
-            return;
-        }
+        // Vulpstation - this is honestly just annoying.
+        // if (args.Emote.ID == component.ScreamId)
+        // {
+        //     args.Handled = TryPlayScreamSound(uid, component);
+        //     return;
+        // }
+
+        // Vulpstation
+        var volume = TryComp<MumbleAccentComponent>(uid, out var mumble)
+            ? mumble.AccentPrototype?.EmoteVolume ?? 0f
+            : 0f;
 
         // just play regular sound based on emote proto
-        args.Handled = _chat.TryPlayEmoteSound(uid, component.EmoteSounds, args.Emote);
+        args.Handled = _chat.TryPlayEmoteSound(uid, component.EmoteSounds, args.Emote.ID, volume); // Vulpstation - added volume control
     }
 
     private void OnScreamAction(EntityUid uid, VocalComponent component, ScreamActionEvent args)

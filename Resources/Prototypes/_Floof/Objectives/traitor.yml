@@ -11,3 +11,13 @@
   - type: PickRandomHead
   - type: TeachLessonCondition
 
+- type: entity # Warden Gloves Steal Objective
+  categories: [HideSpawnMenu]
+  parent: BaseTraitorStealObjective
+  id: WardenGlovesStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: ClothingHandsGlovesKravMaga
+    owner: job-name-warden
+  - type: Objective
+    difficulty: 1
