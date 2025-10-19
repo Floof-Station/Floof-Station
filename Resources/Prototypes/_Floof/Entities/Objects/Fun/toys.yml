@@ -1250,6 +1250,67 @@
     tags:
      - Fleshlight
 
+- type: entity
+  parent: PlushieHuman
+  id: PlushieHarmlessCaptain
+  name: Harmless captain plushie
+  description: Premium nukie bait - smells like sweetpeas in bloom.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: harmless
+  - type: UseDelay
+    delay: 2.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Handling/disk_drop.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Handling/disk_drop.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Animals/fox8.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Animals/fox8.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieBrashKitsune
+  name: Brash kitsune plushie
+  description: A soft plushie of a pink-haired kitsune. Even looking at it fills you with mischief and the urge to say snarky comments. Smells faintly of cigarette smoke, but it is flooded out by the aroma of lavender.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: brash
+  - type: UseDelay
+    delay: 2.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DV/Voice/Kitsune/fox_scream1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_DV/Voice/Kitsune/fox_scream1.ogg
+      params:
+        variation: 0.05
+        volume: 4
 
 # Banned individual
 # - type: entity

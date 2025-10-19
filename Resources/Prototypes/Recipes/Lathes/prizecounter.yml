@@ -944,6 +944,22 @@
   materials:
     PrizeTicket: 50
 
+- type: latheRecipe
+  id: PlushieBrashKitsune
+  result: PlushieBrashKitsune
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieHarmlessCaptain
+  result: PlushieHarmlessCaptain
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
 # HypnoTemp Plushies - Start
 - type: latheRecipe
   id: PlushieHypnoTempCap

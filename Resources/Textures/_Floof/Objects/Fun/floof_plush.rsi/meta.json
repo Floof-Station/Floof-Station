@@ -119,6 +119,12 @@
             "name": "tank"
         },
         {
+            "name": "brash"
+        },
+        {
+            "name": "harmless"
+        },
+        {
             "name": "CMObun"
         }
     ]

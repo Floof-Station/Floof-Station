@@ -491,7 +491,13 @@
         orGroup: Prize
       - id: PlushieSecurityTank
         prob: 0.50
-        orGroup: Prize        
+        orGroup: Prize      
+      - id: PlushieBrashKitsune
+        prob: 0.50
+        orGroup: Prize    
+      - id: PlushieHarmlessCaptain
+        prob: 0.50
+        orGroup: Prize            
       # Floof - End
       # Rare
       - id: PlushieAbductorAgent
