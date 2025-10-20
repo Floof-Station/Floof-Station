@@ -5,6 +5,7 @@
   parent: MobHellspawn
   id: MobHellspawnArtifact
   description: An unstoppable force of carnage.
+  suffix: Artifact spawn
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed: 1
