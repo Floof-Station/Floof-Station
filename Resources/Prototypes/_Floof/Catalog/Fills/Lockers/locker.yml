@@ -109,3 +109,67 @@
     - id: ClothingOuterHardsuitSurgeonGeneral
     - id: DrinkBloodGlass
       amount: 2
+
+#Security Technician
+
+- type: entity
+  id: LockerSecurityTechnicianFilled
+  suffix: Filled
+  parent: LockerSecurityTechnician
+  components:
+  - type: StorageFill
+    contents:
+    - id: SheetSteel
+    - id: SheetSteel10
+    - id: SheetGlass10
+    - id: ClothingEyesHudDiagnostic
+    - id: ClothingBeltUtilityEngineering
+    - id: Flash
+      amount: 2
+    - id: PositronicBrain
+    - id: BorgModuleTool
+    - id: ClothingHeadHelmetSecTech
+    - id: ClothingHandsGlovesCombat
+    - id: ClothingOuterVestHazard
+    - id: ClothingUniformJumpsuitSec
+    - id: ClothingUniformJumpskirtSec
+    - id: CableHVStack
+    - id: CableApcStack
+    - id: CableMVStack
+    - id: ClothingShoesBootsCombatFilled
+    - id: PowerCellHigh
+
+# Security Technician with Hardsuit
+
+- type: entity
+  id: LockerSecurityTechnicianFilledHardsuit
+  suffix: Filled, Hardsuit
+  parent: LockerSecurityTechnician
+  components:
+  - type: StorageFill
+    contents:
+    - id: SheetSteel
+    - id: SheetSteel10
+    - id: SheetGlass10
+    - id: ClothingEyesHudDiagnostic
+    - id: ClothingBeltUtilityEngineering
+    - id: Flash
+      amount: 2
+    - id: PositronicBrain
+    - id: BorgModuleTool
+    - id: ClothingHeadHelmetSecTech
+    - id: ClothingHandsGlovesCombat
+    - id: ClothingOuterVestHazard
+    - id: ClothingUniformJumpsuitSec
+    - id: ClothingUniformJumpskirtSec
+    - id: CableHVStack
+    - id: CableApcStack
+    - id: CableMVStack
+    - id: ClothingShoesBootsCombatFilled
+    - id: PowerCellHigh
+    - id: ClothingOuterHardsuitSecTech
+    - id: ClothingMaskGasSecurity
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
+    - id: WaterVaporTankFilled
+    - id: ClothingShoesBootsSecurityMagboots

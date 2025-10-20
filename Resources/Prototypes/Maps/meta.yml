@@ -61,6 +61,7 @@
           Prisoner: [ 2, 3 ]
           PrisonGuard: [ 1, 1 ]
           SeniorOfficer: [ 1, 1 ]
+          SecurityTechnician: [ 1, 1 ]
           #supply
           Quartermaster: [ 1, 1 ]
           SalvageSpecialist: [ 3, 3 ]

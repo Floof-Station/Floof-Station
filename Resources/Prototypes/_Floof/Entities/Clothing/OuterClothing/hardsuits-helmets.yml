@@ -1,0 +1,26 @@
+#Security Technician Hardsuit Helmet
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitSecTech
+  name: security technician hardsuit helmet
+  description: The sturdy helmet of the security technician's hardsuit. Specialized lenses help prevent eye damage from welding arcs.
+  components:
+  - type: BreathMask
+  - type: EyeProtection
+  - type: Sprite
+    sprite: _Floof/Clothing/Head/Hardsuits/sectech.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Head/Hardsuits/sectech.rsi
+  - type: PointLight
+    color: "#ffdbad"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+        Radiation: 0.90
+  - type: PressureProtection
+    highPressureMultiplier: 0.7
+    lowPressureMultiplier: 1000

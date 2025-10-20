@@ -1,0 +1,10 @@
+- type: construction
+  name: diasec hud
+  id: ClothingEyesHudDiaSec
+  graph: HudDiaSec
+  startNode: start
+  targetNode: diasecHud
+  category: construction-category-clothing
+  description: Two huds joined by arms
+  icon: { sprite: _Floof/Clothing/Eyes/Hud/diasec.rsi, state: icon }
+  objectType: Item

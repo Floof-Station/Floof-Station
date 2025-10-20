@@ -52,6 +52,7 @@
             SecurityCadet: [ 2, 4 ]
             Warden: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
+            SecurityTechnician: [ 1, 1 ]
           #service
             Bartender: [ 2, 2 ]
             Botanist: [ 2, 3 ]

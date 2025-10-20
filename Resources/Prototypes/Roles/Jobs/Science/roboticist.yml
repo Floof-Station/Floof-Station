@@ -13,6 +13,7 @@
   access:
   - Research
   - Maintenance
+  - Robotics # Floof
   special:
   - !type:AddComponentSpecial
     components:

@@ -1,0 +1,45 @@
+- type: job
+  id: SecurityTechnician
+  name: job-name-sectech
+  description: job-description-sectech
+  playTimeTracker: JobSecurityTechnician
+  setPreference: true
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Engineering
+      min: 36000 # 8 hrs
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobRoboticist
+      min: 18000 # 4 hrs
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobWarden
+      min: 18000 # 4 hrs
+  startingGear: SecTechGear
+  icon: "JobIconSecurityTechnician"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Maintenance
+  - External
+  - SecTech
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SecTechGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSec
+    back: ClothingBackpackSecurity
+    shoes: ClothingShoesBootsCombatFilled
+    belt: ClothingBeltUtilityEngineering
+    head: ClothingHeadHelmetSecTech
+    eyes: ClothingEyesHudDiagnostic
+    outerClothing: ClothingOuterHardsuitSecTech
+    id: SecurityTechnicianPDA
+    ears: ClothingHeadsetSecTech
+    gloves: ClothingHandsGlovesCombat
+  innerClothingSkirt: ClothingUniformJumpskirtSec
+  satchel: ClothingBackpackSatchelSecurity
+  duffelbag: ClothingBackpackDuffelSecurity

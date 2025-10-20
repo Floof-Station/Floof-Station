@@ -113,6 +113,7 @@
   - Warden
   - PrisonGuard # Nyanotrasen - PrisonGuard, see Resources/Prototypes/Nyanotrasen/Roles/Jobs/Security/prisonguard.yml
   - Brigmedic # DeltaV - Brigmedic, see Resources/Prototypes/DeltaV/Roles/Jobs/Security/brigmedic.yml
+  - SecurityTechnician # Floof - Recources/Prototypes/_Floof/Roles/Jobs/Security/security_technician.yml
 
 - type: department
   id: Epistemics # DeltaV - Epistemics Department replacing Science

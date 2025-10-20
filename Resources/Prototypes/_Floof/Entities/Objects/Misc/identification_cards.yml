@@ -13,3 +13,19 @@
     - state: senior
   - type: PresetIdCard
     job: InventorySpecialist
+
+- type: entity
+  parent: IDCardStandard
+  id: SecurityTechnicianIDCard
+  name: security technician ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: department
+      color: "#CB0000"
+    - state: subdepartment
+      color: "#F39F27"
+    - state: stationengineer
+  - type: PresetIdCard
+    job: SecurityTechnician

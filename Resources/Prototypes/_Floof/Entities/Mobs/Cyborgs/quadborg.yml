@@ -46,7 +46,7 @@
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
-    access: [["Security"], ["Armory"], ["Command"]]
+    access: [["SecTech"], ["Armory"], ["Command"]]
   - type: BorgTransponder
     sprite:
       sprite: _Floof/Mobs/Silicon/quad.rsi

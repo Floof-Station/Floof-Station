@@ -7,3 +7,19 @@
   components:
   - type: AccessReader
     access: [["Freelancer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSecTech
+  suffix: Security Technician, Locked
+  components:
+  - type: AccessReader
+    access: [["SecTech"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsRobotics
+  suffix: Security Technician, Locked
+  components:
+  - type: AccessReader
+    access: [["Robotics"]]

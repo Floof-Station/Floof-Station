@@ -58,6 +58,7 @@
           Prisoner: [ 3, 4 ]
           PrisonGuard: [ 1, 2 ]
           SeniorOfficer: [ 1, 1 ]
+          SecurityTechnician: [ 1, 1 ]
           #justice added by FloofStation
           ChiefJustice: [ 1, 1 ] #FloofStation
           Clerk: [ 1, 1 ] #FloofStation

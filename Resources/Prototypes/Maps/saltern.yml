@@ -71,6 +71,7 @@
             Prisoner: [ 1, 5 ]
             PrisonGuard: [ 1, 2 ] # someday a 2:1 ratio of guard:prisoner is preferred
             SeniorOfficer: [ 1, 1 ]
+            SecurityTechnician: [ 1, 1 ]
             #supply
             Quartermaster: [ 1, 1 ]
             InventorySpecialist: [ 1, 1 ] #FloofStation

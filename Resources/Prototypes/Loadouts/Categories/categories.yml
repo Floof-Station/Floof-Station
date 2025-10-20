@@ -226,6 +226,7 @@
     - JobsSecurityHeadOfSecurity
     - JobsSecuritySecurityOfficer
     - JobsSecuritySeniorOfficer
+    - JobsSecurityTechnician # Floof - Security Technician
     - JobsSecurityWarden
     - JobsSecurityPrisonGuard # Floof - Prison Guard
 
@@ -252,6 +253,9 @@
 
 - type: loadoutCategory
   id: JobsSecuritySeniorOfficer
+
+- type: loadoutCategory
+  id: JobsSecurityTechnician # Floof - Security Technician
 
 - type: loadoutCategory
   id: JobsSecurityWarden

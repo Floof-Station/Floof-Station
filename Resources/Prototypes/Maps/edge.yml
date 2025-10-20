@@ -69,6 +69,7 @@
             Brigmedic: [ 1, 1 ]
             Prisoner: [ 2, 3 ]
             SeniorOfficer: [ 1, 1 ]
+            SecurityTechnician: [ 1, 1 ]
           #supply
             Quartermaster: [ 1, 1 ]
             InventorySpecialist: [ 1, 1 ] #FloofStation

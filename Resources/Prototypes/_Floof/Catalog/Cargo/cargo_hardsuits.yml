@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: SecurityAraaTacsuit
+  icon:
+    sprite: _Floof/Clothing/OuterClothing/Hardsuits/sectech.rsi
+    state: icon
+  product: CrateSecurityAraaTacsuit
+  cost: 5500
+  category: cargoproduct-category-name-hardsuits
+  group: market

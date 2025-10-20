@@ -1,0 +1,17 @@
+- type: entity
+  parent: [ClothingEyesBase, ShowSecurityIcons]
+  id: ClothingEyesHudDiaSec
+  name: diasec hud
+  description: An eye display that looks like a mixture of diagnostic and security huds.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Eyes/Hud/diasec.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Eyes/Hud/diasec.rsi
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+  - type: Construction
+    graph: HudDiaSec
+    node: diasecHud

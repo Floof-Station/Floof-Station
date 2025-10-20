@@ -1,0 +1,96 @@
+# Security Technician
+# Backpacks
+
+# Belt
+
+- type: loadout
+  id: LoadoutSecurityTechnicianUtilityBelt
+  category: JobsSecurityTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityTechnicianBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - SecurityTechnician
+  items:
+    - ClothingBeltUtilityEngineering
+
+# Ears
+
+# Equipment
+
+# Eyes
+
+- type: loadout
+  id: LoadoutSecurityTechnicianDiaHUD
+  category: JobsSecurityTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityTechnicianEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - SecurityTechnician
+  items:
+    - ClothingEyesHudDiagnostic
+
+# Gloves
+
+- type: loadout
+  id: LoadoutSecurityTechnicianCombatGloves
+  category: JobsSecurityTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityTechnicianGloves
+    - !type:CharacterJobRequirement
+      jobs:
+        - SecurityTechnician
+  items:
+    - ClothingHandsGlovesCombat
+
+# Head
+
+- type: loadout
+  id: LoadoutSecurityTechnicianHelmet
+  category: JobsSecurityTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityTechnicianHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - SecurityTechnician
+  items:
+    - ClothingHeadHelmetSecTech
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+
+- type: loadout
+  id: LoadoutSecurityTechnicianHardsuit
+  category: JobsSecurityTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityTechnicianOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - SecurityTechnician
+  items:
+    - ClothingOuterHardsuitSecTech
+
+# Shoes
+
+# Uniforms

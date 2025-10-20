@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ClothingHeadHelmetSecTech
+  name: security technician helmet
+  description: Standard security gear modified with protective lenses to prevent eye damage from welding arcs.
+  components:
+  - type: EyeProtection
+  - type: Sprite
+    sprite: _Floof/Clothing/Head/Helmets/sectech.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Head/Helmets/sectech.rsi

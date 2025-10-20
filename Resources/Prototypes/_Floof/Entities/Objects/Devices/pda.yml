@@ -74,6 +74,38 @@
         whitelist:
           tags:
             - BookSpaceLaw
-            - BookJusticeSop 
-            - BookSecuritySop 
+            - BookJusticeSop
+            - BookSecuritySop
       state: pda-detective
+
+- type: entity
+  parent: BasePDA
+  id: SecurityTechnicianPDA
+  name: security technician PDA
+  description: Rugged, red, and sporting hazard stripes. For safety.
+  components:
+  - type: Pda
+    id: SecurityTechnicianIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSecuritySop # Floof - M3739 - #607
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookJusticeSop # Floof - M3739 - #607
+        - BookSecuritySop # Floof - M3739 - #607
+    state: pda-security
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+    accentHColor: "#F39F27"
+    accentVColor: "#F39F27"
+  - type: Icon
+    state: pda-security
+  - type: CartridgeLoader # DeltaV - Crime Assist + SecWatch
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NewsReaderCartridge
+      - CrimeAssistCartridge
+      - SecWatchCartridge
+      - NanoChatCartridge

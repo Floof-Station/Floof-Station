@@ -62,6 +62,7 @@
             Prisoner: [ 2, 3 ] # has a small perma so less prisoners
             PrisonGuard: [ 1, 2 ]
             SeniorOfficer: [ 1, 1 ]
+            SecurityTechnician: [ 1, 1 ]
             #supply
             Quartermaster: [ 1, 1 ]
             InventorySpecialist: [ 1, 1 ] #FloofStation

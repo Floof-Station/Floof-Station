@@ -12,3 +12,11 @@
   icon:
     sprite: /Textures/_Floof/Interface/Misc/job_icons.rsi
     state: freelancer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSecurityTechnician
+  icon:
+    sprite: /Textures/_Floof/Interface/Misc/floof_job_icons.rsi
+    state: SecurityTechnician
+  jobName: job-name-sectech

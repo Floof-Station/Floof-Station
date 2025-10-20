@@ -643,6 +643,22 @@ character-item-group-LoadoutSeniorOfficerOuter = Senior Officer Outerwear
 character-item-group-LoadoutSeniorOfficerShoes = Senior Officer Shoes
 character-item-group-LoadoutSeniorOfficerUniforms = Senior Officer Uniforms
 
+# Security - Security Technician | Floof Security Technician Role
+character-item-group-LoadoutSecurityTechnicianBackpacks = Security Technician Backpacks
+character-item-group-LoadoutSecurityTechnicianBelt = Security Technician Belt
+character-item-group-LoadoutSecurityTechnicianEars = Security Technician Ears
+character-item-group-LoadoutSecurityTechnicianEquipment = Security Technician Equipment
+character-item-group-LoadoutSecurityTechnicianEyes = Security Technician Eyewear
+character-item-group-LoadoutSecurityTechnicianGloves = Security Technician Gloves
+character-item-group-LoadoutSecurityTechnicianHead = Security Technician Headgear
+character-item-group-LoadoutSecurityTechnicianId = Security Technician Id
+character-item-group-LoadoutSecurityTechnicianNeck = Security Technician Neckwear
+character-item-group-LoadoutSecurityTechnicianMask = Security Technician Masks
+character-item-group-LoadoutSecurityTechnicianOuter = Security Technician Outerwear
+character-item-group-LoadoutSecurityTechnicianShoes = Security Technician Shoes
+character-item-group-LoadoutSecurityTechnicianUniforms = Security Technician Uniforms
+
+
 # Security - Warden
 character-item-group-LoadoutWardenBackpacks = Warden Backpacks
 character-item-group-LoadoutWardenBelt = Warden Belt

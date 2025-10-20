@@ -1,0 +1,17 @@
+#Security Technician hardsuit
+- type: entity
+  id: SuitStorageSecTech
+  parent: SuitStorageBase
+  name: araa tacsuit storage unit
+  suffix: Security Technician
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitSecTech
+    - id: ClothingMaskGasSecurity
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
+    - id: WaterVaporTankFilled
+    - id: ClothingShoesBootsSecurityMagboots
+  - type: AccessReader
+    access: [["SecTech"], ["Armory"]]

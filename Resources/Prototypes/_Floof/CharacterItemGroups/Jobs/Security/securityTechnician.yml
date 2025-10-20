@@ -1,0 +1,74 @@
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianBackpacks
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutSecurityTechnicianBelt
+  maxItems: 1
+  items:
+    - type: loadout
+      id: ClothingBeltUtilityEngineering
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianEars
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianEquipment
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutSecurityTechnicianEyes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: ClothingEyesHudDiagnostic
+
+- type: characterItemGroup
+  id: LoadoutSecurityTechnicianGloves
+  maxItems: 1
+  items:
+    - type: loadout
+      id: ClothingHandsGlovesCombat
+
+- type: characterItemGroup
+  id: LoadoutSecurityTechnicianHead
+  maxItems: 1
+  items:
+    - type: loadout
+      id: ClothingHeadHelmetSecTech
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianId
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianNeck
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianMask
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutSecurityTechnicianOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: ClothingOuterHardsuitSecTech
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianShoes
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityTechnicianUniforms
+#  maxItems: 1
+#  items:

@@ -34,6 +34,9 @@
     sprite: Clothing/Eyes/Hud/diag.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/diag.rsi
+  - type: Tag
+    tags:
+    - HudDiagnostic
   - type: ShowHealthBars
     damageContainers:
     - Inorganic
