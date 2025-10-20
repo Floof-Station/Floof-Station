@@ -347,3 +347,17 @@
     - !type:CharacterDepartmentRequirement
       departments:
         - Medical
+
+- type: loadout
+  id: LoadoutMedicalUniformJumpskirtNurse
+  category: JobsMedicalAUncategorized
+  cost: 0
+  exclusive: true
+  items:
+  - ClothingUniformJumpskirtNurse
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutMedicalUniforms
+  - !type:CharacterDepartmentRequirement
+    departments:
+    - Medical

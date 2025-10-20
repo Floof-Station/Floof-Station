@@ -68,6 +68,7 @@ loadout-category-JobsMedicalSeniorPhysician = Senior Physician
 # Security
 loadout-category-JobsSecurity = Security
 loadout-category-JobsSecurityAUncategorized = All Security
+loadout-category-JobsSecurityWeapons = Service Weapons 
 loadout-category-JobsSecurityCadet = Cadet
 loadout-category-JobsSecurityCorpsman = Corpsman
 loadout-category-JobsSecurityDetective = Detective

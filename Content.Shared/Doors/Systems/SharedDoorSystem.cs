@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Numerics;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Administration.Logs;
@@ -45,7 +46,6 @@ public abstract partial class SharedDoorSystem : EntitySystem
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiver = default!;
 
-
     [ValidatePrototypeId<TagPrototype>]
     public const string DoorBumpTag = "DoorBumpOpener";
 
@@ -56,8 +56,10 @@ public abstract partial class SharedDoorSystem : EntitySystem
     /// <remarks>
     ///     The intersection percentage relies on WORLD AABBs. So if this is too small, and the grid is rotated 45
     ///     degrees, then an entity outside of the airlock may be crushed.
+    ///     Floof: increased to 0.5 due to changing the way intersection is calculated.
+    ///     TODO: use fixtures instead of world AABB??
     /// </remarks>
-    public const float IntersectPercentage = 0.2f;
+    public const float IntersectPercentage = 0.5f;
 
     /// <summary>
     ///     A set of doors that are currently opening, closing, or just queued to open/close after some delay.
@@ -580,7 +582,12 @@ public abstract partial class SharedDoorSystem : EntitySystem
             if ((physics.CollisionMask & otherPhysics.CollisionLayer) == 0 && (otherPhysics.CollisionMask & physics.CollisionLayer) == 0)
                 continue;
 
-            if (_entityLookup.GetWorldAABB(otherPhysics.Owner).IntersectPercentage(doorAABB) < IntersectPercentage)
+            // Floof: rework safety so it actually works with small characters
+            var otherAABB = _entityLookup.GetWorldAABB(otherPhysics.Owner);
+            var intersection = otherAABB.Intersect(doorAABB).Size;
+            var intersectionArea = intersection.X * intersection.Y;
+            var minArea = float.Min(otherAABB.Size.X * otherAABB.Size.Y, doorAABB.Size.X * doorAABB.Size.Y);
+            if (intersectionArea < minArea * IntersectPercentage)
                 continue;
 
             yield return otherPhysics.Owner;
@@ -608,6 +615,14 @@ public abstract partial class SharedDoorSystem : EntitySystem
             return;
 
         var otherUid = args.OtherEntity;
+
+        // Floof: only check DoorBump if the entity is moving toward the door;
+        // otherwise, the collision may be from the door closing (reenabling collision).
+        if (Vector2.Dot(
+                args.OtherBody.LinearVelocity - args.OurBody.LinearVelocity,
+                (_entityLookup.GetWorldAABB(uid).Center - _entityLookup.GetWorldAABB(otherUid).Center).Normalized()
+            ) < 0.1)
+            return;
 
         if (Tags.HasTag(otherUid, DoorBumpTag))
             TryOpen(uid, door, otherUid, quiet: door.State == DoorState.Denying);
@@ -712,6 +727,17 @@ public abstract partial class SharedDoorSystem : EntitySystem
         {
             foreach (var other in PhysicsSystem.GetContactingEntities(uid, physics, approximate: true))
             {
+                if (!TryComp(other, out PhysicsComponent? otherPhysics))
+                    continue;
+
+                // Floof: only check DoorBump if the entity is moving toward the door;
+                // otherwise, the collision may be from the door closing (reenabling collision).
+                if (Vector2.Dot(
+                    otherPhysics.LinearVelocity - physics.LinearVelocity,
+                    (_entityLookup.GetWorldAABB(uid).Center - _entityLookup.GetWorldAABB(other).Center).Normalized()
+                ) < 0.1)
+                    continue;
+
                 if (Tags.HasTag(other, DoorBumpTag) && TryOpen(uid, door, other, quiet: true))
                     break;
             }

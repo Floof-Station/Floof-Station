@@ -12,6 +12,8 @@ public sealed partial class PickRandomPersonComponent : Component
     [DataField]
     public ObjectiveTypes ObjectiveType;
     //Floofstation Target Consent Traits: End
+    [DataField]
+    public bool NeedsOrganic; // Goobstation: Only pick non-silicon players.
 }
 
 //Floofstation Target Consent Traits: Start

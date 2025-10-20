@@ -9,19 +9,19 @@
 
 # Eyes
 
-# Gloves
-- type: loadout
-  id: LoadoutClothingHandsKravMaga
-  category: JobsSecurityWarden
-  cost: 0
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutWardenGloves
-    - !type:CharacterJobRequirement
-      jobs:
-        - Warden
-  items:
-    - ClothingHandsGlovesKravMaga
+# Gloves // Removed Krav Maga from Loadout for Warden to only have one set on station //
+#- type: loadout
+#  id: LoadoutClothingHandsKravMaga
+#  category: JobsSecurityWarden
+#  cost: 0
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: LoadoutWardenGloves
+#    - !type:CharacterJobRequirement
+#      jobs:
+#        - Warden
+#  items:
+#    - ClothingHandsGlovesKravMaga
 
 # Head
 - type: loadout

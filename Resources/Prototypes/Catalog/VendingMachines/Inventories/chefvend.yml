@@ -11,12 +11,16 @@
     FoodCondimentBottleKetchup: 1
     FoodCondimentBottleBBQ: 1
     FoodCondimentBottleVinegar: 2
+    ReagentContainerHoney: 2 # Floof
     ReagentContainerOliveoil: 2
     ReagentContainerMayo: 1
+    OilJarCorn: 2 # Floof
+    OilJarOlive: 2 # Floof
     VariantCubeBox: 1
-    FoodContainerEgg: 1
+    FoodContainerEgg: 2 # Floof
+    DrinkCreamCarton: 1 # Floof
     DrinkMilkCarton: 2
-    DrinkSoyMilkCarton: 1
+    DrinkSoyMilkCarton: 2 # Floof
     BoxChocolateBar: 2 # Floof
     BoxRaisins: 2 # Floof
     FoodButter: 4

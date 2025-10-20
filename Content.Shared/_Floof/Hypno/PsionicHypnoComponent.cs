@@ -2,7 +2,7 @@ using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Floofstation.Hypno;
+namespace Content.Shared._Floof.Hypno;
 
 [RegisterComponent, NetworkedComponent]
 

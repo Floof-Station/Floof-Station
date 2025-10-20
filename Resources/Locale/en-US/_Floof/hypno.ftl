@@ -5,7 +5,7 @@ hypnosis-power-initialization-feedback = I am able to place other in a trance an
 hypnosis-power-feedback = The air around {CAPITALIZE($entity)} shimmers hypnotically from the force of their personality.
 
 hypno-already-under = {CAPITALIZE($target)} is already under hypnosis.
-examined-hypno = {CAPITALIZE(POSS-ADJ($entity))} eyes seem dull and unfocused, gazing off into the distance, { CAPITALIZE(SUBJECT($user)) } seems completely content with everything.
+examined-hypno = {CAPITALIZE(POSS-ADJ($entity))} eyes seem dull and unfocused, gazing off into the distance. {CAPITALIZE(SUBJECT($entity))} seems completely content with everything.
 lost-subject = I feel my powers dissipate. My subject is once again free...
 hypno-free = I have awoken from my trance...
 hypno-release = Release Subject

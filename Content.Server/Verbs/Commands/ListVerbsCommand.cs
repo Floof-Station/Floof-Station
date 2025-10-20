@@ -1,14 +1,16 @@
-using Content.Server.Administration;
+using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.Verbs;
 using Robust.Shared.Console;
 
 namespace Content.Server.Verbs.Commands
 {
-    [AdminCommand(AdminFlags.Admin)]
+    // Floof: allow `invokeverb self` as any user.
+    [AnyCommand]
     public sealed class ListVerbsCommand : IConsoleCommand
     {
         [Dependency] private readonly IEntityManager _entManager = default!;
+        [Dependency] private readonly IAdminManager _adminManager = default!; // Floof
 
         public string Command => "listverbs";
         public string Description => Loc.GetString("list-verbs-command-description");
@@ -41,6 +43,13 @@ namespace Content.Server.Verbs.Commands
             }
             else
             {
+                // Floof: allow `listverb self` as any user.
+                if (shell.Player is not null && (_adminManager.GetAdminData(shell.Player)?.Flags & AdminFlags.Admin) != AdminFlags.Admin)
+                {
+                    shell.WriteError(Loc.GetString("list-verbs-command-no-perms"));
+                    return;
+                }
+
                 _entManager.TryGetEntity(new NetEntity(intPlayerUid), out playerEntity);
             }
 

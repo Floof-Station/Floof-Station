@@ -1,4 +1,4 @@
-using Content.Shared.Floofstation.Hypno;
+using Content.Shared._Floof.Hypno;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;

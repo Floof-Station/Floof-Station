@@ -20,6 +20,9 @@
       - !type:AdjustReagent
         reagent: Pomelustine
         amount: 0.5
+      - !type:AdjustReagent
+        reagent: Blood
+        amount: 0.07
 
 - type: reagent
   id: A.B.Lustine
@@ -103,6 +106,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.06
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: BethanysCumLust
@@ -126,6 +132,9 @@
       - !type:AdjustReagent
         reagent: Pomelustine
         amount: 0.5
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.14
 
 - type: reagent
   id: BethanysSluttyCumLust
@@ -152,6 +161,9 @@
       - !type:AdjustReagent
         reagent: Philterex
         amount: 0.5
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.14
 
 - type: reagent
   id: BlueBaller
@@ -316,6 +328,12 @@
       - !type:AdjustReagent
         reagent: Pomelustine
         amount: 1
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.08
+      - !type:AdjustReagent
+        reagent: Blood
+        amount: 0.08
 
 - type: reagent
   id: DirtyWastelander
@@ -359,6 +377,9 @@
       effects:
       - !type:SatiateThirst
         factor: 3
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: DragonsBlood
@@ -382,6 +403,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.05
+      - !type:AdjustReagent
+        reagent: Blood
+        amount: 0.15
 
 - type: reagent
   id: DragonsBreath
@@ -428,6 +452,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.12
 
 - type: reagent
   id: EmeraldSwinger
@@ -566,6 +593,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+      - !type:AdjustReagent
+        reagent: Blood
+        amount: 0.15
 
 - type: reagent
   id: HornyStallion
@@ -632,6 +662,9 @@
       effects:
       - !type:SatiateThirst
         factor: 3
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: Lamplight
@@ -762,6 +795,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.06
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: MossBloodShot
@@ -864,6 +900,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.05
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.1
 
 - type: reagent
   id: Pomonade
@@ -993,6 +1032,9 @@
       effects:
       - !type:SatiateThirst
         factor: 3
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.12
 
 - type: reagent
   id: RandyStallion
@@ -1089,6 +1131,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.04
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: SemenHemorrhage
@@ -1112,6 +1157,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.03
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: SilverStallion
@@ -1135,6 +1183,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.05
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: SlimesDelight
@@ -1194,6 +1245,9 @@
       effects:
       - !type:SatiateThirst
         factor: 3
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.12
 
 - type: reagent
   id: SpecialSundae
@@ -1217,6 +1271,9 @@
       - !type:AdjustReagent
         reagent: Pomelustine
         amount: 0.05
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: SyndicatesOverseer
@@ -1239,6 +1296,9 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
+        amount: 0.08
+      - !type:AdjustReagent
+        reagent: Blood
         amount: 0.08
 
 - type: reagent
@@ -1326,6 +1386,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.1
 
 - type: reagent
   id: TheWaterslide
@@ -1349,6 +1412,9 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+      - !type:AdjustReagent
+        reagent: Cum
+        amount: 0.15
 
 - type: reagent
   id: WhiskeySour

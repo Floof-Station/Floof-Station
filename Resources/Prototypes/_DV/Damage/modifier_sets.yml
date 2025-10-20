@@ -23,4 +23,6 @@
     Piercing: 1.2
     Slash: 1.2
     Radiation: 1.5
+    Heat: 0.85
+    Cold: 0.85
     Holy: 0.5

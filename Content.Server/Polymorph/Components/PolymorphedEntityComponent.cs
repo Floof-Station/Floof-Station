@@ -1,4 +1,5 @@
 using Content.Server.Polymorph.Systems;
+using Content.Shared.Floofstation.Leash.Components;
 using Content.Shared.Polymorph;
 
 namespace Content.Server.Polymorph.Components;
@@ -29,4 +30,7 @@ public sealed partial class PolymorphedEntityComponent : Component
 
     [DataField]
     public EntityUid? Action;
+
+    // Floof: The anchor that the leash was attached to on the parent entity
+    public Entity<LeashAnchorComponent>? LeashAnchor;
 }

@@ -1125,6 +1125,132 @@
         variation: 0.05
         volume: 4
 
+- type: entity
+  parent: PlushieHuman
+  id: PlushieCuddlyIPC
+  name: Cuddly IPC plushie
+  description: This plump, pink IPC plushie is extra-huggable, to the point of being a little bulky! It has the left half of a matching tag.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: cuddlyipc
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Talk/pai_exclaim.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Talk/pai_exclaim.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Talk/pai_ask.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Talk/pai_ask.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieFluffyVulpkanin
+  name: Fluffy vulpkanin plushie
+  description: This snow-white vulpkanin plushie is so soft and cuddly that you could squeeze it all day long! It has the right half of a matching tag.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: fluffyvulp
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Reptilian/yip.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity
+  parent: PlushieHuman
+  id: PlushieSecurityTank
+  name: Security tank Plushie
+  description: It weighs a ton and smells like gunpowder.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: tank
+  - type: UseDelay
+    delay: 3.0
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/metal_break1.ogg
+      params:
+        variation: 0.2
+        volume: 2
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/metal_break1.ogg
+      params:
+        variation: 0.2
+        volume: 2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/metal_thud2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/metal_thud2.ogg
+      params:
+        variation: 0.05
+        volume: 4
+  - type: MultiHandedItem
+  - type: Drink
+    solution: fleshlight
+    ignoreEmpty: true
+  - type: SolutionContainerManager
+    solutions:
+      fleshlight:
+        maxVol: 10
+  - type: SolutionTransfer
+    transferAmount: 5
+    maxTransferAmount: 10
+    minTransferAmount: 1
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: fleshlight
+  - type: DrawableSolution
+    solution: fleshlight
+  - type: RefillableSolution
+    solution: fleshlight
+  - type: DrainableSolution
+    solution: fleshlight
+  - type: ExaminableSolution
+    solution: fleshlight
+  - type: Tag
+    tags:
+     - Fleshlight
+
+
 # Banned individual
 # - type: entity
 #   parent: PlushieHuman

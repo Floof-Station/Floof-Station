@@ -35,6 +35,7 @@
   - MartialArtist # Nyanotrasen - MartialArtist, see Resources/Prototypes/Nyanotrasen/Roles/Jobs/Wildcards/martialartist.yml
   #- Prisoner # Floof - Create dedicated service department
   #- Gladiator # Floof - Create dedicated service department
+  - ServiceQuadBorg # Floof
 
 - type: department
   id: Command
@@ -98,6 +99,7 @@
   - Paramedic
   - SeniorPhysician
   - MedicalBorg  # Delta V - Medical Borg, see Resources/Prototypes/DeltaV/Roles/Jobs/Medical/medicalborg.yml
+  - MedicalQuadBorg # Floof
 
 - type: department
   id: Security

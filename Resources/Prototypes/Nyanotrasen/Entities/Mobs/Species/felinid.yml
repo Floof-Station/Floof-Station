@@ -67,11 +67,13 @@
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
+    - SolCommon
     - Nekomimetic
     understands:
     - TauCetiBasic
+    - SolCommon
     - Nekomimetic
-    naturalLanguage: Nekomimetic # Floof: explicitly stated natural languages
+    naturalLanguage: SolCommon # Floof: explicitly stated natural languages
 #  - type: Thieving | Floof - M3739 - #1194 - Removed due to balancing and SoP concerns
 #    ignoreStripHidden: true
 #    stealth: Subtle

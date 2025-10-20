@@ -5,5 +5,51 @@
     inventory: None
     transferName: true
     transferDamage: true
+    transferTemperature: true # Floof
+    transferOrgans: true # Floof
+    transferChemicals: true # Floof
     revertOnCrit: true
     revertOnDeath: true
+    syncComponents: true # Floof
+    copiedComponents: # Floof
+    - FootstepVolumeModifier
+    - Grammar
+    - Hunger
+    - LanguageKnowledge
+    - LanguageSpeaker
+    - Mood
+    - Muted
+    - Narcolepsy
+    - Thirst
+    - Pacified
+    - Paracusia
+    - SelfAware
+    - Vampirism
+    - UltraVision
+    - DogVision
+
+    - BackwardsAccent
+    - BarkAccent
+    - LizardAccent
+    - MobsterAccent
+    - MonkeyAccent
+    - MothAccent
+    - OhioAccent
+    - OwOAccent
+    - ParrotAccent
+    - PirateAccent
+    - ReplacementAccent
+    - RussianAccent
+    - ScrambledAccent
+    - SkeletonAccent
+    - SlurredAccent
+    - SouthernAccent
+    - SpanishAccent
+    - StutteringAccent
+
+# TODO:
+#    - Snoring
+#    - Singer
+#    - Instrument
+#    - Vocal
+#    - Mood

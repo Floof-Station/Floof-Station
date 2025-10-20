@@ -25,6 +25,7 @@
     LOLuckyBillStealObjective: 0.5 # DeltaV - LO steal objective, see Resources/Prototypes/DeltaV/Objectives/traitor.yml
     HoPBookIanDossierStealObjective: 1 # DeltaV - HoP steal objective, see Resources/Prototypes/DeltaV/Objectives/traitor.yml
     HoSGunStealObjective: 0.5
+    WardenGlovesStealObjective: 0.5 #Floof - Warden Krav Maga Gloves steal objective, see Resources/Prototypes/_Floof/Objectives/traitor.yml
     StealSupermatterSliverObjective: 0.5
     EnergyShotgunStealObjective: 0.5
 

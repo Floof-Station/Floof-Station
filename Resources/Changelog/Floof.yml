@@ -7904,3 +7904,396 @@ Entries:
   id: 838
   time: '2025-09-21T16:52:53.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1231
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added variants of the N1984 and Energy Shotgun
+    - type: Tweak
+      message: Seperated weapons into their own tab for security
+    - type: Add
+      message: Added Energy Cutlass for Security
+  id: 839
+  time: '2025-09-23T18:29:49.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1252
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Buffed Necrosol
+  id: 840
+  time: '2025-09-23T18:31:00.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1297
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Add Chocolate Milk Recipe
+  id: 841
+  time: '2025-09-23T18:44:11.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1426
+- author: Sprkl
+  changes:
+    - type: Tweak
+      message: Syndicate keys are no longer visible while in a headset.
+  id: 842
+  time: '2025-09-23T18:45:21.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1427
+- author: router
+  changes:
+    - type: Tweak
+      message: >-
+        Shuffled some Rodentia sounds. They now have far more expressive
+        variation.
+  id: 843
+  time: '2025-09-23T18:45:50.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1430
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Jump boots
+  id: 844
+  time: '2025-09-23T18:53:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1415
+- author: ArcanissKenku
+  changes:
+    - type: Add
+      message: Added a steal objective for Krav Maga gloves for traitors.
+    - type: Remove
+      message: >-
+        Krav Maga gloves can no longer be obtained via loadouts as the Warden
+        locker already contains a pair.
+  id: 845
+  time: '2025-09-24T14:30:38.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1437
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Blood & Cum reagents to appropriate drinks
+  id: 846
+  time: '2025-09-25T14:25:35.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1440
+- author: ArcanissKenku
+  changes:
+    - type: Fix
+      message: 'Arena Minor Hotfix '
+  id: 847
+  time: '2025-09-25T14:26:27.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1409
+- author: ArcanissKenku
+  changes:
+    - type: Add
+      message: Judicial Department added to Kettle
+  id: 848
+  time: '2025-09-25T14:27:16.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1417
+- author: WhiteLightningTwister
+  changes:
+    - type: Add
+      message: >-
+        Did a collective amount of fixing of minor errors, put things that were
+        missing from the original back.
+  id: 849
+  time: '2025-09-25T21:35:20.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1414
+- author: Memeji
+  changes:
+    - type: Tweak
+      message: Increased minimum width and height for Vox.
+  id: 850
+  time: '2025-09-26T17:43:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1439
+- author: Wizden
+  changes:
+    - type: Add
+      message: >-
+        Smuggler stashes! Will get spawned as a round start event and can also
+        be found in a hacked ClothesMate. Will have loot from a large random
+        pool.
+    - type: Add
+      message: Smuggler stashes can now be bought from the syndicate uplink for 2TC.
+  id: 851
+  time: '2025-09-26T21:12:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1388
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Added recipes for Eggnog & Syndicate Eggnog.
+  id: 852
+  time: '2025-09-29T16:06:10.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1441
+- author: ItsDzordz
+  changes:
+    - type: Add
+      message: Added 3 new plushies
+  id: 853
+  time: '2025-09-29T16:18:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1433
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: >-
+        Changed Limb Severing Threshold, Delimbing before death is possible
+        again, beheading will still be very hard.
+  id: 854
+  time: '2025-09-29T16:39:48.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1432
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Candybowl recipe to Medical Techfab
+  id: 855
+  time: '2025-10-01T06:03:03.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1452
+- author: Raikyr0
+  changes:
+    - type: Fix
+      message: The Argenti is now properly labeled in the loadout.
+  id: 856
+  time: '2025-10-03T19:18:38.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1462
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The "spawn here" admin verb will now correctly load the loadouts and
+        traits of the spawned player (but will ignore their current job)
+    - type: Fix
+      message: >-
+        Passive mobs are no longer guaranteed to immediately break out from a
+        pull. Hard grabs will make it harder for them.
+    - type: Fix
+      message: >-
+        Glimmer wisps can now pass over probers, machines, and under doors, as
+        intended. They will no longer get stuck each time, and are more likely
+        to wander around than other mobs.
+    - type: Fix
+      message: >-
+        Cleanbots will no longer try to clean puddles under solid obstacles.
+        Unfortunately, that does include tables.
+    - type: Remove
+      message: Reverted the necrosol buff.
+  id: 857
+  time: '2025-10-03T19:24:07.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1463
+- author: Forzii
+  changes:
+    - type: Tweak
+      message: Vox can now receive uppies.
+  id: 858
+  time: '2025-10-04T08:29:14.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1466
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Added Honey, Corn Oil, Olive Oil (Large), and Cream to the Chefvend.
+    - type: Tweak
+      message: Increased Flour, Rice, Cornmeal, and Sugar per bag from 50->100
+    - type: Tweak
+      message: Increased Egg Carton & Soy Milk quantities in Chefvend
+    - type: Tweak
+      message: Increased Chefvend restock price from 680->800 spesos.
+  id: 859
+  time: '2025-10-04T08:32:56.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1456
+- author: Einstein Engines
+  changes:
+    - type: Add
+      message: >-
+        The document printer has been added. Embrace bureaucracy and print
+        templates without needing the template filing cabinet.
+  id: 860
+  time: '2025-10-04T11:24:23.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1386
+- author: Einstein Engines
+  changes:
+    - type: Add
+      message: >-
+        7 new mechs have been added, along with the relevant equipment and cargo
+        bounties.
+    - type: Tweak
+      message: >-
+        The H.O.N.K. has received an airtight cabin for voidborne honk
+        operations.
+  id: 861
+  time: '2025-10-04T12:56:15.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1390
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Added Cane to Loadout
+    - type: Add
+      message: Made Cane craftable in the Medical techfab
+  id: 862
+  time: '2025-10-04T21:55:28.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1451
+- author: Gaybritishcow
+  changes:
+    - type: Add
+      message: Added the Nurse outfit to the Medical loadout.
+  id: 863
+  time: '2025-10-04T21:57:23.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1455
+- author: ItsDzordz
+  changes:
+    - type: Tweak
+      message: Updated Edge
+  id: 864
+  time: '2025-10-04T21:58:46.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1447
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        The Vulpkanin and the Kitsune can now make fox sounds. The new emotes
+        have the chat triggers @ yips and @ whines.
+    - type: Tweak
+      message: >-
+        The old vulpkanin whine is now triggered by the emote @ whimpers,
+        because the sound it uses is in fact a dog whimper. If you have this
+        emote bound to a keybind, make sure to edit your keybinds.yml file after
+        the update.
+  id: 865
+  time: '2025-10-05T03:15:48.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1469
+- author: Gaybritishcow
+  changes:
+    - type: Tweak
+      message: Changed rodentia sounds back to the original.
+  id: 866
+  time: '2025-10-05T03:21:51.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1457
+- author: M3739
+  changes:
+    - type: Fix
+      message: >-
+        Shadekin markings that were intended to be colored, can now be actually
+        colored.
+  id: 867
+  time: '2025-10-12T02:56:41.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1480
+- author: Forzii
+  changes:
+    - type: Fix
+      message: Yip chat message when using the emote wheel has been restored.
+  id: 868
+  time: '2025-10-12T23:53:37.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1483
+- author: Forzii
+  changes:
+    - type: Fix
+      message: Fixed hypnosis examine text and icons.
+  id: 869
+  time: '2025-10-13T00:47:49.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1467
+- author: ashkitten
+  changes:
+    - type: Fix
+      message: Made doors less indecisive.
+  id: 870
+  time: '2025-10-13T01:44:41.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1481
+- author: ashkitten
+  changes:
+    - type: Add
+      message: >-
+        Emote keybind users rejoice! You can now bind right-click verbs to
+        keybinds that will activate on the hovered entity.
+  id: 871
+  time: '2025-10-13T01:48:24.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1482
+- author: Memeji
+  changes:
+    - type: Remove
+      message: Removed Energy Revolver from Security's Loadout
+  id: 872
+  time: '2025-10-13T01:54:55.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1472
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        Cleanbots will now prioritize unobstructed entities over obstructed
+        ones, instead of outright ignoring the latter.
+  id: 873
+  time: '2025-10-13T02:03:26.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1479
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The mini-gravity generator circuitboard can once again be printed
+        correctly.
+  id: 874
+  time: '2025-10-13T02:05:42.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1477
+- author: Raikyr0
+  changes:
+    - type: Tweak
+      message: Onis to speak Kagebun and Felinids to speak Sol Common.
+  id: 875
+  time: '2025-10-13T02:12:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1473
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: Slightly improved rainbow screen effect.
+  id: 876
+  time: '2025-10-19T21:48:32.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1490
+- author: wizden
+  changes:
+    - type: Add
+      message: >-
+        Almost every instrument has been updated to a new soundfont
+        (GeneralUser-GS), unifying all operating systems and massively improving
+        the sound of certain instruments.
+  id: 877
+  time: '2025-10-19T21:54:57.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1487
+- author: Dunrab
+  changes:
+    - type: Tweak
+      message: >-
+        Many tweaks to Core to make the map more enjoyable & the singularity is
+        back.
+  id: 878
+  time: '2025-10-20T00:03:17.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1454
+- author: Dunrab
+  changes:
+    - type: Tweak
+      message: >-
+        More tweaks to train to fix some of power issues, air alarm issues and
+        other minor things like station beacons.
+  id: 879
+  time: '2025-10-20T00:03:58.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1448
+- author: Raikyr0
+  changes:
+    - type: Fix
+      message: Fixed Mech Drill attack speed
+  id: 880
+  time: '2025-10-20T06:51:40.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1488
+- author: ashkitten
+  changes:
+    - type: Tweak
+      message: >-
+        Significant improvements to kitsune fox polymorph. Now carries over
+        organs, chemicals, blood levels, attached leashes, and most trait
+        components from your character.
+  id: 881
+  time: '2025-10-20T06:54:27.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1322
+- author: Raikyr0
+  changes:
+    - type: Add
+      message: Added Med and Service Quadborg Jobs
+  id: 882
+  time: '2025-10-20T06:57:04.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1271
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixed not being able to break your vow twice as a mime.
+  id: 883
+  time: '2025-10-20T07:07:01.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1362
