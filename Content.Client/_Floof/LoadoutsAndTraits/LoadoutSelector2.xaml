@@ -1,0 +1,71 @@
+<Control xmlns="https://spacestation14.io"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:ui="clr-namespace:Content.Client.Lobby.UI">
+
+    <BoxContainer Name="Container" Orientation="Vertical" HorizontalExpand="True">
+        <!-- Floofstation notice - VerticalExpand has been added to numerous buttons -->
+        <controls:StyledButtonGroup Name="ButtonGroup" Orientation="Horizontal" HorizontalExpand="True">
+            <Button
+                Name="PreferenceButton"
+                ToggleMode="True"
+                VerticalAlignment="Center">
+
+                <BoxContainer Orientation="Horizontal">
+                    <Label
+                        Name="LoadoutCost"
+                        MinSize="32,32"
+                        ClipText="True"
+                        Margin="0 0 8 0"/>
+
+                    <!-- Preview -->
+                    <PanelContainer>
+                        <PanelContainer.PanelOverride>
+                            <graphics:StyleBoxFlat BackgroundColor="2f2f2f" />
+                        </PanelContainer.PanelOverride>
+
+                        <SpriteView Name="EntPreview" Scale="1,1" OverrideDirection="South" VerticalAlignment="Center"/>
+
+                        <Label Name="LoadoutLocName" Margin="8 0 0 00" MinWidth="64"/>
+                    </PanelContainer>
+                </BoxContainer>
+            </Button>
+
+            <Button
+                Name="HeirloomButton"
+                Access="Public"
+                Text="{Loc 'humanoid-profile-editor-loadouts-heirloom'}"
+                ToolTip="{Loc 'humanoid-profile-editor-loadouts-heirloom-tooltip'}"
+                ToggleMode="True"
+                VerticalExpand="True"
+                VerticalAlignment="Center" />
+
+            <!-- Yes I know I can use a TextureButton, but I'm doing this for style -->
+            <Button
+                Name="GuidebookButton"
+                ToolTip="{Loc 'humanoid-profile-editor-loadouts-guidebook-button-tooltip'}"
+                VerticalAlignment="Center">
+
+                <TextureRect
+                    TexturePath="/Textures/Interface/VerbIcons/information.svg.192dpi.png"
+                    TextureScale="0.4 0.4"
+                    VerticalAlignment="Center"
+                    VerticalExpand="True"
+                    Margin="5" />
+            </Button>
+
+            <Button
+                Name="SettingsButton"
+                VerticalAlignment="Center">
+
+                <TextureRect
+                    TexturePath="Resources/Textures/Interface/hamburger.svg.192dpi.png"
+                    TextureScale="0.4 0.4"
+                    VerticalAlignment="Center"
+                    VerticalExpand="True"
+                    Margin="5" />
+            </Button>
+        </controls:StyledButtonGroup>
+    </BoxContainer>
+</Control>

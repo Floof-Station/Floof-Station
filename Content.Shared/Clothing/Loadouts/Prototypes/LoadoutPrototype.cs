@@ -1,3 +1,4 @@
+using Content.Shared._Floof.LoadoutsAndTraits.Prototypes;
 using Content.Shared.Customization.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
@@ -5,15 +6,16 @@ using Robust.Shared.Serialization.Manager;
 namespace Content.Shared.Clothing.Loadouts.Prototypes;
 
 
+// Floof - add the IRecursivePrototype
 [Prototype]
-public sealed partial class LoadoutPrototype : IPrototype
+public sealed partial class LoadoutPrototype : IPrototype, IRecursivePrototype<LoadoutCategoryPrototype, LoadoutPrototype>
 {
     /// Formatted like "Loadout[Department/ShortHeadName][CommonClothingSlot][SimplifiedClothingId]", example: "LoadoutScienceOuterLabcoatSeniorResearcher"
     [IdDataField]
     public string ID { get; } = default!;
 
     [DataField]
-    public ProtoId<LoadoutCategoryPrototype> Category = "Uncategorized";
+    public ProtoId<LoadoutCategoryPrototype> Category { get; } = "Uncategorized";
 
     [DataField(required: true)]
     public List<ProtoId<EntityPrototype>> Items = new();

@@ -75,6 +75,7 @@ namespace Content.Client.Lobby.UI
         private List<SpeciesPrototype> _species = new();
         private List<(string, RequirementsSelector)> _jobPriorities = new();
         private readonly Dictionary<string, BoxContainer> _jobCategories;
+        private readonly ISawmill _sawmill = Logger.GetSawmill("humanoid-profile-editor");
 
         private Dictionary<Button, ConfirmationData> _confirmationData = new();
         private List<TraitPreferenceSelector> _traitPreferences = new();
@@ -1976,7 +1977,7 @@ namespace Content.Client.Lobby.UI
                 var temp = TraitPointsBar.Value + points;
                 return preference ? !(temp < 0) : temp < 0;
             }
-            
+
             bool CheckSlots(int slots, bool preference)
             {
                 var temp = _traitCount + slots;

@@ -1,4 +1,5 @@
 using System;
+using Content.Shared._Floof.LoadoutsAndTraits.Prototypes;
 using Content.Shared.Customization.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
@@ -11,7 +12,7 @@ namespace Content.Shared.Traits;
 ///     Describes a trait.
 /// </summary>
 [Prototype("trait")]
-public sealed partial class TraitPrototype : IPrototype, IComparable
+public sealed partial class TraitPrototype : IPrototype, IComparable, IRecursivePrototype<TraitCategoryPrototype, TraitPrototype> // Floof - implement IRecursivePrototype
 {
     [ViewVariables]
     [IdDataField]
@@ -21,7 +22,7 @@ public sealed partial class TraitPrototype : IPrototype, IComparable
     ///     Which customization tab to place this entry in
     /// </summary>
     [DataField(required: true)]
-    public ProtoId<TraitCategoryPrototype> Category = "Uncategorized";
+    public ProtoId<TraitCategoryPrototype> Category { get; } = "Uncategorized";
 
     /// <summary>
     ///     How many points this will give the character
@@ -55,7 +56,7 @@ public sealed partial class TraitPrototype : IPrototype, IComparable
     [DataField]
     public int Priority = 0;
     public int CompareTo(object? obj) // Compare function to allow for some traits to specify they need to load earlier than others
-    { 
+    {
         if (obj is not TraitPrototype other)
             return -1;
 

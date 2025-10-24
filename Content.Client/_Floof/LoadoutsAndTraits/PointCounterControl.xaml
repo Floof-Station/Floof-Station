@@ -1,0 +1,10 @@
+<BoxContainer
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client._Floof.LoadoutsAndTraits"
+    Orientation="Vertical"
+    HorizontalExpand="True">
+
+    <Label Name="Label" HorizontalAlignment="Stretch" Align="Center" />
+    <ProgressBar Name="Bar" MaxValue="1" Value="1" MaxHeight="8" Margin="0 5"  />
+
+</BoxContainer>
