@@ -22,9 +22,6 @@ public sealed partial class StyledButtonGroup : BoxContainer
 
     public void UpdateStyles()
     {
-        // Floofstation - no, just no.
-        return;
-
         var children = Children.Where(c => c.Visible && c is Button).ToArray();
         for (var i = 0; i < children.Length; i++)
         {

@@ -159,7 +159,7 @@ public sealed class SharedLoadoutSystem : EntitySystem
 [Serializable, NetSerializable, ImplicitDataDefinitionForInheritors]
 public abstract partial class Loadout
 {
-    [DataField] public ProtoId<LoadoutPrototype> LoadoutName { get; set; } // Floof note - this is an ID, not a name.
+    [DataField] public string LoadoutName { get; set; } // Floof note - this is an ID, not a name.
     [DataField] public string? CustomName { get; set; }
     [DataField] public string? CustomDescription { get; set; }
     [DataField] public string? CustomColorTint { get; set; }

@@ -26,14 +26,14 @@ public sealed partial class LoadoutSelector2 : Control
     public LoadoutPrototype Prototype;
     public EntityUid? DummyEntity { get; private set; }
 
-    public LoadoutSelector2(LoadoutTreeCharacterPage parent, LoadoutPreference preference)
+    public LoadoutSelector2(LoadoutTreeCharacterPage parent, LoadoutPreference preference, LoadoutPrototype proto)
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
         _parent = parent;
         Preference = preference;
-        Prototype = _protoMan.Index(Preference.LoadoutName);
+        Prototype = proto;
 
         UpdateFromPreference();
         if (Prototype.Items.Count == 0)
@@ -41,9 +41,12 @@ public sealed partial class LoadoutSelector2 : Control
 
         LoadoutCost.StyleClasses.Add(StyleBase.StyleClassLabelHeading);
 
-        PreferenceButton.OnPressed += _ => throw new NotImplementedException();
+        PreferenceButton.OnPressed += _ =>
+        {
+            Preference.Selected = !Preference.Selected;
+        };
         HeirloomButton.OnPressed += _ => throw new NotImplementedException();
-        SettingsButton.OnPressed += _ => throw new NotImplementedException();
+        SettingsButton.OnPressed += _ => parent.Expand(Prototype);
     }
 
     ~LoadoutSelector2()

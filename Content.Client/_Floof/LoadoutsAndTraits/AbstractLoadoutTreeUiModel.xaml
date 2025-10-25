@@ -10,7 +10,7 @@
 
     </BoxContainer>
 
-    <BoxContainer HorizontalExpand="True" Margin="0 0 0 5" Orientation="Vertical">
+    <BoxContainer HorizontalExpand="True" Margin="0 0 0 5" Orientation="Horizontal">
         <Button
             Name="ShowUnusableButton" Access="Public"
             Text="{Loc 'humanoid-profile-editor-loadouts-show-unusable-button'}"
@@ -28,8 +28,8 @@
             StyleClasses="OpenLeft" />
     </BoxContainer>
 
-    <!-- List of tabs -->
-    <BoxContainer Name="PathContainer" HorizontalExpand="True" Orientation="Horizontal" Access="Public"/>
+    <!-- Current page path -->
+    <ui:StyledButtonGroup Name="PathContainer" HorizontalExpand="True" Orientation="Horizontal" Access="Public"/>
 
     <!-- Primary container -->
     <BoxContainer HorizontalExpand="True" VerticalExpand="True" Orientation="Horizontal">
@@ -38,9 +38,9 @@
 
         <BoxContainer VerticalExpand="True" HorizontalExpand="True" Orientation="Vertical">
             <!-- Details - default hidden -->
-            <BoxContainer Name="DetailsContainer" VerticalExpand="True" Visible="False" Access="Public" />
+            <BoxContainer Name="DetailsContainer" VerticalExpand="True" Visible="False" Access="Public" Orientation="Vertical" />
             <!-- List of choices -->
-            <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" />
+            <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" Orientation="Vertical" />
         </BoxContainer>
     </BoxContainer>
 </BoxContainer>

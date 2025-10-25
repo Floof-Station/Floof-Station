@@ -1,1 +1,1 @@
-loadout-point-counter = "You have {$value}/{$max} points."
+loadout-point-counter = You have {$value}/{$max} points.

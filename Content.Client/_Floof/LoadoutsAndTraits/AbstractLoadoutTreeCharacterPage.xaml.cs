@@ -9,9 +9,14 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 
 namespace Content.Client._Floof.LoadoutsAndTraits;
+
+// TODO implement point calculation (curerntly a stub)
+// fix texture rects and sprite views being misplaced
+// implement
 
 /// <summary>
 ///     Represents an abstract page of loadout customization menu that uses a tree-like structure and keeps track of character "points".
@@ -42,9 +47,13 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// </summary>
     protected TProto? ShowingDetailsFor;
     /// <summary>
-    ///     Current path of categories. Empty if the user is in the "root root" category, having not yet selected anything.
+    ///     Current path of categories. Root category is represented by a "root" entry.
     /// </summary>
     protected readonly Stack<CategoryTreeItem> CurrentPath = new();
+    /// <summary>
+    ///     Pseudo-category that represents the root of the tree.
+    /// </summary>
+    protected CategoryTreeItem RootCategory { get; private set; } = new(null, "root", null, null);
 
     /// <summary>
     ///     List of all point counters relevant to this page. This includes trait points, trait slots, etc.
@@ -60,8 +69,9 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
     protected AbstractLoadoutTreeCharacterPage()
     {
-        Model = new();
         IoCManager.InjectDependencies(this);
+        Model = new();
+        AddChild(Model);
 
         Dictionary<Button, ConfirmationData> confirmationData = new();
         Model.ShowUnusableButton.OnToggled += args =>
@@ -123,6 +133,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         BuildTree(AllCategories.Where(it => it.Root).ToList(), RootCategories);
         PrototypesLoaded = true;
 
+        RootCategory = new(null, "root", null, RootCategories);
+
         #if DEBUG
         // Ensure all prototypes are in a category
         foreach (var prototype in AllPrototypes)
@@ -158,11 +170,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
                 if (category.SubCategories.Count > 0)
                     Log.Error($"Category {locName} contains both terminal and non-terminal nodes. Skipping non-terminals.");
 
-                return;
+                continue;
             }
 
             // Non-terminal node
-            var subCatsList = new List<CategoryTreeItem>();
             var subcategories = new List<TCategory>();
             foreach (var subCatId in category.SubCategories)
             {
@@ -176,6 +187,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
                 subcategories.Add(subCatProto);
             }
 
+            var subCatsList = new List<CategoryTreeItem>();
             BuildTree(subcategories, subCatsList);
             categoryTreeItem = new(
                 category,
@@ -200,15 +212,18 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         }
 
         UpdatePath();
-        UpdateTabs();
+        UpdateCategories();
         UpdateChoices();
         UpdateDetails();
+        UpdateCounters();
     }
 
     protected virtual void UpdateCounters()
     {
+        var valid = true;
         foreach (var counter in Counters)
         {
+            valid = valid && counter.Valid; // Using && instead of &= for short-circuiting
             if (counter.Control is null)
                 continue;
 
@@ -224,14 +239,12 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// </summary>
     protected virtual void UpdatePath()
     {
-        if (CurrentPath.Count == 0)
-        {
-            Model.PathContainer.AddChild(new Label() { Text = "@Root" });
-            return;
-        }
+        EnsurePathIsRooted();
 
-        var oldPath = Model.PathContainer.Children.Where(it => it is PathControl).Cast<PathControl>().ToArray();
+        var oldPath = Model.PathContainer.Children.Where(it => it is PathButton).Cast<PathButton>().ToArray();
         var newPath = CurrentPath.ToArray();
+        // NOTE: since CurrentPath is a stack, newPath is in reverse order. The root category is at the end of the array.
+        CategoryTreeItem getNew(int index) => newPath[newPath.Length - index - 1];
 
         // See if any first entries can be saved, dispose of the rest
         var commonLength = Math.Min(oldPath.Length, newPath.Length);
@@ -239,7 +252,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         int i;
         for (i = 0; i < commonLength; i++)
         {
-            if (oldPath[i].Category.ID != newPath[i].Category.ID)
+            if (oldPath[i].Category?.ID != getNew(i).Prototype?.ID)
                 break;
 
             saved++;
@@ -248,36 +261,43 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         Model.PathContainer.RemoveAllChildren();
         for (i = 0; i < newPath.Length; i++)
         {
-            // Add a separator first
-            if (i > saved)
-                Model.PathContainer.AddChild(new Label());
-
             var item = i < saved ? oldPath[i] : null;
             if (item == null)
             {
-                item = new(newPath[i].Category, GetLocalizedName(newPath[i].Category), i);
-                item.GoButton.OnPressed += _ => GoBackTo(item.Depth);
+                var cat = getNew(i).Prototype;
+                item = new(cat, cat == null ? string.Empty : GetLocalizedName(cat), i);
+                item.OnPressed += _ => GoBackTo(item.Depth);
             }
             Model.PathContainer.AddChild(item);
         }
     }
 
-    protected virtual void UpdateTabs()
+    private void EnsurePathIsRooted()
+    {
+        // Is there a more sane way to do this? Ideally we shouldn't keep that pseudo-category there, but it simplifies the code.
+        if (CurrentPath.Count == 0)
+            CurrentPath.Push(RootCategory);
+
+        DebugTools.Assert(CurrentPath.FirstOrDefault() == RootCategory, "Path is not rooted");
+        DebugTools.Assert(CurrentPath.Count(it => it == RootCategory) == 1, "Path contains bogus roots");
+    }
+
+    protected virtual void UpdateCategories()
     {
         Model.TabContainer.RemoveAllChildren();
 
         List<CategoryTreeItem>? categories;
-        if (CurrentPath.Count == 0)
-            categories = RootCategories;
-        else
-            categories = CurrentPath.Peek().Subcategories;
+        categories = CurrentPath.Count == 0 ? RootCategories : CurrentPath.Peek().Subcategories;
 
         if (categories == null)
             return;
 
         foreach (var category in categories)
         {
-            var categoryButton = new CategoryButton(category, GetLocalizedName(category.Category));
+            if (category.Prototype is null)
+                continue;
+
+            var categoryButton = new CategoryButton(category, GetLocalizedName(category.Prototype));
             categoryButton.OnPressed += _ => GoIntoCategory(category);
             Model.TabContainer.AddChild(categoryButton);
         }
@@ -356,32 +376,40 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     }
 
     /// <summary>
-    ///     Appends a category to the current path. Does not validate the path for validity.
+    ///     Appends a category to the current path. Does not validate the resulting path.
     /// </summary>
     /// <param name="category"></param>
     public void GoIntoCategory(CategoryTreeItem category)
     {
+        if (category.Prototype == null)
+            return;
+
         ShowingDetailsFor = null;
         CurrentPath.Push(category);
-        UpdatePath();
-        UpdateTabs();
-        UpdateChoices();
-        UpdateDetails();
+        UpdateAll();
     }
 
     /// <summary>
-    ///     Returns to the given category depth in the path. If depth is 0, returns to the root.
+    ///     Returns to the given category depth in the path. If depth is 1 or less, returns to the root.
     /// </summary>
     public void GoBackTo(int depth)
     {
+        EnsurePathIsRooted();
+
         ShowingDetailsFor = null;
         while (CurrentPath.Count > depth)
             CurrentPath.Pop();
 
+        UpdateAll();
+    }
+
+    public void UpdateAll()
+    {
         UpdatePath();
-        UpdateTabs();
+        UpdateCategories();
         UpdateChoices();
         UpdateDetails();
+        UpdateCounters();
     }
 
     public abstract TSelector CreateSelector(TProto prototype);
@@ -410,36 +438,39 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         public int CurrentPoints { get; internal set; } = int.MinValue;
         public int MaxPoints { get; internal set; } = int.MinValue;
 
+        public bool Valid =>
+            MaxPoints != int.MinValue
+            && CurrentPoints != int.MinValue
+            && (CurrentPoints >= 0 || MaxPoints == int.MaxValue);
+
         internal PointCounterControl? Control;
     }
 
     /// <summary>
     ///     An item of the prototype tree. It can either be terminal and contain prototypes, or be non-terminal and contain subcategories.
-    ///     It cannot be both.
+    ///     It cannot be both. The category field can only be null for the root category.
     /// </summary>
-    public record class CategoryTreeItem(TCategory Category, string LocalizedName, List<TProto>? Prototypes, List<CategoryTreeItem>? Subcategories)
+    public record class CategoryTreeItem(TCategory? Prototype, string LocalizedName, List<TProto>? Prototypes, List<CategoryTreeItem>? Subcategories)
     {
         public bool Terminal => Prototypes != null;
         public bool NonTerminal => Subcategories != null;
 
         public void Validate()
         {
-            if (Terminal && NonTerminal || !Terminal && !NonTerminal)
-                throw new InvalidOperationException($"Prototype {typeof(TCategory).Name} {Category.ID} must contain either prototypes or subcategories, but not both.");
+            if (Terminal && NonTerminal)
+                throw new InvalidOperationException($"Prototype {typeof(TCategory).Name} {Prototype?.ID} must contain either prototypes or subcategories, but not both.");
         }
     }
 
-    public sealed class PathControl : BoxContainer
+    public sealed class PathButton : Button
     {
-        public TCategory Category { get; }
+        public TCategory? Category { get; }
         public string LocalizedName { get; }
         public int Depth { get; }
-        public bool IsCurrent { get => !GoButton.Disabled; set => GoButton.Disabled = value; }
 
-        public readonly Label Text;
-        public readonly TextureButton GoButton;
+        public readonly TextureRect Image;
 
-        public PathControl(TCategory category, string localizedName, int depth)
+        public PathButton(TCategory? category, string localizedName, int depth)
         {
             Category = category;
             LocalizedName = localizedName;
@@ -447,20 +478,30 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
             HorizontalAlignment = HAlignment.Stretch;
 
-            Text = new()
+            var isRoot = category == null;
+            // Root category is represented by a home sign. Non-root ones are an arrow + text
+            if (isRoot)
             {
-                Text = localizedName,
-                HorizontalAlignment = HAlignment.Center,
-                HorizontalExpand = true,
-                Margin = new(2)
-            };
-            GoButton = new()
+                Text = null;
+                Image = new()
+                {
+                    TexturePath = "/Textures/Interface/home.png",
+                    SetSize = new(20),
+                    HorizontalAlignment = HAlignment.Left,
+                };
+                AddChild(Image);
+            }
+            else
             {
-                TexturePath = "/Textures/Interface/eject.png",
-                SetSize = new(48)
-            };
-            AddChild(Text);
-            AddChild(GoButton);
+                Text = localizedName;
+                Image = new()
+                {
+                    TexturePath = "/Textures/Interface/AdminActions/play.png", // Play button looks like an arrow
+                    SetSize = new(20),
+                    HorizontalAlignment = HAlignment.Left,
+                };
+                AddChild(Image);
+            }
         }
     }
 

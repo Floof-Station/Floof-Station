@@ -22,7 +22,7 @@
                     <!-- Preview -->
                     <PanelContainer>
                         <PanelContainer.PanelOverride>
-                            <graphics:StyleBoxFlat BackgroundColor="2f2f2f" />
+                            <graphics:StyleBoxFlat BackgroundColor="#2f2f2f" />
                         </PanelContainer.PanelOverride>
 
                         <SpriteView Name="EntPreview" Scale="1,1" OverrideDirection="South" VerticalAlignment="Center"/>
@@ -60,7 +60,7 @@
                 VerticalAlignment="Center">
 
                 <TextureRect
-                    TexturePath="Resources/Textures/Interface/hamburger.svg.192dpi.png"
+                    TexturePath="/Textures/Interface/hamburger.svg.192dpi.png"
                     TextureScale="0.4 0.4"
                     VerticalAlignment="Center"
                     VerticalExpand="True"

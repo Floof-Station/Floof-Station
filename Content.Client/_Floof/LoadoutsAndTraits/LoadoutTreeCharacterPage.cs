@@ -19,9 +19,8 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IConfigurationManager _configManager = default!;
-    [Dependency] private readonly CharacterRequirementsSystem _characterRequirementsSystem = default!;
     [Dependency] private readonly JobRequirementsManager _jobRequirementsManager = default!;
+    private readonly CharacterRequirementsSystem _characterRequirements;
 
     public readonly Dictionary<ProtoId<LoadoutPrototype>, LoadoutPreference> Preferences = new();
     public int MaxPoints { get; private set; }
@@ -35,6 +34,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     {
         IoCManager.InjectDependencies(this);
         _cfg.OnValueChanged(CCVars.GameLoadoutsPoints, OnMaxPointsChanged, true);
+        _characterRequirements = _entityManager.System<CharacterRequirementsSystem>();
 
         _highJobProvider = highJobProvider;
         _profileProvider = profileProvider;
@@ -59,7 +59,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
 
     public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype)
     {
-        return new(this, GetOrNew(prototype.ID));
+        return new(this, GetOrNew(prototype.ID), prototype);
     }
 
     protected override void UpdateExtendedPanel()
@@ -70,10 +70,10 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     public override bool IsUsable(LoadoutPrototype prototype, out List<string> reasons)
     {
         var playtimes = _jobRequirementsManager.GetPlayTimes();
-        var usable = _characterRequirementsSystem.CheckRequirementsValid(
+        var usable = _characterRequirements.CheckRequirementsValid(
             prototype.Requirements, _highJobProvider(), _profileProvider(), playtimes,
             _jobRequirementsManager.IsWhitelisted(), prototype,
-            _entityManager, _prototypeManager, _configManager,
+            _entityManager, _prototypeManager, _cfg,
             out reasons);
 
         return usable;
@@ -94,7 +94,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     }
 
     public override string GetLocalizedName(LoadoutCategoryPrototype prototype) =>
-        Loc.GetString($"loadout-category-name-{prototype.ID}");
+        Loc.GetString($"loadout-category-{prototype.ID}");
 
     public override string GetLocalizedName(LoadoutPrototype prototype) =>
         Loc.GetString($"loadout-name-{prototype.ID}");
