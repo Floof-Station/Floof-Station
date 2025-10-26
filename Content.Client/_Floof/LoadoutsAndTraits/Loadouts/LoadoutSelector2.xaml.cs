@@ -31,6 +31,9 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
     protected override BaseButton PreferenceButtonRef => PreferenceButton;
     protected override string Description => _parent.GetLocalizedDescription(Prototype);
 
+    /// <summary>RT ui default constructor. Do not use directly.</summary>
+    public LoadoutSelector2() : this(null!, new(), new()) { }
+
     public LoadoutSelector2(LoadoutTreeCharacterPage parent, LoadoutPreference preference, LoadoutPrototype proto)
     {
         RobustXamlLoader.Load(this);
@@ -50,6 +53,7 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
         {
             Preference.Selected = !Preference.Selected;
             _parent.Dirty();
+            _parent.UpdateSpecials();
             _parent.UpdateChoices(); // This may invalidate other options due to loadout groups
             _parent.UpdateCounters();
         };

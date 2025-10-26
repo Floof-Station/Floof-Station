@@ -6,11 +6,16 @@
     Margin="10">
 
     <!-- Point counters -->
-    <BoxContainer HorizontalExpand="True" Name="PointCountersContainer" Access="Public">
-
+    <BoxContainer Name="PointCountersContainer" Access="Public" Orientation="Vertical" HorizontalExpand="True">
+        <RichTextLabel
+            Name="OutOfPointsLabel"
+            Access="Public"
+            Text="{Loc 'loadouts-and-traits-out-of-points'}"
+            HorizontalExpand="True"
+            Visible="False"/>
     </BoxContainer>
 
-    <BoxContainer HorizontalExpand="True" Margin="0 0 0 5" Orientation="Horizontal">
+    <BoxContainer Margin="0 0 0 5" Orientation="Horizontal" HorizontalExpand="True">
         <Button
             Name="ShowUnusableButton" Access="Public"
             Text="{Loc 'humanoid-profile-editor-loadouts-show-unusable-button'}"
@@ -29,10 +34,10 @@
     </BoxContainer>
 
     <!-- Current page path -->
-    <ui:StyledButtonGroup Name="PathContainer" HorizontalExpand="True" Orientation="Horizontal" Access="Public"/>
+    <ui:StyledButtonGroup Name="PathContainer" Access="Public" Orientation="Horizontal" HorizontalExpand="True"/>
 
     <!-- Primary container -->
-    <BoxContainer HorizontalExpand="True" VerticalExpand="True" Orientation="Horizontal">
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
         <!-- Next tab selector -->
         <BoxContainer Name="TabContainer" Orientation="Vertical" VerticalExpand="True" Access="Public"/>
 
@@ -40,7 +45,7 @@
 
         <BoxContainer VerticalExpand="True" HorizontalExpand="True" Orientation="Vertical">
             <!-- Details - default hidden -->
-            <BoxContainer Name="DetailsContainer" VerticalExpand="True" Visible="False" Access="Public" Orientation="Vertical" />
+            <BoxContainer Name="DetailsContainer" Visible="False" Access="Public" Orientation="Vertical" HorizontalExpand="True"/>
 
             <ui:HLine HorizontalExpand="True"/>
 
@@ -50,7 +55,7 @@
 
                 <!-- List of choices -->
                 <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
-                    <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" Orientation="Vertical" />
+                    <BoxContainer Name="ChoicesContainer" HorizontalExpand="True" VerticalExpand="True" Access="Public" Orientation="Vertical" />
                 </ScrollContainer>
             </BoxContainer>
         </BoxContainer>

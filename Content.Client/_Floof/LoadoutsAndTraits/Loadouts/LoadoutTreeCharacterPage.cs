@@ -52,7 +52,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
 
     protected override void UpdateExtendedPanel()
     {
-        // TODO
+        base.UpdateExtendedPanel();
     }
 
     public override bool IsUsable(LoadoutPrototype prototype, out List<string> reasons)
@@ -86,14 +86,11 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     }
 
     public override string GetLocalizedName(LoadoutCategoryPrototype prototype) =>
-        Loc.GetString($"loadout-category-{prototype.ID}");
+        LocMan.GetString($"loadout-category-{prototype.ID}");
 
+    // Note: we do not account for custom names because those are set by the user and can change by runtime, but sorting depends on them being stable.
     public override string GetLocalizedName(LoadoutPrototype prototype) =>
-        // Try custom name first
-        Preferences.TryGetValue(prototype, out var pref) && pref.CustomName != null ? pref.CustomName
-        // Fall back to prototype-specific name
-        : LocMan.TryGetString($"loadout-name-{prototype.ID}", out var customName) ? customName
-        // Fall back to the name of the item provided by the loadout
+        LocMan.TryGetString($"loadout-name-{prototype.ID}", out var customName) ? customName
         : GetItemName(prototype);
 
     private string GetItemName(LoadoutPrototype prototype)

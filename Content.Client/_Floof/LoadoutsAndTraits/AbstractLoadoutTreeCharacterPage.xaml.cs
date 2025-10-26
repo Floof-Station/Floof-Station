@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Linq;
 using Content.Client.Administration.UI;
 using Content.Client.Players.PlayTimeTracking;
@@ -5,6 +6,7 @@ using Content.Shared._Floof.LoadoutsAndTraits.Prototypes;
 using Content.Shared.Customization.Systems;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Configuration;
@@ -43,7 +45,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     protected readonly List<CategoryTreeItem> RootCategories = new();
     protected bool PrototypesLoaded;
     protected Dictionary<Button, ConfirmationData> ButtonConfirmationData = new();
-    protected readonly ISawmill Log = Logger.GetSawmill($"tree-page-{typeof(TProto)}");
+    protected readonly ISawmill Log = Logger.GetSawmill($"tree-page-{typeof(TProto).Name}");
 
     protected bool LayoutInitialized = false;
     protected bool ShowUnusable = false;
@@ -51,15 +53,21 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     ///     Prototype currently being shown in the details container.
     ///     Null if no prototype is being shown.
     /// </summary>
-    protected TProto? ShowingDetailsFor;
+    protected TProto? ShowingExtendedInfoFor;
     /// <summary>
     ///     Current path of categories. Root category is represented by a "root" entry.
     /// </summary>
     protected readonly Stack<CategoryTreeItem> CurrentPath = new();
+    public CategoryTreeItem CurrentCategory => CurrentPath.Count == 0 ? RootCategory : CurrentPath.Peek();
+
     /// <summary>
     ///     Pseudo-category that represents the root of the tree.
     /// </summary>
-    protected CategoryTreeItem RootCategory { get; private set; } = new(null, "root", null, null);
+    protected readonly CategoryTreeItem RootCategory;
+    /// <summary>
+    ///     Pseudo-category that represents the "chosen items" section.
+    /// </summary>
+    protected readonly CategoryTreeItem ChosenItemsCategory;
 
     /// <summary>
     ///     List of all point counters relevant to this page. This includes trait points, trait slots, etc.
@@ -80,8 +88,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         IoCManager.InjectDependencies(this);
         Model = new();
         AddChild(Model);
-
-        EnsurePathIsRooted();
+// TODO ACTUALLY FIX LOADOUTS NOT KEPEING TRACK OF POINTS WHEN SPAWNING
+        RootCategory = new(null, "__root__", null, RootCategories);
+        ChosenItemsCategory = new(null, Loc.GetString("loadouts-and-traits-chosen-items"), new(), null);
+        CurrentPath.Push(RootCategory);
 
         Model.ShowUnusableButton.OnToggled += args =>
         {
@@ -98,18 +108,21 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         Model.SearchBar.OnTextChanged += _ => UpdateChoices();
     }
 
+    [MustCallBase]
     protected override void EnteredTree()
     {
         base.EnteredTree();
         ProtoMan.PrototypesReloaded += UpdatePrototypes;
     }
 
+    [MustCallBase]
     protected override void ExitedTree()
     {
         base.ExitedTree();
         ProtoMan.PrototypesReloaded -= UpdatePrototypes;
     }
 
+    [MustCallBase]
     protected override void FrameUpdate(FrameEventArgs args)
     {
         if (Visible)
@@ -134,6 +147,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     ///     Called when prototypes are reloaded and when first shown in the UI.
     ///     Inheritors must call the supermethod or set PrototypesLoaded to true inside it.
     /// </summary>
+    [MustCallBase]
     protected virtual void UpdatePrototypes(PrototypesReloadedEventArgs? args)
     {
         if (args != null && !args.WasModified<TProto>() && !args.WasModified<TCategory>())
@@ -144,23 +158,38 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
         RootCategories.Clear();
         BuildTree(AllCategories.Where(it => it.Root).ToList(), RootCategories);
-        RootCategory = new(null, "root", null, RootCategories);
-
         #if DEBUG
-        // Ensure all prototypes are in a category
-        foreach (var prototype in AllPrototypes)
-        {
-            if (AllCategories.None(it => it.SubCategories.Contains(prototype.ID)))
-            {
-                Log.Error($"Prototype {prototype.ID} is not in any valid category.");
-            }
-        }
+        ValidatePrototypes();
         #endif
+
+        // Snowflake case - the chosen items pseudo-category
+        RootCategories.Add(ChosenItemsCategory);
+    }
+
+    private void ValidatePrototypes()
+    {
+        // Ensure all prototypes are in a category
+        List<TProto> prototypesNotInCategory = AllPrototypes.ToList();
+        void RecCheck(CategoryTreeItem item)
+        {
+            if (item.Prototypes != null)
+                prototypesNotInCategory.RemoveAll(it => item.Prototypes.Contains(it));
+
+            if (item.Subcategories != null)
+                foreach (var subcategory in item.Subcategories)
+                    RecCheck(subcategory);
+        }
+
+        RecCheck(RootCategory);
+
+        if (prototypesNotInCategory.Count > 0)
+            Log.Error($"The following prototypes are not in any valid category reachable from the root: {string.Join(", ", prototypesNotInCategory.Select(it => it.ID))}");
     }
 
     /// <summary>
     ///     Recursively builds the tree of prototypes, outputting the result into <paramref name="outputList"/>.
     /// </summary>
+    [MustCallBase]
     protected virtual void BuildTree(List<TCategory> rootCategories, List<CategoryTreeItem> outputList)
     {
         foreach (var category in rootCategories)
@@ -171,10 +200,14 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             if (category.SubCategories.Count == 0)
             {
                 // Terminal node
+                var protos = AllPrototypes.Where(it => it.Category == category.ID).ToList();
+                // Sorting prototypes by name. TODO: selective sorting mode
+                protos.Sort((a, b) => string.Compare(GetLocalizedName(a), GetLocalizedName(b), StringComparison.Ordinal));
+
                 categoryTreeItem = new(
                     category,
                     locName,
-                    AllPrototypes.Where(it => it.Category == category.ID).ToList(),
+                    protos,
                     null);
                 outputList.Add(categoryTreeItem);
 
@@ -197,6 +230,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
                 subcategories.Add(subCatProto);
             }
+            // Sorting subcategories by ID because that's how EE intended it. They apparently never learned they can just add an "order" field.
+            subcategories.Sort((a, b) => string.Compare(a.ID, b.ID, StringComparison.Ordinal));
 
             var subCatsList = new List<CategoryTreeItem>();
             BuildTree(subcategories, subCatsList);
@@ -213,6 +248,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// <summary>
     ///     Initializes the layout of the page. This is called when the page is first shown.
     /// </summary>
+    [MustCallBase]
     protected virtual void InitializeLayout()
     {
         foreach (var counter in Counters)
@@ -222,18 +258,15 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             counter.Control = pointCounterControl;
         }
 
-        UpdatePath();
-        UpdateCategories();
-        UpdateChoices();
-        UpdateDetails();
-        UpdateCounters();
+        UpdateAll();
     }
 
+    [MustCallBase]
     public virtual void UpdateCounters()
     {
         // Reset all counters
         foreach (var counter in Counters)
-            counter.CurrentPoints = counter.GetMaxPoints();
+            counter.MaxPoints = counter.CurrentPoints = counter.GetMaxPoints();
 
         // Recalculate all counters
         foreach (var proto in GetSelected())
@@ -249,11 +282,15 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             valid = valid && counter.Valid; // Using && instead of &= for short-circuiting
             counter.UpdatePoints();
         }
+
+        CountersValid = valid;
+        Model.OutOfPointsLabel.Visible = !valid;
     }
 
     /// <summary>
     ///     Updates the category path panel.
     /// </summary>
+    [MustCallBase]
     public virtual void UpdatePath()
     {
         EnsurePathIsRooted();
@@ -281,9 +318,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             var item = i < saved ? oldPath[i] : null;
             if (item == null)
             {
-                var cat = getNew(i).Prototype;
-                item = new(cat, cat == null ? string.Empty : GetLocalizedName(cat), i);
-                item.OnPressed += _ => GoBackTo(item.Depth);
+                var category = getNew(i);
+                var proto = category.Prototype;
+                item = new(proto, proto == null ? string.Empty : GetLocalizedName(proto), i);
+                item.OnPressed += _ => ReturnToCategory(category);
             }
             Model.PathContainer.AddChild(item);
         }
@@ -291,35 +329,46 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
     protected void EnsurePathIsRooted()
     {
-        // Is there a more sane way to do this? Ideally we shouldn't keep that pseudo-category there, but it simplifies the code.
         if (CurrentPath.Count == 0)
             CurrentPath.Push(RootCategory);
 
-        DebugTools.Assert(CurrentPath.FirstOrDefault() == RootCategory, "Path is not rooted");
+        DebugTools.Assert(CurrentPath.Last() == RootCategory, "Path is not rooted"); // Note: this is a stack, so last == bottom == root
         DebugTools.Assert(CurrentPath.Count(it => it == RootCategory) == 1, "Path contains bogus roots");
     }
 
+    /// <summary>
+    ///     Updates special categories like the "chosen items" section.
+    /// </summary>
+    [MustCallBase]
+    public virtual void UpdateSpecials()
+    {
+        var chosen = ChosenItemsCategory.Prototypes;
+        DebugTools.Assert(chosen != null);
+        chosen!.Clear();
+        chosen!.AddRange(GetSelected());
+    }
+
+    [MustCallBase]
     public virtual void UpdateCategories()
     {
         Model.TabContainer.RemoveAllChildren();
 
-        List<CategoryTreeItem>? categories;
-        categories = CurrentPath.Count == 0 ? RootCategories : CurrentPath.Peek().Subcategories;
-
+        var categories = CurrentCategory.Subcategories;
         if (categories == null)
             return;
 
         foreach (var category in categories)
         {
-            if (category.Prototype is null)
+            if (category.Prototype is null || category.Empty)
                 continue;
 
             var categoryButton = new CategoryButton(category, GetLocalizedName(category.Prototype));
-            categoryButton.OnPressed += _ => GoIntoCategory(category);
+            categoryButton.OnPressed += _ => EnterCategory(category);
             Model.TabContainer.AddChild(categoryButton);
         }
     }
 
+    [MustCallBase]
     public virtual void UpdateChoices()
     {
         Model.ChoicesContainer.RemoveAllChildren();
@@ -375,14 +424,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         AdminUIHelpers.RemoveConfirm(Model.RemoveUnusableButton, ButtonConfirmationData);
     }
 
-    public virtual void UpdateDetails()
+    [MustCallBase]
+    public virtual void UpdateExtendedInfo()
     {
-        // [X] TODO show why loadout is unusable
-        // TODO details panel
-        // [X] TODO color loadouts/traits based on unusable/usable/selected-but-unusable
-        // TODO sorting (maybe with a mode selector)
-        // [X] TODO error: getting 92 unusable loadouts?
-        if (ShowingDetailsFor == null)
+        if (ShowingExtendedInfoFor == null)
         {
             Model.DetailsContainer.Visible = false;
             return;
@@ -440,33 +485,31 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// </summary>
     public void Expand(TProto? prototype)
     {
-        ShowingDetailsFor = prototype;
-        UpdateDetails();
+        ShowingExtendedInfoFor = prototype;
+        UpdateExtendedInfo();
     }
 
     /// <summary>
     ///     Appends a category to the current path. Does not validate the resulting path.
     /// </summary>
     /// <param name="category"></param>
-    public void GoIntoCategory(CategoryTreeItem category)
+    public void EnterCategory(CategoryTreeItem category)
     {
         if (category.Prototype == null)
             return;
 
-        ShowingDetailsFor = null;
+        ShowingExtendedInfoFor = null;
         CurrentPath.Push(category);
         UpdateAll();
     }
 
     /// <summary>
-    ///     Returns to the given category depth in the path. If depth is 1 or less, returns to the root.
+    ///     Returns to the given category depth in the path. If the category is not in the path, returns to root.
     /// </summary>
-    public void GoBackTo(int depth)
+    public void ReturnToCategory(CategoryTreeItem? category)
     {
-        EnsurePathIsRooted();
-
-        ShowingDetailsFor = null;
-        while (CurrentPath.Count > depth + 1) // I won't lie, I have no idea why the +1 is required, but without it we always return 1 too far
+        ShowingExtendedInfoFor = null;
+        while (CurrentPath.Count > 0 && CurrentCategory != category)
             CurrentPath.Pop();
 
         UpdateAll();
@@ -475,9 +518,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     public void UpdateAll()
     {
         UpdatePath();
+        UpdateSpecials();
         UpdateCategories();
         UpdateChoices();
-        UpdateDetails();
+        UpdateExtendedInfo();
         UpdateCounters();
     }
 
@@ -487,6 +531,9 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     public void Dirty()
     {
         OnDirty?.Invoke();
+
+        if (ShowingExtendedInfoFor is { } infoItem && !IsSelected(infoItem))
+            UpdateExtendedInfo();
     }
 
     /// <summary>
@@ -495,10 +542,17 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     public abstract TSelector CreateSelector(TProto prototype);
 
     /// <summary>
-    ///     Called when the user tries to view the extended detail/settings of a prototype.
+    ///     Called when the user tries to view the extended detail/settings of a prototype, should be overridden by inheritors.
     ///     Should update DetailsContainer (note that it will usually be cleared - though not disposed of - before calling this).
     /// </summary>
-    protected abstract void UpdateExtendedPanel();
+    protected virtual void UpdateExtendedPanel()
+    {
+        Model.DetailsContainer.AddChild(new RichTextLabel()
+        {
+            Text = $"Showing details for {GetLocalizedName(ShowingExtendedInfoFor!)}. TODO.",
+            StyleClasses = { "LabelHeading" }
+        });
+    }
 
     /// <summary>
     ///     Checks if the player can use the provided loadout, regardless of points.
@@ -547,6 +601,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     {
         public bool Terminal => Prototypes != null;
         public bool NonTerminal => Subcategories != null;
+        public bool Empty => (Prototypes == null || Prototypes?.Count == 0) && (Subcategories == null || Subcategories?.Count == 0);
     }
 
     public sealed class PathButton : Button
@@ -582,6 +637,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             {
                 Text = localizedName;
                 Image = null;
+                // Special categories get a special blue font
+                Label.FontColorOverride = Category == null ? new(128, 128, 255) : null;
             }
         }
     }

@@ -37,16 +37,10 @@ public abstract class AbstractLoadoutSelector : Control
     {
         // Apply style
         PreferenceButtonRef.StyleClasses.Add(NormalSelectorClass);
-        if (!unusable)
-        {
-            PreferenceButtonRef.StyleClasses.Remove(UnusableSelectorClass);
-            PreferenceButtonRef.StyleClasses.Remove(SelectedUnusableSelectorClass);
-        }
-        else
-        {
-            PreferenceButtonRef.StyleClasses.Remove(!selected ? SelectedUnusableSelectorClass : UnusableSelectorClass);
+        PreferenceButtonRef.StyleClasses.Remove(SelectedUnusableSelectorClass);
+        PreferenceButtonRef.StyleClasses.Remove(UnusableSelectorClass);
+        if (unusable)
             PreferenceButtonRef.StyleClasses.Add(selected ? SelectedUnusableSelectorClass : UnusableSelectorClass);
-        }
 
         // Add tooltip if applicable
         PreferenceButtonRef.TooltipSupplier = _ => GetTooltip(unusable, reasons);
@@ -57,22 +51,22 @@ public abstract class AbstractLoadoutSelector : Control
         // Unlike EE, we create the tooltip dynamically, when it's needed.
         var tooltip = new StringBuilder();
         // Description comes first
+        // NOTE: StringBuilder.AppendLine is a sandbox violation, but StringBuilder.Append is not
         if (Description is { Length: >0 } description)
         {
-            tooltip.AppendLine(description);
-            tooltip.AppendLine();
+            tooltip.Append(description + "\n\n");
         }
 
         // Add requirement reasons to the tooltip, but only if it's considered unusable.
         if (unusable)
             foreach (var reason in reasons)
-                tooltip.AppendLine($"{reason}");
+                tooltip.Append($"{reason}\n");
 
         if (tooltip.Length <= 0)
             return null;
 
         var formattedTooltip = new Tooltip();
-        formattedTooltip.SetMessage(FormattedMessage.FromMarkupPermissive(tooltip.ToString()));
+        formattedTooltip.SetMessage(FormattedMessage.FromMarkupPermissive(tooltip.ToString().Trim()));
         return formattedTooltip;
     }
 }
