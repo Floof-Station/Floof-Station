@@ -2071,32 +2071,6 @@ namespace Content.Client.Lobby.UI
 
         #region Functions
 
-        private Dictionary<string, object> CreateTree(List<LoadoutCategoryPrototype> cats)
-        {
-            var tree = new Dictionary<string, object>();
-            foreach (var category in cats)
-            {
-                // If the category is already in the tree, ignore it
-                if (tree.ContainsKey(category.ID))
-                    continue;
-
-                // Categories don't have a Parent field, so we need to instead check the SubCategories of every Category
-                var subCategories = category.SubCategories.Where(subCategory => !tree.ContainsKey(subCategory)).ToList();
-                // If there are no subcategories, add a loadout spot to the dictionary
-                if (subCategories.Count == 0)
-                {
-                    tree.Add(category.ID, new List<LoadoutPrototype>());
-                    continue;
-                }
-
-                // If there are subcategories, we need to add them to the dictionary as well
-                var subCategoryTree = CreateTree(subCategories.Select(c => _prototypeManager.Index(c)).ToList());
-                tree.Add(category.ID, subCategoryTree);
-            }
-
-            return tree;
-        }
-
         private BoxContainer? FindCategory(string id, NeoTabContainer parent)
         {
             BoxContainer? match = null;

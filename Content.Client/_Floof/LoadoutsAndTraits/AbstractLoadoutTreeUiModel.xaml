@@ -47,8 +47,11 @@
             <BoxContainer VerticalExpand="True" HorizontalExpand="True" Orientation="Vertical">
                 <!-- Search bar -->
                 <HistoryLineEdit Name="SearchBar" HorizontalExpand="True" Access="Public" PlaceHolder="Type to searh..."/>
+
                 <!-- List of choices -->
-                <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" Orientation="Vertical" />
+                <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" Orientation="Vertical" />
+                </ScrollContainer>
             </BoxContainer>
         </BoxContainer>
     </BoxContainer>

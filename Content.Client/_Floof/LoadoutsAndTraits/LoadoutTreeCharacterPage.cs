@@ -48,9 +48,11 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
         UpdateCounters();
     }
 
-    public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype)
+    public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype, bool usable, bool chosen, List<string> reasons)
     {
-        return new(this, GetOrNew(prototype.ID), prototype);
+        var selector = new LoadoutSelector2(this, GetOrNew(prototype.ID), prototype);
+        selector.InferStyleFromState(usable, chosen, reasons);
+        return selector;
     }
 
     protected override void UpdateExtendedPanel()
@@ -92,7 +94,36 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
         Loc.GetString($"loadout-category-{prototype.ID}");
 
     public override string GetLocalizedName(LoadoutPrototype prototype) =>
-        Loc.GetString($"loadout-name-{prototype.ID}");
+        // Try custom name first
+        Preferences.TryGetValue(prototype, out var pref) && pref.CustomName != null ? pref.CustomName
+        // Fall back to prototype-specific name
+        : LocMan.TryGetString($"loadout-name-{prototype.ID}", out var customName) ? customName
+        // Fall back to the name of the item provided by the loadout
+        : GetItemName(prototype);
+
+    private string GetItemName(LoadoutPrototype prototype)
+    {
+        if (prototype.Items.Count == 0 || !ProtoMan.TryIndex(prototype.Items[0], out var itemProto))
+            return "???";
+
+        return itemProto.Name;
+    }
+
+    public override string GetLocalizedDescription(LoadoutPrototype prototype) =>
+        // Try custom description first
+        Preferences.TryGetValue(prototype, out var pref) && pref.CustomDescription != null ? pref.CustomDescription
+        // Fall back to prototype-specific description
+        : LocMan.TryGetString($"loadout-description-{prototype.ID}", out var customDesc) ? customDesc
+        // Fall back to the description of the item provided by the loadout
+        : GetItemDescription(prototype);
+
+    private string GetItemDescription(LoadoutPrototype prototype)
+    {
+        if (prototype.Items.Count == 0 || !ProtoMan.TryIndex(prototype.Items[0], out var itemProto))
+            return "???";
+
+        return itemProto.Description;
+    }
 
     public LoadoutPreference GetOrNew(ProtoId<LoadoutPrototype> proto)
     {

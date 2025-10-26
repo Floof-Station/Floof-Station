@@ -15,10 +15,6 @@ using Robust.Shared.Utility;
 
 namespace Content.Client._Floof.LoadoutsAndTraits;
 
-// TODO implement point calculation (curerntly a stub)
-// fix texture rects and sprite views being misplaced
-// implement
-
 /// <summary>
 ///     Represents an abstract page of loadout customization menu that uses a tree-like structure and keeps track of character "points".
 ///
@@ -32,6 +28,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     [Dependency] protected readonly IPrototypeManager ProtoMan = default!;
     [Dependency] protected readonly IEntityManager EntMan = default!;
     [Dependency] protected readonly IConfigurationManager Cfg = default!;
+    [Dependency] protected readonly ILocalizationManager LocMan = default!;
     [Dependency] private readonly JobRequirementsManager _jobRequirementsManager = default!;
 
     private CharacterRequirementsSystem? _characterRequirements;
@@ -118,7 +115,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         if (Visible)
         {
             if (!PrototypesLoaded)
+            {
                 UpdatePrototypes(null);
+                PrototypesLoaded = true;
+            }
 
             if (!LayoutInitialized)
             {
@@ -144,8 +144,6 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
         RootCategories.Clear();
         BuildTree(AllCategories.Where(it => it.Root).ToList(), RootCategories);
-        PrototypesLoaded = true;
-
         RootCategory = new(null, "root", null, RootCategories);
 
         #if DEBUG
@@ -342,10 +340,13 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         var chosenUnusable = 0;
         foreach (var prototype in currentCategory)
         {
-            if (!IsUsable(prototype, out var reasons))
+            var usable = IsUsable(prototype, out var reasons);
+            var selected = IsSelected(prototype);
+            if (!usable)
             {
-                chosenUnusable++;
-                if (!ShowUnusable)
+                if (selected)
+                    chosenUnusable++;
+                else if (!ShowUnusable)
                     continue;
             }
 
@@ -353,7 +354,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
                 && !GetLocalizedName(prototype).Trim().Contains(Model.SearchBar.Text.Trim(), StringComparison.OrdinalIgnoreCase))
                 continue;
 
-            var selector = CreateSelector(prototype);
+            var selector = CreateSelector(prototype, usable, selected, reasons);
             Model.ChoicesContainer.AddChild(selector);
         }
 
@@ -369,11 +370,17 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         Model.RemoveUnusableButton.Text = Loc.GetString(
             "humanoid-profile-editor-loadouts-remove-unusable-button",
             ("count", chosenUnusable));
+        Model.RemoveUnusableButton.Disabled = chosenUnusable == 0;
         AdminUIHelpers.RemoveConfirm(Model.RemoveUnusableButton, ButtonConfirmationData);
     }
 
     public virtual void UpdateDetails()
     {
+        // [X] TODO show why loadout is unusable
+        // TODO details panel
+        // [X] TODO color loadouts/traits based on unusable/usable/selected-but-unusable
+        // TODO sorting (maybe with a mode selector)
+        // [X] TODO error: getting 92 unusable loadouts?
         if (ShowingDetailsFor == null)
         {
             Model.DetailsContainer.Visible = false;
@@ -417,7 +424,9 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         // EE used to create a new empty JobPrototype here, which would cause certain checks to fail. I have no words.
         profile ??= HumanoidCharacterProfile.DefaultWithSpecies();
         highJob ??= _fallbackJob;
+
         // Also for some reason it requires both prototype and prototype.Requirements? I guess EE never heard of interfaces, inheritance and polymorphism, huh.
+        // TODO: can we make this not return false if a loadout has a CIG that conflicts with itself?
         return _characterRequirements.CheckRequirementsValid(
             requirements, highJob, profile, playtimes,
             _jobRequirementsManager.IsWhitelisted(), checkedProto,
@@ -456,7 +465,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         EnsurePathIsRooted();
 
         ShowingDetailsFor = null;
-        while (CurrentPath.Count > depth)
+        while (CurrentPath.Count > depth + 1) // I won't lie, I have no idea why the +1 is required, but without it we always return 1 too far
             CurrentPath.Pop();
 
         UpdateAll();
@@ -479,7 +488,14 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         OnDirty?.Invoke();
     }
 
-    public abstract TSelector CreateSelector(TProto prototype);
+    /// <summary>
+    ///     Creates a selector for the given prototype.
+    /// </summary>
+    /// <param name="prototype"></param>
+    /// <param name="usable">Whether the provided loadout passes the requirements (cached result of IsUsable). Note that this may be false if the loadout is conflicting with itself.</param>
+    /// <param name="chosen">Whether this loadout is currently chosen (cached result of IsSelected).</param>
+    /// <param name="reasons">The reasons why the loadout is not usable (empty if usable)</param>
+    public abstract TSelector CreateSelector(TProto prototype, bool usable, bool chosen, List<string> reasons);
 
     /// <summary>
     ///     Called when the user tries to view the extended detail/settings of a prototype.
@@ -502,6 +518,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
     public abstract string GetLocalizedName(TProto prototype);
 
+    public abstract string GetLocalizedDescription(TProto prototype);
+
     public record class PointCounterDef(string LocString, Func<TProto, int> GetPrototypeCost, Func<int> GetMaxPoints)
     {
         public int CurrentPoints { get; internal set; } = int.MinValue;
@@ -520,24 +538,18 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
                 return;
 
             Control.SetValue(CurrentPoints);
-            Control.SetValue(MaxPoints);
+            Control.SetMax(MaxPoints);
         }
     }
 
     /// <summary>
     ///     An item of the prototype tree. It can either be terminal and contain prototypes, or be non-terminal and contain subcategories.
-    ///     It cannot be both. The category field can only be null for the root category.
+    ///     It's possible for it to be both. The category field can only be null for the root category.
     /// </summary>
     public record class CategoryTreeItem(TCategory? Prototype, string LocalizedName, List<TProto>? Prototypes, List<CategoryTreeItem>? Subcategories)
     {
         public bool Terminal => Prototypes != null;
         public bool NonTerminal => Subcategories != null;
-
-        public void Validate()
-        {
-            if (Terminal && NonTerminal)
-                throw new InvalidOperationException($"Prototype {typeof(TCategory).Name} {Prototype?.ID} must contain either prototypes or subcategories, but not both.");
-        }
     }
 
     public sealed class PathButton : Button

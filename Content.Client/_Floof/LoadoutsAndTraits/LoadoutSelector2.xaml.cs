@@ -17,7 +17,7 @@ namespace Content.Client._Floof.LoadoutsAndTraits;
 
 
 [GenerateTypedNameReferences]
-public sealed partial class LoadoutSelector2 : Control
+public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
 {
     [Dependency] private readonly IEntityManager _entMan = default!;
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
@@ -27,6 +27,9 @@ public sealed partial class LoadoutSelector2 : Control
     public LoadoutPreference Preference;
     public LoadoutPrototype Prototype;
     public EntityUid? DummyEntity { get; private set; }
+
+    protected override BaseButton PreferenceButtonRef => PreferenceButton;
+    protected override string Description => _parent.GetLocalizedDescription(Prototype);
 
     public LoadoutSelector2(LoadoutTreeCharacterPage parent, LoadoutPreference preference, LoadoutPrototype proto)
     {
@@ -42,9 +45,8 @@ public sealed partial class LoadoutSelector2 : Control
             DummyEntity = EntityUid.Invalid; // I don't care, just nuke it
 
         LoadoutCost.StyleClasses.Add(StyleBase.StyleClassLabelHeading);
-        PreferenceButton.StyleClasses.Add(ContainerButton.StyleClassButton);
 
-        PreferenceButton.OnPressed += _ =>
+        PreferenceButtonRef.OnPressed += _ =>
         {
             Preference.Selected = !Preference.Selected;
             _parent.Dirty();
@@ -104,8 +106,8 @@ public sealed partial class LoadoutSelector2 : Control
             Preference.CustomHeirloom = false;
 
         LoadoutCost.Text = $"{Prototype.Cost}";
-        LoadoutLocName.Text = Preference.CustomName ?? LocOrDefaultName($"loadout-name-{Prototype.ID}");
-        PreferenceButton.Pressed = Preference.Selected;
+        LoadoutLocName.Text = _parent.GetLocalizedName(Prototype);
+        PreferenceButtonRef.Pressed = Preference.Selected;
         HeirloomButton.Pressed = Preference.CustomHeirloom == true;
 
         HeirloomButton.Visible = Prototype.CanBeHeirloom;
@@ -124,15 +126,6 @@ public sealed partial class LoadoutSelector2 : Control
         }
         else
             _entMan.RemoveComponent<PaintedComponent>(DummyEntity.Value);
-    }
-
-    private string LocOrDefaultName(string loc)
-    {
-        if (_locMan.TryGetString(loc, out var customDesc))
-            return customDesc;
-        if (_entMan.TryGetComponent<MetaDataComponent>(DummyEntity, out var meta))
-            return meta.EntityName;
-        return "???";
     }
 
     public void OpenGuidebook()
