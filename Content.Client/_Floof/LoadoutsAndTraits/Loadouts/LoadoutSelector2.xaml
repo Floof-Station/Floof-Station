@@ -1,9 +1,10 @@
-<loadoutsAndTraits:LoadoutSelector2 xmlns="https://spacestation14.io"
+<loadouts:LoadoutSelector2 xmlns="https://spacestation14.io"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:ui="clr-namespace:Content.Client.Lobby.UI"
     xmlns:loadoutsAndTraits="clr-namespace:Content.Client._Floof.LoadoutsAndTraits"
+    xmlns:loadouts="clr-namespace:Content.Client._Floof.LoadoutsAndTraits.Loadouts"
     HorizontalExpand="True">
 
     <BoxContainer Name="Container" Orientation="Vertical" HorizontalExpand="True">
@@ -71,4 +72,4 @@
             </Button>
         </controls:StyledButtonGroup>
     </BoxContainer>
-</loadoutsAndTraits:LoadoutSelector2>
+</loadouts:LoadoutSelector2>

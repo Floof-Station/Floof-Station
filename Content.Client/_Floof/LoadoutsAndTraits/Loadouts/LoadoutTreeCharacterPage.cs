@@ -12,7 +12,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 
-namespace Content.Client._Floof.LoadoutsAndTraits;
+namespace Content.Client._Floof.LoadoutsAndTraits.Loadouts;
 
 
 public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<LoadoutPrototype, LoadoutCategoryPrototype, LoadoutSelector2>
@@ -48,12 +48,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
         UpdateCounters();
     }
 
-    public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype, bool usable, bool chosen, List<string> reasons)
-    {
-        var selector = new LoadoutSelector2(this, GetOrNew(prototype.ID), prototype);
-        selector.InferStyleFromState(usable, chosen, reasons);
-        return selector;
-    }
+    public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype) => new(this, GetOrNew(prototype.ID), prototype);
 
     protected override void UpdateExtendedPanel()
     {

@@ -23,7 +23,7 @@ namespace Content.Client._Floof.LoadoutsAndTraits;
 public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory, TSelector> : Control
     where TProto : class, IRecursivePrototype<TCategory, TProto>, IPrototype
     where TCategory : class, IRecursivePrototypeCategory<TCategory, TProto>, IPrototype
-    where TSelector : Control
+    where TSelector : AbstractLoadoutSelector
 {
     [Dependency] protected readonly IPrototypeManager ProtoMan = default!;
     [Dependency] protected readonly IEntityManager EntMan = default!;
@@ -354,7 +354,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
                 && !GetLocalizedName(prototype).Trim().Contains(Model.SearchBar.Text.Trim(), StringComparison.OrdinalIgnoreCase))
                 continue;
 
-            var selector = CreateSelector(prototype, usable, selected, reasons);
+            var selector = CreateSelector(prototype);
+            selector.InferStyleFromState(!usable, selected, reasons);
             Model.ChoicesContainer.AddChild(selector);
         }
 
@@ -491,11 +492,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// <summary>
     ///     Creates a selector for the given prototype.
     /// </summary>
-    /// <param name="prototype"></param>
-    /// <param name="usable">Whether the provided loadout passes the requirements (cached result of IsUsable). Note that this may be false if the loadout is conflicting with itself.</param>
-    /// <param name="chosen">Whether this loadout is currently chosen (cached result of IsSelected).</param>
-    /// <param name="reasons">The reasons why the loadout is not usable (empty if usable)</param>
-    public abstract TSelector CreateSelector(TProto prototype, bool usable, bool chosen, List<string> reasons);
+    public abstract TSelector CreateSelector(TProto prototype);
 
     /// <summary>
     ///     Called when the user tries to view the extended detail/settings of a prototype.

@@ -13,7 +13,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 
-namespace Content.Client._Floof.LoadoutsAndTraits;
+namespace Content.Client._Floof.LoadoutsAndTraits.Loadouts;
 
 
 [GenerateTypedNameReferences]

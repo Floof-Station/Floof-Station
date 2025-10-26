@@ -2,6 +2,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using Content.Client._Floof.LoadoutsAndTraits;
+using Content.Client._Floof.LoadoutsAndTraits.Loadouts;
 using Content.Client.Administration.UI;
 using Content.Client.Guidebook;
 using Content.Client.Humanoid;

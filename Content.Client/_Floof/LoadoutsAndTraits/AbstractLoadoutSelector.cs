@@ -33,7 +33,7 @@ public abstract class AbstractLoadoutSelector : Control
     /// <param name="unusable">Whether the loadout is unusable.</param>
     /// <param name="selected">Whether the loadout is currently selected.</param>
     /// <param name="reasons">If unusable, the list of reasons why this loadout is unusable.</param>
-    public void InferStyleFromState(bool unusable, bool selected, List<string> reasons)
+    public virtual void InferStyleFromState(bool unusable, bool selected, List<string> reasons)
     {
         // Apply style
         PreferenceButtonRef.StyleClasses.Add(NormalSelectorClass);
