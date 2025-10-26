@@ -444,6 +444,13 @@ namespace Content.Client.Lobby.UI
             cfgManager.OnValueChanged(CCVars.GameLoadoutsEnabled, LoadoutsChanged);
             UpdateLoadouts();
 
+            _loadoutsPage.OnDirty += () =>
+            {
+                // We're providing a copy of our dictionary to the loadout page, so whenever it gets dirtied, we need to copy it back
+                Profile = Profile?.WithLoadoutPreferences(_loadoutsPage.Preferences.Values);
+                SetDirty();
+            };
+
             #endregion
 
             #region Markings
@@ -2053,6 +2060,10 @@ namespace Content.Client.Lobby.UI
         public void UpdateLoadouts()
         {
             // Full refresh
+            _loadoutsPage.Preferences.Clear();
+            foreach (var pref in Profile?.LoadoutPreferences ?? new())
+                _loadoutsPage.Preferences.Add(pref.LoadoutName, pref);
+
             _loadoutsPage.UpdateAll();
         }
 

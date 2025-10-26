@@ -2,12 +2,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-    xmlns:ui="clr-namespace:Content.Client.Lobby.UI">
+    xmlns:ui="clr-namespace:Content.Client.Lobby.UI"
+    HorizontalExpand="True">
 
     <BoxContainer Name="Container" Orientation="Vertical" HorizontalExpand="True">
         <!-- Floofstation notice - VerticalExpand has been added to numerous buttons -->
         <controls:StyledButtonGroup Name="ButtonGroup" Orientation="Horizontal" HorizontalExpand="True">
-            <Button
+            <ContainerButton
                 Name="PreferenceButton"
                 ToggleMode="True"
                 VerticalAlignment="Center">
@@ -26,11 +27,11 @@
                         </PanelContainer.PanelOverride>
 
                         <SpriteView Name="EntPreview" Scale="1,1" OverrideDirection="South" VerticalAlignment="Center"/>
-
-                        <Label Name="LoadoutLocName" Margin="8 0 0 00" MinWidth="64"/>
                     </PanelContainer>
+
+                    <Label Name="LoadoutLocName" Margin="8 0 0 00" MinWidth="64"/>
                 </BoxContainer>
-            </Button>
+            </ContainerButton>
 
             <Button
                 Name="HeirloomButton"
@@ -62,6 +63,7 @@
                 <TextureRect
                     TexturePath="/Textures/Interface/hamburger.svg.192dpi.png"
                     TextureScale="0.4 0.4"
+
                     VerticalAlignment="Center"
                     VerticalExpand="True"
                     Margin="5" />

@@ -36,11 +36,20 @@
         <!-- Next tab selector -->
         <BoxContainer Name="TabContainer" Orientation="Vertical" VerticalExpand="True" Access="Public"/>
 
+        <ui:HighDivider VerticalExpand="True"/>
+
         <BoxContainer VerticalExpand="True" HorizontalExpand="True" Orientation="Vertical">
             <!-- Details - default hidden -->
             <BoxContainer Name="DetailsContainer" VerticalExpand="True" Visible="False" Access="Public" Orientation="Vertical" />
-            <!-- List of choices -->
-            <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" Orientation="Vertical" />
+
+            <ui:HLine HorizontalExpand="True"/>
+
+            <BoxContainer VerticalExpand="True" HorizontalExpand="True" Orientation="Vertical">
+                <!-- Search bar -->
+                <HistoryLineEdit Name="SearchBar" HorizontalExpand="True" Access="Public" PlaceHolder="Type to searh..."/>
+                <!-- List of choices -->
+                <BoxContainer Name="ChoicesContainer" VerticalExpand="True" Access="Public" Orientation="Vertical" />
+            </BoxContainer>
         </BoxContainer>
     </BoxContainer>
 </BoxContainer>

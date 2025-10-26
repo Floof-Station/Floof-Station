@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing.Loadouts.Prototypes;
@@ -16,25 +17,15 @@ namespace Content.Client._Floof.LoadoutsAndTraits;
 
 public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<LoadoutPrototype, LoadoutCategoryPrototype, LoadoutSelector2>
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly JobRequirementsManager _jobRequirementsManager = default!;
-    private readonly CharacterRequirementsSystem _characterRequirements;
-
     public readonly Dictionary<ProtoId<LoadoutPrototype>, LoadoutPreference> Preferences = new();
     public int MaxPoints { get; private set; }
-
-    public event Action<HashSet<LoadoutPreference>>? OnPreferencesChanged = null;
 
     private Func<JobPrototype> _highJobProvider;
     private Func<HumanoidCharacterProfile> _profileProvider;
 
     public LoadoutTreeCharacterPage(Func<JobPrototype> highJobProvider, Func<HumanoidCharacterProfile> profileProvider) : base()
     {
-        IoCManager.InjectDependencies(this);
-        _cfg.OnValueChanged(CCVars.GameLoadoutsPoints, OnMaxPointsChanged, true);
-        _characterRequirements = _entityManager.System<CharacterRequirementsSystem>();
+        Cfg.OnValueChanged(CCVars.GameLoadoutsPoints, OnMaxPointsChanged, true);
 
         _highJobProvider = highJobProvider;
         _profileProvider = profileProvider;
@@ -48,7 +39,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
         if (!disposing)
             return;
 
-        _cfg.UnsubValueChanged(CCVars.GameLoadoutsPoints, OnMaxPointsChanged);
+        Cfg.UnsubValueChanged(CCVars.GameLoadoutsPoints, OnMaxPointsChanged);
     }
 
     private void OnMaxPointsChanged(int obj)
@@ -69,14 +60,7 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
 
     public override bool IsUsable(LoadoutPrototype prototype, out List<string> reasons)
     {
-        var playtimes = _jobRequirementsManager.GetPlayTimes();
-        var usable = _characterRequirements.CheckRequirementsValid(
-            prototype.Requirements, _highJobProvider(), _profileProvider(), playtimes,
-            _jobRequirementsManager.IsWhitelisted(), prototype,
-            _entityManager, _prototypeManager, _cfg,
-            out reasons);
-
-        return usable;
+        return CheckRequirementsValid(_profileProvider(), _highJobProvider(), prototype, prototype.Requirements, out reasons);
     }
 
     public override bool IsSelected(LoadoutPrototype prototype)
@@ -85,6 +69,17 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
             return false;
 
         return preference.Selected;
+    }
+
+    public override IEnumerable<LoadoutPrototype> GetSelected()
+    {
+        foreach (var pref in Preferences.Values)
+        {
+            if (!pref.Selected || !ProtoMan.TryIndex<LoadoutPrototype>(pref.LoadoutName, out var prototype))
+                continue;
+
+            yield return prototype;
+        }
     }
 
     public override void SetSelected(LoadoutPrototype prototype, bool selected)
@@ -99,5 +94,11 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     public override string GetLocalizedName(LoadoutPrototype prototype) =>
         Loc.GetString($"loadout-name-{prototype.ID}");
 
-    public LoadoutPreference GetOrNew(ProtoId<LoadoutPrototype> proto) => Preferences.GetOrNew(proto);
+    public LoadoutPreference GetOrNew(ProtoId<LoadoutPrototype> proto)
+    {
+        if (!Preferences.TryGetValue(proto, out var preference))
+            Preferences[proto] = preference = new(proto.Id);
+
+        return preference;
+    }
 }

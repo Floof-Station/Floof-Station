@@ -342,6 +342,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     }
 
     // Floof
+    public HumanoidCharacterProfile WithLoadoutPreferences(IEnumerable<LoadoutPreference> loadoutPreferences) =>
+        new(this) { _loadoutPreferences = new(loadoutPreferences) };
+
+    // Floof
     public HumanoidCharacterProfile WithFavoriteDrink(string? favoriteDrink) =>
         new(this) { FavoriteDrink = favoriteDrink };
 

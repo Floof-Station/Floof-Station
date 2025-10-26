@@ -1,5 +1,7 @@
 using System.Linq;
+using Content.Client.Guidebook;
 using Content.Client.Stylesheets;
+using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
 using Content.Shared.Paint;
@@ -40,12 +42,22 @@ public sealed partial class LoadoutSelector2 : Control
             DummyEntity = EntityUid.Invalid; // I don't care, just nuke it
 
         LoadoutCost.StyleClasses.Add(StyleBase.StyleClassLabelHeading);
+        PreferenceButton.StyleClasses.Add(ContainerButton.StyleClassButton);
 
         PreferenceButton.OnPressed += _ =>
         {
             Preference.Selected = !Preference.Selected;
+            _parent.Dirty();
+            _parent.UpdateChoices(); // This may invalidate other options due to loadout groups
+            _parent.UpdateCounters();
         };
-        HeirloomButton.OnPressed += _ => throw new NotImplementedException();
+        HeirloomButton.OnPressed += _ =>
+        {
+            Preference.CustomHeirloom = Preference.CustomHeirloom != true; // {false,null} -> true, true -> false
+            _parent.Dirty();
+            _parent.UpdateCounters();
+        };
+        GuidebookButton.OnPressed += _ => OpenGuidebook();
         SettingsButton.OnPressed += _ => parent.Expand(Prototype);
     }
 
@@ -93,9 +105,11 @@ public sealed partial class LoadoutSelector2 : Control
 
         LoadoutCost.Text = $"{Prototype.Cost}";
         LoadoutLocName.Text = Preference.CustomName ?? LocOrDefaultName($"loadout-name-{Prototype.ID}");
+        PreferenceButton.Pressed = Preference.Selected;
         HeirloomButton.Pressed = Preference.CustomHeirloom == true;
 
-        HeirloomButton.Disabled = !Prototype.CanBeHeirloom;
+        HeirloomButton.Visible = Prototype.CanBeHeirloom;
+        GuidebookButton.Visible = !string.IsNullOrEmpty(Prototype.GuideEntry);
 
         if (DummyEntity == null)
             return;
@@ -119,5 +133,17 @@ public sealed partial class LoadoutSelector2 : Control
         if (_entMan.TryGetComponent<MetaDataComponent>(DummyEntity, out var meta))
             return meta.EntityName;
         return "???";
+    }
+
+    public void OpenGuidebook()
+    {
+        if (!_protoMan.TryIndex<GuideEntryPrototype>(Prototype.GuideEntry, out var guideRoot))
+            return;
+
+        var guidebookController = UserInterfaceManager.GetUIController<GuidebookUIController>();
+        guidebookController.ToggleGuidebook(
+            new Dictionary<string, GuideEntry> { { Prototype.GuideEntry, guideRoot } },
+            includeChildren: true,
+            selected: Prototype.GuideEntry);
     }
 }
