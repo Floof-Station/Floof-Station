@@ -57,9 +57,7 @@ public sealed class TraitSystem : EntitySystem
         foreach (var traitId in args.Profile.TraitPreferences)
         {
             if (_prototype.TryIndex<TraitPrototype>(traitId, out var traitPrototype))
-            {
                 sortedTraits.Add(traitPrototype);
-            }
             else
             {
                 DebugTools.Assert($"No trait found with ID {traitId}!");
@@ -81,15 +79,19 @@ public sealed class TraitSystem : EntitySystem
                 out _))
                 continue;
 
-            // To check for cheaters. :FaridaBirb.png:
+            // Floof - early exit if we are over the trait limit or points limit
+            if (pointsTotal + traitPrototype.Points < 0 || traitSelections <= 0)
+                continue;
+
             pointsTotal += traitPrototype.Points;
             --traitSelections;
 
             AddTrait(args.Mob, traitPrototype);
         }
 
-        if (pointsTotal < 0 || traitSelections < 0)
-            PunishCheater(args.Mob);
+        // I dont have any good words for the person who wrote the below
+        // if (pointsTotal < 0 || traitSelections < 0)
+        //     PunishCheater(args.Mob);
     }
 
     /// <summary>
@@ -103,9 +105,11 @@ public sealed class TraitSystem : EntitySystem
 
     /// <summary>
     ///     On a non-cheating client, it's not possible to save a character with a negative number of traits. This can however
+    ///     --- Floofstation note: YES IT IS VERY MUCH POSSIBLE.
     ///     trigger incorrectly if a character was saved, and then at a later point in time an admin changes the traits Cvars to reduce the points.
     ///     Or if the points costs of traits is increased.
     /// </summary>
+    [Obsolete("Do not use. Edit the system to skip any new traits if their addition results in the character going below 0 trait points/selections.", error: true)] // Floof
     private void PunishCheater(EntityUid uid)
     {
         _adminLog.Add(LogType.AdminMessage, LogImpact.High,
@@ -117,7 +121,7 @@ public sealed class TraitSystem : EntitySystem
 
         // For maximum comedic effect, this is plenty of time for the cheater to get on station and start interacting with people.
         var timeToDestroy = _random.NextFloat(120, 360);
-        
+
         Timer.Spawn(TimeSpan.FromSeconds(timeToDestroy), () => VaporizeCheater(targetPlayer));
     }
 
@@ -127,7 +131,7 @@ public sealed class TraitSystem : EntitySystem
     private void VaporizeCheater (Robust.Shared.Player.ICommonSession targetPlayer)
     {
         // Floof - M3739 | Get NetUserID of the targetPlayer.
-        var targetUser = targetPlayer.UserId; 
+        var targetUser = targetPlayer.UserId;
         _adminSystem.Erase(targetUser);
 
         var feedbackMessage = $"[font size=24][color=#ff0000]{"You have spawned in with an illegal trait point total. If this was a result of cheats, then your nonexistence is a skill issue. Otherwise, feel free to click 'Return To Lobby', and fix your trait selections."}[/color][/font]";
