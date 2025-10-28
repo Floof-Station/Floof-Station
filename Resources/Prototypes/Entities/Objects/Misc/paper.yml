@@ -368,6 +368,13 @@
     damage:
       types:
         Piercing: 3
+  # Floof: make pens clicky
+  # TODO: make this toggle writeable state
+  - type: EmitSoundOnUse
+    sound:
+      collection: PenClick
+  - type: UseDelay
+    delay: 0.5
 
 - type: entity
   parent: Pen
