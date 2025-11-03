@@ -266,3 +266,25 @@
     Cream: 15
   solids:
     FoodBowlBig: 1
+
+- type: microwaveMealRecipe
+  id: RecipeHotX
+  name: hotcross bun recipe
+  result: FoodBakedBunHotX
+  resultCount: 2
+  time: 10
+  reagents:
+    Sugar: 5
+    Raisins: 5
+  solids:
+    FoodDoughSlice: 1
+
+- type: microwaveMealRecipe
+  id: RecipeMeatBun
+  name: meat bun recipe
+  result: FoodBakedBunMeat
+  resultCount: 2
+  time: 10
+  solids:
+    FoodDoughSlice: 1
+    FoodMeatCutlet: 1
