@@ -902,15 +902,15 @@
       protoId: SpeedLeftLeg
       slotId: "left leg"
     - !type:TraitCyberneticLimbReplacement
-      removeBodyPart: Foot
-      partSymmetry: Left
-      protoId: LeftFootCybernetic
-      slotId: "left foot"
-    - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Leg
       partSymmetry: Right
       protoId: SpeedRightLeg
       slotId: "right leg"
+    - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Foot
+      partSymmetry: Left
+      protoId: LeftFootCybernetic
+      slotId: "left foot"
     - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Foot
       partSymmetry: Right
