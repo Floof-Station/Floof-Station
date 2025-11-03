@@ -544,10 +544,20 @@
       protoId: CrowbarLeftArm
       slotId: "left arm"
     - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Hand
+      partSymmetry: Left
+      protoId: LeftHandCybernetic
+      slotId: "left hand"
+    - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Arm
       partSymmetry: Right
       protoId: CrowbarRightArm
       slotId: "right arm"
+    - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Hand
+      partSymmetry: Right
+      protoId: RightHandCybernetic
+      slotId: "right hand"
     - !type:TraitPushDescription
       descriptionExtensions:
         - description: examine-pry-arm-message
@@ -876,6 +886,10 @@
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
         - Gladiator # Floof
         - Anomaly
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Arachne # Doesn't work
   functions:
     - !type:TraitPushDescription
       descriptionExtensions:
@@ -888,10 +902,20 @@
       protoId: SpeedLeftLeg
       slotId: "left leg"
     - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Foot
+      partSymmetry: Left
+      protoId: LeftFootCybernetic
+      slotId: "left foot"
+    - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Leg
       partSymmetry: Right
       protoId: SpeedRightLeg
       slotId: "right leg"
+    - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Foot
+      partSymmetry: Right
+      protoId: RightFootCybernetic
+      slotId: "right foot"
 
 - type: trait
   id: LightAmplification
@@ -979,10 +1003,20 @@
       protoId: JawsOfLifeLeftArm
       slotId: "left arm"
     - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Hand
+      partSymmetry: Left
+      protoId: LeftHandCybernetic
+      slotId: "left hand"
+    - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Arm
       partSymmetry: Right
       protoId: JawsOfLifeRightArm
       slotId: "right arm"
+    - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Hand
+      partSymmetry: Right
+      protoId: RightHandCybernetic
+      slotId: "right hand"
     - !type:TraitPushDescription
       descriptionExtensions:
         - description: examine-bionic-arm-message
