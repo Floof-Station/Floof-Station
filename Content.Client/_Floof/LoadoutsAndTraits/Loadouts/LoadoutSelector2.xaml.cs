@@ -23,23 +23,23 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly ILocalizationManager _locMan = default!;
 
-    private readonly LoadoutTreeCharacterPage _parent;
+    public readonly LoadoutTreeCharacterPage Owner;
     public LoadoutPreference Preference;
     public LoadoutPrototype Prototype;
     public EntityUid? DummyEntity { get; private set; }
 
     protected override BaseButton PreferenceButtonRef => PreferenceButton;
-    protected override string Description => _parent.GetLocalizedDescription(Prototype);
+    protected override string Description => Owner.GetLocalizedDescription(Prototype);
 
     /// <summary>RT ui default constructor. Do not use directly.</summary>
     public LoadoutSelector2() : this(null!, new(), new()) { }
 
-    public LoadoutSelector2(LoadoutTreeCharacterPage parent, LoadoutPreference preference, LoadoutPrototype proto)
+    public LoadoutSelector2(LoadoutTreeCharacterPage owner, LoadoutPreference preference, LoadoutPrototype proto)
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
-        _parent = parent;
+        Owner = owner;
         Preference = preference;
         Prototype = proto;
 
@@ -52,19 +52,19 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
         PreferenceButtonRef.OnPressed += _ =>
         {
             Preference.Selected = !Preference.Selected;
-            _parent.Dirty();
-            _parent.UpdateSpecials();
-            _parent.UpdateChoices(); // This may invalidate other options due to loadout groups
-            _parent.UpdateCounters();
+            Owner.Dirty();
+            Owner.UpdateSpecials();
+            Owner.UpdateChoices(); // This may invalidate other options due to loadout groups
+            Owner.UpdateCounters();
         };
         HeirloomButton.OnPressed += _ =>
         {
             Preference.CustomHeirloom = Preference.CustomHeirloom != true; // {false,null} -> true, true -> false
-            _parent.Dirty();
-            _parent.UpdateCounters();
+            Owner.Dirty();
+            Owner.UpdateCounters();
         };
         GuidebookButton.OnPressed += _ => OpenGuidebook();
-        SettingsButton.OnPressed += _ => parent.Expand(Prototype);
+        SettingsButton.OnPressed += _ => owner.Expand(Prototype);
     }
 
     ~LoadoutSelector2()
@@ -110,7 +110,7 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
             Preference.CustomHeirloom = false;
 
         LoadoutCost.Text = $"{Prototype.Cost}";
-        LoadoutLocName.Text = _parent.GetLocalizedName(Prototype);
+        LoadoutLocName.Text = Owner.GetLocalizedName(Prototype);
         PreferenceButtonRef.Pressed = Preference.Selected;
         HeirloomButton.Pressed = Preference.CustomHeirloom == true;
 

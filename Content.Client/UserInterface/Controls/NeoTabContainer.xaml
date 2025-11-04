@@ -6,7 +6,7 @@
     MouseFilter="Pass"
     HorizontalExpand="True"
     VerticalExpand="True">
-    <BoxContainer Name="Container" HorizontalExpand="True" VerticalExpand="True">
+    <BoxContainer Name="Container" HorizontalExpand="True" VerticalExpand="True" HorizontalAlignment="Stretch">
         <ScrollContainer Name="TabScrollContainer" MinSize="42 42" ReserveScrollbarSpace="True" ReturnMeasure="True">
             <BoxContainer Name="TabContainer" />
         </ScrollContainer>

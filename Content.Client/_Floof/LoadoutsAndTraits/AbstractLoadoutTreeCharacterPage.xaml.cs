@@ -88,7 +88,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         IoCManager.InjectDependencies(this);
         Model = new();
         AddChild(Model);
-// TODO ACTUALLY FIX LOADOUTS NOT KEPEING TRACK OF POINTS WHEN SPAWNING
+
         RootCategory = new(null, "__root__", null, RootCategories);
         ChosenItemsCategory = new(null, Loc.GetString("loadouts-and-traits-chosen-items"), new(), null);
         CurrentPath.Push(RootCategory);
@@ -98,7 +98,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             ShowUnusable = args.Pressed;
             UpdateChoices();
         };
-        Model.RemoveUnusableButton.OnPressed += (args) =>
+        Model.RemoveUnusableButton.OnPressed += _ =>
         {
             if (!AdminUIHelpers.TryConfirm(Model.RemoveUnusableButton, ButtonConfirmationData))
                 return;
