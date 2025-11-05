@@ -1,5 +1,7 @@
 ﻿uniform sampler2D SCREEN_TEXTURE;
 uniform highp float effectScale;
+// Floof: convert to world-space
+uniform highp mat3 viewMatrixInv;
 
 const highp float TimeScale = 0.15;
 const highp float DistortionScale = 0.02; // how strongly to warp the screen
@@ -45,10 +47,9 @@ highp vec3 hsv2rgb_smooth( highp vec3 c ) {
 
 highp float mixNoise(highp vec2 point, highp float phase) {
     // Floof: convert to world-space
-    highp mat3 viewMatrixInv = inverse(viewMatrix);
     point -= vec2(0.5);
     point.x *= SCREEN_PIXEL_SIZE.y / SCREEN_PIXEL_SIZE.x;
-    point = viewMatrixInv[0].xy * point.x + viewMatrixInv[1].xy * point.y + viewMatrixInv[2].xy * SCREEN_PIXEL_SIZE.y * 32;
+    point = viewMatrixInv[0].xy * point.x + viewMatrixInv[1].xy * point.y + viewMatrixInv[2].xy * SCREEN_PIXEL_SIZE.y * 32.0;
 
     highp float time = TIME * TimeScale + phase;
     highp float a = noise( NoiseScale * point - time);

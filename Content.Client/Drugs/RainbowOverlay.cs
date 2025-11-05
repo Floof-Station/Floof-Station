@@ -75,12 +75,16 @@ public sealed class RainbowOverlay : Overlay
 
     protected override void Draw(in OverlayDrawArgs args)
     {
-        if (ScreenTexture == null)
+        if (ScreenTexture == null || args.Viewport.Eye == null)
             return;
+
+        // Floof: convert to world-space
+        args.Viewport.Eye.GetViewMatrixInv(out var viewMatrixInv, args.Viewport.RenderScale);
 
         var handle = args.WorldHandle;
         _rainbowShader.SetParameter("SCREEN_TEXTURE", ScreenTexture);
         _rainbowShader.SetParameter("effectScale", EffectScale);
+        _rainbowShader.SetParameter("viewMatrixInv", viewMatrixInv);
         handle.UseShader(_rainbowShader);
         handle.DrawRect(args.WorldBounds, Color.White);
         handle.UseShader(null);
