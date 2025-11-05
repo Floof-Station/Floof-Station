@@ -559,7 +559,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
 
         // TODO SLOTH fix electro's code.
         // ReSharper disable once InconsistentNaming
-        var doorAABB = _entityLookup.GetWorldAABB(uid);
+        var doorAABB = PhysicsSystem.GetHardAABB(uid);
 
         foreach (var otherPhysics in PhysicsSystem.GetCollidingEntities(Transform(uid).MapID, doorAABB))
         {
@@ -583,7 +583,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
                 continue;
 
             // Floof: rework safety so it actually works with small characters
-            var otherAABB = _entityLookup.GetWorldAABB(otherPhysics.Owner);
+            var otherAABB = PhysicsSystem.GetHardAABB(otherPhysics.Owner);
             var intersection = otherAABB.Intersect(doorAABB).Size;
             var intersectionArea = intersection.X * intersection.Y;
             var minArea = float.Min(otherAABB.Size.X * otherAABB.Size.Y, doorAABB.Size.X * doorAABB.Size.Y);
