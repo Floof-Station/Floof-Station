@@ -85,6 +85,13 @@ public sealed partial record PolymorphConfiguration
     public bool TransferChemicals;
 
     /// <summary>
+    /// Floof: whether to share needs (hunger, thirst) with the polymorphed body.
+    /// If you need to synchronize thresholds, you will still need to copy the component.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public bool TransferNeeds;
+
+    /// <summary>
     /// Whether or not the entity transfers its name between forms.
     /// </summary>
     [DataField(serverOnly: true)]

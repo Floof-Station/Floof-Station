@@ -8,6 +8,7 @@
     transferTemperature: true # Floof
     transferOrgans: true # Floof
     transferChemicals: true # Floof
+    transferNeeds: true # Floof
     revertOnCrit: true
     revertOnDeath: true
     syncComponents: true # Floof

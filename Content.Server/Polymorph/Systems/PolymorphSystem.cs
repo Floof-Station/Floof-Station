@@ -24,6 +24,8 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Mind;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Nutrition.Components;
+using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Polymorph;
 using Content.Shared.Popups;
 using Content.Shared.Standing;
@@ -66,6 +68,8 @@ public sealed partial class PolymorphSystem : EntitySystem
     [Dependency] private readonly SharedSolutionContainerSystem _solution = default!; // Floof
     [Dependency] private readonly BloodstreamSystem _bloodstream = default!; // Floof
     [Dependency] private readonly LeashSystem _leash = default!; // Floof
+    [Dependency] private readonly HungerSystem _hunger = default!; // Floof
+    [Dependency] private readonly ThirstSystem _thirst = default!; // Floof
 
     private const string RevertPolymorphId = "ActionRevertPolymorph";
 
@@ -344,6 +348,17 @@ public sealed partial class PolymorphSystem : EntitySystem
             }
         }
 
+        // Floof
+        // If thresholds are different, you'll still need to copy the Hunger (and presumably Thirst) component,
+        // but for some reason that method alone does not actually work to set hunger on the child.
+        if (configuration.TransferNeeds)
+        {
+            if (TryComp<HungerComponent>(uid, out var hunger) && TryComp<HungerComponent>(child, out var childHunger))
+                _hunger.SetHunger(child, hunger.CurrentHunger, childHunger);
+            if (TryComp<ThirstComponent>(uid, out var thirst) && TryComp<ThirstComponent>(child, out var childThirst))
+                _thirst.SetThirst(child, childThirst, thirst.CurrentThirst);
+        }
+
         // DeltaV - Drop MindContainer entities on polymorph
         var beforePolymorphedEv = new BeforePolymorphedEvent();
         RaiseLocalEvent(uid, ref beforePolymorphedEv);
@@ -529,6 +544,15 @@ public sealed partial class PolymorphSystem : EntitySystem
                             break;
                 }
             }
+        }
+
+        // Floof
+        if (component.Configuration.TransferNeeds)
+        {
+            if (TryComp<HungerComponent>(uid, out var hunger) && TryComp<HungerComponent>(parent, out var parentHunger))
+                _hunger.SetHunger(parent, hunger.CurrentHunger, parentHunger);
+            if (TryComp<ThirstComponent>(uid, out var thirst) && TryComp<ThirstComponent>(parent, out var parentThirst))
+                _thirst.SetThirst(parent, parentThirst, thirst.CurrentThirst);
         }
 
         if (component.Configuration.Inventory == PolymorphInventoryChange.Transfer)
