@@ -1,6 +1,6 @@
 - type: artifactEffect # Floof - Eh Silly
   id: EffectHugeIron
-  targetDepth: 4
+  targetDepth: 6
   effectHint: artifact-effect-hint-gun
   whitelist:
     components:
@@ -23,9 +23,8 @@
       path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
   - type: Gun
     selectedMode: SemiAuto
-    fireRate: 2
+    fireRate: 0.4
     availableModes:
     - SemiAuto
-    - FullAuto # no alien revolver in buildings
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg

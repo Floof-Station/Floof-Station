@@ -4,7 +4,7 @@
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
-    maxSpawns: 20
+    maxSpawns: 10
     spawns:
     - id: LewdLootSpawnerToys
       amount: 1
@@ -24,7 +24,7 @@
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
-    maxSpawns: 20
+    maxSpawns: 10
     spawns:
     - id: LewdLootSpawnerKinky
       amount: 1
@@ -108,7 +108,7 @@
 
 - type: artifactEffect
   id: EffectCashSpawnHigh
-  targetDepth: 4
+  targetDepth: 5
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
@@ -127,7 +127,7 @@
 
 - type: artifactEffect # Floof - A little radioactive gift
   id: EffectSupermatterSliver
-  targetDepth: 5
+  targetDepth: 6
   effectHint: artifact-effect-hint-creation
   components:
   - type: SpawnArtifact
@@ -137,7 +137,7 @@
 
 - type: artifactEffect
   id: EffectHellspawn
-  targetDepth: 4
+  targetDepth: 5
   effectHint: artifact-effect-hint-displacement # Floof - Yeah, it's displacing a demon from hell
   components:
   - type: SpawnArtifact
@@ -147,7 +147,7 @@
 
 - type: artifactEffect # Floof - A Supermatter is still safer then a Singulo or a Tesla
   id: EffectSupermatter
-  targetDepth: 8 
+  targetDepth: 8
   effectHint: artifact-effect-hint-destruction
   components:
   - type: SpawnArtifact
