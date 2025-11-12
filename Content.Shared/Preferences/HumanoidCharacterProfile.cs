@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Floof.LoadoutsAndTraits.Data;
 using Content.Shared.CCVar;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Clothing.Loadouts.Prototypes;
@@ -45,7 +46,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
     /// Enabled traits
     [DataField]
-    private HashSet<string> _traitPreferences = new();
+    private HashSet<TraitPreference> _traitPreferences = new(); // Floof - change to TraitPreference
 
     /// <see cref="_loadoutPreferences"/>
     public HashSet<LoadoutPreference> LoadoutPreferences => _loadoutPreferences;
@@ -105,7 +106,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     public IReadOnlySet<string> AntagPreferences => _antagPreferences;
 
     /// <see cref="_traitPreferences"/>
-    public IReadOnlySet<string> TraitPreferences => _traitPreferences;
+    public IReadOnlySet<TraitPreference> TraitPreferences => _traitPreferences; // Floof - change to TraitPreference
 
     /// If we're unable to get one of our preferred jobs do we spawn as a fallback job or do we stay in lobby
     [DataField]
@@ -133,7 +134,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         BackpackPreference backpack,
         PreferenceUnavailableMode preferenceUnavailable,
         HashSet<string> antagPreferences,
-        HashSet<string> traitPreferences,
+        HashSet<TraitPreference> traitPreferences, // Floof - change to TraitPreference
         HashSet<LoadoutPreference> loadoutPreferences,
 
         // Floof
@@ -181,8 +182,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             other.Backpack,
             other.PreferenceUnavailable,
             new HashSet<string>(other.AntagPreferences),
-            new HashSet<string>(other.TraitPreferences),
-            new HashSet<LoadoutPreference>(other.LoadoutPreferences),
+            new(other.TraitPreferences),
+            new(other.LoadoutPreferences),
             other.FavoriteDrink)
     {
     }
@@ -314,15 +315,22 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
     public HumanoidCharacterProfile WithTraitPreference(string traitId, bool pref)
     {
-        var list = new HashSet<string>(_traitPreferences);
+        var list = new HashSet<TraitPreference>(_traitPreferences);
 
         if (pref)
-            list.Add(traitId);
+            list.Add(new(traitId, true));
         else
-            list.Remove(traitId);
+            list.RemoveWhere(it => it.Prototype == traitId);
 
         return new(this) { _traitPreferences = list };
     }
+
+    // Floofstation. Deep-copy the trait preferences.
+    public HumanoidCharacterProfile WithTraitPreferences(IEnumerable<TraitPreference> traitPreferences) =>
+        new(this)
+        {
+            _traitPreferences = traitPreferences.Where(it => it.Selected).Select(it => new TraitPreference(it)).ToHashSet()
+        };
 
     public HumanoidCharacterProfile WithLoadoutPreference(
         string loadoutId,
@@ -345,7 +353,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     public HumanoidCharacterProfile WithLoadoutPreferences(IEnumerable<LoadoutPreference> loadoutPreferences) =>
         new(this)
         {
-            _loadoutPreferences = loadoutPreferences.Select(it => new LoadoutPreference(it)).ToHashSet()
+            _loadoutPreferences = loadoutPreferences.Where(it => it.Selected).Select(it => new LoadoutPreference(it)).ToHashSet()
         };
 
     // Floofstation
@@ -499,7 +507,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             .ToList();
 
         var traits = TraitPreferences
-            .Where(prototypeManager.HasIndex<TraitPrototype>)
+            .Where(it => prototypeManager.HasIndex<TraitPrototype>(it.Prototype))
             .Distinct()
             .ToList();
 

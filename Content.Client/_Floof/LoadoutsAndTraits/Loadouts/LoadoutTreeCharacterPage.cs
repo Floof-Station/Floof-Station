@@ -33,12 +33,8 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
         Counters.Add(new("loadout-point-counter", proto => proto.Cost, () => MaxPoints));
     }
 
-    protected override void Dispose(bool disposing)
+    ~LoadoutTreeCharacterPage()
     {
-        base.Dispose(disposing);
-        if (!disposing)
-            return;
-
         Cfg.UnsubValueChanged(CCVars.GameLoadoutsPoints, OnMaxPointsChanged);
     }
 

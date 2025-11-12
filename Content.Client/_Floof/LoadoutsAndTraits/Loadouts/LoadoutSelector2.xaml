@@ -42,13 +42,13 @@
                 ToolTip="{Loc 'humanoid-profile-editor-loadouts-heirloom-tooltip'}"
                 ToggleMode="True"
                 VerticalExpand="True"
-                VerticalAlignment="Center" />
+                VerticalAlignment="Stretch" />
 
             <!-- Yes I know I can use a TextureButton, but I'm doing this for style -->
             <Button
                 Name="GuidebookButton"
                 ToolTip="{Loc 'humanoid-profile-editor-loadouts-guidebook-button-tooltip'}"
-                VerticalAlignment="Center">
+                VerticalAlignment="Stretch">
 
                 <TextureRect
                     TexturePath="/Textures/Interface/VerbIcons/information.svg.192dpi.png"
@@ -60,7 +60,7 @@
 
             <Button
                 Name="SettingsButton"
-                VerticalAlignment="Center">
+                VerticalAlignment="Stretch">
 
                 <TextureRect
                     TexturePath="/Textures/Interface/hamburger.svg.192dpi.png"

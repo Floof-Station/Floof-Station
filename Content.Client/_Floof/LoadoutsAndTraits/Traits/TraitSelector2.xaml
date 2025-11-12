@@ -1,0 +1,43 @@
+<traits:TraitSelector2 xmlns="https://spacestation14.io"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:ui="clr-namespace:Content.Client.Lobby.UI"
+    xmlns:loadoutsAndTraits="clr-namespace:Content.Client._Floof.LoadoutsAndTraits"
+    xmlns:loadouts="clr-namespace:Content.Client._Floof.LoadoutsAndTraits.Loadouts"
+    xmlns:traits="clr-namespace:Content.Client._Floof.LoadoutsAndTraits.Traits"
+    HorizontalExpand="True">
+
+    <BoxContainer Name="Container" Orientation="Vertical" HorizontalExpand="True">
+        <controls:StyledButtonGroup Name="ButtonGroup" Orientation="Horizontal" HorizontalExpand="True">
+            <ContainerButton
+                Name="PreferenceButton"
+                ToggleMode="True"
+                VerticalAlignment="Center">
+
+                <BoxContainer Orientation="Horizontal">
+                    <Label
+                        Name="CostLabel"
+                        MinSize="32,32"
+                        ClipText="True"
+                        Margin="0 0 8 0"/>
+
+                    <Label Name="NameLabel" Margin="8 0 0 00" MinWidth="64"/>
+                </BoxContainer>
+            </ContainerButton>
+
+            <Button
+                Name="SettingsButton"
+                VerticalAlignment="Center">
+
+                <TextureRect
+                    TexturePath="/Textures/Interface/hamburger.svg.192dpi.png"
+                    TextureScale="0.4 0.4"
+
+                    VerticalAlignment="Center"
+                    VerticalExpand="True"
+                    Margin="5" />
+            </Button>
+        </controls:StyledButtonGroup>
+    </BoxContainer>
+</traits:TraitSelector2>

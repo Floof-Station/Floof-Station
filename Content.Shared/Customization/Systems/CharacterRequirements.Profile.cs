@@ -323,7 +323,7 @@ public sealed partial class CharacterTraitRequirement : CharacterRequirement
             ("traits", $"[color={color}]{string.Join($"[/color], [color={color}]",
                 Traits.Select(t => Loc.GetString($"trait-name-{t}")))}[/color]"));
 
-        return Traits.Any(t => profile.TraitPreferences.Contains(t.ToString()));
+        return Traits.Any(t => profile.TraitPreferences.Any(it => it.Prototype == t));
     }
 }
 

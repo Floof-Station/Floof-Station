@@ -125,7 +125,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             _profileEditor.RefreshJobs();
 
         if (obj.WasModified<TraitPrototype>())
-            _profileEditor.UpdateTraits(null, true);
+            _profileEditor.UpdateTraits();
     }
 
 
