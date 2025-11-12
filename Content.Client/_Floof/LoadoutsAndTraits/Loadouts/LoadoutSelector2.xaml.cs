@@ -49,17 +49,13 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
 
         LoadoutCost.StyleClasses.Add(StyleBase.StyleClassLabelHeading);
 
-        PreferenceButtonRef.OnPressed += _ =>
+        PreferenceButtonRef.OnToggled += args =>
         {
-            Preference.Selected = !Preference.Selected;
-            Owner.Dirty();
-            Owner.UpdateSpecials();
-            Owner.UpdateChoices(); // This may invalidate other options due to loadout groups
-            Owner.UpdateCounters();
+            Owner.SetSelected(Prototype, args.Pressed);
         };
-        HeirloomButton.OnPressed += _ =>
+        HeirloomButton.OnToggled += args =>
         {
-            Preference.CustomHeirloom = Preference.CustomHeirloom != true; // {false,null} -> true, true -> false
+            Preference.CustomHeirloom = args.Pressed;
             Owner.Dirty();
             Owner.UpdateCounters();
         };

@@ -448,7 +448,8 @@ namespace Content.Client.Lobby.UI
             _loadoutsPage.OnDirty += () =>
             {
                 // We're providing a copy of our dictionary to the loadout page, so whenever it gets dirtied, we need to copy it back
-                Profile = Profile?.WithLoadoutPreferences(_loadoutsPage.Preferences.Values);
+                // Also, we retain deselected entries in the UI, but not on the server
+                Profile = Profile?.WithLoadoutPreferences(_loadoutsPage.Preferences.Values.Where(it => it.Selected));
                 SetDirty();
             };
 

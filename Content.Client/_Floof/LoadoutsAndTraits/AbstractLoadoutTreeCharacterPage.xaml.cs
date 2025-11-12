@@ -87,6 +87,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     {
         IoCManager.InjectDependencies(this);
         Model = new();
+        HorizontalExpand = true;
         AddChild(Model);
 
         RootCategory = new(null, "__root__", null, RootCategories);
@@ -285,6 +286,20 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
         CountersValid = valid;
         Model.OutOfPointsLabel.Visible = !valid;
+
+        // Update unusable counter
+        var chosenUnusable = 0;
+        foreach (var prototype in GetSelected())
+        {
+            if (!IsUsable(prototype, out var reasons))
+                chosenUnusable++;
+        }
+
+        Model.RemoveUnusableButton.Text = Loc.GetString(
+            "humanoid-profile-editor-loadouts-remove-unusable-button",
+            ("count", chosenUnusable));
+        Model.RemoveUnusableButton.Disabled = chosenUnusable == 0;
+        AdminUIHelpers.RemoveConfirm(Model.RemoveUnusableButton, ButtonConfirmationData);
     }
 
     /// <summary>
@@ -359,10 +374,10 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
         foreach (var category in categories)
         {
-            if (category.Prototype is null || category.Empty)
+            if (category.Empty)
                 continue;
 
-            var categoryButton = new CategoryButton(category, GetLocalizedName(category.Prototype));
+            var categoryButton = new CategoryButton(category, category.LocalizedName);
             categoryButton.OnPressed += _ => EnterCategory(category);
             Model.TabContainer.AddChild(categoryButton);
         }
@@ -386,18 +401,12 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             return;
         }
 
-        var chosenUnusable = 0;
         foreach (var prototype in currentCategory)
         {
             var usable = IsUsable(prototype, out var reasons);
             var selected = IsSelected(prototype);
-            if (!usable)
-            {
-                if (selected)
-                    chosenUnusable++;
-                else if (!ShowUnusable)
-                    continue;
-            }
+            if (!usable && !ShowUnusable)
+                continue;
 
             if (Model.SearchBar.Text != string.Empty
                 && !GetLocalizedName(prototype).Trim().Contains(Model.SearchBar.Text.Trim(), StringComparison.OrdinalIgnoreCase))
@@ -415,18 +424,15 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
                 Text = "No items match the requirements." // TODO localize
             });
         }
-
-        // Pretty counterintuitively, this is the place where we update the "remove unusable" button.
-        Model.RemoveUnusableButton.Text = Loc.GetString(
-            "humanoid-profile-editor-loadouts-remove-unusable-button",
-            ("count", chosenUnusable));
-        Model.RemoveUnusableButton.Disabled = chosenUnusable == 0;
-        AdminUIHelpers.RemoveConfirm(Model.RemoveUnusableButton, ButtonConfirmationData);
     }
 
     [MustCallBase]
     public virtual void UpdateExtendedInfo()
     {
+        Model.DetailsContainer.RemoveAllChildren();
+        if (ShowingExtendedInfoFor != null && CurrentCategory.Prototypes?.Contains(ShowingExtendedInfoFor) != true)
+            ShowingExtendedInfoFor = null; // Close the panel if the item is no longer in the current category
+
         if (ShowingExtendedInfoFor == null)
         {
             Model.DetailsContainer.Visible = false;
@@ -434,8 +440,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         }
 
         Model.DetailsContainer.Visible = true;
-        Model.DetailsContainer.RemoveAllChildren();
-        UpdateExtendedPanel();
+        UpdateExtendedPanel(ShowingExtendedInfoFor);
     }
 
     public virtual void RemoveUnusable()
@@ -485,7 +490,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// </summary>
     public void Expand(TProto? prototype)
     {
-        ShowingExtendedInfoFor = prototype;
+        ShowingExtendedInfoFor = ShowingExtendedInfoFor != prototype ? prototype : null; // Toggle if the button is pressed twice
         UpdateExtendedInfo();
     }
 
@@ -495,8 +500,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     /// <param name="category"></param>
     public void EnterCategory(CategoryTreeItem category)
     {
-        if (category.Prototype == null)
-            return;
+        if (category == RootCategory)
+            return; // Just in case
 
         ShowingExtendedInfoFor = null;
         CurrentPath.Push(category);
@@ -545,12 +550,14 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     ///     Called when the user tries to view the extended detail/settings of a prototype, should be overridden by inheritors.
     ///     Should update DetailsContainer (note that it will usually be cleared - though not disposed of - before calling this).
     /// </summary>
-    protected virtual void UpdateExtendedPanel()
+    /// <param name="subject"></param>
+    protected virtual void UpdateExtendedPanel(TProto subject)
     {
         Model.DetailsContainer.AddChild(new RichTextLabel()
         {
-            Text = $"Showing details for {GetLocalizedName(ShowingExtendedInfoFor!)}. TODO.",
-            StyleClasses = { "LabelHeading" }
+            Text = $"Details for {GetLocalizedName(ShowingExtendedInfoFor!)}.",
+            StyleClasses = { "LabelHeading" },
+            Margin = new(2f, 2f, 2f, 10f)
         });
     }
 

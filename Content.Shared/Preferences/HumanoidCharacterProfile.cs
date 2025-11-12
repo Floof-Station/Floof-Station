@@ -341,11 +341,14 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         return new HumanoidCharacterProfile(this) { _loadoutPreferences = list };
     }
 
-    // Floof
+    // Floofstation. Deep-copy the loadout preferences.
     public HumanoidCharacterProfile WithLoadoutPreferences(IEnumerable<LoadoutPreference> loadoutPreferences) =>
-        new(this) { _loadoutPreferences = new(loadoutPreferences) };
+        new(this)
+        {
+            _loadoutPreferences = loadoutPreferences.Select(it => new LoadoutPreference(it)).ToHashSet()
+        };
 
-    // Floof
+    // Floofstation
     public HumanoidCharacterProfile WithFavoriteDrink(string? favoriteDrink) =>
         new(this) { FavoriteDrink = favoriteDrink };
 

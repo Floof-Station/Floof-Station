@@ -50,9 +50,13 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
 
     public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype) => new(this, GetOrNew(prototype.ID), prototype);
 
-    protected override void UpdateExtendedPanel()
+    protected override void UpdateExtendedPanel(LoadoutPrototype subject)
     {
-        base.UpdateExtendedPanel();
+        base.UpdateExtendedPanel(subject);
+
+        var extendedInfo = new LoadoutExtendedInfo2(this, GetOrNew(subject.ID), subject);
+        extendedInfo.OnPreferencesChanged += () => Dirty();
+        Model.DetailsContainer.AddChild(extendedInfo);
     }
 
     public override bool IsUsable(LoadoutPrototype prototype, out List<string> reasons)
@@ -83,6 +87,10 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
     {
         var preference = GetOrNew(prototype.ID);
         preference.Selected = selected;
+        Dirty();
+        UpdateSpecials();
+        UpdateChoices(); // This may invalidate other options due to loadout groups
+        UpdateCounters();
     }
 
     public override string GetLocalizedName(LoadoutCategoryPrototype prototype) =>

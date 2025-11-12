@@ -207,4 +207,15 @@ public sealed partial class LoadoutPreference : Loadout
         string? customColorTint = null,
         bool? customHeirloom = null
     ) : base(loadoutName, customName, customDescription, customColorTint, customHeirloom) { }
+
+    // Floofstation - copy constructor
+    public LoadoutPreference(LoadoutPreference other) : this(
+        other.LoadoutName,
+        other.CustomName,
+        other.CustomDescription,
+        other.CustomColorTint,
+        other.CustomHeirloom)
+    {
+        Selected = other.Selected;
+    }
 }

@@ -3,7 +3,8 @@
     xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
     HorizontalExpand="True"
     Orientation="Vertical"
-    Margin="10">
+    Margin="10"
+    SizeFlagsStretchRatio="1">
 
     <!-- Point counters -->
     <BoxContainer Name="PointCountersContainer" Access="Public" Orientation="Vertical" HorizontalExpand="True">
@@ -12,7 +13,8 @@
             Access="Public"
             Text="{Loc 'loadouts-and-traits-out-of-points'}"
             HorizontalExpand="True"
-            Visible="False"/>
+            Visible="False"
+            Margin="0 0 0 10"/>
     </BoxContainer>
 
     <BoxContainer Margin="0 0 0 5" Orientation="Horizontal" HorizontalExpand="True">
