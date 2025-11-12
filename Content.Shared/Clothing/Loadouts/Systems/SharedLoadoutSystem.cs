@@ -94,7 +94,7 @@ public sealed class SharedLoadoutSystem : EntitySystem
                 continue;
 
             if (!_characterRequirements.CheckRequirementsValid(
-                loadoutProto.Requirements, job, profile, playTimes, whitelisted, loadoutProto,
+                loadoutProto.Requirements, job, profileCopy, playTimes, whitelisted, loadoutProto,
                 EntityManager, _prototype, _configuration,
                 out _))
                 continue;

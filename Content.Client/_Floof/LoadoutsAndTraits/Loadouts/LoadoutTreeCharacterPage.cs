@@ -46,9 +46,9 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
 
     public override LoadoutSelector2 CreateSelector(LoadoutPrototype prototype) => new(this, GetOrNew(prototype.ID), prototype);
 
-    protected override void UpdateExtendedPanel(LoadoutPrototype subject)
+    protected override void UpdateDetails(LoadoutPrototype subject)
     {
-        base.UpdateExtendedPanel(subject);
+        base.UpdateDetails(subject);
 
         var extendedInfo = new LoadoutExtendedInfo2(this, GetOrNew(subject.ID), subject);
         extendedInfo.OnPreferencesChanged += () => Dirty();

@@ -426,8 +426,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         }
     }
 
-    [MustCallBase]
-    public virtual void UpdateExtendedInfo()
+    public void UpdateExtendedInfo()
     {
         Model.DetailsContainer.RemoveAllChildren();
         if (ShowingExtendedInfoFor != null && CurrentCategory.Prototypes?.Contains(ShowingExtendedInfoFor) != true)
@@ -440,7 +439,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         }
 
         Model.DetailsContainer.Visible = true;
-        UpdateExtendedPanel(ShowingExtendedInfoFor);
+        UpdateDetails(ShowingExtendedInfoFor);
     }
 
     public virtual void RemoveUnusable()
@@ -551,7 +550,8 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     ///     Should update DetailsContainer (note that it will usually be cleared - though not disposed of - before calling this).
     /// </summary>
     /// <param name="subject"></param>
-    protected virtual void UpdateExtendedPanel(TProto subject)
+    [MustCallBase]
+    protected virtual void UpdateDetails(TProto subject)
     {
         Model.DetailsContainer.AddChild(new RichTextLabel()
         {

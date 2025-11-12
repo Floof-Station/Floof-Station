@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared._Floof.LoadoutsAndTraits.Data;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
 using Content.Shared.Preferences;
@@ -41,15 +42,24 @@ public sealed partial class CharacterItemGroupItem
         // This sucks
         switch (Type)
         {
+            // Floof - rewritten a little.
             case "trait":
-                return profile.TraitPreferences.TryFirstOrDefault(
-                    p => protoMan.Index<TraitPrototype>((string) p).ID == ID, out value);
+            {
+                var res = profile.TraitPreferences.TryFirstOrDefault(it => it.Prototype == ID && it.Selected, out var maybeValue);
+                value = maybeValue;
+                return res;
+            }
             case "loadout":
-                return profile.LoadoutPreferences.TryFirstOrDefault(
-                    p => protoMan.Index<LoadoutPrototype>(((Loadout) p).LoadoutName).ID == ID, out value);
+            {
+                var res = profile.LoadoutPreferences.TryFirstOrDefault(it => it.LoadoutName == ID && it.Selected, out var maybeValue);
+                value = maybeValue;
+                return res;
+            }
             default:
                 DebugTools.Assert($"Invalid CharacterItemGroupItem Type: {Type}");
                 return false;
         }
+
+        return false;
     }
 }

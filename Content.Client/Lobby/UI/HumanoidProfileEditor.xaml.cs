@@ -700,13 +700,6 @@ namespace Content.Client.Lobby.UI
 
             _entManager.System<HumanoidAppearanceSystem>().LoadProfile(PreviewDummy, Profile);
             SetPreviewRotation(_previewRotation);
-            TraitsTabs.UpdateTabMerging();
-        }
-
-        private void LoadoutsChanged(bool enabled)
-        {
-            CTabContainer.SetTabVisible(4, enabled);
-            ShowLoadouts.Visible = enabled;
         }
 
         private void OnSpeciesInfoButtonPressed(BaseButton.ButtonEventArgs args)
@@ -1138,8 +1131,6 @@ namespace Content.Client.Lobby.UI
 
             _entManager.DeleteEntity(PreviewDummy);
             PreviewDummy = EntityUid.Invalid;
-
-            _cfgManager.UnsubValueChanged(CCVars.GameLoadoutsEnabled, LoadoutsChanged);
         }
 
         private void SetAge(int newAge)

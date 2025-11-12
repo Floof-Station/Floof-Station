@@ -3,6 +3,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Content.Shared.Traits;
+using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Prototypes;
 
 
@@ -52,8 +53,20 @@ public sealed class TraitTreeCharacterPage : AbstractLoadoutTreeCharacterPage<Tr
 
     public override TraitSelector2 CreateSelector(TraitPrototype prototype)
     {
-        var selector = new TraitSelector2();
+        var selector = new TraitSelector2(this, GetOrNew(prototype.ID), prototype);
         return selector;
+    }
+
+    protected override void UpdateDetails(TraitPrototype prototype)
+    {
+        base.UpdateDetails(prototype);
+
+        // Description label as there's no per-trait options yet
+        Model.DetailsContainer.AddChild(new RichTextLabel()
+        {
+            Text = GetLocalizedDescription(prototype),
+            HorizontalExpand = true
+        });
     }
 
     public override bool IsUsable(TraitPrototype prototype, out List<string> reasons)
