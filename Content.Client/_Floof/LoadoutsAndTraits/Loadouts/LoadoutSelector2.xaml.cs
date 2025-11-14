@@ -63,10 +63,10 @@ public sealed partial class LoadoutSelector2 : AbstractLoadoutSelector
         SettingsButton.OnPressed += _ => owner.Expand(Prototype);
     }
 
-    ~LoadoutSelector2()
+    protected override void ExitedTree()
     {
-        // Suuurely this is safe, right?
-        _entMan.QueueDeleteEntity(DummyEntity);
+        if (DummyEntity != null)
+            _entMan.QueueDeleteEntity(DummyEntity);
         DummyEntity = null;
     }
 
