@@ -6,7 +6,6 @@ using Content.Shared._Floof.LoadoutsAndTraits.Prototypes;
 using Content.Shared.Customization.Systems;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
-using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Configuration;
