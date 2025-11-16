@@ -72,7 +72,7 @@
             ResearchAssistant: [ 2, 4 ]
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
-            Borg: [ 3, 3 ] #FloofStation
+            Borg: [ -1, -1 ] #FloofStation
             SeniorResearcher: [ 1, 1 ]
           #supply
             Quartermaster: [ 1, 1 ]

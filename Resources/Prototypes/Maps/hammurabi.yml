@@ -69,7 +69,7 @@
             Scientist: [ 4, 6 ]
             ResearchAssistant: [ 2, 3 ]
             Chaplain: [ 1, 1 ]
-            Borg: [ 2, 3 ]
+            Borg: [ -1, -1 ]
             ForensicMantis: [ 1, 1 ]
             Roboticist: [ 1, 1 ]
             SeniorResearcher: [ 1, 1 ]

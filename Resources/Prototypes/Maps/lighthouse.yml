@@ -57,7 +57,7 @@
           Scientist: [ 3, 4 ]
           Roboticist: [ 1, 1 ]
           ResearchAssistant: [ 2, 3 ]
-          Borg: [ 1, 2 ]
+          Borg: [ -1, -1 ]
           Librarian: [ 1, 1 ]
           SeniorResearcher: [ 1, 1 ]
         #security

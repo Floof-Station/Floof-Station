@@ -74,7 +74,7 @@
           Musician: [ 1, 1 ]
           Anomaly: [ 4, 4 ] # Floofstation
           #silicon
-          Borg: [ 2, 2 ]
+          Borg: [ -1, -1 ]
           MedicalBorg: [ 2, 2 ]
           #justice added by FloofStation
           ChiefJustice: [ 1, 1 ] #FloofStation

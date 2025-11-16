@@ -75,7 +75,7 @@
           ResearchAssistant: [ 3, 3 ]
           Chaplain: [ 1, 1 ]
           ForensicMantis: [ 1, 1 ]
-          Borg: [ 2, 4 ]
+          Borg: [ -1, -1 ]
           SeniorResearcher: [ 1, 1 ]
           #Logistics
           Quartermaster: [ 1, 1 ]

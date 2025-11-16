@@ -70,7 +70,7 @@
             ForensicMantis: [ 1, 1 ]
             ResearchAssistant: [ 2, 4 ]
             Chaplain: [ 1, 1 ]
-            Borg: [ 2, 3 ]
+            Borg: [ -1, -1 ]
             SeniorResearcher: [ 1, 1 ]
             Roboticist: [ 1, 1 ]
           #supply

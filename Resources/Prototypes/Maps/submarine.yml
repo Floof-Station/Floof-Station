@@ -72,6 +72,7 @@
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 3, 4 ]
             SeniorResearcher: [ 1, 1 ]
+            Borg: [ -1, -1 ]
           #supply
             CargoTechnician: [ 4, 6 ]
             MailCarrier: [ 1, 2 ]

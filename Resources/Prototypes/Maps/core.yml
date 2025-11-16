@@ -52,7 +52,7 @@
             Scientist: [ 3, 6 ]
             ResearchAssistant: [ 3, 6 ]
             Roboticist: [ 1, 2 ]
-            Borg: [ 1, 2 ]
+            Borg: [ -1, -1 ]
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
             ForensicMantis: [ 1, 1 ]
