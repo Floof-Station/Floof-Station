@@ -133,7 +133,6 @@ public sealed class RevivifyPowerSystem : EntitySystem
             _damageable.TryChangeDamage(args.Target.Value, args.HealingAmount * args.ModifiedAmplification, true, false, damageableComponent, uid);
 
         if (!args.DoRevive
-            || HasComp<UnrevivableComponent>(args.Target.Value) // Floofstation - unrevivable
             || _rotting.IsRotten(args.Target.Value)
             || !TryComp<MobStateComponent>(args.Target.Value, out var mob)
             || !_mobState.IsDead(args.Target.Value, mob)
