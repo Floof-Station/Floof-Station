@@ -18,7 +18,6 @@
     sprite: _Shitmed/Mobs/Aliens/Carps/carp_parts.rsi
 
 - type: entity
-  categories: [ HideSpawnMenu ]
   parent: BaseCarpPart
   id: TailCarp
   name: carp tail

@@ -4,20 +4,37 @@
   root: torso
   slots:
     head:
-      part: HeadAnimal
+      part: HeadReptilian
+      connections:
+      - torso
       organs:
+        brain: OrganHumanBrain
         eyes: OrganLaserEyes
     torso:
-      part: TorsoAnimal
-      connections:
-      - legs
-      - head
+      part: TorsoReptilian
       organs:
-        lungs: OrganAnimalLungs
-        stomach: OrganAnimalStomach
-        liver: OrganAnimalLiver
         heart: OrganAnimalHeart
+        lungs: OrganAnimalLungs
+        stomach: OrganReptilianStomach
+        liver: OrganAnimalLiver
         kidneys: OrganAnimalKidneys
+      connections:
+      - right arm # Floof
+      - left arm # Floof
+      - legs
+      - head # Shitmed
+    right arm: # Floof
+      part: RightArmReptilian
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmReptilian
+      connections:
+      - left hand
+    right hand:
+      part: RightHandReptilian
+    left hand:
+      part: LeftHandReptilian
     legs:
       part: LegsAnimal
       connections:

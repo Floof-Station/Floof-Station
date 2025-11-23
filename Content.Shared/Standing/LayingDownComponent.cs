@@ -13,6 +13,7 @@ public sealed partial class LayingDownComponent : Component
     public float LyingSpeedModifier = 0.35f,
                  CrawlingUnderSpeedModifier = 0.5f;
 
+    // Floofstation note - this is set by the server when the client lays down.
     [DataField, AutoNetworkedField]
     public bool AutoGetUp;
 
@@ -30,8 +31,10 @@ public sealed partial class LayingDownComponent : Component
 [Serializable, NetSerializable]
 public sealed class ChangeLayingDownEvent : CancellableEntityEventArgs;
 
-[Serializable, NetSerializable]
-public sealed class CheckAutoGetUpEvent(NetEntity user) : CancellableEntityEventArgs
-{
-    public NetEntity User = user;
-}
+// Floofstation - removed. This is ChatGPT shitcode that never deserved to exist. A single client would set the AutoGetUp state of all other clients.
+// Do not port. All usages of this have been removed.
+// [Serializable, NetSerializable]
+// public sealed class CheckAutoGetUpEvent(NetEntity user) : CancellableEntityEventArgs
+// {
+//     public NetEntity User = user;
+// }

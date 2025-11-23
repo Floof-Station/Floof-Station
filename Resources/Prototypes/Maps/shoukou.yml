@@ -2,7 +2,7 @@
   id: Shoukou
   mapName: 'Shōkō'
   mapPath: /Maps/Floof/shoukou.yml # FloofStation
-  minPlayers: 0
+  minPlayers: 35
   maxPlayers: 60
   stations:
     Shoukou:
@@ -33,6 +33,7 @@
           Janitor: [ 2, 2 ]
           Musician: [ 1, 1]
           Mime: [ 1, 1 ]
+          ServiceQuadBorg: [ 2, 3 ] #Floofstation
           Captain: [ 1, 1 ]
           #BlueshieldOfficer: [ 1, 1] Floof - uncomment once implemented on Floof maps
           #NanotrasenRepresentative: [ 1, 1 ] Floof - uncomment once implemented on Floof maps
@@ -54,6 +55,7 @@
           ChiefMedicalOfficer: [ 1, 1 ]
           Paramedic: [ 2, 2 ]
           MedicalBorg: [ 2, 4 ]
+          MedicalQuadBorg: [ 2, 3 ] #Floofstation
           MedicalDoctor: [ 3, 3 ]
           Chemist: [ 2, 2 ]
           MedicalIntern: [ 3, 3 ]

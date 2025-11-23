@@ -393,13 +393,13 @@
       - id: PlushieSlimeTider
         prob: 0.50
         orGroup: Prize
-      - id: PlushieKitsuneCaptain 
+      - id: PlushieKitsuneCaptain
         prob: 0.50
         orGroup: Prize
       - id: PlushieSapphicHarpyPlushie
         prob: 0.50
         orGroup: Prize
-      - id: PlushieRatLogisticsOfficer 
+      - id: PlushieRatLogisticsOfficer
         prob: 0.50
         orGroup: Prize
       - id: PlushieBunnyChiefMedicalOfficer
@@ -417,16 +417,16 @@
       - id: PlushieKoboldCefJustice
         prob: 0.50
         orGroup: Prize
-      - id: PlushieAvaliHOP 
+      - id: PlushieAvaliHOP
         prob: 0.50
         orGroup: Prize
-      - id: PlushieSlimeBartender 
+      - id: PlushieSlimeBartender
         prob: 0.50
         orGroup: Prize
-      - id: PlushieGrumpyQuartermaster 
+      - id: PlushieGrumpyQuartermaster
         prob: 0.50
         orGroup: Prize
-      - id: PlushieHardcoreDj 
+      - id: PlushieHardcoreDj
         prob: 0.50
         orGroup: Prize
       - id: PlushieHos
@@ -491,13 +491,16 @@
         orGroup: Prize
       - id: PlushieSecurityTank
         prob: 0.50
-        orGroup: Prize      
+        orGroup: Prize
       - id: PlushieBrashKitsune
         prob: 0.50
-        orGroup: Prize    
+        orGroup: Prize
       - id: PlushieHarmlessCaptain
         prob: 0.50
-        orGroup: Prize            
+        orGroup: Prize
+      - id: PlushieDetectiveVulps
+        prob: 0.50
+        orGroup: Prize
       # Floof - End
       # Rare
       - id: PlushieAbductorAgent

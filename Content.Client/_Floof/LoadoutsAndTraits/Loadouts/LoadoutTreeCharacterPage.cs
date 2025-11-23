@@ -30,7 +30,8 @@ public sealed class LoadoutTreeCharacterPage : AbstractLoadoutTreeCharacterPage<
         _highJobProvider = highJobProvider;
         _profileProvider = profileProvider;
 
-        Counters.Add(new("loadout-point-counter", proto => proto.Cost, () => MaxPoints));
+        Counters.Add(new("loadout-point-counter-name", "loadout-point-counter", proto => proto.Cost, () => MaxPoints));
+        UpdateCounters();
     }
 
     ~LoadoutTreeCharacterPage()

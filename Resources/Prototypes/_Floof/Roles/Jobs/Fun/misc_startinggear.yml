@@ -1,0 +1,4 @@
+- type: startingGear
+  id: FriendlyPlayerMob
+  equipment:
+    id: AnimalPDA

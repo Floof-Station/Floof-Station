@@ -92,6 +92,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         RootCategory = new(null, "__root__", null, RootCategories);
         ChosenItemsCategory = new(null, Loc.GetString("loadouts-and-traits-chosen-items"), new(), null);
         CurrentPath.Push(RootCategory);
+        SetSortingMode(0); // Just so we update the button's text
 
         Model.ShowUnusableButton.OnToggled += args =>
         {
@@ -105,6 +106,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
             RemoveUnusable();
         };
+        Model.SortModeToggleButton.OnPressed += _ => { SetSortingMode(SortByCounter + 1); };
         Model.SearchBar.OnTextChanged += _ => UpdateChoices();
     }
 
@@ -201,9 +203,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             {
                 // Terminal node
                 var protos = AllPrototypes.Where(it => it.Category == category.ID).ToList();
-                // Sorting prototypes by name. TODO: selective sorting mode
-                protos.Sort((a, b) => string.Compare(GetLocalizedName(a), GetLocalizedName(b), StringComparison.Ordinal));
-
+                // Note: we don't sort prototypes here
                 categoryTreeItem = new(
                     category,
                     locName,
@@ -253,7 +253,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
     {
         foreach (var counter in Counters)
         {
-            PointCounterControl pointCounterControl = new(counter.LocString);
+            PointCounterControl pointCounterControl = new(counter.DescLoc);
             Model.PointCountersContainer.AddChild(pointCounterControl);
             counter.Control = pointCounterControl;
         }
@@ -400,6 +400,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
             return;
         }
 
+        currentCategory.Sort(GetItemComparison());
         foreach (var prototype in currentCategory)
         {
             var usable = IsUsable(prototype, out var reasons);
@@ -466,10 +467,18 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
         List<CharacterRequirement> requirements,
         out List<string> failReasons)
     {
-        _characterRequirements ??= IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<CharacterRequirementsSystem>();
+        _characterRequirements ??= IoCManager.Resolve<IEntitySystemManager>().GetEntitySystemOrNull<CharacterRequirementsSystem>();
+        if (_characterRequirements == null)
+        {
+            // IOC my behatred. Ideally this method shouldn't be called mid-connection, but sometimes it can, in which case the system will fail to resolve.
+            failReasons = new();
+            return true;
+        }
         _fallbackJob ??= ProtoMan.Index(_fallbackJobId);
 
-        var playtimes = _jobRequirementsManager.GetPlayTimes();
+        // !!! landmine: make sure to use GetRawPlayTime trackers, as this is what the loadout system was made to rely on.
+        // GetPlayTimes would return a Dictionary<ProtoId<Job>, TimeSpan>, whereas this returns a Dictionary<ProtoId<PlayTimeTracker>, TimeSpan>, but neither of them are typed properly
+        var playtimes = _jobRequirementsManager.GetRawPlayTimeTrackers();
         // EE used to create a new empty JobPrototype here, which would cause certain checks to fail. I have no words.
         profile ??= HumanoidCharacterProfile.DefaultWithSpecies();
         highJob ??= _fallbackJob;
@@ -577,7 +586,7 @@ public abstract partial class AbstractLoadoutTreeCharacterPage<TProto, TCategory
 
     public abstract string GetLocalizedDescription(TProto prototype);
 
-    public record class PointCounterDef(string LocString, Func<TProto, int> GetPrototypeCost, Func<int> GetMaxPoints)
+    public record class PointCounterDef(string NameLoc, string DescLoc, Func<TProto, int> GetPrototypeCost, Func<int> GetMaxPoints)
     {
         public int CurrentPoints { get; internal set; } = int.MinValue;
         public int MaxPoints { get; internal set; } = int.MinValue;

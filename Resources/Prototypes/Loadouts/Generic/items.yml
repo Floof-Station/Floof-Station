@@ -1058,3 +1058,10 @@
   cost: 0
   items:
     - ClothingHandsFriendshipBracelets
+    
+- type: loadout # Floof - Mood Lighting for LONG ERP sessions
+  id: LoadoutItemBoxCandleInfinite
+  category: Items
+  cost: 1
+  items:
+    - BoxCandleInfinite

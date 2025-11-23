@@ -686,7 +686,7 @@
   completetime: 0.1
   materials:
     PrizeTicket: 50
-    
+
 - type: latheRecipe
   id: PlushieSapphicHarpyPlushie
   result: PlushieSapphicHarpyPlushie
@@ -727,7 +727,7 @@
   completetime: 0.1
   materials:
     PrizeTicket: 50
-    
+
 - type: latheRecipe
   id: PlushieKoboldCefJustice
   result: PlushieKoboldCefJustice
@@ -735,7 +735,7 @@
   completetime: 0.1
   materials:
     PrizeTicket: 50
-    
+
 - type: latheRecipe
   id: PlushieSlimeBartender
   result: PlushieSlimeBartender
@@ -783,7 +783,7 @@
   completetime: 0.1
   materials:
     PrizeTicket: 50
-    
+
 - type: latheRecipe
   id: PlushieSillyResomi
   result: PlushieSillyResomi
@@ -947,6 +947,14 @@
 - type: latheRecipe
   id: PlushieBrashKitsune
   result: PlushieBrashKitsune
+  applyMaterialDiscount: false
+  completetime: 0.1
+  materials:
+    PrizeTicket: 50
+
+- type: latheRecipe
+  id: PlushieDetectiveVulps
+  result: PlushieDetectiveVulps
   applyMaterialDiscount: false
   completetime: 0.1
   materials:
@@ -1151,7 +1159,7 @@
   completetime: 0.1
   materials:
     PrizeTicket: 500
-    
+
 - type: latheRecipe
   id: MadScientistPlushie
   result: MadScientistPlushie

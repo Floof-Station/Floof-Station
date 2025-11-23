@@ -69,6 +69,7 @@ namespace Content.IntegrationTests.Tests
             //"talos", // Floof	- Derotated, no current maintainer
             "Train", // Floof
             "Fland", // Floof,
+            "Getaway", // Floof
             "Amber", // Apparently, floof?
             //"Europa" // Floof - Derotated, no current maintainer
         };

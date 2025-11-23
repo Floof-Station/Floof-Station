@@ -1,0 +1,35 @@
+- type: entity
+  id: LeftArmFish
+  name: "left fish arm"
+  parent: [PartReptilian, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmFish
+  name: "right fish arm"
+  parent: [PartReptilian, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandFish
+  name: "left fish hand"
+  parent: [PartReptilian, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandFish
+  name: "right fish hand"
+  parent: [PartReptilian, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "r_hand"

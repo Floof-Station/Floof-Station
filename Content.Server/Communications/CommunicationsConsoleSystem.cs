@@ -251,7 +251,8 @@ namespace Content.Server.Communications
 
                 var tryGetIdentityShortInfoEvent = new TryGetIdentityShortInfoEvent(uid, mob);
                 RaiseLocalEvent(tryGetIdentityShortInfoEvent);
-                author = tryGetIdentityShortInfoEvent.Title;
+                if (!string.IsNullOrWhiteSpace(tryGetIdentityShortInfoEvent.Title))
+                    author = tryGetIdentityShortInfoEvent.Title;
             }
 
             comp.AnnouncementCooldownRemaining = comp.Delay;

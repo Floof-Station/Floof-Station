@@ -8567,3 +8567,41 @@ Entries:
   id: 915
   time: '2025-11-16T00:00:43.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1443
+- author: WhiteLightningTwister
+  changes:
+    - type: Add
+      message: quadborg spawn points, to certain maps.
+    - type: Tweak
+      message: Made adjustments to saltern & shoukou.
+    - type: Remove
+      message: Removed surplus crates from LPO.
+  id: 916
+  time: '2025-11-16T19:49:04.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1539
+- author: Dunrab
+  changes:
+    - type: Add
+      message: Added Getaway the Floof Sectors first leisure station for play testing.
+  id: 917
+  time: '2025-11-16T20:19:09.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1514
+- author: Mnemotechnician
+  changes:
+    - type: Fix
+      message: >-
+        The trait selections counter no longer shows the same max value as the
+        trait points counter, the loadouts ui now correctly fetches your
+        playtimes when checking if a loadout is usable, and the server now
+        correctly keeps track of trait slots.
+  id: 918
+  time: '2025-11-16T23:47:18.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1542
+- author: Dunrab
+  changes:
+    - type: Fix
+      message: >-
+        N14 tiles will no longer show wasteland when pried up and will no longer
+        have weather effects on them.
+  id: 919
+  time: '2025-11-17T20:22:18.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1548

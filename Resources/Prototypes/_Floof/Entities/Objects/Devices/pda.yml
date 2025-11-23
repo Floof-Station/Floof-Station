@@ -1,3 +1,23 @@
+#For Librarian, Wizard PDAs.
+- type: entity
+  parent: BasePDA
+  id: BaseWidePDA
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay_wide"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay_wide"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+
 - type: entity
   parent: CentcomPDA
   id: SurgeonGeneralPDA
@@ -74,6 +94,42 @@
         whitelist:
           tags:
             - BookSpaceLaw
-            - BookJusticeSop 
-            - BookSecuritySop 
+            - BookJusticeSop
+            - BookSecuritySop
       state: pda-detective
+
+#PDA for sapient animals
+- type: entity
+  parent: BaseWidePDA
+  id: AnimalPDA
+  name: Beast PDA
+  description: Covered in scratches. A coordinate switch has been soldered onto the open circuits. Mind your claws around the wires.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-animal"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay_wide"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Pda
+    id: PassengerIDCard
+    state: pda-animal
+  - type: PdaBorderColor
+    borderColor: "#ffe685"
+  - type: SuitSensor
+    activationSlot: "pda"
+    randomMode: false
+    mode: SensorCords
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: StationLimitedNetwork

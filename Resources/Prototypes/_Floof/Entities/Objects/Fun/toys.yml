@@ -348,7 +348,7 @@
       params:
         variation: 0.1
         volume: 4
-        
+
 - type: entity
   parent: PlushieHuman
   id: PlushieAvaliHOP
@@ -379,7 +379,7 @@
       params:
         variation: 0.05
         volume: 4
-        
+
 - type: entity
   parent: PlushieHuman
   id: PlushieSlimeBartender
@@ -567,7 +567,7 @@
       params:
         variation: 0.05
         volume: 4
-        
+
 - type: entity
   parent: PlushieHuman
   id: PlushieSillyResomi
@@ -598,13 +598,13 @@
       params:
         variation: 0.05
         volume: 4
-                
+
 
 - type: entity
   parent: PlushieHuman
-  id: PlushieAvianMysta 
+  id: PlushieAvianMysta
   name: Avian mysta plushie
-  description: A fluffy bird plushie that feels like it's slightly radiating glimmer.. Maybe you're just imagining it. 
+  description: A fluffy bird plushie that feels like it's slightly radiating glimmer.. Maybe you're just imagining it.
   components:
   - type: Sprite
     sprite: _Floof/Objects/Fun/floof_plush.rsi
@@ -635,7 +635,7 @@
   parent: [PlushieHuman, BaseFleshlight]
   id: PlushieBunnyStressRelief
   name: Bunny stress relief plushie
-  description: This plushie smells sweet and feels super soft to the touch. Great for relieving stress in every way. 
+  description: This plushie smells sweet and feels super soft to the touch. Great for relieving stress in every way.
   components:
   - type: Sprite
     sprite: _Floof/Objects/Fun/floof_plush.rsi
@@ -1035,7 +1035,7 @@
 - type: entity
   parent: PlushieHuman
   id: PlushieStealthyBird
-  name: Stealthy bird plushie 
+  name: Stealthy bird plushie
   description: Stelf! #misspelled on purpouse
   components:
   - type: Sprite
@@ -1066,7 +1066,7 @@
 - type: entity
   parent: PlushieHuman
   id: PlushieMedicalHarpy
-  name: Medical harpy plushie 
+  name: Medical harpy plushie
   description: This plushie gives you the sense that it just wants to be helpful.
   components:
   - type: Sprite
@@ -1280,7 +1280,7 @@
       params:
         variation: 0.05
         volume: 4
-        
+
 - type: entity
   parent: BasePlushie
   id: MadScientistPlushie
@@ -1869,6 +1869,32 @@
 #       params:
 #         variation: 0.05
 #         volume: 4
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDetectiveVulps
+  name: Detective Vulps Plushie
+  description: "FDP: Funny Drunk Puppy"
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi
+    state: detectivevulps
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Animals/fox_squeak.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Floof/Voice/Vulpkanin/gekker.ogg
+
 
 # Artistic
 

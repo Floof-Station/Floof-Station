@@ -1,0 +1,19 @@
+﻿- type: parallax
+  id: Water
+  layers:
+  - texture:
+      !type:ImageParallaxTextureSource
+      path: "/Textures/Tiles/Planet/water.rsi/shoreline_water.png"
+    slowness: 0
+    scale: "1, 1"
+    shader: ""
+
+- type: parallax
+  id: SeaWater
+  layers:
+  - texture:
+      !type:ImageParallaxTextureSource
+      path: "/Textures/_Nuclear14/Tiles/ms13/Water/water_shallow.png"
+    slowness: 0
+    scale: "1, 1"
+    shader: ""

@@ -32,6 +32,13 @@
             ToolTip="{Loc 'humanoid-profile-editor-loadouts-remove-unusable-button-tooltip'}"
             HorizontalAlignment="Stretch"
             HorizontalExpand="True"
+            StyleClasses="OpenBoth" />
+        <Button
+            Name="SortModeToggleButton" Access="Public"
+            Text="Peekabu"
+            ToolTip="{Loc 'loadouts-and-traits-sort-toggle-tooltip'}"
+            HorizontalAlignment="Stretch"
+            HorizontalExpand="True"
             StyleClasses="OpenLeft" />
     </BoxContainer>
 

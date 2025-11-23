@@ -239,7 +239,16 @@ public abstract class SharedIdCardSystem : EntitySystem
 
     private static string ExtractFullTitle(IdCardComponent idCardComponent)
     {
-        return $"{idCardComponent.FullName} ({CultureInfo.CurrentCulture.TextInfo.ToTitleCase(idCardComponent.JobTitle ?? string.Empty)})"
-            .Trim();
+        var jobTitle = idCardComponent.LocalizedJobTitle;
+        var fullName = idCardComponent.FullName;
+
+        // If no name or job found, return null/empty and let callers
+        if (string.IsNullOrWhiteSpace(fullName) && string.IsNullOrWhiteSpace(jobTitle))
+            return string.Empty;
+
+        if (string.IsNullOrWhiteSpace(jobTitle))
+            return fullName?.Trim() ?? string.Empty;
+
+        return $"{fullName} ({CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobTitle)})".Trim();
     }
 }
