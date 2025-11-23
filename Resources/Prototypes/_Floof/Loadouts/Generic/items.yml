@@ -166,3 +166,12 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutSmokes
+
+      
+- type: loadout
+  id: LoadoutItemFriendshipBracelets
+  canBeHeirloom: true
+  category: Items
+  cost: 0
+  items:
+    - ClothingHandsFriendshipBracelets

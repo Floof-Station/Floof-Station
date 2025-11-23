@@ -1050,14 +1050,6 @@
       group: LoadoutPets
   functions:
     - !type:LoadoutMakeFollower
-
-- type: loadout #Floof
-  id: LoadoutItemFriendshipBracelets
-  canBeHeirloom: true #FLOOF
-  category: Items
-  cost: 0
-  items:
-    - ClothingHandsFriendshipBracelets
     
 - type: loadout # Floof - Mood Lighting for LONG ERP sessions
   id: LoadoutItemBoxCandleInfinite

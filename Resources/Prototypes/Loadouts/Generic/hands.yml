@@ -82,11 +82,3 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutRing  # Floof change
-
-- type: loadout #Floof
-  id: LoadoutFriendshipBracelets
-  category: Hands
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingHandsFriendshipBracelets

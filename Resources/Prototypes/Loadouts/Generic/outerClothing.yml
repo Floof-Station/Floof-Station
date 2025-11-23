@@ -93,17 +93,6 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutOuter
 
-- type: loadout #Floof
-  id: LoadoutOuterOversizedShirt
-  category: Outer
-  cost: 1
-  customColorTint: true
-  items:
-    - ClothingOuterOversizedShirt
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-
 # Letterman Jackets
 - type: loadout
   id: LoadoutOuterCoatLettermanBlue
