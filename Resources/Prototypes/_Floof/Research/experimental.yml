@@ -1,0 +1,15 @@
+# Temporary solution more or less
+- type: technology
+  id: Cloning
+  name: research-technology-cloning
+  icon:
+    sprite: Structures/Machines/cloning.rsi
+    state: pod_0
+  discipline: Experimental
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - CloningPodMachineCircuitboard
+  technologyPrerequisites:
+  - Metempsychosis
+  softCapContribution: 1.2
