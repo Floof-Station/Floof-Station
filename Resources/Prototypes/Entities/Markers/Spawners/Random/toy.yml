@@ -137,6 +137,8 @@
         - PlushieBrashKitsune
         - PlushieHarmlessCaptain
         - PlushieDetectiveVulps
+        - PlushieExpieMobster
+        - PlushieMailTech
         # Floof Plushies End
       chance: 0.5
       offset: 0.2
