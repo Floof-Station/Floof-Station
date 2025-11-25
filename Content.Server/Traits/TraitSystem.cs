@@ -46,52 +46,79 @@ public sealed class TraitSystem : EntitySystem
     // When the player is spawned in, add all trait components selected during character creation
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args)
     {
+        // This method has mostly been rewritten on floofstation.
         var pointsTotal = _configuration.GetCVar(CCVars.GameTraitsDefaultPoints);
         var traitSelections = _configuration.GetCVar(CCVars.GameTraitsMax);
 
-        if (args.JobId is not null && !_prototype.TryIndex<JobPrototype>(args.JobId, out var jobPrototype)
-            && jobPrototype is not null && !jobPrototype.ApplyTraits)
+        JobPrototype? jobPrototype = null;
+        if (args.JobId is not null && _prototype.TryIndex(args.JobId, out jobPrototype) && !jobPrototype.ApplyTraits)
             return;
+        jobPrototype ??= _prototype.Index<JobPrototype>("Passenger"); // Fallback
 
+        // Step 1. Figure out which traits will actually apply.
         var sortedTraits = new List<TraitPrototype>();
+        var discardedTraits = new List<TraitPrototype>();
         foreach (var traitId in args.Profile.TraitPreferences)
         {
-            if (_prototype.TryIndex<TraitPrototype>(traitId, out var traitPrototype))
-                sortedTraits.Add(traitPrototype);
-            else
+            if (!_prototype.TryIndex<TraitPrototype>(traitId, out var traitPrototype))
             {
                 DebugTools.Assert($"No trait found with ID {traitId}!");
                 return;
             }
-        }
 
-        sortedTraits.Sort();
-        // End Floof
-
-        foreach (var traitPrototype in sortedTraits) // Floof - changed to use the sorted list
-        {
-            // Moved converting to prototypes to above loop in order to sort before applying them. End Floof modifications.
             if (!_characterRequirements.CheckRequirementsValid(
                 traitPrototype.Requirements,
-                _prototype.Index<JobPrototype>(args.JobId ?? _prototype.EnumeratePrototypes<JobPrototype>().First().ID),
+                jobPrototype,
                 args.Profile, _playTimeTracking.GetTrackerTimes(args.Player), args.Player.ContentData()?.Whitelisted ?? false, traitPrototype,
                 EntityManager, _prototype, _configuration,
                 out _))
+            {
+                discardedTraits.Add(traitPrototype);
                 continue;
+            }
 
-            // Floof - early exit if we are over the trait limit or points limit
-            if (pointsTotal + traitPrototype.Points < 0 || traitSelections <= 0)
-                continue;
-
-            pointsTotal += traitPrototype.Points;
-            --traitSelections;
-
-            AddTrait(args.Mob, traitPrototype);
+            sortedTraits.Add(traitPrototype);
         }
 
-        // I dont have any good words for the person who wrote the below
-        // if (pointsTotal < 0 || traitSelections < 0)
-        //     PunishCheater(args.Mob);
+        // Step 2. sort by points added so that we never go into negative balance unless the player already has a negative total.
+        // Eliminate any trait that would cause us to go into negative balance.
+        sortedTraits.Sort((a, b) => a.Points.CompareTo(b.Points));
+        for (int i = sortedTraits.Count - 1; i >= 0; i--)
+        {
+            var traitPrototype = sortedTraits[i];
+            if (pointsTotal + traitPrototype.Points < 0 || traitSelections - traitPrototype.Slots < 0)
+            {
+                // Note: this mandates reverse iteration.
+                sortedTraits.RemoveSwap(i);
+                discardedTraits.Add(traitPrototype);
+                Log.Debug($"Eliminating trait {traitPrototype.ID} at index {i}");
+                continue;
+            }
+
+            pointsTotal += traitPrototype.Points;
+            traitSelections -= traitPrototype.Slots;
+        }
+
+        // Step 3. finally apply all the traits that passed this trial by fire, sorting by their programmatic priority.
+        sortedTraits.Sort();
+        foreach (var traitPrototype in sortedTraits)
+            AddTrait(args.Mob, traitPrototype);
+
+        // This is just so I can know if I fucked up again and broke someone's character.
+        if (pointsTotal < 0 || traitSelections < 0 || discardedTraits.Count > 0)
+        {
+            Log.Warning($"Player {args.Player.Name} tried to spawn with a negative balance: {discardedTraits.Count} discarded, {pointsTotal} points, {traitSelections} selections.");
+
+            var msg = $"Warning: {discardedTraits.Count} of your traits failed to apply due to insufficient trait balance or missing requirements: " +
+                $"{string.Join(", ", discardedTraits.Select(t => t.ID))}.";
+            _chatManager.ChatMessageToOne(
+                ChatChannel.Server,
+                msg, msg,
+                EntityUid.Invalid,
+                false,
+                args.Player.Channel,
+                Color.Orange);
+        }
     }
 
     /// <summary>

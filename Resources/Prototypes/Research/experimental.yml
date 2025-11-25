@@ -161,7 +161,7 @@
     state: cloning_idle
   discipline: Experimental
   tier: 2
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
     - BiomassReclaimerMachineCircuitboard
     - CloningConsoleComputerCircuitboard

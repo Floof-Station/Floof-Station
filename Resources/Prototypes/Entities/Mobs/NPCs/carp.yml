@@ -72,8 +72,11 @@
         - Carp
         - DoorBumpOpener
         - NoPaint
-    - type: ReplacementAccent
-      accent: genericAggressive
+    - type: LanguageKnowledge # Floof - Replaced genericAggressive accent with Draconic language
+      speaks:
+      - Kobold
+      understands:
+      - Kobold
     - type: Speech
       speechVerb: LargeMob
     - type: InteractionPopup

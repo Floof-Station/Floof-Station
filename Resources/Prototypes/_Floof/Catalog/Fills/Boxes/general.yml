@@ -108,3 +108,22 @@
     whitelist:
       components:
       - LightBulb
+
+- type: entity
+  name: magic candle box
+  parent: BoxCandle
+  id: BoxCandleInfinite
+  description: This box is specifically moulded to only carry magic non-scented candles.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CandleInfinite
+        amount: 4
+      - id: CandleBlueInfinite
+        amount: 2
+      - id: CandleRedInfinite
+        amount: 2
+      - id: CandleGreenInfinite
+        amount: 2
+      - id: CandlePurpleInfinite
+        amount: 2

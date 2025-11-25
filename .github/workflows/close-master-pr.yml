@@ -7,7 +7,8 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-    if: ${{github.head_ref == 'master' || github.head_ref == 'main' || github.head_ref == 'develop'}}
+    # Floof: don't run if made from the same repo
+    if: ${{(github.head_ref == 'master' || github.head_ref == 'main' || github.head_ref == 'develop') && github.event.pull_request.head.repo.full_name != github.repository}}
     
     steps:    
     - uses: superbrothers/close-pull-request@v3

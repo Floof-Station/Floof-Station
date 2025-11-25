@@ -149,4 +149,4 @@
   unit: materials-unit-piece
   icon: { sprite: Objects/Materials/materials.rsi, state: diamond }
   color: "#80ffff"
-  price: 20 # big diamond gaslit us so hard diamonds actually became extremely rare
+  price: 3.33333 # big diamond gaslit us so hard diamonds actually became extremely rare # Floof - changed to 10k/stack

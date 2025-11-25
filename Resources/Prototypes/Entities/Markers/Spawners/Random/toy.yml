@@ -92,7 +92,7 @@
         # - PlushieNoticeableSecurityOfficer
         - PlushieHarpy
         - PlushieMort
-        - PlushieAvaliHOP 
+        - PlushieAvaliHOP
         - PlushieKoboldCefJustice
         - PlushieSlimeBartender
         - PlushieGrumpyQuartermaster
@@ -138,7 +138,8 @@
         - PlushieHarmlessCaptain
         - PlushieNuclearMoth
         - PlushieUnathiEngineer
-        # Floof Plushies End 
+        - PlushieDetectiveVulps
+        # Floof Plushies End
       chance: 0.5
       offset: 0.2
 

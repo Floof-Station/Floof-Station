@@ -95,8 +95,6 @@ public abstract class SharedLayingDownSystem : EntitySystem
             || !TryComp(uid, out LayingDownComponent? layingDown))
             return;
 
-        RaiseNetworkEvent(new CheckAutoGetUpEvent(GetNetEntity(uid)));
-
         if (HasComp<KnockedDownComponent>(uid)
             || !_mobState.IsAlive(uid))
             return;
@@ -105,6 +103,10 @@ public abstract class SharedLayingDownSystem : EntitySystem
             TryStandUp(uid, layingDown, standing);
         else
             TryLieDown(uid, layingDown, standing);
+
+        // Floofstation - no need to auto get up if we manually laid down. The system will reset it when we get downed the next time.
+        // IMPORTANT NOTE: SharedStunSystem directly calls TryLieDown for some godforsaken reason. Make sure this method isn't directly called elsewhere.
+        layingDown.AutoGetUp = false;
     }
 
     private void OnStandingUpDoAfter(EntityUid uid, StandingStateComponent component, StandingUpDoAfterEvent args)
@@ -186,6 +188,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
         }
 
         _standing.Down(uid, true, behavior != DropHeldItemsBehavior.NoDrop, standingState);
+        Dirty(uid, layingDown); // Floofstation
         return true;
     }
 }

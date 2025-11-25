@@ -3,6 +3,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Input;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Stunnable;
 using Robust.Shared.Configuration;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Player;
@@ -11,23 +12,29 @@ namespace Content.Server.Standing;
 
 public sealed class LayingDownSystem : SharedLayingDownSystem
 {
-    [Dependency] private readonly INetConfigurationManager _cfg = default!;
+    // Floofstation - everything here was changed.
+    [Dependency] private readonly INetConfigurationManager _netCfg = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeNetworkEvent<CheckAutoGetUpEvent>(OnCheckAutoGetUp);
+        SubscribeLocalEvent<LayingDownComponent, DownedEvent>(OnDowned);
     }
 
-    private void OnCheckAutoGetUp(CheckAutoGetUpEvent ev, EntitySessionEventArgs args)
+    private void OnDowned(Entity<LayingDownComponent> ent, ref DownedEvent args)
     {
-        var uid = GetEntity(ev.User);
-
-        if (!TryComp(uid, out LayingDownComponent? layingDown))
+        // The original system used to let CLIENTS force their auto get up state on ALL OTHER CLIENTS
+        // And that's exactly what would happen. Any time someone gets downed, all clients who see it would raise an AutoGetUpEvent over the network, changing the downed person's auto getup state
+        // The new system only sets it on the server.
+        if (!TryComp<ActorComponent>(ent, out var actor))
             return;
 
-        layingDown.AutoGetUp = _cfg.GetClientCVar(args.SenderSession.Channel, CCVars.AutoGetUp);
-        Dirty(uid, layingDown);
+        var autoGetUp = _netCfg.GetClientCVar(actor.PlayerSession.Channel, CCVars.AutoGetUp);
+        if (autoGetUp == ent.Comp.AutoGetUp)
+            return;
+
+        ent.Comp.AutoGetUp = autoGetUp;
+        Dirty(ent);
     }
 }

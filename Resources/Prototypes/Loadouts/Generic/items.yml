@@ -1050,3 +1050,10 @@
       group: LoadoutPets
   functions:
     - !type:LoadoutMakeFollower
+    
+- type: loadout # Floof - Mood Lighting for LONG ERP sessions
+  id: LoadoutItemBoxCandleInfinite
+  category: Items
+  cost: 1
+  items:
+    - BoxCandleInfinite

@@ -1,0 +1,238 @@
+- type: entity
+  id: BasePlayableFeralMob
+  parent: StripableInventoryBase
+  suffix: Friendly
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Hands
+    - type: ComplexInteraction
+    - type: Inventory
+      templateId: nakedcrew
+    - type: MailReceiver
+    - type: NpcFactionMember
+      factions:
+      - NanoTrasen
+    - type: Puller
+    - type: Cuffable
+    - type: Prying
+      speedModifier: 0.8
+    - type: Loadout
+      prototypes:
+        - FriendlyPlayerMob
+    - type: Vore
+
+- type: entity
+  name: laser raptor
+  id: MobLaserRaptorAdmeme
+  parent: [BasePlayableFeralMob, MobLaserRaptor, StripableInventoryBase]
+  description: From the Viking age. Bizarrely civilized.
+  components:
+    - type: Body
+      prototype: LaserRaptor
+    - type: HTN
+    - type: MeleeWeapon
+      soundHit:
+        collection: AlienClaw
+      animation: WeaponArcClaw
+      attackRate: 1.25
+      damage:
+        types:
+          Slash: 7.5
+      range: 1.75
+    - type: Puller
+      needsHands: false
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/laser_raptor.rsi
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: laser_raptor
+        - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: laser_raptor
+        Critical:
+          Base: laser_raptor_dead
+        Dead:
+          Base: laser_raptor_dead
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 2.5
+      baseSprintSpeed: 6
+    - type: BodyEmotes
+      soundsId: ReptilianBodyEmotes
+    - type: Tag
+      tags:
+        - CanPilot
+        - FootstepSound
+        - DoorBumpOpener
+        - UnathiEmotes
+    - type: InteractionPopup
+      successChance: 0.3
+      interactSuccessString: petting-success-reptile
+      interactFailureString: petting-failure-generic
+      interactSuccessSound:
+        path: /Audio/Animals/lizard_happy.ogg
+    - type: Vocal
+      sounds:
+        Male: MaleReptilian
+        Female: FemaleReptilian
+        Unsexed: MaleReptilian
+
+- type: entity
+  name: space dragon
+  id: SpaceDragonAdmeme
+  parent: [BasePlayableFeralMob, MobDragonDungeon, StripableInventoryBase]
+  description: A flying leviathan, loosely related to space carps. Surprisingly civilized.
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+    - NanoTrasen
+  - type: NightVision
+    isActive: false
+    toggleAction: ToggleNightVision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
+  - type: Puller
+    needsHands: false
+  - type: Sprite
+    sprite: Mobs/Aliens/Carps/dragon.rsi
+    noRot: true
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: alive-unshaded
+      shader: unshaded
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - Carp
+    - UnathiEmotes
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Kobold
+    understands:
+    - TauCetiBasic
+    - Kobold
+    - Sign
+  - type: Vocal
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
+
+- type: entity
+  name: space carp
+  id: MobCarpPlayable
+  parent: [BasePlayableFeralMob, BaseMobCarp, StripableInventoryBase]
+  components:
+  - type: Body
+    prototype: CarpHands
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 5
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+    - NanoTrasen
+  - type: NightVision
+    isActive: false
+    toggleAction: ToggleNightVision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Carps/space.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - Carp
+    - UnathiEmotes
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Kobold
+    understands:
+    - TauCetiBasic
+    - Kobold
+  - type: Vocal
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
+
+- type: entity
+  name: sharkminnow
+  id: MobSharkPlayable
+  parent: [BasePlayableFeralMob, MobShark, StripableInventoryBase]
+  components:
+  - type: Body
+    prototype: CarpHands
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 5
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+    - NanoTrasen
+  - type: NightVision
+    isActive: false
+    toggleAction: ToggleNightVision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Carps/sharkminnow.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - Carp
+    - UnathiEmotes
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Kobold
+    understands:
+    - TauCetiBasic
+    - Kobold
+  - type: Vocal
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
