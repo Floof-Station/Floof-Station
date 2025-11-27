@@ -200,7 +200,7 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
                     currentLine += word + " ";
 
                     // magic number
-                    if (currentLine.Length <= 50)
+                    if (currentLine.Length <= 200)
                         continue;
 
                     agentSummary.AppendLine(Loc.GetString("custom-objective-format", ("line", currentLine)));

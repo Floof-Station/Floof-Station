@@ -16,12 +16,14 @@ using Robust.Shared.Utility;
 using System.Linq;
 using System.Numerics;
 using System.Threading;
+using Content.Client.UserInterface.RichText;
 using Content.Shared.Eye.Blinding.Components;
 using Robust.Client;
 using static Content.Shared.Interaction.SharedInteractionSystem;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Item;
+using Robust.Client.UserInterface.RichText;
 using Direction = Robust.Shared.Maths.Direction;
 
 namespace Content.Client.Examine
@@ -35,6 +37,13 @@ namespace Content.Client.Examine
         [Dependency] private readonly VerbSystem _verbSystem = default!;
 
         public const string StyleClassEntityTooltip = "entity-tooltip";
+
+        // Floofstation
+        public static readonly Type[] SafeTags = new Type[]
+        {
+            typeof(BoldTag), typeof(ItalicTag), typeof(BoldItalicTag), typeof(ColorTag),
+            typeof(ScrambleTag), typeof(BulletTag), typeof(FontTag), typeof(HeadingTag),
+        }; // Floofstation - for some reason wizden added [CmdLink] which is singlehandely accountable for 100% of RTL exploits
 
         private EntityUid _examinedEntity;
         private EntityUid _lastExaminedEntity;
@@ -242,7 +251,7 @@ namespace Content.Client.Examine
                 var itemName = FormattedMessage.RemoveMarkup(Identity.Name(target, EntityManager, player));
                 var labelMessage = FormattedMessage.FromMarkup($"[bold]{itemName}[/bold]");
                 var label = new RichTextLabel();
-                label.SetMessage(labelMessage);
+                label.SetMessage(labelMessage, SafeTags); // Floofstation
                 hBox.AddChild(label);
             }
             else

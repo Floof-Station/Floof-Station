@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Client.Examine;
 using Content.Client.Message;
 using Content.Shared.GameTicking;
 using Robust.Client.UserInterface.Controls;
@@ -168,7 +169,7 @@ namespace Content.Client.RoundEnd
             }
             else
             {
-                label.SetMarkup(filteredText);
+                label.SetMessage(FormattedMessage.FromMarkupPermissive(filteredText), ExamineSystem.SafeTags); // Don't allow John Doe to inject cmdlinks
                 return true;
             }
         }
