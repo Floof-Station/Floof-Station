@@ -8736,3 +8736,12 @@ Entries:
   id: 933
   time: '2025-11-23T04:15:44.0000000+00:00'
   url: https://github.com/Floof-Station/Floof-Station/pull/1540
+- author: >-
+    Individual that does not exist whose sole purpose is to push a test
+    changelog entry and to stress test the workflow in question
+  changes:
+    - type: Tweak
+      message: Test entry. Please ignore.
+  id: 934
+  time: '2025-12-12T03:23:13.0000000+00:00'
+  url: https://github.com/Floof-Station/Floof-Station/pull/1569
