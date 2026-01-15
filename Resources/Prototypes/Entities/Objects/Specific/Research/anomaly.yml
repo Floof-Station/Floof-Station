@@ -128,7 +128,7 @@
   - type: Item
     size: Large
   - type: MeleeWeapon
-    attackRate: 2
+    attackRate: 0.5 #Floof - Revert from EE attack rate
     angle: 0
     animation: WeaponArcFist
     wideAnimationRotation: -135

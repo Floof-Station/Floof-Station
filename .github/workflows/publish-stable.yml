@@ -3,6 +3,7 @@ name: Publish stable
 concurrency:
   group: publish
 on:
+  workflow_dispatch:
   push:
     branches:
       - stable  # or the branch where merge requests are being merged into (e.g., 'master')
@@ -73,7 +74,8 @@ jobs:
       env:
         CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}
 
-    - uses: geekyeggo/delete-artifact@v5
-      if: always()
-      with:
-        name: build
+    # Floofstation: avoid deleting artifacts for now
+    # - uses: geekyeggo/delete-artifact@v5
+    #   if: always()
+    #   with:
+    #     name: build
