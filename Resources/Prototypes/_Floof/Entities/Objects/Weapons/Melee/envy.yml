@@ -1,0 +1,20 @@
+- type: entity
+  name: envy's knife
+  parent: CombatKnife
+  id: EnvyKnife
+  description: Their success will be yours.
+  components:
+  - type: EnvyCloneSpawner
+    copiedComponents:
+      - Damageable
+      - DetailExaminable
+      - Dna
+      - Fingerprint
+      - LanguageKnowledge
+      - LanguageSpeaker
+      - MobState
+      - Psionic
+      - Scent
+  - type: Sprite
+    sprite: _Floof/Objects/Weapons/Melee/envy_knife.rsi
+    state: knife
