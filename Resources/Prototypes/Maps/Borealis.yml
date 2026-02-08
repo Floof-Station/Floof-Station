@@ -1,0 +1,91 @@
+- type: gameMap
+  id: Borealis
+  mapName: Borealis
+  mapPath: /Maps/Floof/Borealis.yml # Floofstation
+  minPlayers: 30
+  maxPlayers: 70
+  stations:
+    Borealis:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationEmergencyShuttle #floofstation
+        emergencyShuttlePath: /Maps/Shuttles/DeltaV/NTES_Delta.yml #floofstation
+      - type: StationNameSetup
+        mapNameTemplate: '{0} Borealis Orbital {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: 'NY'
+      - type: StationJobs
+        overflowJobs:
+          - Passenger
+          #- Anomaly # Floofstation
+        availableJobs:
+          Passenger: [ -1, -1 ]
+          Anomaly: [ 4, 4 ] # Floofstation
+          Captain: [ 1, 1 ]
+          #BlueshieldOfficer: [ 1, 1] Floof - uncomment once implemented on Floof maps
+          #NanotrasenRepresentative: [ 1, 1 ] Floof - uncomment once implemented on Floof maps
+          #AdministrativeAssistant: [ 1, 1 ] Floof - uncomment once implemented on Floof maps
+        #service
+          HeadOfPersonnel: [ 1, 1 ]
+          Bartender: [ 2, 2 ]
+          Botanist: [ 2, 2 ]
+          MartialArtist: [ 2, 4 ]
+          Boxer: [ 2, 4 ]
+          Chef: [ 2, 2 ]
+          Clown: [ 1, 2 ]
+          Reporter: [ 2, 2 ]
+          Musician: [ 1, 2 ]
+          ServiceWorker: [ 2, 3 ]
+          Janitor: [ 2, 2 ]
+          Mime: [ 1, 2 ]
+          ServiceQuadBorg: [ 2, 3 ] #Floofstation
+        #engineering
+          ChiefEngineer: [ 1, 1 ]
+          AtmosphericTechnician: [ 1, 2 ]
+          StationEngineer: [ 2, 3 ]
+          TechnicalAssistant: [ 2, 4 ]
+          SeniorEngineer: [ 1, 1 ]
+        #justice added by FloofStation
+          ChiefJustice: [ 1, 1 ] #FloofStation
+          Clerk: [ 1, 1 ] #FloofStation
+          Lawyer: [ 2, 2 ] #FloofStation
+          Prosecutor: [ 1, 2 ] #FloofStation
+        #medical
+          ChiefMedicalOfficer: [ 1, 1 ]
+          Chemist: [ 1, 2 ]
+          Paramedic: [ 1, 2 ]
+          Psychologist: [ 1, 1 ]
+          MedicalDoctor: [ 2, 3 ]
+          MedicalIntern: [ 2, 2 ]
+          MedicalBorg: [ 1, 2 ]
+          MedicalQuadBorg: [ 2, 3 ] #Floofstation
+          SeniorPhysician: [ 1, 1 ]
+        #science
+          ResearchDirector: [ 1, 1 ]
+          Chaplain: [ 1, 1 ]
+          ForensicMantis: [ 1, 1 ]
+          Scientist: [ 2, 3 ]
+          ResearchAssistant: [ 2, 2 ]
+          Borg: [ 2, 4 ]
+          Roboticist: [ 1, 2 ]
+          Librarian: [ 1, 1 ]
+          SeniorResearcher: [ 1, 1 ]
+        #security
+          HeadOfSecurity: [ 1, 1 ]
+          Warden: [ 1, 1 ]
+          Detective: [ 1, 1 ]
+          SecurityOfficer: [ 3, 4 ]
+          SecurityCadet: [ 2, 4 ]
+          Brigmedic: [ 1, 2 ]
+          Prisoner: [ 3, 4 ]
+          PrisonGuard: [ 1, 3 ] # someday a 2:1 ratio of guard:prisoner is preferred
+          SeniorOfficer: [ 1, 1 ]
+#         Lawyer: [ 2, 2 ]
+        #logistics
+          Quartermaster: [ 1, 1 ]
+          InventorySpecialist: [ 1, 1 ] #FloofStation
+          MailCarrier: [ 2, 3 ]
+          SalvageSpecialist: [ 5, 6 ]
+          CargoTechnician: [ 2, 3 ]
+
