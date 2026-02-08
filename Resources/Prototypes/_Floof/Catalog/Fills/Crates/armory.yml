@@ -1,0 +1,69 @@
+- type: entity
+  id: CrateArmorySMGC20r
+  parent: CrateWeaponSecure
+  name: C-20r SMG crate
+  description: Contains a single C-20r Submachine Gun with four mags. Requires Armory access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunC20r
+      - id: MagazinePistolSubMachineGun
+        amount: 2
+      - id: MagazinePistolSubMachineGunRubber
+        amount: 2
+
+- type: entity
+  id: CrateArmoryPistolPython
+  parent: CrateWeaponSecure
+  name: Python revolver crate
+  description: Contains a single Python revolver with two speed loaders. Requires Armory access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRevolverPython
+      - id: SpeedLoaderMagnum
+        amount: 1
+      - id: SpeedLoaderMagnumRubber
+        amount: 1
+
+- type: entity
+  id: CrateArmoryShotgunBulldog
+  parent: CrateWeaponSecure
+  name: Bulldog shotgun crate
+  description: Contains a single Bulldog tactical shotgun with two mags. Requires Armory access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponShotgunBulldog
+      - id: MagazineShotgun
+        amount: 1
+      - id: MagazineShotgunBeanbag
+        amount: 1
+
+- type: entity
+  id: CrateArmoryRifleLector
+  parent: CrateWeaponSecure
+  name: Lecter rifle crate
+  description: Contains a single Lecter assault rifle with four mags. Requires Armory access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleLecter
+      - id: MagazineRifle
+        amount: 2
+      - id: MagazineRifleRubber
+        amount: 2
+
+- type: entity
+  id: CrateArmoryRifleAKMS
+  parent: CrateWeaponSecure
+  name: AKMS rifle crate
+  description: Contains a single AKMS assault rifle with four mags. Requires Armory access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleAk
+      - id: MagazineLightRifle
+        amount: 2
+      - id: MagazineLightRifleRubber
+        amount: 2

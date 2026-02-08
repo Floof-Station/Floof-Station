@@ -1,0 +1,49 @@
+- type: cargoProduct
+  id: ArmorySmgC20r
+  icon:
+    sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+    state: icon
+  product: CrateArmorySMGC20r
+  cost: 20000
+  category: cargoproduct-category-name-armory
+  group: market
+
+- type: cargoProduct
+  id: ArmoryPistolPython
+  icon:
+    sprite: Objects/Weapons/Guns/Revolvers/python.rsi
+    state: icon
+  product: CrateArmoryPistolPython
+  cost: 5000
+  category: cargoproduct-category-name-armory
+  group: market
+
+- type: cargoProduct
+  id: ArmoryShotgunBulldog
+  icon:
+    sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+    state: icon
+  product: CrateArmoryShotgunBulldog
+  cost: 20000
+  category: cargoproduct-category-name-armory
+  group: market
+
+- type: cargoProduct
+  id: ArmoryRifleLecter
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    state: icon
+  product: CrateArmoryRifleLector
+  cost: 5000
+  category: cargoproduct-category-name-armory
+  group: market
+
+- type: cargoProduct
+  id: ArmoryRifleAKMS
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    state: icon
+  product: CrateArmoryRifleAKMS
+  cost: 16000
+  category: cargoproduct-category-name-armory
+  group: market
