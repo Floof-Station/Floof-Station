@@ -9,6 +9,9 @@
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
   customName: true
+  youngAge: 300 # Floofstation - Biologically Immortal
+  oldAge: 700
+  maxAge: 1000
 
 - type: speciesBaseSprites
   id: MobSlimeSprites

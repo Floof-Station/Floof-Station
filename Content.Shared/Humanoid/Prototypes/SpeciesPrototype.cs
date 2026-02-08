@@ -123,9 +123,10 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// <summary>
     ///     Characters cannot be older than this. Only used for restrictions...
     ///     although imagine if ghosts could age people WYCI...
+    ///     Floofstation - Increased Max Age
     /// </summary>
     [DataField]
-    public int MaxAge = 120;
+    public int MaxAge = 200;
 
     /// <summary>
     ///     The minimum height and width ratio for this species
