@@ -119,7 +119,6 @@
       slots: WITHOUT_POCKET
     - type: Tag
       tags:
-        - FullBodyOuter
         - WhitelistChameleon
         # HidesHarpyWings floof
 
