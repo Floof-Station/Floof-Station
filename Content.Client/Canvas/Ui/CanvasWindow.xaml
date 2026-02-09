@@ -1,0 +1,81 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+               xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+               xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+               Title="Canvas"
+               Resizable="True"
+               SetSize="800 700"
+               MinSize="700 700">
+    <BoxContainer Orientation="Vertical">
+        <PanelContainer>
+            <PanelContainer.PanelOverride>
+                <gfx:StyleBoxFlat BackgroundColor="#1e1e1e" />
+            </PanelContainer.PanelOverride>
+            <BoxContainer Name="HeaderColorPreview" Orientation="Horizontal" Align="Center" Margin="0 8 0 8">
+            </BoxContainer>
+            <BoxContainer Name="HeaderTools" Orientation="Horizontal" Margin="0 0 0 8">
+                <LineEdit Name="PaintCodeInput" PlaceHolder="{Loc 'canvas-paintcode'}" HorizontalExpand="True" />
+                <Button Name="ImportButton" Text="{Loc 'canvas-finalize-import'}" Margin="8 0 0 0" />
+                <Button Name="ExportButton" Text="{Loc 'canvas-export'}" Margin="8 0 0 0" />
+                <Button Name="FinalizeButton" Text="{Loc 'canvas-finalize'}" Margin="8 0 0 0" />
+            </BoxContainer>
+        </PanelContainer>
+        
+        <ScrollContainer VerticalExpand="True">
+            
+            <BoxContainer Orientation="Horizontal" Align="Begin">
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#3a3a3a" />
+                    </PanelContainer.PanelOverride>
+                    <BoxContainer Name="ResolutionContainer" Orientation="Vertical" Align="Begin">
+                        <Label Text="Resolution"/>
+                        <BoxContainer Orientation="Horizontal">
+                            <Slider Name="HeightSize"
+                                    MinValue="16"
+                                    MaxValue="64"
+                                    HorizontalExpand="True"
+                                    MinSize="256 0"
+                                    Rounded="True" />
+                            <Control MinSize="8 0" />
+                            <Label Name="HeightSizeLabel" Text="16" MinSize="48 0"/>
+                            <Control MinSize="4 0"/>
+
+                        </BoxContainer>
+                        <BoxContainer Orientation="Horizontal">
+                            <Slider Name="WidthSize"
+                                    MinValue="16"
+                                    MaxValue="64"
+                                    HorizontalExpand="True"
+                                    MinSize="256 0"
+                                    Rounded="True" />
+                            <Control MinSize="8 0" />
+                            <Label Name="WidthSizeLabel" Text="16" MinSize="48 0"/>
+                            <Control MinSize="4 0"/>
+                        </BoxContainer>
+                        <BoxContainer Orientation="Horizontal" Align="Center">
+                            <LineEdit Name="ArtistSignature" PlaceHolder="{Loc 'canvas-signature'}" HorizontalExpand="True" />
+                        </BoxContainer>
+                        <BoxContainer Orientation="Horizontal" Align="Center">
+                            <Label Text="{Loc 'canvas-color'}:" Margin="0 0 8 0"/>
+                            <Button Name="ColorPreview" Margin="8 0 0 0" />
+                        </BoxContainer>
+                        <ColorSelectorSliders Name="ColorSelector" ></ColorSelectorSliders>
+                        <BoxContainer Name="ColorSelectorBox" Orientation="Horizontal" Align="Center">
+                        </BoxContainer>
+                    
+                    </BoxContainer>
+                </PanelContainer>
+                
+                <PanelContainer>
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#1b1b1e" />
+                        </PanelContainer.PanelOverride>
+                        <BoxContainer Name="Grids" Orientation="Vertical" Align="Center" VerticalExpand="True">
+                            <!-- Add grid content dynamically here -->
+                        </BoxContainer>
+                    </PanelContainer>
+            </BoxContainer>
+            
+        </ScrollContainer>
+    </BoxContainer>
+</controls:FancyWindow>
