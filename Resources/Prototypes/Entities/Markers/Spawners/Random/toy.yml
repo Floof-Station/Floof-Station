@@ -136,6 +136,8 @@
         - TwoTailedCommandPlushie
         - PlushieBrashKitsune
         - PlushieHarmlessCaptain
+        - PlushieNuclearMoth
+        - PlushieUnathiEngineer
         - PlushieDetectiveVulps
         # Floof Plushies End
       chance: 0.5

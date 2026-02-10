@@ -1776,6 +1776,71 @@
       params:
         variation: 0.05
         volume: 4
+
+- type: entity 
+  parent: PlushieHuman
+  id: PlushieNuclearMoth
+  name: Nuclear Moth Plushie
+  description: A scraggly and evil-looking red moth wearing a plastic nuclear operative hardsuit. The tag states that nuclear operatives are purely fictitious and that any resemblence to real sophonts, alive or dead, is purely coincidental. There is a magnet in its left hand.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi 
+    state: nuclearmoth
+  - type: UseDelay
+    delay: 180
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Machines/Nuke/nuke_alarm.ogg
+      params:
+        volume: -5
+        maxDistance: 10
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Machines/Nuke/nuke_alarm.ogg
+      params:
+        volume: -5
+        maxDistance: 10
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/bodyfall1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
+- type: entity 
+  parent: PlushieHuman
+  id: PlushieUnathiEngineer
+  name: Unathi Engineer Plushie
+  description: A weathered, gravel-colored unathi wearing a miniature hard hat and warm coat. It has two big teeth at the corners of its mouth. It's stained with oil and smells like phoron. The tag features the NanoTrasen trademark. There is a magnet in its right hand.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Fun/floof_plush.rsi 
+    state: unathiengineer
+  - type: UseDelay
+    delay: 3.0 
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+      params:
+        volume: 2 
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+      params:
+        volume: 2 
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/trayhit2.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+      params:
+        variation: 0.05
+        volume: 4
+
 # Banned individual
 # - type: entity
 #   parent: PlushieHuman

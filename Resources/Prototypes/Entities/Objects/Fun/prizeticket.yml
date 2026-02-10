@@ -497,6 +497,11 @@
         orGroup: Prize
       - id: PlushieHarmlessCaptain
         prob: 0.50
+        orGroup: Prize            
+      - id: PlushieNuclearMoth
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieUnathiEngineer
         orGroup: Prize
       - id: PlushieDetectiveVulps
         prob: 0.50
