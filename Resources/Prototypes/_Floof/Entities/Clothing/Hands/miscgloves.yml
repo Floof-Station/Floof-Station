@@ -348,4 +348,25 @@
   - type: Fiber
     fiberMaterial: fibers-synthetic
     fiberColor: fibers-dyed
-  - type: FingerprintMask    
+
+- type: entity
+  parent: ClothingHandsGlovesNorthStar
+  id: ClothingHandsGlovesJoStar
+  name: gloves of the jo star
+  description: These gloves allow you to punch incredibly fast. Diamond is unbreakable!
+  components:
+  - type: MeleeWeapon
+    autoAttack: true
+    attackRate: 6
+    heavyStaminaCost: 0.2
+    heavyDamageBaseModifier: 1
+    maxTargets: 1
+    damage:
+      types:
+       Blunt: 0
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: StaminaDamageOnHit
+    damage: 3
