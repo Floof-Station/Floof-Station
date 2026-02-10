@@ -1,0 +1,43 @@
+# Extra Limbs that exist to be added via Trait
+- type: entity
+  id: LeftArmHarpyTrait
+  name: "left harpy arm"
+  parent: PartHarpy
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Mobs/Species/Harpy/parts.rsi
+    state: "l_arm"
+  - type: Icon
+    sprite: Mobs/Species/Harpy/parts.rsi
+    state: "l_arm"
+  - type: BodyPart
+    partType: Arm
+    symmetry: Left
+    toolName: "a left arm" # Shitmed Change
+  - type: GenerateChildPart
+    id: LeftHandHarpy
+
+- type: entity
+  id: RightArmHarpyTrait
+  name: "right harpy arm"
+  parent: PartHarpy
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Mobs/Species/Harpy/parts.rsi
+    state: "r_arm"
+  - type: Icon
+    sprite: Mobs/Species/Harpy/parts.rsi
+    state: "r_arm"
+  - type: BodyPart
+    partType: Arm
+    symmetry: Right
+    toolName: "a right arm" # Shitmed Change
+    onAdd:
+    - type: Flight
+      isLayerAnimated: true
+      layer: "/Textures/Mobs/Customization/Harpy/harpy_wings.rsi"
+      animationKey: "Flap"
+  - type: GenerateChildPart
+    id: RightHandHarpy

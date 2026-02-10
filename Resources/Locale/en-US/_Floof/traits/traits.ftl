@@ -94,3 +94,7 @@ trait-description-OniShooting = Due to an innate skill issue, you can't aim at a
 trait-name-BadShooting = Bad Aim
 trait-description-BadShooting = Due to a lack of training or simply a lack of skill or talent, you can't aim very well.
 
+trait-name-Wings = Wings
+trait-description-Wings =
+    Through mutation, genetic editing, or questionable surgery, your arms have been replaced with wings similar to those of a Harpy.
+    You gain the ability to fly like a Harpy.

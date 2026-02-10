@@ -338,3 +338,34 @@
       - type: PlayerAccuracyModifier
         spreadMultiplier: 2.5
         maxSpreadAngle: 90
+
+# The Limb replacement function it uses lacks the functionality to change the wing color, thus will spawn as skin color.
+# In future the function may be changed to allow for it to use hair color or tie it to the marking system.
+# For now simply having wings markings should work fine for coloring em.
+- type: trait 
+  id: Wings
+  category: Physical
+  points: -1
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - BionicArm
+        - BionicPryArm
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Harpy
+        - IPC
+        # - Xelthia # this would fall off
+  functions:
+    - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Arm
+      partSymmetry: Left
+      protoId: LeftArmHarpyTrait
+      slotId: "left arm"
+    - !type:TraitCyberneticLimbReplacement
+      removeBodyPart: Arm
+      partSymmetry: Right
+      protoId: RightArmHarpyTrait
+      slotId: "right arm"
