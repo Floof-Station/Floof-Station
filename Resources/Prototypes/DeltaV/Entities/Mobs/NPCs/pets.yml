@@ -18,6 +18,12 @@
     tags:
     - CannotSuicide
     - VimPilot
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
+
 
 - type: entity
   name: Laika
@@ -55,3 +61,8 @@
     - CannotSuicide
     - VimPilot
     - DoorBumpOpener
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui

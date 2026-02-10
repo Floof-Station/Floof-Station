@@ -888,6 +888,11 @@
     barkMultiplier: 3
   - type: LeashAnchor # Floofstation
     kind: Intrinsic
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 
 - type: entity
@@ -1206,6 +1211,11 @@
       task: SimpleHostileCompound
   - type: LeashAnchor # Floofstation
     kind: Intrinsic
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: boxing kangaroo
@@ -2334,6 +2344,12 @@
   - type: LanguageKnowledge
     speaks: [Hissing]
     understands: [Hissing]
+  - type: Body
+    prototype: Animal
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
@@ -2658,6 +2674,11 @@
     kind: Intrinsic
   - type: RandomBark
     barkType: possum
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: possum
@@ -2738,6 +2759,11 @@
     kind: Intrinsic
   - type: RandomBark
     barkType: raccoon
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: fox
@@ -2830,6 +2856,13 @@
   - type: RandomBark
     barkType: fox
     barkMultiplier: 0.5 # Talkative <3
+  - type: Body
+    prototype: Animal
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: corgi
@@ -2901,6 +2934,13 @@
     barkType: dog
   - type: LeashAnchor # Floofstation
     kind: Intrinsic
+  - type: Body
+    prototype: Animal
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: corrupted corgi
@@ -3063,6 +3103,13 @@
     barkType: cat
   - type: LeashAnchor # Floofstation
     kind: Intrinsic
+  - type: Body
+    prototype: Animal
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: calico cat
@@ -3302,6 +3349,11 @@
     - Hissing
     understands:
     - Hissing
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: ferret
@@ -3362,6 +3414,11 @@
     - Hissing
   - type: LeashAnchor # Floofstation
     kind: Intrinsic
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: hamster
@@ -3513,6 +3570,11 @@
     normalState: Mouse_burning
   - type: LeashAnchor # Floofstation
     kind: Intrinsic
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   parent: MobHamster
@@ -3598,6 +3660,11 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: diona nymph

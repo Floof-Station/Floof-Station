@@ -9,3 +9,8 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: ferret
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui

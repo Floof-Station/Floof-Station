@@ -42,6 +42,11 @@
     understands:
     - TauCetiBasic
     - Dog
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key: # For some reason, childs wont inherit the surgery interface if the parent is not on the same YAML file. In this case, Ian is not taking the Surgery interface from MobCorgi. I hate this, but it works.
+        type: SurgeryBui
 
 - type: entity
   name: Old Ian
@@ -133,6 +138,11 @@
     understands:
     - TauCetiBasic
     - Cat
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Exception
@@ -157,6 +167,11 @@
     understands:
     - TauCetiBasic
     - Cat
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Floppa
@@ -182,6 +197,11 @@
     tags:
     - CannotSuicide
     - VimPilot
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Bandito
@@ -197,6 +217,11 @@
     tags:
     - CannotSuicide
     - VimPilot
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Bingus
@@ -254,6 +279,11 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalBingus
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: McGriff
@@ -320,6 +350,11 @@
   - type: RandomBark
     barkType: dog
     barkMultiplier: 1.3
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Paperwork
@@ -354,6 +389,11 @@
     attributes:
       proper: true
       gender: male
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Walter
@@ -420,6 +460,11 @@
   - type: RandomBark
     barkType: dog
     barkMultiplier: 1.1
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Morty
@@ -444,6 +489,11 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalMorty
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Morty
@@ -508,6 +558,11 @@
     tags:
     - CannotSuicide
     - VimPilot
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Alexander
@@ -530,6 +585,11 @@
     tags:
     - CannotSuicide
     - VimPilot
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Renault
@@ -566,6 +626,10 @@
     understands:
     - TauCetiBasic
     - Fox
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Hamlet
@@ -620,6 +684,11 @@
     understands:
     - TauCetiBasic
     - Mouse
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Shiva
@@ -724,6 +793,11 @@
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [ BoxingKangarooGear ]
+  - type: SurgeryTarget
+  - type: UserInterface
+    interfaces:
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
 
 - type: entity
   name: Smile
