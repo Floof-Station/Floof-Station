@@ -6,6 +6,7 @@
   physicalDesc: reagent-physical-desc-sticky
   flavor: fruity
   color: "#45072f"
+  pricePerUnit: 50 # Floof - Selling Drugs
   metabolisms:
     Medicine:
       metabolismRate : 0.03
@@ -59,6 +60,7 @@
   physicalDesc: reagent-physical-desc-syrupy
   flavor: sweet
   color: "#ae0072"
+  pricePerUnit: 200 # Floof - Selling Drugs
   metabolisms:
     Medicine:
       metabolismRate : 0.03

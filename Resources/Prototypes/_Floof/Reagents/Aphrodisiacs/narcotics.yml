@@ -6,6 +6,7 @@
   physicalDesc: reagent-physical-desc-milky
   flavor: spooky
   color: "#c90084"
+  pricePerUnit: 800 # Floof - Selling Drugs
   metabolisms:
     Narcotic:
       metabolismRate : 0.03

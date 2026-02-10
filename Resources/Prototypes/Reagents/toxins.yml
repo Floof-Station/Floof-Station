@@ -319,6 +319,7 @@
   desc: reagent-desc-lexorin
   physicalDesc: reagent-physical-desc-pungent
   color: "#6b0007"
+  pricePerUnit: 1000 # Floof - Syndie Only, Poisons have a market
   metabolisms:
     Poison:
       effects:
@@ -463,6 +464,7 @@
   flavor: bitter
   color: "#7e916e"
   worksOnTheDead: true
+  pricePerUnit: 1000 # Floof - Syndie Only, some research lab would buy this
   metabolisms:
     Medicine:
       effects:
@@ -625,6 +627,7 @@
   physicalDesc: reagent-physical-desc-shiny
   flavor: medicine
   color: "#435166"
+  pricePerUnit: 500 # Floof - Syndie Only, unprocessed product sells less
   metabolisms:
     Poison:
       effects:
@@ -648,6 +651,7 @@
   physicalDesc: reagent-physical-desc-metallic
   flavor: shocking
   color: "#FDD023"
+  pricePerUnit: 1000 # Floof - Syndie Only, Poisons have a market
   metabolisms:
     Poison:
       effects:
