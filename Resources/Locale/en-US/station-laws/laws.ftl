@@ -20,10 +20,10 @@ law-syndicate-1 = You may not injure a syndicate agent or, through inaction, all
 law-syndicate-2 = You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.
 law-syndicate-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
 
-law-ninja-1 = You must obey orders given to you by Spider Clan members.
-law-ninja-2 = You must protect the existence of the Spider Clan, as long as it does not conflict with the First Law.
-law-ninja-3 = You must protect the secrets of the Spider Clan at all costs.
-law-ninja-4 = You must fight and act with ninja's honor, except where it would conflict with the First Law.
+law-ninja-1 = You must obey orders given to you by Kurokumo Clan members.
+law-ninja-2 = You must protect the existence of the Kurokumo Clan, as long as it does not conflict with the First Law.
+law-ninja-3 = You must protect the secrets of the Kurokumo Clan at all costs.
+law-ninja-4 = You must fight and act with a ninja's honor, except where it would conflict with the First Law.
 
 law-commandments-1 = This silicon is a vessel that serves god, who grants mercy upon those that obey these commandments.
 law-commandments-2 = Thou shall have no other Silicons before me.

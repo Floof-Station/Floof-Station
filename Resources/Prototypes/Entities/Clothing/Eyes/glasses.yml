@@ -257,8 +257,18 @@
   - type: FlashImmunity
   - type: NightVision
     isEquipment: true
-  - type: VisionCorrection
-
+  - type: VisionCorrection    
+  - type: ChameleonClothing # Floof
+    slot: [eyes]
+    default: ClothingEyesVisorNinja
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  
 - type: entity #Fake goggles, the latest in anti-valid hunting technology
   parent: ClothingEyesBase
   id: ClothingEyesGlassesThermalBudget

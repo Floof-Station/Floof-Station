@@ -715,3 +715,14 @@
   - type: Tag
     tags:
     - IPCMaskWearable # Estacao Pirata - IPCs
+    - WhitelistChameleon
+  - type: VoiceMask # Floof
+  - type: ChameleonClothing
+    slot: [mask]
+    default: ClothingMaskNinja
+  - type: UserInterface
+    interfaces:
+      enum.VoiceMaskUIKey.Key:
+        type: VoiceMaskBoundUserInterface
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface

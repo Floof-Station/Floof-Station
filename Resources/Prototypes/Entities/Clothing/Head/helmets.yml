@@ -172,6 +172,13 @@
     slots:
     - Hair
     - Snout
+  - type: ChameleonClothing # Floof
+    slot: [HEAD]
+    default: ClothingHeadHelmetSpaceNinja
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface  
 
 #Templar Helmet
 - type: entity

@@ -258,6 +258,16 @@
     - objective: MassArrestObjective
       components:
       - type: CriminalRecordsHacker
+  - type: ChameleonClothing # Floof
+    slot: [gloves]
+    default: ClothingHandsGlovesSpaceNinja
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHandsGlovesColorBlack

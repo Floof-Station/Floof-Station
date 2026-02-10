@@ -1097,6 +1097,16 @@
     sprite: Clothing/Uniforms/Jumpsuit/ninja.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/ninja.rsi
+  - type: ChameleonClothing # Floof
+    slot: [innerclothing]
+    default: ClothingUniformJumpsuitNinja
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
