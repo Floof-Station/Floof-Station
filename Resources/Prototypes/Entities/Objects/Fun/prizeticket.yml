@@ -501,6 +501,12 @@
       - id: PlushieDetectiveVulps
         prob: 0.50
         orGroup: Prize
+      - id: PlushieExpieMobster
+        prob: 0.50
+        orGroup: Prize
+      - id: PlushieMailTech
+        prob: 0.50
+        orGroup: Prize
       # Floof - End
       # Rare
       - id: PlushieAbductorAgent
