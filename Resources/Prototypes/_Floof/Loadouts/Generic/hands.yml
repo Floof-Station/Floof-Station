@@ -239,3 +239,11 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutFriendshipBracelets
+  category: Hands
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingHandsFriendshipBracelets

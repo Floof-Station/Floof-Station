@@ -349,3 +349,14 @@
     fiberMaterial: fibers-synthetic
     fiberColor: fibers-dyed
   - type: FingerprintMask    
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsFriendshipBracelets
+  name: friendship bracelets
+  description: A cute way to declare friendship!
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Gloves/friendship.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Gloves/friendship.rsi

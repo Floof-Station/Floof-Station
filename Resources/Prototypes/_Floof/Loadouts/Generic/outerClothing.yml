@@ -109,6 +109,17 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutOuter
 
+- type: loadout
+  id: LoadoutOuterOversizedShirt
+  category: Outer
+  cost: 1
+  customColorTint: true
+  items:
+    - ClothingOuterOversizedShirt
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+
 # Section - those were in the outerwearGroup, but never had loadouts added for them
 - type: loadout
   id: LoadoutOuterBomberAerostatic

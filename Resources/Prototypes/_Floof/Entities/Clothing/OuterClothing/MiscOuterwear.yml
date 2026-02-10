@@ -76,6 +76,17 @@
   - type: Clothing
     sprite: _Floof/Clothing/OuterClothing/Misc/plainoveralls.rsi
 
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterOversizedShirt
+  name: oversized shirt
+  description: A comfy shirt, looks a bit big however.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/OuterClothing/Misc/oversized_shirt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/OuterClothing/Misc/oversized_shirt.rsi
+
 #Cybercoats
 - type: entity
   parent: ClothingOuterWinterCoat
