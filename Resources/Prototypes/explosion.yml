@@ -149,3 +149,16 @@
 # STOP
 # BEFORE YOU ADD MORE EXPLOSION TYPES CONSIDER IF AN EXISTING ONE IS SUITABLE
 # ADDING NEW ONES IS PROHIBITIVELY EXPENSIVE
+
+# Needed an acid one
+- type: explosion
+  id: AcidSplashExplosion
+  damagePerIntensity:
+    types:
+      Caustic: 1
+  tileBreakChance: [0]
+  tileBreakIntensity: [0]
+  lightColor: Blue # Xenos Blood Blue
+  fireColor: Blue
+  texturePath: /Textures/Effects/fire_greyscale.rsi
+  fireStates: 3

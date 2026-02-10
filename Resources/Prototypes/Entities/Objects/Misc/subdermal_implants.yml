@@ -327,6 +327,42 @@
       - Dead
     - type: Rattle
 
+# Xenos Acid Explosion
+- type: entity
+  parent: BaseSubdermalImplant
+  id: AcidSplashImplant
+  name: acid splash implant
+  description: This implant detonates the user upon activation or upon death.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      implantAction: ActionActivateMicroBomb
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Dead
+    - type: TriggerImplantAction
+    - type: ExplodeOnTrigger
+    - type: GibOnTrigger
+      deleteItems: true
+    - type: Explosive
+      explosionType: AcidSplashExplosion
+      totalIntensity: 90
+      intensitySlope: 5
+      maxIntensity: 30
+      canCreateVacuum: false
+    - type: ClusterGrenade # Testing if this works
+      fillPrototype: BulletAcid
+      maxGrenadesCount: 30
+      grenadeType: enum.GrenadeType.Shoot
+    - type: ContainerContainer
+      containers:
+        cluster-payload: !type:Container
+    - type: Tag
+      tags:
+        - SubdermalImplant
+        - HideContextMenu
+
 # Sec and Command implants
 
 - type: entity
