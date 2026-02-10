@@ -33,6 +33,10 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+  - type: Storage
+    grid:
+    - 0,0,0,1
+    - 8,0,0,1
 
 - type: entity
   abstract: true

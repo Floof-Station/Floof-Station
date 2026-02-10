@@ -9,6 +9,9 @@
     - WhitelistChameleon
     - Skirt
     - ShirtlessClothing # to allow equipping/unequipping under coats and the like
+  - type: Storage # The secret pocket
+    grid:
+    - 0,0,0,1
 
 - type: entity
   id: ClothingUniformThongBase
