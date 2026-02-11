@@ -24,10 +24,10 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 50
+        maxVol: 100
         reagents:
         - ReagentId: SpaceGlue
-          Quantity: 50
+          Quantity: 100
   - type: TrashOnSolutionEmpty
     solution: drink
   - type: Sealable

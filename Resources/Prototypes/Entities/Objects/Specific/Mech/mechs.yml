@@ -239,6 +239,8 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+      params:
+        volume: -15
   - type: Mech
     baseState: hamtr
     openState: hamtr-open
@@ -259,6 +261,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.4
     baseSprintSpeed: 3.7
+  - type: CanMoveInAir
 
 - type: entity
   parent: MechHamtr
@@ -298,9 +301,9 @@
         - MobLayer
   - type: FootstepModifier
     footstepSoundCollection:
-      path: /Audio/Mecha/mechmove03.ogg
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
       params:
-        volume: -10
+        volume: -15
   - type: Mech
     baseState: vim
     openState: vim-open

@@ -2341,6 +2341,8 @@
   parent: [ SimpleMobBase, MobCombat ]
   id: MobSpiderBase
   abstract: true
+  name: tarantula
+  description: Widely recognized to be the literal worst thing in existence.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -2469,6 +2471,8 @@
 - type: entity
   parent: MobSpiderBase
   id: MobSpiderAngryBase
+  name: tarantula
+  description: Widely recognized to be the literal worst thing in existence.
   abstract: true
   components:
     - type: NpcFactionMember
@@ -2530,6 +2534,8 @@
 - type: entity
   parent: MobSpiderAngryBase
   id: MobGiantSpiderAngry
+  name: tarantula
+  description: Widely recognized to be the literal worst thing in existence.
 
 - type: entity
   name: clown spider
