@@ -205,7 +205,7 @@
 
       - tool: Screwing
         doAfter: 0.5
-        
+
     - to: Quadsalv
       steps:
       - assemblyId: quadsalv
@@ -232,7 +232,7 @@
 
       - tool: Screwing
         doAfter: 0.5
-        
+
     - to: Quadserv
       steps:
       - assemblyId: quadserv
@@ -259,7 +259,7 @@
 
       - tool: Screwing
         doAfter: 0.5
-    
+
     - to: Quadmed
       steps:
       - assemblyId: quadmed
@@ -286,22 +286,22 @@
 
       - tool: Screwing
         doAfter: 0.5
-        
+
   - node: Quadborg
-    entity: BorgChassisQuad
-    
+    entity: BorgChassisQuadSec
+
   - node: Quadsalv
     entity: BorgChassisQuadsalv
-    
+
   - node: Quadserv
     entity: BorgChassisQuadserv
-    
+
   - node: Quadmed
     entity: BorgChassisQuadmed
 
   - node: cyborg
     entity: BorgChassisGeneric
-    
+
   - node: engineer
     entity: BorgChassisEngineer
 

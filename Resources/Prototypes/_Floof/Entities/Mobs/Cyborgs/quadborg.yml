@@ -2,6 +2,31 @@
 - type: entity
   id: BorgChassisQuad
   parent: BaseBorgChassisNT
+  abstract: true
+  components:
+  - type: Stripping
+  - type: BorgTransponder
+    sprite:
+      sprite: _Floof/Mobs/Silicon/quad.rsi
+      state: quadsprite
+    name: cyborg
+  - type: Construction
+    node: cyborg
+  - type: Speech
+    speechVerb: Robotic
+  - type: LayingDown
+  - type: LeashAnchor
+  - type: GuideHelp
+    guides:
+    - Quadborgs
+    - Cyborgs
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepQuadBorg
+
+- type: entity
+  id: BorgChassisQuadSec
+  parent: BorgChassisQuad
   components:
   - type: Sprite
     sprite: _Floof/Mobs/Silicon/quad.rsi
@@ -24,7 +49,6 @@
     noMovementLayers:
       movement:
         state: quadsprite
-  - type: Stripping
   - type: IntrinsicRadioTransmitter
     channels:
     - Security
@@ -45,33 +69,18 @@
       - BorgModuleSecurity
     hasMindState: quadspritel
     noMindState: quadspriter
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccessSecurityBorg
   - type: AccessReader
-    access: [["Security"], ["Armory"], ["Command"]]
-  - type: BorgTransponder
-    sprite:
-      sprite: _Floof/Mobs/Silicon/quad.rsi
-      state: quadsprite
-    name: cyborg
-  - type: Construction
-    node: cyborg
-  - type: Speech
-    speechVerb: Robotic
-  - type: LayingDown
+    access: [["Armory"], ["Command"]] # Only command and the warden can unlock it, not other borgs
   - type: SiliconLawProvider
     laws: Qborg
-  - type: LeashAnchor
-  - type: GuideHelp
-    guides:
-    - Quadborgs
-    - Cyborgs
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepQuadBorg
-
 
 - type: entity
   id: BorgChassisQuadCC
-  parent: BorgChassisQuad
+  parent: BorgChassisQuadSec
   components:
   - type: Sprite
     sprite: _Floof/Mobs/Silicon/quad.rsi

@@ -7,7 +7,7 @@
   components:
     - type: BatterySelfRecharger
       autoRecharge: true
-      autoRechargeRate: 30
+      autoRechargeRate: 15
 
 - type: entity
   name: borg stun baton
@@ -18,7 +18,7 @@
   components:
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 40
+    autoRechargeRate: 15
 
 - type: entity
   name: Borg flash

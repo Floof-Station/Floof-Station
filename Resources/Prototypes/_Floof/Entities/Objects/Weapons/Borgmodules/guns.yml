@@ -30,6 +30,10 @@
       map: ["enum.GunVisualLayers.Base"]
   - type: Gun
     fireRate: 5
+    minAngle: 0.5
+    maxAngle: 20
+    angleIncrease: 5
+    angleDecay: 7.5 # Must shoot at most 1.5 shots/second to achieve full accuracy
     availableModes:
     - SemiAuto
     soundGunshot:
@@ -55,6 +59,11 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 30
+  - type: Gun
+    minAngle: 3
+    maxAngle: 10
+    angleIncrease: 5
+    angleDecay: 1
 
 - type: entity
   parent: WeaponPulseRifle
@@ -66,4 +75,26 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 30
+  - type: Gun
+    minAngle: 1
+    maxAngle: 10
+    angleIncrease: 5
+    angleDecay: 2
+
+- type: entity
+  id: WeaponBorgAdvancedLaser
+  parent: WeaponAdvancedLaser
+  name: Cyber-laser
+  suffix: Robot
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Gun
+    fireRate: 1.2
+    minAngle: 0.5
+    maxAngle: 20
+    angleIncrease: 5
+    angleDecay: 3 # Roughly 1.3 shots per second for maximum accuracy
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser # Less DPS than the advanced laser and less shots
+    fireCost: 200
 

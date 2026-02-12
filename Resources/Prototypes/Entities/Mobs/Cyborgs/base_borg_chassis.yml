@@ -99,8 +99,15 @@
     - Science
   - type: ZombieImmune
   - type: Repairable
-    doAfterDelay: 10
+    doAfterDelay: 4
     allowSelfRepair: false
+    damage: # Floofstation - don't just allow cyborgs to get insta-repaired. In turn the do-after is faster.
+      types: # Those are all the damage types the silicon damage container supports
+        Blunt: -8
+        Slash: -8
+        Piercing: -8
+        Heat: -8
+        Shock: -8
   - type: BorgChassis
   - type: WiresPanel
   - type: ActivatableUIRequiresPanel

@@ -1,0 +1,12 @@
+# For security borgs. Unlike most borgs, doesn't include the mini-AA because it's a game changer when chasing antags.
+- type: accessGroup
+  id: AllAccessSecurityBorg
+  tags:
+  - Security
+  - Detective
+  - Corpsman
+  - Lawyer
+  - Maintenance
+  - External
+  - Justice
+  - Prosecutor
