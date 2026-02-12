@@ -85,14 +85,14 @@
     min: 259200 # 3 days
   - !type:CharacterItemGroupRequirement
     group: LoadoutSecurityWeapons
-  - !type:CharacterJobRequirement
-    jobs:
-    - BlueshieldOfficer
-    - SeniorOfficer
-    - Warden
-  - !type:CharacterSpeciesRequirement
-    species:
-    - Oni
+  - !type:CharacterLogicOrRequirement
+    requirements:
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - Security
+    - !type:CharacterJobRequirement
+      jobs:
+      - BlueshieldOfficer
   items:
     - ClothingBeltKatanaSheathFilled
 
