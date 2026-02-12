@@ -99,12 +99,20 @@
     heavyStaminaCost: 15
     maxTargets: 1
     angle: 20
+  - type: Wieldable # Floof - Banzai!
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 8
   - type: DamageOtherOnHit
     staminaCost: 10
   - type: EmbeddableProjectile
   - type: EmbedPassiveDamage
   - type: ThrowingAngle
     angle: 225
+  - type: Reflect # Floof - Just Parry 4head
+    reflectProb: .1
+    spread: 90
   - type: Item
     size: Normal
     sprite: DeltaV/Objects/Weapons/Melee/katana.rsi #DeltaV
