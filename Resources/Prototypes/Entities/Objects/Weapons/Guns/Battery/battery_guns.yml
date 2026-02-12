@@ -296,6 +296,16 @@
     proto: RedLaser
     fireCost: 62.5
 
+- type: entity # Floof - Laser Rifle with no ammo
+  name: laser rifle
+  parent: WeaponLaserCarbine
+  id: WeaponLaserCarbineEmpty
+  suffix: Empty
+  components:
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 0
+
 - type: entity
   name: practice laser rifle
   parent: WeaponLaserCarbine

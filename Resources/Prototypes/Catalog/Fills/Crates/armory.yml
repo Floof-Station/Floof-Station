@@ -1,28 +1,32 @@
 - type: entity
-  id: CrateArmorySMG
+  id: CrateArmorySMG # Floof -contents adjusted
   parent: CrateWeaponSecure
-  name: SMG crate
-  description: Contains two high-powered, semiautomatic rifles with four mags. Requires Armory access to open.
+  name: WT550 SMG crate
+  description: Contains a single WT550 Submachine Gun with two mags. Requires Armory access to open.
   components:
   - type: StorageFill
     contents:
       - id: WeaponSubMachineGunWt550
-        amount: 2
+        amount: 1
       - id: MagazinePistolSubMachineGunTopMounted
-        amount: 4
+        amount: 2
 
 - type: entity
-  id: CrateArmoryShotgun
+  id: CrateArmoryShotgun # Floof - contents adjusted
   parent: CrateWeaponSecure
-  name: shotgun crate
-  description: For when the enemy absolutely needs to be replaced with lead. Contains two Enforcer Combat Shotguns, and some standard shotgun shells. Requires Armory access to open.
+  name: Enforcer shotgun crate
+  description: Contains a single Enforcer Combat Shotgun, and some standard shotgun shells. Requires Armory access to open.
   components:
   - type: StorageFill
     contents:
       - id: WeaponShotgunEnforcer
-        amount: 2
+        amount: 1
       - id: BoxLethalshot
-        amount: 3
+        amount: 1
+      - id: BoxBeanbag
+        amount: 1
+      - id: BoxShotgunSlug
+        amount: 1
 
 - type: entity
   id: CrateTrackingImplants
@@ -47,25 +51,27 @@
       amount: 3
 
 - type: entity
-  id: CrateArmoryLaser
+  id: CrateArmoryLaser # Floof - contents adjusted
   parent: CrateWeaponSecure
-  name: lasers crate
+  name: laser rifle crate
   description: Contains three standard-issue laser rifles. Requires Armory access to open.
   components:
   - type: StorageFill
     contents:
-      - id: WeaponLaserCarbine
+      - id: WeaponLaserCarbineEmpty # Floof - Laser Rifles arrive uncharged
         amount: 3
 
 - type: entity
-  id: CrateArmoryPistols
+  id: CrateArmoryPistols # Floof - contents adjusted
   parent: CrateWeaponSecure
-  name: pistols crate
-  description: Contains two standard NT pistols with four mags. Requires Armory access to open.
+  name: MK58 pistols crate
+  description: Contains two MK58 pistols with four mags. Requires Armory access to open.
   components:
   - type: StorageFill
     contents:
     - id: WeaponPistolMk58
       amount: 2
     - id: MagazinePistol
-      amount: 4
+      amount: 2
+    - id: MagazinePistolRubber
+      amount: 2

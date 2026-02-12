@@ -4,7 +4,7 @@
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
     state: icon
   product: CrateArmorySMG
-  cost: 9000
+  cost: 4500 # Floof - changed to one per box
   category: cargoproduct-category-name-armory
   group: market
 
@@ -14,7 +14,7 @@
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
     state: icon
   product: CrateArmoryShotgun
-  cost: 7000
+  cost: 3500 # Floof - changed to 1 per box
   category: cargoproduct-category-name-armory
   group: market
 
@@ -38,6 +38,7 @@
   category: cargoproduct-category-name-armory
   group: market
 
+# Floof - I haven't changed the laser rifle price but they come uncharged now
 - type: cargoProduct
   id: ArmoryLaser
   icon:
@@ -54,6 +55,6 @@
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
     state: icon
   product: CrateArmoryPistols
-  cost: 5200
+  cost: 5000 # Floof - $2500 each
   category: cargoproduct-category-name-armory
   group: market
