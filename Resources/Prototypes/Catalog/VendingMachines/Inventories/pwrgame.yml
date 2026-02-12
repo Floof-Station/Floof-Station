@@ -1,16 +1,17 @@
 - type: vendingMachineInventory
   id: PwrGameInventory
   startingInventory:
-    DrinkPwrGameCan: 4
+    DrinkPwrGameCan: 6
     DrinkEnergyDrinkCan: 4
     DrinkBoykisserEnergy: 4 #Floofstation
-    DrinkGrapeCan: 2
-    DrinkRootBeerCan: 2
-    DrinkIcedTeaCan: 2
-    DrinkSolDryCan: 2
-    DrinkLemonLimeCan: 2
-    DrinkFourteenLokoCan: 2
-    DrinkNNNCan: 2 #Floofstation
-  emaggedInventory:
-    DrinkNukieCan: 2
-    DrinkChangelingStingCan: 2
+    DrinkGrapeCan: 4
+    DrinkRootBeerCan: 4
+    DrinkIcedTeaCan: 4
+    DrinkSolDryCan: 4
+    DrinkLemonLimeCan: 4
+    DrinkFourteenLokoCan: 4
+    DrinkNNNCan: 4 #Floofstation
+    DrinkWaterBottleFull: 4 #Floofstation
+  contrabandInventory:
+    DrinkNukieCan: 4
+    DrinkChangelingStingCan: 4
