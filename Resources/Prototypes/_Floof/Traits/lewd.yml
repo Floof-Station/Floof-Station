@@ -35,14 +35,18 @@
   - !type:TraitAddComponent
     components:
     - type: MilkProducer
-      solutionname: "breasts"
+      solutionname: "udder"
     - type: SolutionContainerManager
       solutions:
-        breasts:
-          maxVol: 50
+        udder:
+          maxVol: 100
           reagents:
           - ReagentId: Milk
-            Quantity: 50
+            Quantity: 100
+    - type: Udder
+      reagentId: Milk
+      quantityPerUpdate: 100
+      growthDelay: 10
 
 - type: trait
   id: SquirtProducer

@@ -35,6 +35,8 @@
   id: Balloon
 
 - type: Tag
+  id: TraitTiny
+- type: Tag
   id: HydroponicsToolClippers
 
 - type: Tag

@@ -229,6 +229,9 @@
   - !type:TraitPushDescription
     descriptionExtensions:
       - description: examine-tiny-trait-message
+  - !type:TraitAddTag
+    tags:
+      - TraitTiny
 
 - type: trait
   id: Heavyweight
@@ -338,3 +341,81 @@
       - type: PlayerAccuracyModifier
         spreadMultiplier: 2.5
         maxSpreadAngle: 90
+
+- type: trait
+  id: DrinkHolder
+  category: Physical
+  points: 0 # Placeholder for Testing
+  slots: 0 # Placeholder for Testing
+  requirements:
+    - !type:CharacterSpeciesRequirement
+      species:
+      - IPC
+  functions:
+    - !type:TraitAddComponent
+      components:
+      - type: ActivatableUI
+        key: enum.ReagentDispenserUiKey.Key
+      - type: UserInterface
+        interfaces:
+          enum.ReagentDispenserUiKey.Key:
+            type: ReagentDispenserBoundUserInterface
+      - type: ReagentDispenser
+        storageWhitelist:
+          tags:
+          - DrinkBottle
+          - ChemDispensable
+          - Bottle
+        beakerSlot:
+          whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
+          whitelist:
+            components:
+            - FitsInDispenser
+      - type: ItemSlots
+      - type: ContainerContainer
+        containers:
+          beakerSlot: !type:ContainerSlot
+
+- type: trait
+  id: Chemmaster
+  category: Physical
+  points: 0 # Placeholder for Testing
+  slots: 0 # Placeholder for Testing
+  requirements:
+    - !type:CharacterSpeciesRequirement
+      species:
+      - IPC
+  functions:
+    - !type:TraitAddComponent
+      components:
+      - type: ActivatableUI
+        key: enum.ChemMasterUiKey.Key
+      - type: UserInterface
+        interfaces:
+          enum.ChemMasterUiKey.Key:
+            type: ChemMasterBoundUserInterface
+      - type: ChemMaster
+        pillDosageLimit: 20
+      - type: ContainerContainer
+        containers:
+          beakerSlot: !type:ContainerSlot
+          outputSlot: !type:ContainerSlot
+      - type: ItemSlots
+        slots:
+          beakerSlot:
+            whitelist:
+              components:
+              -  FitsInDispenser
+          outputSlot:
+            whitelistFailPopup: chem-master-component-cannot-put-entity-message
+            whitelist:
+              tags:
+              - Bottle
+              - PillCanister
+      - type: SolutionContainerManager
+        solutions:
+          buffer: {}
+          pillBuffer: {}
+      - type: DumpableSolution
+        solution: buffer
+        unlimited: true

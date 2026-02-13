@@ -249,6 +249,7 @@
     pilotWhitelist:
       tags:
       - Hamster
+      - TraitTiny
   - type: MeleeWeapon
     hidden: true
     attackRate: 1.25
@@ -312,6 +313,7 @@
     pilotWhitelist:
       tags:
       - VimPilot
+      - TraitTiny
   - type: MeleeWeapon
     hidden: true
     attackRate: 1.25
