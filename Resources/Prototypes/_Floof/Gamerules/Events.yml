@@ -182,3 +182,28 @@
     minimumPlayers: 10
   - type: RandomEntityStorageSpawnRule
     prototype: MobMimePenguin
+
+- type: entity # Mild Impact Event
+  id: GlimmerAnomalySpawnFlesh
+  parent: BaseGlimmerSignaturesEvent
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: GlimmerEvent
+    minimumGlimmer: 400
+    maximumGlimmer: 1000
+    report: glimmer-event-report-incursion
+    glimmerBurnLower: 50
+    glimmerBurnUpper: 100
+  - type: GlimmerMobRule
+    mobPrototype: AnomalyFlesh
+
+- type: entity # Mild Impact Event
+  id: GlimmerAnomalySpawnFlora
+  parent: BaseGlimmerSignaturesEvent
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: GlimmerEvent
+    minimumGlimmer: 400
+    maximumGlimmer: 1000
+    report: glimmer-event-report-incursion
+    glimmerBurnLower: 50

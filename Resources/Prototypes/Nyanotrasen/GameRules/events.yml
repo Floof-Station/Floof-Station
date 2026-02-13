@@ -62,8 +62,8 @@
       reoccurrenceDelay: 15
     - type: GlimmerEvent
       maximumGlimmer: 300
-      glimmerBurnLower: 18
-      glimmerBurnUpper: 40
+      glimmerBurnLower: 10 # Floof
+      glimmerBurnUpper: 50
     - type: MundaneDischargeRule
 
 - type: entity
@@ -96,8 +96,8 @@
     - type: GlimmerEvent
       minimumGlimmer: 400
       maximumGlimmer: 1000
-      glimmerBurnLower: 18
-      glimmerBurnUpper: 40
+      glimmerBurnLower: 10 # Floof
+      glimmerBurnUpper: 50
     - type: PsionicCatGotYourTongueRule
 
 # - type: entity # Floofstation - Disabled because this is perm and this is bullshit!
@@ -119,7 +119,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: GlimmerEvent
-    minimumGlimmer: 300
+    minimumGlimmer: 200 # Floof
     maximumGlimmer: 1000
     report: glimmer-event-report-signatures
 
@@ -173,7 +173,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: GlimmerEvent
-    minimumGlimmer: 250
+    minimumGlimmer: 50 # Floof
     maximumGlimmer: 900
   - type: GlimmerMobRule
     mobPrototype: MobGlimmerMite
