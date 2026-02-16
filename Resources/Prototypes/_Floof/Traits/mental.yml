@@ -28,3 +28,33 @@
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics
+
+- type: trait
+  id: GlimmerLeak
+  category: Mental
+  points: 10
+  requirements:
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterTraitRequirement
+          traits:
+            - LatentPsychic
+        - !type:CharacterJobRequirement
+          jobs:
+            - Chaplain
+            - Librarian
+            - ForensicMantis
+            - ResearchDirector
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - AnomalousPositronics
+  functions:
+  - !type:TraitAddPsionics
+    psionicPowers:
+    - GlimmerLeak

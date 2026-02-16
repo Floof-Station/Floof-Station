@@ -79,6 +79,11 @@ trait-description-FastBatteryDrain = Due to poor maintenance, fault battery or o
 trait-name-SlowBatteryDrain = Slow Battery Drain
 trait-description-SlowBatteryDrain = A hardware or software modification causes your battery drains 33% slower then standard.
 
+# I need to think of something cooler, but it kinda feels edgy
+trait-name-GlimmerLeak = Astral Leak
+trait-description-GlimmerLeak = Your soul is deeply intertwined with the noosphere, drawing it to spill forth into realspace. They will fear you.
+
+glimmer-leak-power-feedback = Reality seemingly bends around {CAPITALIZE($entity)}, with each slow heartbeat the pitch black water from the sea of stars flows freely forth into realspace.
 
 # Target Consent Traits: Start
 trait-name-TraitorKillTarget = Marked for Removal

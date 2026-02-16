@@ -25,3 +25,24 @@
   - !type:RemovePsionicStatSources
   - !type:RemoveAssayFeedback
     assayFeedback: hypnosis-power-feedback
+
+- type: psionicPower
+  id: GlimmerLeak
+  name: GlimmerLeak
+  powerCategories:
+    - Passive
+    - Dangerous
+  powerSlotCost: 0
+  initializeFunctions:
+    - !type:AddPsionicPowerComponents
+      components:
+      - type: GlimmerSource
+        # SecondsPerGlimmer: 15 # Not sure why it's not finding that field
+    - !type:AddPsionicAssayFeedback
+      assayFeedback: glimmer-leak-power-feedback
+  removalFunctions:
+    - !type:RemovePsionicPowerComponents
+      components:
+      - type: GlimmerSource
+    - !type:RemoveAssayFeedback
+      assayFeedback: glimmer-leak-power-feedback
