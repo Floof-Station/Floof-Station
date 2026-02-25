@@ -154,6 +154,8 @@
     energy: 2.0
     color: "#6270bb"
     castShadows: false
+  - type: Seed
+    seedId: anomalyBerry
 
 - type: entity
   parent: [ BaseAnomalyCore, BaseShadow ]
@@ -301,6 +303,8 @@
     energy: 2.0
     color: "#6270bb"
     castShadows: false
+  - type: Seed
+    seedId: anomalyBerry
 
 - type: entity
   parent: [ BaseAnomalyInertCore, BaseShadow ]
