@@ -313,7 +313,7 @@
       - id: ClothingOuterCoatHoSTrench
       - id: ClothingLongcoatHoS # Floofstation
       - id: ClothingMaskNeckGaiter
-      - id: ClothingOuterHardsuitCombatHoS # DeltaV - ClothingOuterHardsuitSecurityRed replaced in favour of head of security's advanced combat hardsuit.
+      - id: ClothingOuterHardsuitSecurityRed # Floof - Changed to MK1
       - id: ClothingShoesBootsSecurityMagboots # Floofstation
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity

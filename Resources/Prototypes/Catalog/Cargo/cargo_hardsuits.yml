@@ -68,7 +68,7 @@
     sprite: DeltaV/Clothing/OuterClothing/Hardsuits/Combat/standard.rsi
     state: icon
   product: CrateSecurityBaghaturTacsuit
-  cost: 5000
+  cost: 7500
   category: cargoproduct-category-name-hardsuits
   group: market
 
@@ -78,7 +78,7 @@
     sprite: DeltaV/Clothing/OuterClothing/Hardsuits/Combat/riot.rsi
     state: icon
   product: CrateSecuritySuldeTacsuit
-  cost: 7500
+  cost: 10000
   category: cargoproduct-category-name-hardsuits
   group: market
 
@@ -88,6 +88,16 @@
     sprite: DeltaV/Clothing/OuterClothing/Hardsuits/Combat/medical.rsi
     state: icon
   product: CrateSecurityTsagaanTacsuit
-  cost: 5500
+  cost: 8500
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+- type: cargoProduct
+  id: SecurityDayicinTacsuit
+  icon:
+    sprite: DeltaV/Clothing/OuterClothing/Hardsuits/Combat/advanced.rsi
+    state: icon
+  product: CrateSecurityDayicinTacsuit
+  cost: 25000
   category: cargoproduct-category-name-hardsuits
   group: market

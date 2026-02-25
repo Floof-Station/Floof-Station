@@ -20,7 +20,7 @@
       - id: ClothingLongcoatWarden # Floofstation
       - id: RubberStampWarden
       - id: DoorRemoteArmory
-      - id: ClothingOuterHardsuitCombatWarden # DeltaV - ClothingOuterHardsuitWarden replaced in favour of warden's riot combat hardsuit.
+      - id: ClothingOuterHardsuitWarden # DeltaV - ClothingOuterHardsuitWarden replaced in favour of warden's riot combat hardsuit.
       - id: ClothingShoesBootsSecurityMagboots # Floofstation
       - id: HoloprojectorSecurity
       - id: ClothingEyesHudSecurity
@@ -118,7 +118,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingEyesHudSecurity
+      - id: ClothingEyesHudMedSec
       - id: WeaponDisabler
       - id: TrackingImplanter
         amount: 2
@@ -159,11 +159,11 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingEyesHudSecurity
+      - id: ClothingEyesHudMedSec
       - id: WeaponDisabler
       - id: TrackingImplanter
         amount: 2
-      - id: ClothingOuterHardsuitCombatCorpsman
+      - id: ClothingOuterHardsuitBrigmedic 
       - id: ClothingShoesBootsSecurityMagboots #Floofstation
       - id: ClothingUniformJumpsuitBrigmedic
       - id: ClothingUniformJumpskirtBrigmedic

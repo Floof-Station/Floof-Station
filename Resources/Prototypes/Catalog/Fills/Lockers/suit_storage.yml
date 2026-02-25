@@ -8,6 +8,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVA
         - id: ClothingMaskBreath
@@ -21,6 +22,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -34,6 +36,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterSuitEmergency
         - id: ClothingMaskBreath
 
@@ -46,6 +49,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitEVAPrisoner
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -59,6 +63,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitSyndicate
         - id: ClothingHeadHelmetSyndicate
         - id: ClothingMaskGasSyndicate
@@ -72,6 +77,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitPirateEVA
         - id: ClothingMaskGas
 
@@ -98,6 +104,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitBasic
         - id: ClothingMaskBreath
 
@@ -110,6 +117,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitEngineering
         - id: ClothingMaskBreath
@@ -125,6 +133,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitAtmos
         - id: ClothingMaskBreath
   - type: AccessReader
@@ -139,9 +148,10 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
-        - id: ClothingOuterHardsuitCombatOfficer # DeltaV - ClothingOuterHardsuitSecurity replaced in favour of security combat hardsuit.
+        - id: NitrogenTankFilled
+        - id: ClothingOuterHardsuitSecurity # Floof - Replaced with the MK1 so Security has to buy MK2s
         - id: ClothingShoesBootsSecurityMagboots # Floofstation
-        - id: ClothingMaskBreath
+        - id: ClothingMaskGasSecurity
   - type: AccessReader
     access: [["Security"]]
 
@@ -154,6 +164,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: JetpackVoidFilled
         - id: ClothingShoesBootsMagAdv
         - id: ClothingOuterHardsuitEngineeringWhite
@@ -170,6 +181,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitMedical
         - id: ClothingMaskBreathMedical
   - type: AccessReader
@@ -184,6 +196,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitRd
         - id: ClothingMaskBreath
   - type: AccessReader
@@ -198,8 +211,9 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: JetpackSecurityFilled
-        - id: ClothingOuterHardsuitCombatHoS # DeltaV - ClothingOuterHardsuitSecurityRed replaced in favour of head of security's advanced combat hardsuit.
+        - id: ClothingOuterHardsuitSecurityRed # Floof - changed to MK1
         - id: ClothingShoesBootsSecurityMagboots # Floofstation
         - id: ClothingMaskGasSwat
   - type: AccessReader
@@ -214,7 +228,8 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
-        - id: ClothingOuterHardsuitCombatWarden # DeltaV - ClothingOuterHardsuitWarden replaced in favour of warden's riot combat hardsuit.
+        - id: NitrogenTankFilled
+        - id: ClothingOuterHardsuitWarden # Floof - Changed to MK1
         - id: ClothingShoesBootsSecurityMagboots # Floofstation
         - id: ClothingMaskBreath
   - type: AccessReader
@@ -229,6 +244,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitCap
         - id: ClothingMaskGasCaptain
         - id: ClothingMaskGasCaptainCombat
@@ -244,6 +260,7 @@
   - type: StorageFill
     contents:
       - id: OxygenTankFilled
+      - id: NitrogenTankFilled
       - id: ClothingShoesBootsMag
       - id: ClothingOuterHardsuitSpatio
       - id: ClothingMaskGasExplorer
@@ -276,7 +293,7 @@
     contents:
       - id: NitrogenTankFilled
       - id: OxygenTankFilled
-      - id: ClothingOuterHardsuitCombatCorpsman
+      - id: ClothingOuterHardsuitBrigmedic # Floof - Changed to MK1
       - id: ClothingShoesBootsSecurityMagboots # Floofstation
       - id: ClothingMaskBreath
   - type: AccessReader
@@ -293,6 +310,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitSyndie
         - id: ClothingShoesBootsMagSyndie
         - id: ClothingMaskGasSyndicate
@@ -306,6 +324,7 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitPirateCap
         - id: ClothingMaskGas
 
@@ -318,5 +337,6 @@
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitWizard
         - id: ClothingMaskBreath

@@ -1,4 +1,4 @@
-# Standard Combat Hardsuits
+# Standard Combat Hardsuits Baghatur Mk.II
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCombatStandard
@@ -13,21 +13,23 @@
     highPressureMultiplier: 0.50
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.50
+    damageCoefficient: 0.5
   - type: Armor # Good armour resistance across the board, comparable to the standard security hardsuit.
     modifiers:
       coefficients:
-        Blunt: 0.60
-        Slash: 0.60
-        Piercing: 0.60
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
         Radiation: 0.75
-        Caustic: 0.75
-        Heat: 0.75
   - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatStandard
+  - type: StaminaDamageResistance
+    coefficient: 0.7 # 30%
 
 - type: entity
   parent: ClothingOuterHardsuitCombatStandard
@@ -42,7 +44,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatOfficer
 
-# Medical Combat Hardsuits
+# Medical Combat Hardsuits Tsagaan Mk.II
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCombatMedical
@@ -54,24 +56,27 @@
   - type: Clothing
     sprite: DeltaV/Clothing/OuterClothing/Hardsuits/Combat/medical.rsi
   - type: PressureProtection # Less protective from high pressure than a standard hardsuit due to less plating.
-    highPressureMultiplier: 0.60
+    highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.60
-  - type: Armor # Slightly less armour than the standard hardsuit, but far higher mobility.
+    damageCoefficient: 0.5
+  - type: Armor # Floof Changed to be the same as a normal Baghatur MK2 but with caustic
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
-        Piercing: 0.65
-        Radiation: 0.80
-        Caustic: 0.80
-        Heat: 0.80
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+        Radiation: 0.75
+        Caustic: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatMedical
+  - type: StaminaDamageResistance
+    coefficient: 0.7 # 30%
 
 - type: entity
   parent: ClothingOuterHardsuitCombatMedical
@@ -86,7 +91,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatCorpsman
 
-# Riot Combat Hardsuits
+# Riot Combat Hardsuits Sulde Mk.II
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCombatRiot
@@ -98,24 +103,27 @@
   - type: Clothing
     sprite: DeltaV/Clothing/OuterClothing/Hardsuits/Combat/riot.rsi
   - type: PressureProtection
-    highPressureMultiplier: 0.45
+    highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.3
   - type: Armor # More protective than a standard security hardsuit, but far slower.
     modifiers:
       coefficients:
-        Blunt: 0.50
-        Slash: 0.50
-        Piercing: 0.50
-        Radiation: 0.70
-        Caustic: 0.70
-        Heat: 0.70
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.75
+        Caustic: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 0.65
-    sprintModifier: 0.65
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatRiot
+  - type: StaminaDamageResistance
+    coefficient: 0.50 # 50%
 
 - type: entity
   parent: ClothingOuterHardsuitCombatRiot
@@ -130,7 +138,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatWarden
 
-# Advanced Combat Hardsuits
+# Advanced Combat Hardsuits Dayicin Mk.II
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCombatAdvanced
@@ -145,21 +153,24 @@
     highPressureMultiplier: 0.40
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.4
   - type: Armor # About as protective as a riot hardsuit but with far less movement penalty.
     modifiers:
-      coefficients:
-        Blunt: 0.50
-        Slash: 0.50
-        Piercing: 0.50
-        Radiation: 0.75
-        Caustic: 0.75
-        Heat: 0.75
+      coefficients: # Changed so it was an upgrade over the Dayicin MK1
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.45
+        Heat: 0.45
+        Radiation: 0.5
+        Caustic: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.80
-    sprintModifier: 0.80
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatAdvanced
+  - type: StaminaDamageResistance
+    coefficient: 0.4 # 60%
 
 - type: entity
   parent: ClothingOuterHardsuitCombatAdvanced

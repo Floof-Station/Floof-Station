@@ -230,8 +230,8 @@
   - type: GuideHelp
     guides: [ HephaestusIndustries ]
 
-#Security Hardsuit
-- type: entity
+#Security Hardsuit Baghatur
+- type: entity 
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitSecurity
   name: security hardsuit
@@ -245,24 +245,24 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.4
+    damageCoefficient: 0.5
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
-        Slash: 0.6
-        Piercing: 0.6
-        Caustic: 0.7
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurity
   - type: StaminaDamageResistance
     coefficient: 0.75 # 25%
 
-#Brigmedic Hardsuit
+#Brigmedic Hardsuit Tsagaan
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitBrigmedic
@@ -276,22 +276,26 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
+        Blunt: 0.7
+        Slash: 0.7
         Piercing: 0.7
+        Heat: 0.7
+        Caustic: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.65
-    sprintModifier: 0.65
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
   - type: StaminaDamageResistance
     coefficient: 0.75 # 25%
 
-#Warden's Hardsuit
+#Warden's Hardsuit Sulde
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitWarden
@@ -306,22 +310,23 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.4
+    damageCoefficient: 0.3
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
+        Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
+        Heat: 0.6
         Caustic: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.6
+    sprintModifier: 0.6
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitWarden
   - type: StaminaDamageResistance
-    coefficient: 0.65 # 35%
+    coefficient: 0.60 # 40%
 
 #Captain's Hardsuit
 - type: entity
@@ -473,7 +478,7 @@
   - type: GuideHelp
     guides: [ NanoTrasen ]
 
-#Head of Security's Hardsuit
+#Head of Security's Hardsuit Dayicin
 - type: entity
   parent: ClothingOuterHardsuitSecurity
   id: ClothingOuterHardsuitSecurityRed
@@ -488,18 +493,19 @@
     highPressureMultiplier: 0.45
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.6
+    damageCoefficient: 0.5
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
+        Blunt: 0.5
         Slash: 0.5
         Piercing: 0.5
+        Heat: 0.5
         Radiation: 0.5
-        Caustic: 0.6
+        Caustic: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.8
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurityRed

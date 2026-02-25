@@ -17,7 +17,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: ClothingOuterHardsuitAtmos
+    - id: ClothingOuterHardsuitEngineering
 
 # Logistics
 - type: entity
@@ -65,28 +65,38 @@
   id: CrateSecurityBaghaturTacsuit
   parent: CrateSecgear
   name: baghatur tacsuit crate
-  description: Contains a single FPA-83s "Baghatur" tacsuit. Requires Security access to open.
+  description: Contains a single FPA-85s "Baghatur Mk.II" tacsuit. Requires Security access to open.
   components:
   - type: StorageFill
     contents:
-    - id: ClothingOuterHardsuitCombatStandard
+    - id: ClothingOuterHardsuitCombatOfficer
 
 - type: entity
   id: CrateSecuritySuldeTacsuit
   parent: CrateSecgear
   name: sulde tacsuit crate
-  description: Contains a single FPA-93 - "Sulde Mk.II" tacsuit. Requires Security access to open.
+  description: Contains a single FPA-93s - "Sulde Mk.II" tacsuit. Requires Security access to open.
   components:
   - type: StorageFill
     contents:
-    - id: ClothingOuterHardsuitCombatRiot
+    - id: ClothingOuterHardsuitCombatWarden
 
 - type: entity
   id: CrateSecurityTsagaanTacsuit
   parent: CrateSecgear
   name: tsagaan tacsuit crate
-  description: Contains a single FPA-86 - "Tsagaan Mk.II" tacsuit. Requires Security access to open.
+  description: Contains a single FPA-86m - "Tsagaan Mk.II" tacsuit. Requires Security access to open.
   components:
   - type: StorageFill
     contents:
-    - id: ClothingOuterHardsuitCombatMedical
+    - id: ClothingOuterHardsuitCombatCorpsman
+
+- type: entity
+  id: CrateSecurityDayicinTacsuit
+  parent: CrateSecgear
+  name: Dayicin tacsuit crate
+  description: Contains a single FPA-99s - "Dayicin Mk.II" tacsuit. Requires Security access to open.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitCombatHoS 
