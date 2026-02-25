@@ -1,3 +1,6 @@
+# Floof - I will be consolidating nearly all the backpacks here because it's stupid that there's 3 folders for different backpack types
+
+# Grey
 - type: loadout
   id: LoadoutBackpack
   category: Backpacks
@@ -11,6 +14,31 @@
       group: LoadoutBackpacks
 
 - type: loadout
+  id: LoadoutBackpackSatchel
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpackSatchel
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+
+- type: loadout
+  id: LoadoutBackpackDuffel
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpackDuffel
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+
+# Botany
+- type: loadout
   id: LoadoutBackpackHydroponics
   category: Backpacks
   cost: 0
@@ -20,10 +48,759 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutBackpacks
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Civilian
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Botanist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
 
+- type: loadout
+  id: LoadoutBackpackSatchelHydroponics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelHydroponics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Botanist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelHydroponics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelHydroponics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Botanist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+# Clown
+- type: loadout
+  id: LoadoutBackpackClown
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackClown
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Clown
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelClown
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackSatchelClown
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Clown
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelClown
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackDuffelClown
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Clown
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+# Mime
+- type: loadout
+  id: LoadoutBackpackMime
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackMime
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Mime
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelMime
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelMime
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Mime
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelMime
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelMime
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Mime
+      - !type:CharacterDepartmentTimeRequirement
+        department: Civilian
+        min: 3600 # 1 hours
+
+# Logistics
+- type: loadout
+  id: LoadoutBackpackCargo
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackCargo
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Logistics
+      - !type:CharacterDepartmentTimeRequirement
+        department: Logistics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelCargo
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelCargo
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Logistics
+      - !type:CharacterDepartmentTimeRequirement
+        department: Logistics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelCargo
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelCargo
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Logistics
+      - !type:CharacterDepartmentTimeRequirement
+        department: Logistics
+        min: 3600 # 1 hours
+
+# Salvage
+- type: loadout
+  id: LoadoutSalvageBackpackBackpack
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpackSalvage
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - SalvageSpecialist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Logistics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutSalvageBackpackSatchel
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpackSatchelSalvage
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - SalvageSpecialist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Logistics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutSalvageBackpackDuffel
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpackDuffelSalvage
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - SalvageSpecialist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Logistics
+        min: 3600 # 1 hours
+
+# Epistemics
+- type: loadout
+  id: LoadoutBackpackScience
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackScience
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Epistemics
+      - !type:CharacterDepartmentTimeRequirement
+        department: Epistemics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelScience
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelScience
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Epistemics
+      - !type:CharacterDepartmentTimeRequirement
+        department: Epistemics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelScience
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelScience
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Epistemics
+      - !type:CharacterDepartmentTimeRequirement
+        department: Epistemics
+        min: 3600 # 1 hours
+
+# Roboticist
+- type: loadout
+  id: LoadoutBackpackRobotics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackRobotics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Roboticist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Epistemics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelRobotics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelRobotics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Roboticist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Epistemics
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelRobotics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelRobotics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Roboticist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Epistemics
+        min: 3600 # 1 hours
+        
+# Engineering
+- type: loadout
+  id: LoadoutBackpackEngineering
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackEngineering
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Engineering
+      - !type:CharacterDepartmentTimeRequirement
+        department: Engineering
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelEngineering
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelEngineering
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Engineering
+      - !type:CharacterDepartmentTimeRequirement
+        department: Engineering
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelEngineering
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelEngineering
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Engineering
+      - !type:CharacterDepartmentTimeRequirement
+        department: Engineering
+        min: 3600 # 1 hours
+
+# Atmos
+- type: loadout
+  id: LoadoutAtmosphericTechnicianBackpackBackpack
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackAtmospherics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - AtmosphericTechnician
+      - !type:CharacterDepartmentTimeRequirement
+        department: Engineering
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutAtmosphericTechnicianBackpackSatchel
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelAtmospherics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - AtmosphericTechnician
+      - !type:CharacterDepartmentTimeRequirement
+        department: Engineering
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutAtmosphericTechnicianBackpackDuffel
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelAtmospherics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - AtmosphericTechnician
+      - !type:CharacterDepartmentTimeRequirement
+        department: Engineering
+        min: 3600 # 1 hours
+
+# Medical
+- type: loadout
+  id: LoadoutBackpackMedical
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackMedical
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelMedical
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelMedical
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours   
+
+- type: loadout
+  id: LoadoutBackpackDuffelMedical
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelMedical
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+# Virology
+- type: loadout
+  id: LoadoutBackpackVirology
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackVirology
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelVirology
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelVirology
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelVirology
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelVirology
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+ # Genetics
+- type: loadout
+  id: LoadoutBackpackGenetics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackGenetics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelGenetics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelGenetics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelGenetics
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelGenetics
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterDepartmentRequirement
+        departments:
+          - Medical
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+# Chemist
+- type: loadout
+  id: LoadoutChemistryBackpackBackpack
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelChemistry
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Chemist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackSatchelChemistry
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelChemistry
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Chemist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+- type: loadout
+  id: LoadoutBackpackDuffelChemistry
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelChemistry
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+      - !type:CharacterJobRequirement
+        jobs:
+          - Chemist
+      - !type:CharacterDepartmentTimeRequirement
+        department: Medical
+        min: 3600 # 1 hours
+
+# Misc
 - type: loadout
   id: LoadoutBackpackMerc
   category: Backpacks
@@ -34,12 +811,14 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutBackpacks
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterDepartmentRequirement
-          departments:
-            - Security
-            - Miscellaneous # Floof - Add loadouts for Miscellaneous department
-        - !type:CharacterJobRequirement
-          jobs:
-            - SalvageSpecialist
+
+- type: loadout
+  id: LoadoutItemBackpackSatchelLeather
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelLeather
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks

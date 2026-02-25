@@ -1,14 +1,14 @@
 # All Logistics
-- type: characterItemGroup
-  id: LoadoutLogisticsBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutBackpackCargo
-    - type: loadout
-      id: LoadoutBackpackSatchelCargo
-    - type: loadout
-      id: LoadoutBackpackDuffelCargo
+#- type: characterItemGroup
+#  id: LoadoutLogisticsBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutBackpackCargo
+#    - type: loadout
+#      id: LoadoutBackpackSatchelCargo
+#    - type: loadout
+#      id: LoadoutBackpackDuffelCargo
 
 #- type: characterItemGroup
 #  id: LoadoutLogisticsBelt

@@ -1,14 +1,14 @@
 # Salvage Specialist
-- type: characterItemGroup
-  id: LoadoutSalvageSpecialistBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutBackpackSalvage
-    - type: loadout
-      id: LoadoutSalvageBackpackSatchel
-    - type: loadout
-      id: LoadoutSalvageBackpackDuffel
+#- type: characterItemGroup
+#  id: LoadoutSalvageSpecialistBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutBackpackSalvage
+#    - type: loadout
+#      id: LoadoutSalvageBackpackSatchel
+#    - type: loadout
+#      id: LoadoutSalvageBackpackDuffel
 
 - type: characterItemGroup
   id: LoadoutSalvageSpecialistBelt

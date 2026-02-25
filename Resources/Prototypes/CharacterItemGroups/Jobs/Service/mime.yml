@@ -1,14 +1,14 @@
 # Mime
-- type: characterItemGroup
-  id: LoadoutMimeBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutBackpackMime
-    - type: loadout
-      id: LoadoutBackpackSatchelMime
-    - type: loadout
-      id: LoadoutBackpackDuffelMime
+#- type: characterItemGroup
+#  id: LoadoutMimeBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutBackpackMime
+#    - type: loadout
+#      id: LoadoutBackpackSatchelMime
+#    - type: loadout
+#      id: LoadoutBackpackDuffelMime
 
 #- type: characterItemGroup
 #  id: LoadoutMimeBelt

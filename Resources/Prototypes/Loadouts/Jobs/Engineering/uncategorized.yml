@@ -1,46 +1,6 @@
 # All Engineering Department Jobs
 # Backpacks
-- type: loadout
-  id: LoadoutBackpackEngineering
-  category: JobsEngineeringAAUncategorized
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingBackpackEngineering
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutEngineeringBackpacks
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Engineering
 
-- type: loadout
-  id: LoadoutBackpackSatchelEngineering
-  category: JobsEngineeringAAUncategorized
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingBackpackSatchelEngineering
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutEngineeringBackpacks
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Engineering
-
-- type: loadout
-  id: LoadoutBackpackDuffelEngineering
-  category: JobsEngineeringAAUncategorized
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingBackpackDuffelEngineering
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutEngineeringBackpacks
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Engineering
 # Belt
 
 # Ears

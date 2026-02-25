@@ -1,14 +1,14 @@
 # All Engineering
-- type: characterItemGroup
-  id: LoadoutEngineeringBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutBackpackEngineering
-    - type: loadout
-      id: LoadoutBackpackSatchelEngineering
-    - type: loadout
-      id: LoadoutBackpackDuffelEngineering
+#- type: characterItemGroup
+#  id: LoadoutEngineeringBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutBackpackEngineering
+#    - type: loadout
+#      id: LoadoutBackpackSatchelEngineering
+#    - type: loadout
+#      id: LoadoutBackpackDuffelEngineering
 
 #- type: characterItemGroup
 #  id: LoadoutEngineeringBelt

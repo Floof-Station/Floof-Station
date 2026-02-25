@@ -1,13 +1,13 @@
-- type: characterItemGroup
-  id: LoadoutAtmosphericTechnicianBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadingEngineeringAtmosBackpackBackpack
-    - type: loadout
-      id: LoadingEngineeringAtmosBackpackSatchel
-    - type: loadout
-      id: LoadingEngineeringAtmosBackpackDuffel
+#- type: characterItemGroup
+#  id: LoadoutAtmosphericTechnicianBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadingEngineeringAtmosBackpackBackpack
+#    - type: loadout
+#      id: LoadingEngineeringAtmosBackpackSatchel
+#    - type: loadout
+#      id: LoadingEngineeringAtmosBackpackDuffel
 
 - type: characterItemGroup
   id: LoadoutAtmosphericTechnicianBelt

@@ -1,14 +1,14 @@
 # Chemist
-- type: characterItemGroup
-  id: LoadoutChemistBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutChemistryBackpackBackpack
-    - type: loadout
-      id: LoadoutBackpackSatchelChemistry
-    - type: loadout
-      id: LoadoutBackpackDuffelChemistry
+#- type: characterItemGroup
+#  id: LoadoutChemistBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutChemistryBackpackBackpack
+#    - type: loadout
+#      id: LoadoutBackpackSatchelChemistry
+#    - type: loadout
+#      id: LoadoutBackpackDuffelChemistry
 
 - type: characterItemGroup
   id: LoadoutChemistBelt

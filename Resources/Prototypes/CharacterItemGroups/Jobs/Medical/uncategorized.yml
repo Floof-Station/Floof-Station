@@ -1,26 +1,26 @@
 # All Medical
-- type: characterItemGroup
-  id: LoadoutMedicalBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutBackpackMedical
-    - type: loadout
-      id: LoadoutBackpackVirology
-    - type: loadout
-      id: LoadoutBackpackGenetics
-    - type: loadout
-      id: LoadoutBackpackSatchelMedical
-    - type: loadout
-      id: LoadoutBackpackSatchelVirology
-    - type: loadout
-      id: LoadoutBackpackSatchelGenetics
-    - type: loadout
-      id: LoadoutBackpackDuffelMedical
-    - type: loadout
-      id: LoadoutBackpackDuffelVirology
-    - type: loadout
-      id: LoadoutBackpackDuffelGenetics
+#- type: characterItemGroup
+#  id: LoadoutMedicalBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutBackpackMedical
+#    - type: loadout
+#      id: LoadoutBackpackVirology
+#    - type: loadout
+#      id: LoadoutBackpackGenetics
+#    - type: loadout
+#      id: LoadoutBackpackSatchelMedical
+#    - type: loadout
+#      id: LoadoutBackpackSatchelVirology
+#    - type: loadout
+#      id: LoadoutBackpackSatchelGenetics
+#    - type: loadout
+#      id: LoadoutBackpackDuffelMedical
+#    - type: loadout
+#      id: LoadoutBackpackDuffelVirology
+#    - type: loadout
+#      id: LoadoutBackpackDuffelGenetics
 #    - type: loadout # Floof -  Move surgical duffel bag to equipment
 #      id: LoadoutBackpackMedicalDuffelSurgeryFilled
 

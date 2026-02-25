@@ -1,46 +1,5 @@
 # Atmospheric Technician
 # Backpacks
-- type: loadout
-  id: LoadoutAtmosphericTechnicianBackpackBackpack
-  category: JobsEngineeringAtmosphericTechnician
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutAtmosphericTechnicianBackpacks
-    - !type:CharacterJobRequirement
-      jobs:
-        - AtmosphericTechnician
-  items:
-    - ClothingBackpackAtmospherics
-
-- type: loadout
-  id: LoadoutAtmosphericTechnicianBackpackSatchel
-  category: JobsEngineeringAtmosphericTechnician
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutAtmosphericTechnicianBackpacks
-    - !type:CharacterJobRequirement
-      jobs:
-        - AtmosphericTechnician
-  items:
-    - ClothingBackpackSatchelAtmospherics
-
-- type: loadout
-  id: LoadoutAtmosphericTechnicianBackpackDuffel
-  category: JobsEngineeringAtmosphericTechnician
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutAtmosphericTechnicianBackpacks
-    - !type:CharacterJobRequirement
-      jobs:
-        - AtmosphericTechnician
-  items:
-    - ClothingBackpackDuffelAtmospherics
 
 # Belt
 - type: loadout

@@ -1,52 +1,5 @@
 # Clown
 # Backpacks
-- type: loadout
-  id: LoadoutBackpackClown
-  category: JobsServiceClown
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  canBeHeirloom: true
-  items:
-    - ClothingBackpackClown
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutClownBackpacks
-    - !type:CharacterJobRequirement
-      jobs:
-        - Clown
-
-- type: loadout
-  id: LoadoutBackpackSatchelClown
-  category: JobsServiceClown
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  canBeHeirloom: true
-  items:
-    - ClothingBackpackSatchelClown
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutClownBackpacks
-    - !type:CharacterJobRequirement
-      jobs:
-        - Clown
-
-- type: loadout
-  id: LoadoutBackpackDuffelClown
-  category: JobsServiceClown
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  canBeHeirloom: true
-  items:
-    - ClothingBackpackDuffelClown
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutClownBackpacks
-    - !type:CharacterJobRequirement
-      jobs:
-        - Clown
 
 # Belt
 

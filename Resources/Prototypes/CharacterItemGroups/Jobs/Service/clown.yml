@@ -1,14 +1,14 @@
 # Clown
-- type: characterItemGroup
-  id: LoadoutClownBackpacks
-  maxItems: 1
-  items:
-    - type: loadout
-      id: LoadoutBackpackClown
-    - type: loadout
-      id: LoadoutBackpackSatchelClown
-    - type: loadout
-      id: LoadoutBackpackDuffelClown
+#- type: characterItemGroup
+#  id: LoadoutClownBackpacks
+#  maxItems: 1
+#  items:
+#    - type: loadout
+#      id: LoadoutBackpackClown
+#    - type: loadout
+#      id: LoadoutBackpackSatchelClown
+#    - type: loadout
+#      id: LoadoutBackpackDuffelClown
 
 #- type: characterItemGroup
 #  id: LoadoutClownBelt

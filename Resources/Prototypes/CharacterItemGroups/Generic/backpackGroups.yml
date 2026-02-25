@@ -1,13 +1,92 @@
 - type: characterItemGroup
   id: LoadoutBackpacks
+  maxItems: 1
   items:
     - type: loadout
       id: LoadoutBackpack
     - type: loadout
-      id: LoadoutBackpackDuffel
-    - type: loadout
       id: LoadoutBackpackSatchel
     - type: loadout
-      id: LoadoutItemBackpackSatchelLeather
+      id: LoadoutBackpackDuffel
+    - type: loadout
+      id: LoadoutBackpackHydroponics
+    - type: loadout
+      id: LoadoutBackpackSatchelHydroponics
+    - type: loadout
+      id: LoadoutBackpackDuffelHydroponics
+    - type: loadout
+      id: LoadoutBackpackClown
+    - type: loadout
+      id: LoadoutBackpackSatchelClown
+    - type: loadout
+      id: LoadoutBackpackDuffelClown
+    - type: loadout
+      id: LoadoutBackpackMime
+    - type: loadout
+      id: LoadoutBackpackSatchelMime
+    - type: loadout
+      id: LoadoutBackpackDuffelMime
+    - type: loadout
+      id: LoadoutBackpackCargo
+    - type: loadout
+      id: LoadoutBackpackSatchelCargo
+    - type: loadout
+      id: LoadoutBackpackDuffelCargo
+    - type: loadout
+      id: LoadoutSalvageBackpackBackpack
+    - type: loadout
+      id: LoadoutSalvageBackpackSatchel
+    - type: loadout
+      id: LoadoutSalvageBackpackDuffel
+    - type: loadout
+      id: LoadoutBackpackScience
+    - type: loadout
+      id: LoadoutBackpackSatchelScience
+    - type: loadout
+      id: LoadoutBackpackDuffelScience
+    - type: loadout
+      id: LoadoutBackpackRobotics
+    - type: loadout
+      id: LoadoutBackpackSatchelRobotics
+    - type: loadout
+      id: LoadoutBackpackDuffelRobotics
+    - type: loadout
+      id: LoadoutBackpackEngineering
+    - type: loadout
+      id: LoadoutBackpackSatchelEngineering
+    - type: loadout
+      id: LoadoutBackpackDuffelEngineering
+    - type: loadout
+      id: LoadingEngineeringAtmosBackpackBackpack
+    - type: loadout
+      id: LoadingEngineeringAtmosBackpackSatchel
+    - type: loadout
+      id: LoadingEngineeringAtmosBackpackDuffel
+    - type: loadout
+      id: LoadoutBackpackMedical
+    - type: loadout
+      id: LoadoutBackpackSatchelMedical
+    - type: loadout
+      id: LoadoutBackpackDuffelMedical
+    - type: loadout
+      id: LoadoutBackpackVirology
+    - type: loadout
+      id: LoadoutBackpackSatchelVirology      
+    - type: loadout
+      id: LoadoutBackpackDuffelVirology
+    - type: loadout
+      id: LoadoutBackpackGenetics
+    - type: loadout
+      id: LoadoutBackpackSatchelGenetics
+    - type: loadout
+      id: LoadoutBackpackDuffelGenetics
+    - type: loadout
+      id: LoadoutChemistryBackpackBackpack
+    - type: loadout
+      id: LoadoutBackpackSatchelChemistry
+    - type: loadout
+      id: LoadoutBackpackDuffelChemistry
     - type: loadout
       id: LoadoutBackpackMerc
+    - type: loadout
+      id: LoadoutItemBackpackSatchelLeather
