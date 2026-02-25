@@ -1,35 +1,41 @@
 - type: entity
-  id: CrateArmoryGrand
+  id: CrateArmoryGrand # Floof - Contents Adjusted
   parent: CrateWeaponSecure
   components:
   - type: StorageFill
     contents:
       - id: WeaponSniperGrand
-        amount: 2
+        amount: 1
       - id: MagazineLightRifleMarkOne
-        amount: 4
+        amount: 2
 
 - type: entity
-  id: CrateArmoryUniversal
+  id: CrateArmoryUniversal # Floof - Contents Adjusted
   parent: CrateWeaponSecure
   components:
   - type: StorageFill
     contents:
       - id: WeaponPistolUniversal
-        amount: 2
+        amount: 1
       - id: MagazineUniversalMagnum
-        amount: 4
+        amount: 2
+      - id: MagazineUniversalMagnumRubber
+        amount: 2
 
 - type: entity
-  id: CrateArmoryAdjutant
+  id: CrateArmoryAdjutant # Floof - Contents Adjusted
   parent: CrateWeaponSecure
   components:
   - type: StorageFill
     contents:
     - id: WeaponShotgunAdjutant
-      amount: 2
+      amount: 1
     - id: BoxLethalshot
-      amount: 3
+      amount: 1
+    - id: BoxBeanbag
+      amount: 1
+    - id: BoxShotgunSlug
+      amount: 1
 
 - type: entity
   id: CrateArmoryEnergyGun
