@@ -44,7 +44,7 @@
   - type: Item # Floof - Gun Shape Refactor
     size: Large
     shape:
-    - 0,0,3,1
+    - 0,0,4,2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
     layers:

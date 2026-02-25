@@ -198,9 +198,9 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 18
-  cost:
     Telecrystal: 24
+  cost:
+    Telecrystal: 36
   categories:
   - UplinkWeaponry
 
@@ -212,9 +212,9 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledLMG
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 20
+    Telecrystal: 12
   cost:
-    Telecrystal: 30
+    Telecrystal: 18
   categories:
   - UplinkWeaponry
 
@@ -1009,6 +1009,28 @@
     blacklist:
       components:
       - SurplusBundle
+
+- type: listing
+  id: UplinkSurplusBundle
+  name: uplink-surplus-bundle-name
+  description: uplink-surplus-bundle-desc
+  productEntity: CrateSyndicateSurplusBundle
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle      
 # Allies
 
 - type: listing

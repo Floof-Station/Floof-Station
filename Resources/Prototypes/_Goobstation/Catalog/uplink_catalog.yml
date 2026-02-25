@@ -48,8 +48,11 @@
   name: uplink-sleeping-carp-name
   description: uplink-sleeping-carp-desc
   productEntity: SleepingCarpScroll
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 12
   cost:
-    Telecrystal: 35 # Floof | Was originally 70
+    Telecrystal: 18 # Floof | Was originally 70 (Was balanced around new TC cost)
   categories:
     - UplinkWeaponry
   conditions:
