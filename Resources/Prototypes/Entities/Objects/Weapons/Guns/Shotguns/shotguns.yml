@@ -168,8 +168,14 @@
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 2
+    fireRate: 4
     fireOnDropChance: 0.5
+    selectedMode: SemiAuto
+    shotsPerBurst: 2
+    burstFireRate: 30 # Floof
+    availableModes:
+    - SemiAuto
+    - Burst # Floof - Both Barrels
   - type: Wieldable
   - type: BallisticAmmoProvider
     capacity: 2
@@ -264,6 +270,12 @@
   - type: Gun
     fireRate: 4
     fireOnDropChance: 0.5
+    selectedMode: SemiAuto
+    burstFireRate: 30 # Floof
+    shotsPerBurst: 2
+    availableModes:
+    - SemiAuto
+    - Burst # Floof - Both Barrels
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -279,7 +291,7 @@
     staminaCost: 6
 
 - type: entity
-  name: sawn-off shogun
+  name: sawn-off shotgun
   parent: WeaponShotgunSawn
   id: WeaponShotgunSawnEmpty
   description: Groovy! Uses .50 shotgun shells.
