@@ -15,10 +15,22 @@ public sealed class PassiveDamageSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PassiveDamageComponent, MapInitEvent>(OnPendingMapInit);
+        SubscribeLocalEvent<PassiveDamageComponent, MapInitEvent>(OnPendingMapInitA);
+        SubscribeLocalEvent<PassiveHealingComponent, MapInitEvent>(OnPendingMapInitB);
+        SubscribeLocalEvent<ChronicDamageComponent, MapInitEvent>(OnPendingMapInitC);
     }
 
-    private void OnPendingMapInit(EntityUid uid, PassiveDamageComponent component, MapInitEvent args)
+    private void OnPendingMapInitA(EntityUid uid, PassiveDamageComponent component, MapInitEvent args)
+    {
+        component.NextDamage = _timing.CurTime + TimeSpan.FromSeconds(1f);
+    }
+
+    private void OnPendingMapInitB(EntityUid uid, PassiveHealingComponent component, MapInitEvent args)
+    {
+        component.NextDamage = _timing.CurTime + TimeSpan.FromSeconds(1f);
+    }
+
+    private void OnPendingMapInitC(EntityUid uid, ChronicDamageComponent component, MapInitEvent args)
     {
         component.NextDamage = _timing.CurTime + TimeSpan.FromSeconds(1f);
     }
@@ -31,6 +43,9 @@ public sealed class PassiveDamageSystem : EntitySystem
 
         // Go through every entity with the component
         var query = EntityQueryEnumerator<PassiveDamageComponent, DamageableComponent, MobStateComponent>();
+        var query2 = EntityQueryEnumerator<PassiveHealingComponent, DamageableComponent, MobStateComponent>();
+        var query3 = EntityQueryEnumerator<ChronicDamageComponent, DamageableComponent, MobStateComponent>();
+
         while (query.MoveNext(out var uid, out var comp, out var damage, out var mobState))
         {
             // Make sure they're up for a damage tick
@@ -46,7 +61,47 @@ public sealed class PassiveDamageSystem : EntitySystem
             // Damage them
             foreach (var allowedState in comp.AllowedStates)
             {
-                if(allowedState == mobState.CurrentState)
+                if (allowedState == mobState.CurrentState)
+                    _damageable.TryChangeDamage(uid, comp.Damage, true, false, damage);
+            }
+        }
+
+        while (query2.MoveNext(out var uid, out var comp, out var damage, out var mobState))
+        {
+            // Make sure they're up for a damage tick
+            if (comp.NextDamage > curTime)
+                continue;
+
+            if (comp.DamageCap != 0 && damage.TotalDamage >= comp.DamageCap)
+                continue;
+
+            // Set the next time they can take damage
+            comp.NextDamage = curTime + TimeSpan.FromSeconds(1f);
+
+            // Damage them
+            foreach (var allowedState in comp.AllowedStates)
+            {
+                if (allowedState == mobState.CurrentState)
+                    _damageable.TryChangeDamage(uid, comp.Damage, true, false, damage);
+            }
+        }
+
+        while (query3.MoveNext(out var uid, out var comp, out var damage, out var mobState))
+        {
+            // Make sure they're up for a damage tick
+            if (comp.NextDamage > curTime)
+                continue;
+
+            if (comp.DamageCap != 0 && damage.TotalDamage >= comp.DamageCap)
+                continue;
+
+            // Set the next time they can take damage
+            comp.NextDamage = curTime + TimeSpan.FromSeconds(1f);
+
+            // Damage them
+            foreach (var allowedState in comp.AllowedStates)
+            {
+                if (allowedState == mobState.CurrentState)
                     _damageable.TryChangeDamage(uid, comp.Damage, true, false, damage);
             }
         }
